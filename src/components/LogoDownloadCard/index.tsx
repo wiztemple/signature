@@ -11,7 +11,7 @@ interface CardProps {
 const LogoDownloadCard: React.FC<CardProps> = ({ pngLink, svgLink, bgColor, img, imgSize }) => {
   return (
     <div className="w-full">
-      <div className={`${bgColor} rounded-[20px] flex justify-center sm:w-[215px] sm:h-[215px] items-center pt-10 pb-5 font-nunito`}>
+      <div className={`${bgColor} rounded-[20px] flex justify-center sm:w-[215px] sm:h-[215px] items-center py-10 font-nunito`}>
         <img className={imgSize} src={img} alt="Logo" />
       </div>
       <div className="flex gap-x-2">
