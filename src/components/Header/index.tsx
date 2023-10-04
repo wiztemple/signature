@@ -34,7 +34,7 @@ const Header = () => {
           <div className="flex gap-10">
             <img src={Logo} className="w-[142px] h-[38px]" alt="App Logo" />
             <div className="flex gap-[5px]">
-              <a href="#" className="text-midblack text-base py-2.5 px-3">
+              <a href="personal-banking" className="text-midblack text-base py-2.5 px-3">
                 Personal
               </a>
               <a href="#" className="text-midblack text-base py-2.5 px-3">
