@@ -16,7 +16,7 @@ interface CustomBannerProps {
 
 const CustomBanner = ({ src, alt, dropFilter, lineargradient, description, title1, title2, bg, color, subColor, top, bannerWidth, textWidth }: CustomBannerProps) => {
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
+    <div className="relative h-screen bg-secondaryblown w-screen overflow-hidden">
       <div className="z-40 w-screen h-full">
         <img
           className="h-full w-full block rounded-inherit object-center object-cover image-auto"

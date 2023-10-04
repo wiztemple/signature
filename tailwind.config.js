@@ -31,7 +31,8 @@ export default {
         secondarygray: '#bbbbbb',
         uppergray: '#dddddd',
         cardbadge: '#f8efea',
-        primaryblown: '#8a4224'
+        primaryblown: '#8a4224',
+        secondaryblown: '#b05c37'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
