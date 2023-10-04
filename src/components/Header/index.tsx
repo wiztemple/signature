@@ -2,7 +2,7 @@ import Logo from "../../assets/altlogo.svg";
 import Rocket from '../../assets/rocket.svg';
 const Header = () => {
   return (
-    <div className="fixed h-auto w-full">
+    <div className="fixed h-auto w-full z-50">
       <div className="px-[50px] bg-white/60 backdrop-blur-[20px] opacity-100">
         <div className="relative">
           <div className="flex justify-between py-2 px-4 items-center">
