@@ -1,6 +1,7 @@
-const Footer = () => {
+import Logo from '../../assets/logo.svg'
+const Footer = ({ background = 'bg-hex-2' }) => {
   return (
-    <footer className="bg-[#6c1d45] w-full">
+    <footer className={`w-full ${background}`}>
       <div className="sm:p-[100px] p-5">
         <div className="flex flex-col flex-nowrap h-min justify-start items-start w-full relative">
           <div className="sm:flex flex-row justify-between flex-nowrap pb-16 w-full relative h-min border-b border-b-[#894a69]">
@@ -9,9 +10,8 @@ const Footer = () => {
                 <p className="text-xl font-bold leading-[30px]">
                   Stay informed. Join our newsletter
                 </p>
-                <p className="leading-6 break-words">
-                  Get up-to-date information about products and services that
-                  will help build and sustain your finances.
+                <p className="leading-6 w-full break-after-all break-words">
+                  Get up-to-date information about products and services that will help build and sustain your finances.
                 </p>
               </div>
             </div>
@@ -29,69 +29,69 @@ const Footer = () => {
                     <input
                       type="submit"
                       value="Subscribe"
-                      className="appearance-none bg-[#5a193a] leading-[1.4em] outline-none font-semibold border-none rounded-[10px] p-[15px] text-white cursor-pointer"
+                      className="appearance-none bg-hex-1 leading-[1.4em] outline-none font-semibold border-none rounded-[10px] p-[15px] text-white cursor-pointer"
                     />
                   </div>
                 </form>
               </div>
             </div>
           </div>
-          <div className="border-b border-b-[#894a69] w-full py-16">
-            <div className="grid sm:grid-cols-6 grid-cols-2">
+          <div className="border-b border-b-[#894a69] w-full py-16 font-nunito">
+            <div className="grid sm:grid-cols-6 grid-cols-2 sm:gap-y-0 gap-y-[30px] sm:gap-x-0 gap-x-10">
               <div className="flex flex-col gap-4">
-                <span className="font-bold text-sm leading-5 text-[#C5A4B5]">
+                <span className="font-bold text-sm leading-5 text-main-2">
                   Products
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-[#EAECF0]">Accounts</a>
-                  <a className="block text-[#EAECF0]">Cards</a>
+                  <a className="block text-main-1 font-nunito">Accounts</a>
+                  <a className="block text-main-1">Cards</a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
-                <span className="font-bold text-sm leading-5 text-[#C5A4B5]">
+                <span className="font-bold text-sm leading-5 text-main-2">
                   Services
                 </span>
                 <span className="flex flex-col gap-3 sm:text-base">
-                  <a className="block text-[#EAECF0]">Personal Banking</a>
-                  <a className="block text-[#EAECF0]">Private Banking</a>
-                  <a className="block text-[#EAECF0]">Business Banking</a>
-                  <a className="block text-[#EAECF0]">Institutional Banking</a>
-                  <a className="block text-[#EAECF0]">Digital Banking</a>
+                  <a className="block text-main-1">Personal Banking</a>
+                  <a className="block text-main-1">Private Banking</a>
+                  <a className="block text-main-1">Business Banking</a>
+                  <a className="block text-main-1">Institutional Banking</a>
+                  <a className="block text-main-1">Digital Banking</a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
-                <span className="font-bold text-sm leading-5 text-[#C5A4B5]">
+                <span className="font-bold text-sm leading-5 text-main-2">
                   About Signature Bank
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-[#EAECF0]">About Us</a>
-                  <a className="block text-[#EAECF0]">Team</a>
-                  <a className="block text-[#EAECF0]">Careers</a>
-                  <a className="block text-[#EAECF0]">Press</a>
-                  <a className="block text-[#EAECF0]">Contact</a>
+                  <a className="block text-main-1">About Us</a>
+                  <a className="block text-main-1">Team</a>
+                  <a className="block text-main-1">Careers</a>
+                  <a className="block text-main-1">Press</a>
+                  <a className="block text-main-1">Contact</a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
-                <span className="font-bold text-sm leading-5 text-[#C5A4B5]">
+                <span className="font-bold text-sm leading-5 text-main-2">
                   Resources
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-[#EAECF0]">Forms</a>
-                  <a className="block text-[#EAECF0]">Newsletter</a>
-                  <a className="block text-[#EAECF0]">Support</a>
-                  <a className="block text-[#EAECF0]">Press</a>
-                  <a className="block text-[#EAECF0]">Media kit</a>
+                  <a className="block text-main-1">Forms</a>
+                  <a className="block text-main-1">Newsletter</a>
+                  <a className="block text-main-1">Support</a>
+                  <a className="block text-main-1">Press</a>
+                  <a className="block text-main-1">Media kit</a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
-                <span className="font-bold text-sm leading-5 text-[#C5A4B5]">
+                <span className="font-bold text-sm leading-5 text-main-2">
                   Social
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-[#EAECF0]">Twitter</a>
-                  <a className="block text-[#EAECF0]">LinkedIn</a>
-                  <a className="block text-[#EAECF0]">Facebook</a>
-                  <a className="block text-[#EAECF0]">Instagram</a>
+                  <a className="block text-main-1">Twitter</a>
+                  <a className="block text-main-1">LinkedIn</a>
+                  <a className="block text-main-1">Facebook</a>
+                  <a className="block text-main-1">Instagram</a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -99,18 +99,18 @@ const Footer = () => {
                   Legal
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-[#EAECF0]">Terms</a>
-                  <a className="block text-[#EAECF0]">Privacy</a>
-                  <a className="block text-[#EAECF0]">Cookies</a>
-                  <a className="block text-[#EAECF0]">AML Policy</a>
-                  <a className="block text-[#EAECF0]">Online Security Tips</a>
+                  <a className="block text-main-1">Terms</a>
+                  <a className="block text-main-1">Privacy</a>
+                  <a className="block text-main-1">Cookies</a>
+                  <a className="block text-main-1">AML Policy</a>
+                  <a className="block text-main-1">Online Security Tips</a>
                 </span>
               </div>
             </div>
           </div>
-          <div className="flex justify-between w-full pt-8">
-            <span>Logo</span>
-            <span className="w-fit text-[#C5A4B5]">
+          <div className="sm:flex justify-between w-full pt-8">
+            <img src={Logo} alt="App Logo" />
+            <span className="w-fit text-main-2 block pt-5 sm:pt-0">
               © 2023 Signature Bank Ltd. All rights reserved.
             </span>
           </div>

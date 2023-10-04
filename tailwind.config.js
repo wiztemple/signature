@@ -5,7 +5,22 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: {
+          1: '#EAECF0',
+          2: '#C5A4B5',
+        },
+        hex: {
+          1: '#5a193a',
+          2: '#6c1d45'
+        },
+        gold: '#1f190f'
+      },
+      fontFamily: {
+        nunito: ['Nunito', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

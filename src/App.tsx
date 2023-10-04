@@ -1,12 +1,12 @@
-import './App.css'
 import Footer from './components/Footer'
 
 function App() {
 
   return (
     <>
-      <div>lets go!!!</div>
+      <div className='font-nunito'>
       <Footer />
+      </div>
     </>
   )
 }
