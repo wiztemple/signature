@@ -16,12 +16,13 @@ const PersonalBanking = () => {
               alt="Lady using signature bank personal banking"
           />
           </div>
-        <div className="text-white z-50 absolute w-full h-auto flex mx-auto justify-center top-[50%]">
+        <div className="text-white z-40 absolute w-full h-auto flex mx-auto justify-center top-[55%]">
           <div style={{backdropFilter: "blur(15px)"}} className="text-[64px] bg-[#fff3] rounded-2xl p-[30px]">
-            <h1 className="text-hex-2 text-[64px] text-center font-medium font-nunito leading-[1em]">Experience <br /> Transformational Banking</h1>
+            <h1 className="text-hex-2 text-[64px] text-center font-bold font-nunito leading-[1em]">Experience <br /> Transformational Banking</h1>
             <p className="text-2xl font-nunito text-center mt-4 text-[#101828]">Attain new financial heights with our personalised banking <br /> solutions</p>
           </div>
           </div>
+          <div style={{background: "linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"}} className="h-[450px] absolute bottom-0 left-0 w-full" />
       </div>
       
       {/* Cards */}
@@ -34,26 +35,31 @@ const PersonalBanking = () => {
           </div>
         <div className="grid grid-cols-3 grid-rows-2 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
             <Card
+              src="https://framerusercontent.com/images/hFULY64HSxNlieXQDxDF2XD13AA.png"
               cardTitle="Signature Savings Account"
               cardDescription="Start building your savings with our attractive interest rates and flexible deposit and withdrawal options."
               buttonName="Open an Account"
             />
             <Card
+              src="https://framerusercontent.com/images/xUakLXfAp9hDiKFMhJL2sbfLhmc.png"
               cardTitle="Signature Savings Account"
               cardDescription="Start building your savings with our attractive interest rates and flexible deposit and withdrawal options."
               buttonName="Open an Account"
             />
             <Card
+              src="https://framerusercontent.com/images/qXGYkj1ONzvdceSrwBEKAownPAU.png"
               cardTitle="Signature Savings Account"
               cardDescription="Start building your savings with our attractive interest rates and flexible deposit and withdrawal options."
               buttonName="Open an Account"
             />
             <Card
+              src="https://framerusercontent.com/images/NeWuUuzZ3MDTHXELs9JrOZnxWc8.png"
               cardTitle="Signature Savings Account"
               cardDescription="Start building your savings with our attractive interest rates and flexible deposit and withdrawal options."
               buttonName="Open an Account"
             />
             <Card
+              src="https://framerusercontent.com/images/CFfaM23YU7Zm84gfR4YEZezntYM.png"
               cardTitle="Signature Savings Account"
               cardDescription="Start building your savings with our attractive interest rates and flexible deposit and withdrawal options."
               buttonName="Open an Account"
@@ -68,20 +74,27 @@ const PersonalBanking = () => {
           <h1 className="text-[#0f1728] text-[48px] font-nunito font-bold leading-[-0.96px] text-center">Built for the future, built for your progress.</h1>
           <p className="text-center text-2xl text-[#101828] mt-3 mb-20">We take pride in offering you a superior banking experience</p>
           <SectionCard
+            src="https://framerusercontent.com/images/dwaQogkrt99Ybnxmpycv6sqPz8.jpg?scale-down-to=1024"
+            cardTitle="Personalized Financial Solutions"
+            cardDescription="At Signature Bank, we understand that every individual has unique financial goals and needs. Our personal banking services are tailored to empower your aspirations as we provide customized products and services that align with your preferences."
             flexRow=""
           />
           <SectionCard
+            src="https://framerusercontent.com/images/ui1R9E3KgKbepwNqccyZ52D220M.jpg?scale-down-to=1024"
+            cardTitle="Cutting-Edge Technology"
+            cardDescription="We leverage the latest advancements in banking technology to enhance convenience and simplify your transactions. With our secure online and mobile banking platforms, you can access your accounts, make payments, transfer funds, and monitor your finances anytime, anywhere without fear of unwanted activities."
             flexRow="flex-row-reverse"
           />
           <SectionCard
+            src="https://framerusercontent.com/images/lBUv4SG2dcEfqLW8gB19ubQxg.jpg?scale-down-to=1024"
+            cardTitle="Commitment to Security and Privacy"
+            cardDescription="Safeguarding your financial information is our top priority. We adhere to the highest security standards, implementing robust security protocols to protect your personal and financial data."
             flexRow=""
           />
         </div>
       </div>
 
       {/* banner */}
-      <div className="bg-white text-black">
-      </div>
 
       {/* Footer */}
       <Footer />
