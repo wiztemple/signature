@@ -13,7 +13,8 @@ export default {
         },
         hex: {
           1: '#5a193a',
-          2: '#6c1d45'
+          2: '#6c1d45',
+          3: '#8C2E5E'
         },
         gold: '#1f190f',
         alternate: '#101828',

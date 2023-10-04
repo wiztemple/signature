@@ -1,6 +1,9 @@
+import bannerSvg from '../../assets/bannersvg.svg'
 const Banner = () => {
   return (
-    <div>Banner Component</div>
+    <div>
+      <img src={bannerSvg} alt="banner svg" />
+    </div>
   )
 }
 export default Banner;
