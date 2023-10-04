@@ -1,12 +1,17 @@
-import Footer from './components/Footer'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Resources from './pages/Resources'
 
 function App() {
 
   return (
     <>
-      <div className='font-nunito'>
-      <Footer />
-      </div>
+      <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/resources" element={<Resources />} />
+            </Routes>
+        </BrowserRouter>
     </>
   )
 }

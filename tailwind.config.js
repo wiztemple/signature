@@ -15,7 +15,10 @@ export default {
           1: '#5a193a',
           2: '#6c1d45'
         },
-        gold: '#1f190f'
+        gold: '#1f190f',
+        alternate: '#101828',
+        midblack: '#3E4552',
+        lightgrey: '#f9fafb'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],

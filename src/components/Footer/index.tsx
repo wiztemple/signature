@@ -10,7 +10,7 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                 <p className="text-xl font-bold leading-[30px]">
                   Stay informed. Join our newsletter
                 </p>
-                <p className="leading-6 w-full break-after-all break-words">
+                <p className="leading-6 w-full break-after-all break-words text-main-1">
                   Get up-to-date information about products and services that will help build and sustain your finances.
                 </p>
               </div>
