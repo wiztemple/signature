@@ -20,7 +20,9 @@ export default {
         alternate: '#101828',
         midblack: '#3E4552',
         lightgrey: '#f9fafb',
-        bannerbg: '#fdf9f0'
+        bannerbg: '#fdf9f0',
+        pink: '#ffdbed',
+        alternateblack: '#0c0c0c',
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
