@@ -19,7 +19,8 @@ export default {
         gold: '#1f190f',
         alternate: '#101828',
         midblack: '#3E4552',
-        lightgrey: '#f9fafb'
+        lightgrey: '#f9fafb',
+        bannerbg: '#fdf9f0'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
