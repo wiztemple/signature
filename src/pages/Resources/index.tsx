@@ -1,9 +1,16 @@
+import React, { useState } from "react";
 import Banner from "../../components/Banner";
 import DownloadCard from "../../components/DownloadCard";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
 const Resources = () => {
+  const [activeTab, setActiveTab] = useState<string | undefined>("downloads");
+
+  const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
+    const { value } = event.currentTarget.dataset;
+    setActiveTab(value);
+  };
   return (
     <div className="font-nunito">
       <Header />
@@ -17,28 +24,65 @@ const Resources = () => {
       </div>
       <div className="flex justify-center bg-lightgrey">
         <div className="w-[1000px] py-[50px] px-5">
-          <div className="w-full grid grid-cols-4 gap-5">
-            <DownloadCard
-              downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
-              cardText="Additional Account Opening Form"
-            />
-            <DownloadCard
-              cardText="Signature Bank Account Opening Reference Form"
-              downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
-            />
-            <DownloadCard
-              cardText="Corporate Account Opening Form"
-              downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
-            />
-            <DownloadCard
-              cardText="Individual Account Opening Form"
-              downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
-            />
+          <div className="flex justify-center">
+            <div className="bg-white w-fit  flex gap-[96px] p-5 rounded-[20px]">
+              <button
+                type="button"
+                className={`py-3 text-xl text-[#9999] border-b-2 border-b-2-transparent font-medium focus:outline-none ${
+                  activeTab === "downloads" && "text-hex-2 border-b-hex-2"
+                }`}
+                onClick={toggleTab}
+                id="downloads"
+                data-value="downloads"
+              >
+                Downloads
+              </button>
+              <button
+                type="button"
+                className={`rounded py-3 text-xl font-medium text-[#9999] focus:outline-none ${
+                  activeTab === "media" &&
+                  "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
+                }`}
+                onClick={toggleTab}
+                id="media"
+                data-value="media"
+              >
+                Media Kit
+              </button>
+            </div>
           </div>
+          {activeTab === "downloads" && (
+            <div className="w-full grid grid-cols-4 gap-5">
+              <DownloadCard
+                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+                cardText="Additional Account Opening Form"
+              />
+              <DownloadCard
+                cardText="Signature Bank Account Opening Reference Form"
+                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+              />
+              <DownloadCard
+                cardText="Corporate Account Opening Form"
+                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+              />
+              <DownloadCard
+                cardText="Individual Account Opening Form"
+                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+              />
+            </div>
+          )}
+          {activeTab === "media" && (
+            <div className="w-full grid grid-cols-4 gap-5">
+              <DownloadCard
+                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+                cardText="Additional Account Opening Form"
+              />
+            </div>
+          )}
         </div>
       </div>
       <div className="bg-white">
-      <Banner />
+        <Banner />
       </div>
       <Footer />
     </div>
