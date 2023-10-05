@@ -87,13 +87,13 @@ const Header = () => {
               >
                 Private
               </a>
-              <a href="#" className="text-midblack text-base py-2.5 px-3">
+              <a href="business" className="text-midblack text-base py-2.5 px-3">
                 Business
               </a>
-              <a href="#" className="text-midblack text-base py-2.5 px-3">
+              <a href="institutional" className="text-midblack text-base py-2.5 px-3">
                 Institutional
               </a>
-              <a href="#" className="text-midblack text-base py-2.5 px-3">
+              <a href="digital" className="text-midblack text-base py-2.5 px-3">
                 Digital
               </a>
             </div>
