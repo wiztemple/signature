@@ -32,7 +32,9 @@ export default {
         uppergray: '#dddddd',
         cardbadge: '#f8efea',
         primaryblown: '#8a4224',
-        secondaryblown: '#b05c37'
+        secondaryblown: '#b05c37',
+        pink: '#ffdbed',
+        alternateblack: '#0c0c0c',
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
