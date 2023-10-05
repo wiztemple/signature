@@ -30,6 +30,9 @@ const Business = () => {
     <div>
       <Header />
       <CustomBanner
+        display="hidden"
+        scaling=""
+        heroBg="white"
         bannerWidth="w-[56%]"
         textWidth="w-[85%]"
         top="top-[57.5%]"

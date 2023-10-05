@@ -1,3 +1,4 @@
+import Banner from "../../components/Banner";
 import Card from "../../components/Card";
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
@@ -39,11 +40,14 @@ const cards: { url: string, title: string, description: string, buttonName: stri
 
 const PersonalBanking = () => {
   return (
-    <div>
+    <div className="bg-white">
       {/* Header */}
       <Header />
       {/* Custom Banner */}
       <CustomBanner
+        display="hidden"
+        scaling=""
+        heroBg="white"
         bannerWidth="w-[62%]"
         textWidth="w-[85%]"
         top="top-[57%]"
@@ -121,7 +125,9 @@ const PersonalBanking = () => {
         </div>
       </div>
       {/* banner */}
-
+      <div className="w-[85%] mx-auto py-14">
+        <Banner />
+      </div>
       {/* Footer */}
       <Footer />
     </div>

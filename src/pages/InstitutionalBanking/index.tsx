@@ -30,9 +30,12 @@ const InstitutionalBanking = () => {
     <div>
       <Header />
       <CustomBanner
-        bannerWidth="w-[70%]"
+        display="block"
+        scaling="px-4 pt-[68px]"
+        heroBg="bg-secondaryblown"
+        bannerWidth="w-[69%]"
         textWidth="w-[85%]"
-        top="top-[57.5%]"
+        top="top-[61%]"
         bg="bg-hex-6"
         color="white"
         subColor="white"

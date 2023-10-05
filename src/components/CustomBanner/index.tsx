@@ -12,20 +12,32 @@ interface CustomBannerProps {
   top: string
   bannerWidth: string
   textWidth: string
+  display: string
+  scaling: string
+  heroBg: string
 }
 
-const CustomBanner = ({ src, alt, dropFilter, lineargradient, description, title1, title2, bg, color, subColor, top, bannerWidth, textWidth }: CustomBannerProps) => {
+const CustomBanner = ({
+  src,
+  alt,
+  dropFilter,
+  lineargradient,
+  description,
+  title1, title2, bg, color, subColor, top, bannerWidth, textWidth, display, scaling, heroBg }: CustomBannerProps) => {
   return (
-    <div className="relative h-screen bg-secondaryblown w-screen overflow-hidden">
-      <div className="z-40 w-screen h-full">
+    <div className={`relative h-screen ${heroBg} w-full overflow-hidden`}>
+      <div className={`w-full ${display} mx-auto flex justify-center`}>
+        <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[40%] rounded-full" />
+      </div>
+      <div className={`z-40 w-full h-full ${scaling}`}>
         <img
-          className="h-full w-full block rounded-inherit object-center object-cover image-auto"
+          className="h-full w-full rounded-inherit relative object-center object-cover image-auto"
           src={src}
           alt={alt}
         />
       </div>
       <div className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center ${top}`}>
-        <div style={{ backdropFilter: `${dropFilter}` }} className={`text-[60px] ${bannerWidth} ${bg} rounded-2xl p-[30px]`}>
+        <div style={{ backdropFilter: `${dropFilter}` }} className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] p-[30px]`}>
           <div className={`text-${color} text-[64px] text-center font-bold font-nunito leading-[1em]`}>
             <h1>{title1}</h1>
             <h1>{title2}</h1></div>

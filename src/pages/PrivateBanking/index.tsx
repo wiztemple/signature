@@ -8,6 +8,9 @@ const PrivateBanking = () => {
     <div>
       <Header />
       <CustomBanner
+        display="hidden"
+        scaling=""
+        heroBg="white"
         bannerWidth="w-[59%]"
         textWidth="w-[70%]"
         top="top-[65%]"
