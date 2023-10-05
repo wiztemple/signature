@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
