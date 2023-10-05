@@ -17,7 +17,7 @@ const Resources = () => {
     setActiveTab(value);
   };
   return (
-    <div className="font-nunito">
+    <div className="font-nunitoSans">
       <Header />
       <div className="pt-[270px] pb-24 bg-[#f9f5f8]">
         <h1 className="text-center text-7xl font-bold text-alternate">

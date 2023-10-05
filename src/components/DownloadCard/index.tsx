@@ -8,7 +8,7 @@ interface CardProps {
 const DownloadCard: React.FC<CardProps> = ({ cardText, downloadLink }) => {
   return (
     <div className="sm:w-[215px] w-full">
-      <div className="bg-hex-2 rounded-[20px] flex flex-col items-center pt-10 pb-5 font-nunito">
+      <div className="bg-hex-2 rounded-[20px] flex flex-col items-center pt-10 pb-5 font-nunitoSans">
         <img className="w-[96px] h-[104px]" src={pdfIcon} alt="Pdf Icon" />
         <a
           href={downloadLink}

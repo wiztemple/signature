@@ -36,14 +36,14 @@ const Footer = ({ background = 'bg-hex-2' }) => {
               </div>
             </div>
           </div>
-          <div className="border-b border-b-[#894a69] w-full py-16 font-nunito">
+          <div className="border-b border-b-[#894a69] w-full py-16 font-nunitoSans">
             <div className="grid sm:grid-cols-6 grid-cols-2 sm:gap-y-0 gap-y-[30px] sm:gap-x-0 gap-x-10">
               <div className="flex flex-col gap-4">
                 <span className="font-bold text-sm leading-5 text-main-2">
                   Products
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-main-1 font-nunito">Accounts</a>
+                  <a className="block text-main-1 font-nunitoSans">Accounts</a>
                   <a className="block text-main-1">Cards</a>
                 </span>
               </div>

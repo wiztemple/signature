@@ -3,7 +3,7 @@ import Header from "../../components/Header";
 
 const Home = () => {
   return (
-    <div className="font-nunito">
+    <div className="font-nunitoSans">
     <Header />
     <Footer />
     </div>

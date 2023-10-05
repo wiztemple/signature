@@ -18,7 +18,7 @@ const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg }: Car
               <div className="text-[28.85px] font-bold leading-[1em] mt-3">{cardTitle}</div>
               <div className="text-lg leading-[1.7em] mt-6 text-primarygray">{cardDescription}</div>
               <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} text-white py-4 px-7 mt-14 rounded-[10px]`}>
-                  <a className="text-lg text-center font-nunito" href="/">{buttonName}</a>
+                  <a className="text-lg text-center font-nunitoSans" href="/">{buttonName}</a>
               </button>
           </div>
       </div>

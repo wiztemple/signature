@@ -36,7 +36,7 @@ const CustomBanner = ({
   heroBg,
 }: CustomBannerProps) => {
   return (
-    <div className={`relative h-screen ${heroBg} w-full overflow-hidden`}>
+    <div className={`relative h-screen ${heroBg} w-full overflow-hidden font-nunitoSans`}>
       <div className={`w-full ${display} mx-auto flex justify-center`}>
         <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[38.1%] rounded-full" />
       </div>
@@ -61,7 +61,7 @@ const CustomBanner = ({
             <h1>{title2}</h1>
           </div>
           <p
-            className={`text-2xl font-nunito flex justify-center text-center mt-4 text-${subColor}`}
+            className={`text-2xl font-nunitoSans flex justify-center text-center mt-4 text-${subColor}`}
           >
             <p className={`${textWidth}`}>{description}</p>
           </p>
