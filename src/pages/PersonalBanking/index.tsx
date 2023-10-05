@@ -90,10 +90,10 @@ const PersonalBanking = () => {
           <h1 className="text-[#0f1728] text-[48px] font-nunito font-bold leading-[-0.96px] text-center">Built for the future, built for your progress.</h1>
           <p className="text-center text-2xl text-[#101828] mt-3 mb-20">We take pride in offering you a superior banking experience</p>
           <SectionCard
-          black="primaryblack"
-          buttonBg=""
-          buttonColor=""
-          gray="primarygray"
+            black="primaryblack"
+            buttonBg=""
+            buttonColor=""
+            gray="primarygray"
             src="https://framerusercontent.com/images/dwaQogkrt99Ybnxmpycv6sqPz8.jpg?scale-down-to=1024"
             cardTitle="Personalized Financial Solutions"
             cardDescription="At Signature Bank, we understand that every individual has unique financial goals and needs. Our personal banking services are tailored to empower your aspirations as we provide customized products and services that align with your preferences."
@@ -101,10 +101,10 @@ const PersonalBanking = () => {
             display="hidden"
           />
           <SectionCard
-          black="primaryblack"
-          buttonBg=""
-          buttonColor=""
-          gray="primarygray"
+            black="primaryblack"
+            buttonBg=""
+            buttonColor=""
+            gray="primarygray"
             src="https://framerusercontent.com/images/ui1R9E3KgKbepwNqccyZ52D220M.jpg?scale-down-to=1024"
             cardTitle="Cutting-Edge Technology"
             cardDescription="We leverage the latest advancements in banking technology to enhance convenience and simplify your transactions. With our secure online and mobile banking platforms, you can access your accounts, make payments, transfer funds, and monitor your finances anytime, anywhere without fear of unwanted activities."
@@ -112,10 +112,10 @@ const PersonalBanking = () => {
             display="hidden"
           />
           <SectionCard
-          black="primaryblack"
-          buttonBg=""
-          buttonColor=""
-          gray="primarygray"
+            black="primaryblack"
+            buttonBg=""
+            buttonColor=""
+            gray="primarygray"
             src="https://framerusercontent.com/images/lBUv4SG2dcEfqLW8gB19ubQxg.jpg?scale-down-to=1024"
             cardTitle="Commitment to Security and Privacy"
             cardDescription="Safeguarding your financial information is our top priority. We adhere to the highest security standards, implementing robust security protocols to protect your personal and financial data."
@@ -126,7 +126,17 @@ const PersonalBanking = () => {
       </div>
       {/* banner */}
       <div className="w-[85%] mx-auto py-14">
-        <Banner />
+        <Banner
+          bannerBg="bg-bannerbg"
+          buttonStyle="bg-hex-2 text-white"
+          titleStyle="text-alternate w-[90%]"
+          imgContainer=""
+          textColor="text-primarygray"
+          title="Open an account with us in a few simple steps."
+          description="Open an account with us and enjoy the benefits of personalized banking services."
+          buttonName="Open an Account - Coming Soon"
+          url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
+        />
       </div>
       {/* Footer */}
       <Footer />

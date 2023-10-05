@@ -15,11 +15,11 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/resources" element={<Resources />} />
-              <Route path="/personal" element={<PersonalBanking />} />
-              <Route path="/private" element={<PrivateBanking />} />
-              <Route path="/business" element={<Business />} />
-              <Route path="/institutional" element={<InstitutionalBanking />} />
-              <Route path="/digital" element={<DigitalBanking />} />
+              <Route path="/personal-banking" element={<PersonalBanking />} />
+              <Route path="/private-banking" element={<PrivateBanking />} />
+              <Route path="/business-banking" element={<Business />} />
+              <Route path="/institutional-banking" element={<InstitutionalBanking />} />
+              <Route path="/digital-banking" element={<DigitalBanking />} />
             </Routes>
         </BrowserRouter>
     </>

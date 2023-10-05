@@ -27,7 +27,7 @@ const CustomBanner = ({
   return (
     <div className={`relative h-screen ${heroBg} w-full overflow-hidden`}>
       <div className={`w-full ${display} mx-auto flex justify-center`}>
-        <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[40%] rounded-full" />
+        <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[38.1%] rounded-full" />
       </div>
       <div className={`z-40 w-full h-full ${scaling}`}>
         <img

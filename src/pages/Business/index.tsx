@@ -1,3 +1,4 @@
+import Banner from "../../components/Banner";
 import Card from "../../components/Card";
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
@@ -27,7 +28,7 @@ const cards: { url: string, title: string, description: string, buttonName: stri
 
 const Business = () => {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <CustomBanner
         display="hidden"
@@ -106,6 +107,19 @@ const Business = () => {
             display="hidden"
           />
         </div>
+      </div>
+      <div className="w-[85%] mx-auto py-14">
+        <Banner
+          bannerBg="bg-bannerbg"
+          buttonStyle="bg-secondaryblown text-white"
+          titleStyle="text-alternate w-[90%]"
+          imgContainer=""
+          textColor="text-primarygray"
+          title="Enter a whole new world of business advancement"
+          description="Open an account with us in a few simple steps."
+          buttonName="Open an Account - Coming Soon"
+          url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
+        />
       </div>
       <Footer />
     </div>

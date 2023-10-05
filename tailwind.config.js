@@ -35,6 +35,7 @@ export default {
         secondaryblown: '#b05c37',
         pink: '#ffdbed',
         alternateblack: '#0c0c0c',
+        dutyblack: '#040304'
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
