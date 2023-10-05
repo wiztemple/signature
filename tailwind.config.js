@@ -17,7 +17,8 @@ export default {
           3: '#8C2E5E',
           4: '#fff3',
           5: '#b9965b1c',
-          6: '#ffffff33'
+          6: '#ffffff33',
+          7: '#440b29'
         },
         gold: '#1f190f',
         alternate: '#101828',
