@@ -24,7 +24,7 @@ const Banner = ({ title, description, buttonName, url, bannerBg, titleStyle, tex
           <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonStyle} mt-12 text-lg px-6 py-4 rounded-[10px]`}>{buttonName}</button>
         </div>
         <div className={`${imgContainer}`}>
-          <img className='h-[340px] w-full rounded-[30px] object-cover' src={url} alt="Open an account" />
+          <img className='h-full w-full rounded-[30px] object-cover' src={url} alt="Open an account" />
         </div>
       </div>
     </div>

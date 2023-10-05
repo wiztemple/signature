@@ -7,8 +7,8 @@ import LogoDownloadCard from "../../components/LogoDownloadCard";
 import Logo1 from "../../assets/logo.svg";
 import Logo2 from "../../assets/altlogo.svg";
 import Logo3 from "../../assets/logowhite.svg";
-import Symbol1 from '../../assets/symbol1.svg';
-import Symbol2 from '../../assets/symbol2.svg';
+import Symbol1 from "../../assets/symbol1.svg";
+import Symbol2 from "../../assets/symbol2.svg";
 const Resources = () => {
   const [activeTab, setActiveTab] = useState<string | undefined>("downloads");
 
@@ -101,7 +101,9 @@ const Resources = () => {
                   imgSize="w-[186px] h-[48px]"
                 />
               </div>
-              <h1 className="text-5xl font-bold text-alternate pb-2.5 pt-28">Symbol</h1>
+              <h1 className="text-5xl font-bold text-alternate pb-2.5 pt-28">
+                Symbol
+              </h1>
               <div className="w-full grid grid-cols-4 gap-5">
                 <LogoDownloadCard
                   bgColor="bg-hex-2"
@@ -129,7 +131,17 @@ const Resources = () => {
         </div>
       </div>
       <div className="bg-white">
-        <Banner />
+        <Banner
+          bannerBg="bg-bannerbg"
+          buttonStyle="bg-hex-2 text-white"
+          titleStyle="text-alternate w-[90%]"
+          imgContainer=""
+          textColor="text-primarygray"
+          title="Open an account with us in a few simple steps."
+          description="Open an account with us and enjoy the benefits of personalized banking services."
+          buttonName="Open an Account - Coming Soon"
+          url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
+        />
       </div>
       <Footer />
     </div>

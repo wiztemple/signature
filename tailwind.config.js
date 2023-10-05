@@ -40,6 +40,7 @@ export default {
       },
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
+        nunitoSans: ['Nunito Sans', 'sans-serif'],
       },
     },
   },
