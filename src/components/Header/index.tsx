@@ -27,7 +27,7 @@ const Header = () => {
     setMenuContent(null);
   };
   return (
-    <div className="fixed h-auto w-full">
+    <div className="fixed h-auto w-full z-50">
       <div className="px-[50px] bg-white/60 backdrop-blur-[20px] opacity-100 relative">
         <div className="relative">
           <div className="flex justify-between py-2 px-4 items-center">
@@ -38,9 +38,9 @@ const Header = () => {
               <a href="#" className="text-alternate text-sm py-2.5 px-3">
                 About Us
               </a>
-              <a href="#" className="text-alternate text-sm py-2.5 px-3">
+              <Link to="/resources" className="text-alternate text-sm py-2.5 px-3">
                 Resources
-              </a>
+              </Link>
               <a href="#" className="text-alternate text-sm py-2.5 px-3">
                 Media
               </a>
@@ -60,7 +60,7 @@ const Header = () => {
             <img src={Logo} className="w-[142px] h-[38px]" alt="App Logo" />
             <div className="flex gap-[5px] relative">
               <Link
-                to="/"
+                to="/personal-banking"
                 className="text-midblack text-base py-2.5 px-3 relative"
                 onMouseEnter={(e) =>
                   handleMenuItemHover(
@@ -74,8 +74,8 @@ const Header = () => {
               >
                 Personal
               </Link>
-              <a
-                href="#"
+              <Link
+                to="/private-banking"
                 className="text-midblack text-base py-2.5 px-3"
                 onMouseEnter={(e) =>
                   handleMenuItemHover(
@@ -86,16 +86,16 @@ const Header = () => {
                 onMouseLeave={handleMenuItemLeave}
               >
                 Private
-              </a>
-              <a href="business" className="text-midblack text-base py-2.5 px-3">
+              </Link>
+              <Link to="/business-banking" className="text-midblack text-base py-2.5 px-3">
                 Business
-              </a>
-              <a href="institutional" className="text-midblack text-base py-2.5 px-3">
+              </Link>
+              <Link to="/institutional-banking" className="text-midblack text-base py-2.5 px-3">
                 Institutional
-              </a>
-              <a href="digital" className="text-midblack text-base py-2.5 px-3">
+              </Link>
+              <Link to="/digital-banking" className="text-midblack text-base py-2.5 px-3">
                 Digital
-              </a>
+              </Link>
             </div>
           </div>
           <button
