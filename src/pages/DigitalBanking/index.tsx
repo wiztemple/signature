@@ -1,13 +1,9 @@
 import Banner from "../../components/Banner";
-import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import appleLogo from "../../assets/apple.svg";
-import handSvg from "../../assets/hand.svg";
-
 
 const DigitalBanking = () => {
-  // https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048
   return (
     <div className="bg-hex-7">
       <Header />
