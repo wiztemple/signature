@@ -6,6 +6,7 @@ import PrivateBanking from "./pages/PrivateBanking";
 import Business from "./pages/Business";
 import InstitutionalBanking from "./pages/InstitutionalBanking";
 import DigitalBanking from "./pages/DigitalBanking";
+import Media from "./pages/Media";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/media" element={<Media />} />
           <Route path="/personal-banking" element={<PersonalBanking />} />
           <Route path="/private-banking" element={<PrivateBanking />} />
           <Route path="/business-banking" element={<Business />} />

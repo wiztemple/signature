@@ -32,7 +32,7 @@ const Header = () => {
         <div className="relative">
           <div className="flex justify-between py-2 px-4 items-center">
             <div className="flex gap-[30px]">
-              <a href="#" className="text-alternate text-sm py-2.5 px-3">
+              <a href="/" className="text-alternate text-sm py-2.5 px-3">
                 Home
               </a>
               <a href="#" className="text-alternate text-sm py-2.5 px-3">
@@ -41,7 +41,7 @@ const Header = () => {
               <Link to="/resources" className="text-alternate text-sm py-2.5 px-3">
                 Resources
               </Link>
-              <a href="#" className="text-alternate text-sm py-2.5 px-3">
+              <a href="media" className="text-alternate text-sm py-2.5 px-3">
                 Media
               </a>
               <a href="#" className="text-alternate text-sm py-2.5 px-3">

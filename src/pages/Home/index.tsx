@@ -244,6 +244,7 @@ const Home = () => {
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>
+      {/* <img width="200px" height="200px" src={curve} alt="" /> */}
       <Footer />
     </div>
   );
