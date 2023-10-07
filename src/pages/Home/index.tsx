@@ -10,8 +10,8 @@ interface HeroProps {
   title: string
   description: string
   url: string
-  setActiveIndex: any
-  activeIndex: number
+  mt: string
+  top: string
 }
 
 const dots = [
@@ -20,29 +20,22 @@ const dots = [
   {dot: 3, tag: <div className="w-[10px] h-[10px] bg-gray-400 rounded-full" />},
 ]
 
-const Hero = ({title, description, url, setActiveIndex, activeIndex}: HeroProps) => (
-  <div className="h-screen bg-[#f9fafb] overflow-hidden">
-    <Slide className="h-full overflow-hidden relative w-full z-40">
+const Hero = ({ title, description, url, mt, top }: HeroProps) => (
+  <Slide className="h-full relative w-full z-40">
     <div className="w-[85%] mx-auto h-full">
-      <img className='absolute -top-5 z-30 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
-      <div className="flex justify-between z-50 items-center w-full h-full">
-        <div className="text-black w-[45%] mt-44">
+      <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
+      <div className="flex justify-between relative z-40 items-center w-full h-full">
+        <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
           <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">{title}</h1>
           <p className="text-xl font-nunito text-hex-8 mt-3">{description}</p>
           <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
         </div>
         <div className="text-black flex-1">
-          <img className="w-full h-full z-50 object-center bg-cover ml-24 mt-[17%]" src={url} alt="" />
+          <img className={`w-full h-full relative z-40 object-center bg-cover ${mt}`} src={url} alt="" />
         </div>
       </div>
     </div>
-    <div className="absolute bottom-10 z-40 text-black mx-auto w-full flex justify-center">
-      <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-20 h-7 gap-2 rounded-[20px] flex justify-center items-center">
-        {dots.map((tab, index) => <div onClick={() => setActiveIndex(tab.dot)} key={index} className={`cursor-pointer ${tab.dot === activeIndex ? "bg-white" : "bg-gray-200/50"} rounded-full w-[10px] h-[10px]`}></div>)}
-      </div>
-    </div>
   </Slide>
-  </div>
 );
 
 const Home = () => {
@@ -54,7 +47,7 @@ const Home = () => {
   };
     
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 7000);
+    const slideInterval = setInterval(nextSlide, 30000);
 
     return () => clearInterval(slideInterval);
   }, [activeIndex]);
@@ -62,27 +55,41 @@ const Home = () => {
   return (
     <div className="font-nunitoSans bg-white">
       <Header />
-      {dots[0].dot === activeIndex && <Hero
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        title="Unlock Limitless Possibilities"
-        description="We provide exceptional banking solutions by leveraging technology to accelerate your financial growth."
-        url="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png"
-      />}
-      {dots[1].dot === activeIndex && <Hero
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        title="Experience Freedom"
-        description="Stay ahead with on-the-go banking."
-        url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
-      />}
-      {dots[2].dot === activeIndex && <Hero
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        title="Make Your Mark"
-        description="Whatever the size of your dream we will help you achieve them with our variety of innovative banking products and services."
-        url="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
-      />}
+      <div className="h-screen bg-[#f9fafb] overflow-hidden">
+        {dots[0].dot === activeIndex && <Hero
+          top="mt-[14%]"
+          mt="mt-[17%] ml-24"
+          title="Unlock Limitless Possibilities"
+          description="We provide exceptional banking solutions by leveraging technology to accelerate your financial growth."
+          url="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png"
+        />}
+        {dots[1].dot === activeIndex && <Hero
+          top="mt-[44px]"
+          mt="mt-[22%] ml-10"
+          title="Experience Freedom"
+          description="Stay ahead with on-the-go banking."
+          url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
+        />}
+        {dots[2].dot === activeIndex && <Slide className="h-full relative w-full z-40">
+    <div className="w-[85%] mx-auto h-full">
+      <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
+      <div className="flex justify-between items-center w-full h-full">
+        <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
+          <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">Experience Freedom</h1>
+          <p className="text-xl font-nunito text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
+          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
+        </div>
+        <div style={{backdropFilter: "blur(10px)"}} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
+          <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
+      </div>
+    </div>
+  </Slide>}
+        <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
+          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-16 h-7 gap-2 rounded-[20px] flex justify-center items-center">
+            {dots.map((tab, index) => <div onClick={() => setActiveIndex(tab.dot)} key={index} className={`cursor-pointer ${tab.dot === activeIndex ? "bg-white" : "bg-gray-200/50"} rounded-full w-[10px] h-[10px]`}></div>)}
+          </div>
+        </div>
+      </div>
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
         <div className="text-black w-[85%] mx-auto">
           <div className="flex gap-5 py-28">
@@ -214,21 +221,21 @@ const Home = () => {
         <p className="text-[#667084] text-xl leading-[30px] mt-4">The latest news, publications, and resources from our team.</p>
         <div className="flex gap-4 w-[75%] mx-auto h-[240px] mt-14">
           <div className="flex-1 flex gap-4">
-              <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
+            <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
             <div >
               <h2 className="text-lg text-main-3 font-bold">CBN provides further update to the guidelines in the Foreign Exchange Market.</h2>
-            <p className="text-base text-primarygray">The Director of Corporate Communications, Dr Isa AbdulMumin, has announced further policy changes in relation to FX which is aimed at…</p>
-            <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button>
+              <p className="text-base text-primarygray">The Director of Corporate Communications, Dr Isa AbdulMumin, has announced further policy changes in relation to FX which is aimed at…</p>
+              <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button>
             </div>
           </div>
           <div className="flex-1 flex gap-4">
-              <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
+            <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
             <div >
               <h2 className="text-lg text-main-3 font-bold">Excitement as Signature Bank launches operation</h2>
-            <p className="text-base text-primarygray">Signature Bank, on Monday, November 21, 2022 launched its operations into the Nigerian banking sector with unique services that are expected to deepen Nigeria's financial inclusion, targeting over 40 million…</p>
-            <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5">Read more</button>
+              <p className="text-base text-primarygray">Signature Bank, on Monday, November 21, 2022 launched its operations into the Nigerian banking sector with unique services that are expected to deepen Nigeria's financial inclusion, targeting over 40 million…</p>
+              <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5">Read more</button>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
