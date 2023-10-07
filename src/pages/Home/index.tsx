@@ -5,6 +5,9 @@ import Header from "../../components/Header";
 import bannerSvg from '../../assets/bannersvg.svg';
 import { Slide } from "../../utils/Slide";
 import appleLogo from "../../assets/apple.svg";
+import cookieSvg from "../../assets/cookie.svg";
+import facebookSvg from "../../assets/facebook.svg";
+import closeSvg from "../../assets/close.svg";
 
 interface HeroProps {
   title: string
@@ -14,11 +17,13 @@ interface HeroProps {
   top: string
 }
 
-const dots = [
-  {dot: 1, tag: <div className="w-[10px] h-[10px] bg-white rounded-full" />},
-  {dot: 2, tag: <div className="w-[10px] h-[10px] bg-gray-400 rounded-full" />},
-  {dot: 3, tag: <div className="w-[10px] h-[10px] bg-gray-400 rounded-full" />},
-]
+const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2, }, { dot: 3 },];
+
+const banks: { title: string, description: string }[] = [
+  { title: "No Constraints", description: "Manage your transactions on our mobile banking application from anywhere you are." },
+  { title: "Maximum Security", description: "Your money is safe and secured with our multi-level digital security implementations." },
+  { title: "Personalized Experience", description: "Personalise your banking and enjoy the Signature experience." },
+];
 
 const Hero = ({ title, description, url, mt, top }: HeroProps) => (
   <Slide className="h-full relative w-full z-40">
@@ -38,9 +43,12 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => (
   </Slide>
 );
 
+// 	https://framerusercontent.com/images/er05LdZo66tT1ACAo4r7nUJOrs0.png?scale-down-to=1024
+
 const Home = () => {
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState<number>(1);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) => (prevIndex === dots.length ? 1 : prevIndex + 1));
@@ -63,27 +71,27 @@ const Home = () => {
           description="We provide exceptional banking solutions by leveraging technology to accelerate your financial growth."
           url="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png"
         />}
-        {dots[1].dot === activeIndex && <Hero
+        {dots[2].dot === activeIndex && <Hero
           top="mt-[44px]"
           mt="mt-[22%] ml-10"
           title="Experience Freedom"
           description="Stay ahead with on-the-go banking."
           url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
         />}
-        {dots[2].dot === activeIndex && <Slide className="h-full relative w-full z-40">
-    <div className="w-[85%] mx-auto h-full">
-      <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
-      <div className="flex justify-between items-center w-full h-full">
-        <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
-          <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">Experience Freedom</h1>
-          <p className="text-xl font-nunito text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
-          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
-        </div>
-        <div style={{backdropFilter: "blur(10px)"}} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
-          <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
-      </div>
-    </div>
-  </Slide>}
+        {dots[1].dot === activeIndex && <Slide className="h-full relative w-full z-40">
+          <div className="w-[85%] mx-auto h-full">
+            <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
+            <div className="flex justify-between items-center w-full h-full">
+              <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
+                <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">Experience Freedom</h1>
+                <p className="text-xl font-nunito text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
+                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
+              </div>
+              <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
+              <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
+            </div>
+          </div>
+        </Slide>}
         <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
           <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-16 h-7 gap-2 rounded-[20px] flex justify-center items-center">
             {dots.map((tab, index) => <div onClick={() => setActiveIndex(tab.dot)} key={index} className={`cursor-pointer ${tab.dot === activeIndex ? "bg-white" : "bg-gray-200/50"} rounded-full w-[10px] h-[10px]`}></div>)}
@@ -179,7 +187,7 @@ const Home = () => {
         </div>
       </div>
       {/*  */}
-      <div style={{ backgroundColor: "rgb(227, 212, 189)" }}>
+      <div style={{ backgroundColor: "rgb(227, 212, 189)" }} className="relative">
         <div className="w-[85%] mx-auto pt-10 pb-28">
           <div className="flex justify-center flex-col items-center w-full">
             <div className="bg-[#f1ebdf] text-[#b9975b] py-1 px-3 rounded-[50px]">Brand New</div>
@@ -193,25 +201,21 @@ const Home = () => {
                 <img className="w-full" src={appleLogo} alt="apple logo" />
               </div>
             </div>
-            <div className="h-[353px] w-full mt-10 overflow-hidden">
+            <div className="h-[353px] w-full mt-10 relative overflow-hidden">
               <div className="flex relative w-full justify-center mx-auto">
-                <img className="w-[300px] bg-cover mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
-                <img className="w-[300px] bg-cover -ml-16" src="	https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
+                <img className="w-[300px] bg-cover relative z-40 mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
+                <img className="w-[300px] bg-cover relative z-40 -ml-16" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
               </div>
+              <img className="w-[35%] absolute left-12 top-16 z-30" src="https://framerusercontent.com/images/rSYgkYVqa3gEd7bmGhOq4RkzFA.png?scale-down-to=1024" alt="" />
+              <img className="w-[35%] absolute right-2 top-1 z-30" src="https://framerusercontent.com/images/er05LdZo66tT1ACAo4r7nUJOrs0.png?scale-down-to=1024" alt="" />
             </div>
-            <div className="border-t-2 w-full rounded-sm flex pt-5">
-              <div className="flex-1 text-center">
-                <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">No Constraints</h4>
-                <p className="text-[#545c6c] leading-[24px] text-base font-nunito">Manage your transactions on our mobile banking application from anywhere you are.</p>
-              </div>
-              <div className="flex-1 text-center">
-                <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">Maximum Security</h4>
-                <p className="text-[#545c6c] leading-[24px] text-base font-nunito">Your money is safe and secured with our multi-level digital security implementations.</p>
-              </div>
-              <div className="flex-1 text-center">
-                <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">Personalized Experience</h4>
-                <p className="text-[#545c6c] leading-[24px] text-base font-nunito">Personalise your banking and enjoy the Signature experience.</p>
-              </div>
+            <div className="border-t-4 w-full flex">
+              {banks.map((bank, index) => (
+                <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center border-t-4 -mt-1 cursor-pointer pt-4 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
+                  <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">{bank.title}</h4>
+                  <p className="text-[#545c6c] leading-[24px] text-base font-nunito">{bank.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -251,7 +255,36 @@ const Home = () => {
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>
-      {/* <img width="200px" height="200px" src={curve} alt="" /> */}
+      {/* cookies */}
+      <div className="flex justify-center mx-auto relative z-50">
+        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto w-[45%] rounded-[16px] fixed bottom-3 z-50">
+          <div className="relative flex items-center justify-between p-2">
+            <div className="flex gap-4 items-center">
+              <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
+              <p className="text-main-4 text-sm leading-[1.5em] w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
+            </div>
+            <button className="bg-hex-2 whitespace-nowrap px-4 py-2 text-sm rounded-[6px] text-white font-nunito">Okay, Thanks</button>
+          </div>
+        </div>
+      </div>
+      <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] bg-white right-10 fixed bottom-3 w-[22%] z-50 h-11 px-4">
+        <div className="flex items-center h-full justify-between gap-3">
+          <div className="flex gap-2">
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+          </div>
+          <div className="flex items-center gap-3">
+            <p className="text-sm text-[#101828b3]">Social</p>
+            <div>
+              <img className="h-[14px] w-[14px]" src={closeSvg} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );
