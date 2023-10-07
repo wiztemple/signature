@@ -47,7 +47,7 @@ const Home = () => {
   };
     
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 30000);
+    const slideInterval = setInterval(nextSlide, 12000);
 
     return () => clearInterval(slideInterval);
   }, [activeIndex]);
