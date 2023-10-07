@@ -258,7 +258,7 @@ const Home = () => {
       {/* cookies */}
       <div className="flex justify-center mx-auto relative z-50">
         <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto w-[45%] rounded-[16px] fixed bottom-3 z-50">
-          <div className="relative flex items-center justify-between p-2">
+          <div className="relative flex items-center justify-between py-2 px-3">
             <div className="flex gap-4 items-center">
               <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
               <p className="text-main-4 text-sm leading-[1.5em] w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
