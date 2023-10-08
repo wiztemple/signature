@@ -41,7 +41,7 @@ export default {
         uppergray: '#dddddd',
         cardbadge: '#f8efea',
         primaryblown: '#8a4224',
-        secondaryblown: '#b05c37',
+        secondarybrown: '#b05c37',
         pink: '#ffdbed',
         alternateblack: '#0c0c0c',
         dutyblack: '#040304',

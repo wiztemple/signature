@@ -8,10 +8,11 @@ interface MegaMenu {
   spanColor2?: string;
   imageText?: ReactNode;
   imageUrl?: string;
+  position?: string;
 }
-const MegaMenu: React.FC<MegaMenu> = ({ children, bgColor, textColor, spanColor1, spanColor2, imageText, imageUrl }) => {
+const MegaMenu: React.FC<MegaMenu> = ({ children, bgColor, textColor, spanColor1, spanColor2, imageText, imageUrl, position = '-ml-32' }) => {
   return (
-    <div className={`flex w-[980px] p-10 bg-${bgColor} rounded-[20px] font-nunitoSans`}>
+    <div className={`flex w-[980px] p-10 ${bgColor} rounded-[20px] ${position} font-nunitoSans`}>
       <div className="w-3/5 flex gap-x-4">
         <div>
           {/* <span className="block text-hex-3 px-2 pb-5">Business Banking</span>

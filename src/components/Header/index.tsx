@@ -105,7 +105,7 @@ const Header = () => {
                           </Link>
                         </>
                       }
-                      bgColor="white"
+                      bgColor="bg-white"
                       textColor="hex-3"
                       spanColor1="alternate"
                       spanColor2="midblack"
@@ -166,7 +166,7 @@ const Header = () => {
                           </Link>
                         </>
                       }
-                      bgColor="charcoal"
+                      bgColor="bg-charcoal"
                       textColor="lightgold"
                       spanColor1="white"
                       spanColor2="white"
@@ -194,7 +194,7 @@ const Header = () => {
                     <MegaMenu
                       children={
                         <>
-                          <span className="block text-hex-3 px-2 pb-5">
+                          <span className="block text-secondarybrown px-2 pb-5">
                             Business Banking
                           </span>
                           <Link
@@ -228,8 +228,8 @@ const Header = () => {
                           </Link>
                         </>
                       }
-                      bgColor="white"
-                      textColor="hex-3"
+                      bgColor="bg-white"
+                      textColor="secondarybrown"
                       spanColor1="alternate"
                       spanColor2="midblack"
                       imageUrl="https://framerusercontent.com/images/hneHIfOkY3L7GZQuZWWokg6New.png"
@@ -276,7 +276,7 @@ const Header = () => {
                           </Link>
                         </>
                       }
-                      bgColor="white"
+                      bgColor="bg-white"
                       textColor="hex-3"
                       spanColor1="alternate"
                       spanColor2="midblack"
@@ -324,10 +324,11 @@ const Header = () => {
                           </Link>
                         </>
                       }
-                      bgColor="white"
+                      bgColor="bg-white"
                       textColor="hex-3"
                       spanColor1="alternate"
                       spanColor2="midblack"
+                      position="-ml-60"
                       imageUrl="https://framerusercontent.com/images/MUsbEHK8AAoO9GkfOv9Ln6zWz4I.png?scale-down-to=512"
                       imageText={
                         <span className="text-white absolute bottom-8 text-[30px] leading-[1.1em] left-8 font-bold">
@@ -357,7 +358,7 @@ const Header = () => {
         {menuContent && menuPosition && (
           <div
             ref={dropdownRef}
-            className="absolute mt-4 rounded-[20px] shadow left-0 backdrop-blur-[20px]"
+            className="absolute mt-2.5 rounded-[20px] shadow left-0 backdrop-blur-[20px]"
             style={{
               top: menuPosition?.top ?? 0,
               left: menuPosition?.left ?? 0,

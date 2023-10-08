@@ -31,9 +31,9 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => (
       <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
       <div className="flex justify-between relative z-40 items-center w-full h-full">
         <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
-          <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">{title}</h1>
-          <p className="text-xl font-nunito text-hex-8 mt-3">{description}</p>
-          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
+          <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
+          <p className="text-xl font-nunitoSans text-hex-8 mt-3">{description}</p>
+          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
         </div>
         <div className="text-black flex-1">
           <img className={`w-full h-full relative z-40 object-center bg-cover ${mt}`} src={url} alt="" />
@@ -81,9 +81,9 @@ const Home = () => {
             <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
             <div className="flex justify-between items-center w-full h-full">
               <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
-                <h1 className="text-[64px] text-hex-2 font-nunito leading-[1em] font-bold">Experience Freedom</h1>
-                <p className="text-xl font-nunito text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunito">Learn More</button>
+                <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Experience Freedom</h1>
+                <p className="text-xl font-nunitoSans text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
+                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
               </div>
               <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
               <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
@@ -100,14 +100,14 @@ const Home = () => {
         <div className="text-black w-[85%] mx-auto">
           <div className="flex lg:flex-row flex-col gap-5 py-28">
             <div className="lg:w-[30%] text-primaryblack">
-              <h2 className="text-[36px] lg:text-start text-center font-nunito font-bold leading-[44px]">All You Need </h2>
-              <h2 className="text-[36px] lg:text-start text-center font-nunito font-bold leading-[44px]">In One Place</h2>
-              <p className="text-hex-9 lg:text-start text-center text-lg font-nunito leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
+              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
+              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
+              <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-8 w-full">
               <div className="h-[384px] bg-[#f1ebdf] overflow-hidden rounded-[20px] pt-6 relative">
                 <div className="px-6">
-                  <h3 className="text-xl font-nunito font-bold text-hex-10">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
+                  <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white px-5 py-2.5">Lauching Soon</button>
                 </div>
                 <div className="w-full absolute -bottom-20 flex flex-col items-center gap-3">
@@ -119,7 +119,7 @@ const Home = () => {
               </div>
               <div style={{ backgroundColor: "rgb(255, 255, 255)" }} className="h-[340px] rounded-[20px] z-40 overflow-hidden relative">
                 <div className="z-40 relative p-6">
-                  <h3 className="text-xl font-nunito font-bold text-hex-10">Access Bespoke Banking Solutions For Your Business</h3>
+                  <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Access Bespoke Banking Solutions For Your Business</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white px-5 py-2.5">See how</button>
                 </div>
                 <div className="absolute -bottom-14 z-30">
@@ -128,7 +128,7 @@ const Home = () => {
               </div>
               <div style={{ backgroundColor: "rgb(227, 212, 189)" }} className="rounded-[20px] overflow-hidden h-[384px]">
                 <div className="z-40 relative p-6">
-                  <h3 className="text-xl font-nunito font-bold text-hex-10">Money Can&apos;t Stop You. Let&apos;s Support You.</h3>
+                  <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Money Can&apos;t Stop You. Let&apos;s Support You.</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white px-5 py-2.5">Coming soon</button>
                   <div className="mt-4">
                     <img className="bg-cover object-cover" src="https://framerusercontent.com/images/IhX3GJKlhJRxvbuaNZe0DoPnLw.png" alt="" />
@@ -138,14 +138,14 @@ const Home = () => {
               {/* SECTION2 */}
               <div style={{ backgroundColor: "rgb(27, 28, 29)" }} className="lg:h-[340px] h-[384px] rounded-[20px] relative">
                 <div className="text-white relative flex justify-end flex-col h-full w-full z-40 px-6 -mt-10">
-                  <h3 className="text-xl text-white font-nunito font-bold">Exclusive Banking That Preserves Wealth</h3>
+                  <h3 className="text-xl text-white font-nunitoSans font-bold">Exclusive Banking That Preserves Wealth</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5">Learn More</button>
                 </div>
                 {/* <div className="h-44 w-full absolute z-30 opacity-20 bottom-0 bg-black" /> */}
                 <img className="w-full h-full bg-cover left-0 top-0 z-20 absolute object-cover rounded-[20px]" src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
               </div>
               <div style={{ backgroundColor: "rgb(227, 212, 189)" }} className="lg:-mt-11 overflow-hidden rounded-[20px] h-[384px] pt-6 px-6">
-                <h3 className="text-xl font-nunito font-bold text-hex-10">Make Everyday Banking Seamless</h3>
+                <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Make Everyday Banking Seamless</h3>
                 <p className="text-base text-[#30353f] leading-[17px]">Get the Signature Bank app</p>
                 <div className="w-[130px] h-[30px] mt-2">
                   <img className="w-[80%]" src={appleLogo} alt="apple logo" />
@@ -159,8 +159,8 @@ const Home = () => {
               </div>
               <div style={{ backgroundColor: "rgb(255, 255, 255)" }} className="lg:h-[340px] h-[384px] rounded-[20px] overflow-hidden p-6">
                 <div>
-                  <h3 className="text-xl font-nunito font-bold text-hex-10">No restrictions, no limitations.</h3>
-                  <h3 className="text-xl font-nunito font-bold text-hex-10">Bank on-the-go.</h3>
+                  <h3 className="text-xl font-nunitoSans font-bold text-hex-10">No restrictions, no limitations.</h3>
+                  <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Bank on-the-go.</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5">Coming Soon</button>
                   {/* dial */}
                   <div className="gap-4 flex w-[98%] justify-center mx-auto mt-12">
@@ -189,7 +189,7 @@ const Home = () => {
         <div className="w-[85%] mx-auto pt-10 pb-28">
           <div className="flex justify-center flex-col items-center w-full">
             <div className="bg-[#f1ebdf] text-[#b9975b] py-1 px-3 rounded-[50px]">Brand New</div>
-            <h2 className="text-[36px] leading-[44px] font-nunito font-bold text-[#0f1725] mt-3">Bank on-the-go</h2>
+            <h2 className="text-[36px] leading-[44px] font-nunitoSans font-bold text-[#0f1725] mt-3">Bank on-the-go</h2>
             <p className="text-lg leading-[28px] text-hex-9 mt-3">Banking anytime, anywhere</p>
             <div className="flex justify-center gap-4 mt-3 mx-auto">
               <div className="w-[120px] h-[30px]">
@@ -210,8 +210,8 @@ const Home = () => {
             <div className="border-t-4 w-full flex lg:gap-0 gap-3 mt-4 lg:flex-row flex-col">
               {banks.map((bank, index) => (
                 <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center lg:first:bg-transparent lg:even:bg-transparent lg:last:bg-transparent first:bg-main-5 even:bg-main-6 last:bg-main-6 lg:border-t-4 -mt-1 lg:rounded-none rounded-[30px] cursor-pointer py-4 px-3 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
-                  <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">{bank.title}</h4>
-                  <p className="text-[#545c6c] leading-[24px] text-base font-nunito">{bank.description}</p>
+                  <h4 className="text-xl font-bold font-nunitoSans leading-[30px] text-primaryblack">{bank.title}</h4>
+                  <p className="text-[#545c6c] leading-[24px] text-base font-nunitoSans">{bank.description}</p>
                 </div>
               ))}
             </div>
@@ -261,7 +261,7 @@ const Home = () => {
               <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
               <p className="text-main-4 text-sm lg:text-start lg: text-center leading-[1.5em] lg:w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
             </div>
-            <button className="bg-hex-2 whitespace-nowrap lg:w-auto w-full px-4 py-2 lg:my-0 my-4 text-sm rounded-[6px] text-white font-nunito">Okay, Thanks</button>
+            <button className="bg-hex-2 whitespace-nowrap lg:w-auto w-full px-4 py-2 lg:my-0 my-4 text-sm rounded-[6px] text-white font-nunitoSans">Okay, Thanks</button>
           </div>
         </div>
       </div>

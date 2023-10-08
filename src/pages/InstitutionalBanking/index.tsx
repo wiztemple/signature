@@ -33,7 +33,7 @@ const InstitutionalBanking = () => {
       <CustomBanner
         display="block"
         scaling="px-4 pt-[68px]"
-        heroBg="bg-secondaryblown"
+        heroBg="bg-secondarybrown"
         bannerWidth="w-[69%]"
         textWidth="w-[85%]"
         top="top-[61%]"
@@ -111,7 +111,7 @@ const InstitutionalBanking = () => {
       <div className="w-[85%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-secondaryblown text-white"
+          buttonStyle="bg-secondarybrown text-white"
           titleStyle="text-alternate w-[90%]"
           imgContainer=""
           textColor="text-primarygray"
