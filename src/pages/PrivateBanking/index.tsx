@@ -2,11 +2,19 @@ import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
+import Logo from "../../assets/logo.svg";
 
 const PrivateBanking = () => {
   return (
     <div>
-      <Header />
+      <Header
+        bg="bg-[#1e191b]/70"
+        textColor1="text-white"
+        textColor2="text-white"
+        logoUrl={Logo}
+        primaryBtnClassName="bg-primaryyellow hover:bg-secondarybrown"
+        showPrimaryBtnIcon={false}
+      />
       <CustomBanner
         display="hidden"
         scaling=""
@@ -26,16 +34,27 @@ const PrivateBanking = () => {
         title2="Banking"
       />
       {/* SectionCard */}
-      <div style={{background: "linear-gradient(rgb(18, 14, 16) 0%, rgb(18, 14, 16) 100%)"}} className="text-black">
+      <div
+        style={{
+          background:
+            "linear-gradient(rgb(18, 14, 16) 0%, rgb(18, 14, 16) 100%)",
+        }}
+        className="text-black"
+      >
         <div className="w-[85%] mx-auto pb-28">
           <div className="flex justify-between pt-28">
-            <div className="text-[48px] w-[45%] font-bold leading-[1.2em] text-white font-nunitoSans">Experience the epitome of luxury banking</div>
-            <div className="w-[25%] text-uppergray text-lg font-nunitoSans">Exclusive and unparalleled access to a comprehensive suite of financial solutions</div>
+            <div className="text-[48px] w-[45%] font-bold leading-[1.2em] text-white font-nunitoSans">
+              Experience the epitome of luxury banking
+            </div>
+            <div className="w-[25%] text-uppergray text-lg font-nunitoSans">
+              Exclusive and unparalleled access to a comprehensive suite of
+              financial solutions
+            </div>
           </div>
           <SectionCard
             black="white"
-             buttonBg="bg-primaryyellow"
-          buttonColor="text-white"
+            buttonBg="bg-primaryyellow"
+            buttonColor="text-white"
             gray="text-secondarygray"
             src="	https://framerusercontent.com/images/WFEuFpta6TOIBsSSS6C6PgAGHRs.jpg?scale-down-to=1024"
             cardTitle="Exclusive Customer Privileges"
@@ -45,7 +64,7 @@ const PrivateBanking = () => {
           />
           <SectionCard
             black="white"
-             buttonBg="bg-primaryyellow"
+            buttonBg="bg-primaryyellow"
             buttonColor="text-white"
             gray="text-secondarygray"
             src="https://framerusercontent.com/images/7cZwTFEV7Sxck9AaCyerMpA3EP8.jpg"
@@ -56,7 +75,7 @@ const PrivateBanking = () => {
           />
           <SectionCard
             black="white"
-             buttonBg="bg-primaryyellow"
+            buttonBg="bg-primaryyellow"
             buttonColor="text-white"
             gray="text-secondarygray"
             src="https://framerusercontent.com/images/AVRrGV5qinCaJoJhlahT4Od4Qg4.jpg"
@@ -69,6 +88,6 @@ const PrivateBanking = () => {
         <Footer background="bg-gold" />
       </div>
     </div>
-  )
-}
+  );
+};
 export default PrivateBanking;

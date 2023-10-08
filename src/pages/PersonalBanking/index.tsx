@@ -42,7 +42,7 @@ const PersonalBanking = () => {
   return (
     <div className="bg-white">
       {/* Header */}
-      <Header />
+      <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       {/* Custom Banner */}
       <CustomBanner
         display="hidden"
