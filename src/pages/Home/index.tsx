@@ -43,8 +43,6 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => (
   </Slide>
 );
 
-// 	https://framerusercontent.com/images/er05LdZo66tT1ACAo4r7nUJOrs0.png?scale-down-to=1024
-
 const Home = () => {
 
   const [activeIndex, setActiveIndex] = useState<number>(1);
@@ -55,7 +53,7 @@ const Home = () => {
   };
     
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 12000);
+    const slideInterval = setInterval(nextSlide, 30000);
 
     return () => clearInterval(slideInterval);
   }, [activeIndex]);
@@ -100,13 +98,13 @@ const Home = () => {
       </div>
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
         <div className="text-black w-[85%] mx-auto">
-          <div className="flex gap-5 py-28">
-            <div className="w-[30%] text-primaryblack">
-              <h2 className="text-[36px] font-nunito font-bold leading-[44px]">All You Need </h2>
-              <h2 className="text-[36px] font-nunito font-bold leading-[44px]">In One Place</h2>
-              <p className="text-hex-9 text-lg font-nunito leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
+          <div className="flex lg:flex-row flex-col gap-5 py-28">
+            <div className="lg:w-[30%] text-primaryblack">
+              <h2 className="text-[36px] lg:text-start text-center font-nunito font-bold leading-[44px]">All You Need </h2>
+              <h2 className="text-[36px] lg:text-start text-center font-nunito font-bold leading-[44px]">In One Place</h2>
+              <p className="text-hex-9 lg:text-start text-center text-lg font-nunito leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
-            <div className="grid grid-cols-3 gap-5 w-full">
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-8 w-full">
               <div className="h-[384px] bg-[#f1ebdf] overflow-hidden rounded-[20px] pt-6 relative">
                 <div className="px-6">
                   <h3 className="text-xl font-nunito font-bold text-hex-10">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
@@ -138,7 +136,7 @@ const Home = () => {
                 </div>
               </div>
               {/* SECTION2 */}
-              <div style={{ backgroundColor: "rgb(27, 28, 29)" }} className="h-[340px] rounded-[20px] relative">
+              <div style={{ backgroundColor: "rgb(27, 28, 29)" }} className="lg:h-[340px] h-[384px] rounded-[20px] relative">
                 <div className="text-white relative flex justify-end flex-col h-full w-full z-40 px-6 -mt-10">
                   <h3 className="text-xl text-white font-nunito font-bold">Exclusive Banking That Preserves Wealth</h3>
                   <button className="bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5">Learn More</button>
@@ -146,7 +144,7 @@ const Home = () => {
                 {/* <div className="h-44 w-full absolute z-30 opacity-20 bottom-0 bg-black" /> */}
                 <img className="w-full h-full bg-cover left-0 top-0 z-20 absolute object-cover rounded-[20px]" src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
               </div>
-              <div style={{ backgroundColor: "rgb(227, 212, 189)" }} className="-mt-11 overflow-hidden rounded-[20px] h-[384px] pt-6 px-6">
+              <div style={{ backgroundColor: "rgb(227, 212, 189)" }} className="lg:-mt-11 overflow-hidden rounded-[20px] h-[384px] pt-6 px-6">
                 <h3 className="text-xl font-nunito font-bold text-hex-10">Make Everyday Banking Seamless</h3>
                 <p className="text-base text-[#30353f] leading-[17px]">Get the Signature Bank app</p>
                 <div className="w-[130px] h-[30px] mt-2">
@@ -159,7 +157,7 @@ const Home = () => {
                   <img className="w-[75%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                 </div>
               </div>
-              <div style={{ backgroundColor: "rgb(255, 255, 255)" }} className="h-[340px] rounded-[20px] overflow-hidden p-6">
+              <div style={{ backgroundColor: "rgb(255, 255, 255)" }} className="lg:h-[340px] h-[384px] rounded-[20px] overflow-hidden p-6">
                 <div>
                   <h3 className="text-xl font-nunito font-bold text-hex-10">No restrictions, no limitations.</h3>
                   <h3 className="text-xl font-nunito font-bold text-hex-10">Bank on-the-go.</h3>
@@ -203,15 +201,15 @@ const Home = () => {
             </div>
             <div className="h-[353px] w-full mt-10 relative overflow-hidden">
               <div className="flex relative w-full justify-center mx-auto">
-                <img className="w-[300px] bg-cover relative z-40 mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
-                <img className="w-[300px] bg-cover relative z-40 -ml-16" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
+                <img className="w-[300px] bg-cover lg:block hidden relative z-40 mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
+                <img className="w-[300px] bg-cover relative z-40 lg:-ml-16" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
               </div>
               <img className="w-[35%] absolute left-12 top-16 z-30" src="https://framerusercontent.com/images/rSYgkYVqa3gEd7bmGhOq4RkzFA.png?scale-down-to=1024" alt="" />
               <img className="w-[35%] absolute right-2 top-1 z-30" src="https://framerusercontent.com/images/er05LdZo66tT1ACAo4r7nUJOrs0.png?scale-down-to=1024" alt="" />
             </div>
-            <div className="border-t-4 w-full flex">
+            <div className="border-t-4 w-full flex lg:gap-0 gap-3 mt-4 lg:flex-row flex-col">
               {banks.map((bank, index) => (
-                <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center border-t-4 -mt-1 cursor-pointer pt-4 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
+                <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center lg:first:bg-transparent lg:even:bg-transparent lg:last:bg-transparent first:bg-main-5 even:bg-main-6 last:bg-main-6 lg:border-t-4 -mt-1 lg:rounded-none rounded-[30px] cursor-pointer py-4 px-3 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
                   <h4 className="text-xl font-bold font-nunito leading-[30px] text-primaryblack">{bank.title}</h4>
                   <p className="text-[#545c6c] leading-[24px] text-base font-nunito">{bank.description}</p>
                 </div>
@@ -222,18 +220,18 @@ const Home = () => {
       </div>
       <div className="bg-white flex justify-center items-center flex-col py-28">
         <h2 className="text-primaryblack text-[36px] leading-[44px] font-bold">Latest Publications</h2>
-        <p className="text-[#667084] text-xl leading-[30px] mt-4">The latest news, publications, and resources from our team.</p>
-        <div className="flex gap-4 w-[75%] mx-auto h-[240px] mt-14">
-          <div className="flex-1 flex gap-4">
-            <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
+        <p className="text-[#667084] text-xl lg:text-start text-center leading-[30px] mt-4">The latest news, publications, and resources from our team.</p>
+        <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[85%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
+          <div className="flex-1 flex lg:flex-row flex-col gap-4">
+            <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
             <div >
               <h2 className="text-lg text-main-3 font-bold">CBN provides further update to the guidelines in the Foreign Exchange Market.</h2>
               <p className="text-base text-primarygray">The Director of Corporate Communications, Dr Isa AbdulMumin, has announced further policy changes in relation to FX which is aimed at…</p>
               <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button>
             </div>
           </div>
-          <div className="flex-1 flex gap-4">
-            <img className="rounded-[24px] w-[240px] h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
+          <div className="flex-1 flex lg:flex-row flex-col gap-4">
+            <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
             <div >
               <h2 className="text-lg text-main-3 font-bold">Excitement as Signature Bank launches operation</h2>
               <p className="text-base text-primarygray">Signature Bank, on Monday, November 21, 2022 launched its operations into the Nigerian banking sector with unique services that are expected to deepen Nigeria's financial inclusion, targeting over 40 million…</p>
@@ -257,17 +255,17 @@ const Home = () => {
       </div>
       {/* cookies */}
       <div className="flex justify-center mx-auto relative z-50">
-        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto w-[45%] rounded-[16px] fixed bottom-3 z-50">
-          <div className="relative flex items-center justify-between py-2 px-3">
-            <div className="flex gap-4 items-center">
+        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto lg:w-[45%] w-[85%] rounded-[16px] justify-center fixed bottom-3 z-50">
+          <div className="relative flex lg:flex-row flex-col items-center justify-between py-2 px-3">
+            <div className="flex lg:flex-row flex-col gap-4 items-center">
               <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
-              <p className="text-main-4 text-sm leading-[1.5em] w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
+              <p className="text-main-4 text-sm lg:text-start lg: text-center leading-[1.5em] lg:w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
             </div>
-            <button className="bg-hex-2 whitespace-nowrap px-4 py-2 text-sm rounded-[6px] text-white font-nunito">Okay, Thanks</button>
+            <button className="bg-hex-2 whitespace-nowrap lg:w-auto w-full px-4 py-2 lg:my-0 my-4 text-sm rounded-[6px] text-white font-nunito">Okay, Thanks</button>
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] bg-white right-10 fixed bottom-3 w-[22%] z-50 h-11 px-4">
+      <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] lg:block hidden bg-white right-10 fixed bottom-3 w-[22%] z-50 h-11 px-4">
         <div className="flex items-center h-full justify-between gap-3">
           <div className="flex gap-2">
             <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
