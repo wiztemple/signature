@@ -6,7 +6,7 @@ const Media = () => {
   return (
     <div className="bg-white">
       <Header />
-      <div className="pt-[270px] pb-24 bg-[#f9f5f8]">
+      <div className="pt-[230px] pb-16 bg-[#f9f5f8]">
         <h1 className="text-center text-7xl font-bold text-alternate">
           Media & Publications
         </h1>
