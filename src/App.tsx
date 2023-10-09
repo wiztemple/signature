@@ -8,6 +8,7 @@ import InstitutionalBanking from "./pages/InstitutionalBanking";
 import DigitalBanking from "./pages/DigitalBanking";
 import Media from "./pages/Media";
 import Careers from "./pages/Careers";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/media" element={<Media />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/personal-banking" element={<PersonalBanking />} />

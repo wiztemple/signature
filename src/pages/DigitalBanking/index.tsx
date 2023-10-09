@@ -98,7 +98,7 @@ const DigitalBanking = () => {
           </div>
         </div>
         {/*  */}
-        <div className="grid grid-cols-2 gap-10 mt-20">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
           <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em] font-nunito">
@@ -203,15 +203,15 @@ const DigitalBanking = () => {
           </div>
         </div>
       </div>
-      <div className="w-[85%] mx-auto py-14">
+      <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-[#ba975a]"
           buttonStyle="bg-hex-2 text-white"
           titleStyle="text-white w-[90%]"
-          imgContainer="w-[40%]"
+          imgContainer=""
           textColor="text-white"
-          title="Experience limitless banking services"
-          description="Open an account with us in a few simple steps."
+          title="Open an account with us in a few simple steps."
+          description="Open an account with us and enjoy the benefits of personalized banking services."
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />

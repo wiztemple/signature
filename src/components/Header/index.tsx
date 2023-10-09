@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({
                 <a href="/" className={`${textColor1} text-sm py-2.5 px-3`}>
                   Home
                 </a>
-                <a href="#" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a href="/about-us" className={`${textColor1} text-sm py-2.5 px-3`}>
                   About Us
                 </a>
                 <Link

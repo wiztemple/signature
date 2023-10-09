@@ -51,12 +51,12 @@ const PrivateBanking = () => {
         }}
         className="text-black"
       >
-        <div className="w-[85%] mx-auto pb-28">
-          <div className="flex justify-between pt-28">
-            <div className="text-[48px] w-[45%] font-bold leading-[1.2em] text-white font-nunitoSans">
+        <div className="lg:w-[85%] w-[90%] mx-auto pb-28">
+          <div className="flex lg:flex-row flex-col justify-between pt-28">
+            <div className="text-[48px] lg:w-[45%] font-bold leading-[1.2em] text-white font-nunitoSans">
               Experience the epitome of luxury banking
             </div>
-            <div className="w-[25%] text-uppergray text-lg font-nunitoSans">
+            <div className="lg:w-[25%] lg:mt-0 mt-4 text-uppergray text-lg font-nunitoSans">
               Exclusive and unparalleled access to a comprehensive suite of
               financial solutions
             </div>
@@ -66,7 +66,7 @@ const PrivateBanking = () => {
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
             gray="text-secondarygray"
-            src="	https://framerusercontent.com/images/WFEuFpta6TOIBsSSS6C6PgAGHRs.jpg?scale-down-to=1024"
+            src="https://framerusercontent.com/images/WFEuFpta6TOIBsSSS6C6PgAGHRs.jpg?scale-down-to=1024"
             cardTitle="Exclusive Customer Privileges"
             cardDescription="Enjoy exclusive privileges that encompass discretionary service, exclusive event invitations, networking opportunities and a host of other offerings meticulously designed to elevate your financial well-being."
             flexRow=""

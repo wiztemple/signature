@@ -28,11 +28,11 @@ const banks: { title: string, description: string }[] = [
 
 const Hero = ({ title, description, url, mt, top }: HeroProps) => (
   <Slide className="h-full relative w-full z-40">
-    <div className="w-[85%] mx-auto h-full">
+    <div className="lg:w-[85%] w-[90%] mx-auto h-full">
       <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
-      <div className="flex justify-between relative z-40 items-center w-full h-full">
-        <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
-          <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
+      <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
+        <div className={`text-black lg:w-[45%] relative z-30 ${top} relative`}>
+          <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
           <p className="text-xl font-nunitoSans text-hex-8 mt-3">{description}</p>
           <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
         </div>
@@ -62,8 +62,8 @@ const Home = () => {
   return (
     <div className="font-nunitoSans bg-white">
       <Header primaryBtnClassName="bg-hex-2" />
-      <div className="h-screen bg-[#f9fafb] overflow-hidden">
       <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
+      <div className="h-screen lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex && <Hero
           top="mt-[14%]"
           mt="mt-[17%] ml-24"
@@ -98,9 +98,26 @@ const Home = () => {
           </div>
         </div>
       </div>
+       <div className="h-screen lg:hidden block bg-[#f9fafb] overflow-hidden py-20">
+          <div className="h-full relative w-full z-40">
+    <div className="w-[90%] mx-auto h-full">
+      <img className='absolute top-20 z-20 w-full rotate overflow-hidden' src={bannerSvg} alt="banner svg" />
+      <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full mt-24 h-full">
+        <div className={`text-black z-30 relative`}>
+          <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Unlock Limitless Possibilities</h1>
+          <p className="text-xl font-nunitoSans text-hex-8 mt-3">We provide exceptional banking solutions by leveraging technology to accelerate your financial growth.</p>
+          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+        </div>
+        <div className="text-black flex-1">
+          <img className={`w-full h-full relative z-40 object-center bg-cover`} src="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+        </div>
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
         <div className="text-black w-[85%] mx-auto">
-          <div className="flex lg:flex-row flex-col gap-5 py-28">
+          <div className="flex lg:flex-row flex-col gap-5 lg:py-28 py-10">
             <div className="lg:w-[30%] text-primaryblack">
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
@@ -256,8 +273,8 @@ const Home = () => {
         />
       </div>
       {/* cookies */}
-      <div className="flex justify-center mx-auto relative z-50">
-        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto lg:w-[45%] w-[85%] rounded-[16px] justify-center fixed bottom-3 z-50">
+      <div className="flex justify-center mx-auto">
+        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto w-[80%] rounded-[16px] justify-center fixed bottom-3 z-40">
           <div className="relative flex lg:flex-row flex-col items-center justify-between py-2 px-3">
             <div className="flex lg:flex-row flex-col gap-4 items-center">
               <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
@@ -285,7 +302,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Footer />
+        <Footer />
     </div>
   );
 };
