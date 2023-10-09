@@ -101,12 +101,12 @@ const InstitutionalBanking = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#fcf8fb] text-black py-20">
+      <div className="bg-[#fcf8fb] text-black lg:py-20 py-10">
         <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] text-[48px] font-nunitoSans font-bold leading-[-0.96px] text-center">
+          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-nunitoSans font-bold leading-[-0.96px] text-center">
             Built for the future, built for your progress.
           </h1>
-          <p className="text-center text-2xl text-[#101828] mt-3 mb-20">
+          <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">
             We take pride in offering you a superior banking experience
           </p>
           <SectionCard
