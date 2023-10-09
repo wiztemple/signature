@@ -76,17 +76,17 @@ const InstitutionalBanking = () => {
       />
       <div className="bg-white text-black">
         <div className="w-[85%] mx-auto">
-          <div className="flex justify-between py-28">
-            <div className="text-[40px] w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
+          <div className="flex lg:flex-row flex-col justify-between lg:py-28 py-10">
+            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
               Banking solutions that deliver growth and sustainability.
             </div>
-            <div className="w-[340px] text-[#555d68] text-lg font-nunitoSans">
+            <div className="lg:w-[340px] text-[#555d68] text-lg lg:mt-0 mt-4 font-nunitoSans">
               With a commitment to excellence, we offer tailored solutions
               designed to meet the specific requirements of large institutions
               with diverse banking needs.
             </div>
           </div>
-          <div className="grid grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
+          <div className="grid lg:grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
                 key={index}

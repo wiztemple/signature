@@ -75,16 +75,16 @@ const Business = () => {
       />
       <div className="bg-white text-black">
         <div className="w-[85%] mx-auto">
-          <div className="flex justify-between py-28">
-            <div className="text-[40px] w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
+          <div className="flex lg:flex-row flex-col justify-between lg:py-28 py-10">
+            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
               Banking services designed to grow your business
             </div>
-            <div className="w-[340px] text-[#555d68] text-lg font-nunitoSans">
+            <div className="lg:w-[340px] text-[#555d68] lg:mt-0 mt-4 text-lg font-nunitoSans">
               Empowering you with the tools to drive your business forward and
               achieve your goals.
             </div>
           </div>
-          <div className="grid grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
+          <div className="grid lg:grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
             {cards.map((card, index) => (
               <Card
                 key={index}
@@ -99,12 +99,12 @@ const Business = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#fcf8fb] text-black py-20">
+      <div className="bg-[#fcf8fb] text-black lg:py-20 py-5">
         <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] text-[48px] font-nunitoSans font-bold leading-[-0.96px] text-center">
-            Built for the future, built for your progress.
+          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-nunitoSans font-bold leading-[-0.96px] text-center">
+           Access simple business solutions that will certainly put your business ahead.
           </h1>
-          <p className="text-center text-2xl text-[#101828] mt-3 mb-20 font-nunitoSans">
+          <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20 font-nunitoSans">
             We take pride in offering you a superior banking experience
           </p>
           <SectionCard
