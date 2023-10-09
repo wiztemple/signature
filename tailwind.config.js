@@ -16,7 +16,8 @@ export default {
           6: '#E8E1C9',
           7: '#f9f5f8',
           8: '#f9fafb',
-          9: '#fcf8fb'
+          9: '#fcf8fb',
+          10: '#A61890',
         },
         hex: {
           1: '#5a193a',

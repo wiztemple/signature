@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 
+
 const cores: { url: string, title: string }[] = [
   { url: 'https://framerusercontent.com/images/kdWsYkM6W1ZYYue2sN2HV0eZrM.png', title: 'Professionalism' },
   { url: 'https://framerusercontent.com/images/08l356m0NnV0oaxhH7WmxRuqk.png', title: 'Audacity' },
@@ -32,13 +33,30 @@ const boardOfManagers: { url: string, name: string, title: string, alt: string }
   { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
 ];
 
+const slides: { name: string, url: string, path: string, alt: string, stroke:string, color: string }[] = [
+  { color: 'bg-main-10/60', stroke: "stroke-main-10", name: 'Personal Banking', path: '/personal-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/0pkpx4EoTB98LDipRi3Fsa17t2U.jpg' },
+  { color: 'bg-primaryblown/60',stroke: "stroke-primaryblown", name: 'Private Banking', path: '/private-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/AVRrGV5qinCaJoJhlahT4Od4Qg4.jpg?scale-down-to=512' },
+  { color: 'bg-primaryyellow/60',stroke: "stroke-primaryyellow", name: 'Business Banking', path: '/business-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png?scale-down-to=512' },
+  { color: 'bg-hex-2/60',stroke: "stroke-hex-2", name: 'Institutional Banking', path: '/institutional-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/SiwzAOftQDTO4naBSmAOBMWkQJg.jpg' },
+  {color: 'bg-primaryyellow/60', stroke: "stroke-primaryyellow", name: 'Digital Banking', path: '/digital-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/csHFzMjSvWHg0OXUzrTfKLl52s.jpg' },
+  { color: 'bg-main-10/60',stroke: "stroke-main-10", name: 'Personal Banking', path: '/personal-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/0pkpx4EoTB98LDipRi3Fsa17t2U.jpg' },
+  {color: 'bg-primaryblown/60', stroke: "stroke-primaryblown", name: 'Private Banking', path: '/private-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/AVRrGV5qinCaJoJhlahT4Od4Qg4.jpg?scale-down-to=512' },
+  {color: 'bg-primaryyellow/60', stroke: "stroke-primaryyellow", name: 'Business Banking', path: '/business-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png?scale-down-to=512' },
+  { color: 'bg-hex-2/60',stroke: "stroke-hex-2", name: 'Institutional Banking', path: '/institutional-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/SiwzAOftQDTO4naBSmAOBMWkQJg.jpg' },
+  { color: 'bg-primaryyellow/60',stroke: "stroke-primaryyellow", name: 'Digital Banking', path: '/digital-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/csHFzMjSvWHg0OXUzrTfKLl52s.jpg' },
+];
+
 const AboutUs = () => {
+
+  const [onFous, setOnFocus] = useState<boolean>(false);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const [activeTab, setActiveTab] = useState<string | undefined>("directors");
 const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
     const { value } = event.currentTarget.dataset;
     setActiveTab(value);
 };
+  
   
   return (
     <div className="bg-white">
@@ -48,16 +66,28 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
           <h1 className="text-[64px] text-black leading-[1.2em] font-nunito text-center font-bold">Built on trust, service and innovation</h1>
           <p className="text-lg text-hex-11 font-nunito text-center px-10 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
         </div>
-        <div className="h-[257px] relative w-full">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent z-50 via-main-7 text-black to-transparent">
-            <div className="flex">
-              <div className="relative w-[180px] h-[203px]">
-                <svg className="absolute z-40" width="180" height="203" viewBox="0 0 180 203" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.5" d="M175 119.5V128C175 166.66 143.66 198 105 198H75C36.34 198 5 166.66 5 128V119.5M175 83.5V75C175 36.34 143.66 5 105 5H75C36.34 5 5 36.34 5 75V83.5" stroke="#6C1D45" stroke-width="10" stroke-miterlimit="10" stroke-linecap="round" />
+        <div className="relative overflow-hidden">
+          <div className="" />
+            <div className="flex relative w-[3000px] z-20 gap-20 h-[257px]">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                onMouseEnter={() => {
+                  setOnFocus(true)
+                  setCurrentIndex(index)
+                }}
+              onMouseLeave={() => setOnFocus(false)} className="relative cursor-pointer w-[180px] h-[203px]">
+                <svg className={`absolute ${slide.stroke} z-40`} width="180" height="203" viewBox="0 0 180 203" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.5" d="M175 119.5V128C175 166.66 143.66 198 105 198H75C36.34 198 5 166.66 5 128V119.5M175 83.5V75C175 36.34 143.66 5 105 5H75C36.34 5 5 36.34 5 75V83.5" strokeWidth="10" strokeMiterlimit="10" strokeLinecap="round" />
                 </svg>
-                <img className="rounded-[60px] left-5 top-[22px] absolute w-[140px] h-[160px] bg-cover object-cover" src="https://framerusercontent.com/images/WFEuFpta6TOIBsSSS6C6PgAGHRs.jpg?scale-down-to=1024" alt="" />
+              <img className="rounded-[60px] left-5 top-[22px] absolute w-[140px] h-[160px] bg-cover object-cover" src={slide.url} alt={slide.alt} />
+              {(onFous === true && currentIndex === index) && <div className={`rounded-[60px] ease-in-out text-center delay-500 duration-1000 transition-all inset-0 left-5 top-[22px] absolute text-white w-[140px] z-40 h-[160px] ${slide.color}`}>
+                <a href={slide.path} className="flex justify-center text-base font-bold text-white relative z-50 items-center h-full">
+                  {slide.name}
+                </a>
+              </div>}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -123,8 +153,8 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
            <h1 className="text-[48px] text-center font-bold text-primaryblack tracking-[-0.96px]">Our Outstanding Leadership</h1>
           <p className="text-lg leading-[28px] text-center font-nunito text-primarygray mx-auto w-[55%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
 
-          <div className="flex justify-center">
-            <div className="bg-white w-fit  flex gap-[96px] p-5 rounded-[20px]">
+          <div className="flex justify-center mt-10">
+            <div className="bg-white w-fit flex gap-[96px] p-5 rounded-[20px]">
               <button
                 type="button"
                 className={`py-3 text-xl text-[#9999] border-b-2 border-b-2-transparent font-medium focus:outline-none ${
@@ -150,33 +180,21 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
               </button>
             </div>
           </div>
-          {activeTab === "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
+          {activeTab === "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10 grid-rows-3">
             {boardOfDirectors.map((dierctor, index:number) => (
               <div key={index} className="mb-20">
-              <div className="h-[396px] border rounded-[90px]" />
-              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
+              <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={dierctor.url} alt={dierctor.alt} />
                 <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{dierctor.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{dierctor.title}</p>
             </div>
             ))}
           </div>)}
-          {activeTab == "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
+          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10 grid-rows-3">
             {boardOfManagers.map((manager, index:number) => (
               <div key={index} className="mb-20">
-              <div className="h-[396px] border rounded-[90px]" />
-              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
+              <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={manager.url} alt={manager.alt} />
                 <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{manager.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{manager.title}</p>
-            </div>
-            ))}
-          </div>)}
-          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
-            {boardOfDirectors.map((board, index:number) => (
-              <div key={index} className="mb-20">
-              <div className="h-[396px] border rounded-[90px]" />
-              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
-                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{board.name}</h3>
-                <p className="text-[18.78px] text-alternatew text-center mt-2">{board.title}</p>
             </div>
             ))}
           </div>)}
