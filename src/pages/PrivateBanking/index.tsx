@@ -62,6 +62,7 @@ const PrivateBanking = () => {
             </div>
           </div>
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
@@ -73,6 +74,7 @@ const PrivateBanking = () => {
             display="block"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
@@ -84,6 +86,7 @@ const PrivateBanking = () => {
             display="block"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"

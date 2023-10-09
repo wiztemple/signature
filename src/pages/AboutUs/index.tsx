@@ -4,17 +4,37 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 
-const cores:{url: string, title: string}[] = [
-  {url: 'https://framerusercontent.com/images/kdWsYkM6W1ZYYue2sN2HV0eZrM.png', title:'Professionalism'},
-  {url: 'https://framerusercontent.com/images/08l356m0NnV0oaxhH7WmxRuqk.png', title:'Audacity'},
-  {url: 'https://framerusercontent.com/images/tuKO3HicS4R6iPXfgGFr9tPBTc.png', title:'Creativity'},
-  {url: '	https://framerusercontent.com/images/Z4NOytugSYGsrckr0AYs8OjFA0.png', title:'Trust'},
-  {url: 'https://framerusercontent.com/images/NWrEQPq8NCfSfgvCLUfwRybYxac.png', title:'Service Excellence'}
-]
+const cores: { url: string, title: string }[] = [
+  { url: 'https://framerusercontent.com/images/kdWsYkM6W1ZYYue2sN2HV0eZrM.png', title: 'Professionalism' },
+  { url: 'https://framerusercontent.com/images/08l356m0NnV0oaxhH7WmxRuqk.png', title: 'Audacity' },
+  { url: 'https://framerusercontent.com/images/tuKO3HicS4R6iPXfgGFr9tPBTc.png', title: 'Creativity' },
+  { url: '	https://framerusercontent.com/images/Z4NOytugSYGsrckr0AYs8OjFA0.png', title: 'Trust' },
+  { url: 'https://framerusercontent.com/images/NWrEQPq8NCfSfgvCLUfwRybYxac.png', title: 'Service Excellence' }
+];
+
+const boardOfDirectors: { url: string, name: string, title: string, alt: string }[] = [
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+];
+
+const boardOfManagers: { url: string, name: string, title: string, alt: string }[] = [
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+];
 
 const AboutUs = () => {
 
-  const [activeTab, setActiveTab] = useState<string | undefined>("downloads");
+  const [activeTab, setActiveTab] = useState<string | undefined>("directors");
 const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
     const { value } = event.currentTarget.dataset;
     setActiveTab(value);
@@ -71,6 +91,7 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
           </div>
           <div className="pb-14">
             <SectionCard
+              extraClass="w-[80%]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -82,6 +103,7 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
             display="hidden"
           />
           <SectionCard
+            extraClass="w-[80%]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -106,28 +128,58 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
               <button
                 type="button"
                 className={`py-3 text-xl text-[#9999] border-b-2 border-b-2-transparent font-medium focus:outline-none ${
-                  activeTab === "downloads" && "text-hex-2 border-b-hex-2"
+                  activeTab === "directors" && "text-hex-2 border-b-hex-2"
                 }`}
                 onClick={toggleTab}
-                id="downloads"
-                data-value="downloads"
+                id="directors"
+                data-value="directors"
               >
                 board of Directors
               </button>
               <button
                 type="button"
                 className={`rounded py-3 text-xl font-medium text-[#9999] focus:outline-none ${
-                  activeTab === "media" &&
+                  activeTab === "managers" &&
                   "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
                 }`}
                 onClick={toggleTab}
-                id="media"
-                data-value="media"
+                id="managers"
+                data-value="managers"
               >
                 Executive Team
               </button>
             </div>
           </div>
+          {activeTab === "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
+            {boardOfDirectors.map((dierctor, index:number) => (
+              <div key={index} className="mb-20">
+              <div className="h-[396px] border rounded-[90px]" />
+              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
+                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{dierctor.name}</h3>
+                <p className="text-[18.78px] text-alternatew text-center mt-2">{dierctor.title}</p>
+            </div>
+            ))}
+          </div>)}
+          {activeTab == "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
+            {boardOfManagers.map((manager, index:number) => (
+              <div key={index} className="mb-20">
+              <div className="h-[396px] border rounded-[90px]" />
+              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
+                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{manager.name}</h3>
+                <p className="text-[18.78px] text-alternatew text-center mt-2">{manager.title}</p>
+            </div>
+            ))}
+          </div>)}
+          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 grid-rows-3">
+            {boardOfDirectors.map((board, index:number) => (
+              <div key={index} className="mb-20">
+              <div className="h-[396px] border rounded-[90px]" />
+              {/* <img src="	https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024" alt="Dr. Mutiu Sunmonu, CON" /> */}
+                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{board.name}</h3>
+                <p className="text-[18.78px] text-alternatew text-center mt-2">{board.title}</p>
+            </div>
+            ))}
+          </div>)}
              </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">

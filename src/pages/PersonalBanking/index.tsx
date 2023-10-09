@@ -94,6 +94,7 @@ const PersonalBanking = () => {
           <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-nunitoSans font-bold lg:leading-[-0.96px] text-center">Built for the future, built for your progress.</h1>
           <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">We take pride in offering you a superior banking experience</p>
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -105,6 +106,7 @@ const PersonalBanking = () => {
             display="hidden"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -116,6 +118,7 @@ const PersonalBanking = () => {
             display="hidden"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""

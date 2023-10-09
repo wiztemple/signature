@@ -110,6 +110,7 @@ const InstitutionalBanking = () => {
             We take pride in offering you a superior banking experience
           </p>
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -121,6 +122,7 @@ const InstitutionalBanking = () => {
             display="hidden"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -132,6 +134,7 @@ const InstitutionalBanking = () => {
             display="hidden"
           />
           <SectionCard
+          extraClass="xl:w-[570px]"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
