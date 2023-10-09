@@ -274,7 +274,7 @@ const Home = () => {
       </div>
       {/* cookies */}
       <div className="flex justify-center mx-auto">
-        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto w-[80%] rounded-[16px] justify-center fixed bottom-3 z-40">
+        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto lg:w-[45%] w-[80%] rounded-[16px] justify-center fixed bottom-3 z-40">
           <div className="relative flex lg:flex-row flex-col items-center justify-between py-2 px-3">
             <div className="flex lg:flex-row flex-col gap-4 items-center">
               <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
