@@ -1,21 +1,24 @@
 import Logo from '../../assets/logo.svg'
 const Footer = ({ background = 'bg-hex-2' }) => {
   return (
-    <footer className={`w-full ${background}`}>
-      <div className="sm:p-[100px] p-5">
+    <footer className={`w-full ${background} `}>
+      <div className="lg:p-[100px] p-5">
         <div className="flex flex-col flex-nowrap h-min justify-start items-start w-full relative">
-          <div className="sm:flex flex-row justify-between flex-nowrap pb-16 w-full relative h-min border-b border-b-[#894a69]">
+          <div className="lg:flex lg:flex-row flex-col justify-between flex-nowrap pb-16 w-full relative h-min border-b border-b-[#894a69]">
             <div className="flex flex-1 flex-grow-0 flex-shrink-0 items-start gap-2 flex-nowrap h-min overflow-visible relative  justify-start p-0">
               <div className="w-full relative h-auto whitespace-pre break-words outline-none flex gap-2 flex-col justify-start shrink-0 text-white">
                 <p className="text-xl font-bold leading-[30px]">
                   Stay informed. Join our newsletter
                 </p>
-                <p className="leading-6 w-full break-after-all break-words text-main-1">
-                  Get up-to-date information about products and services that will help build and sustain your finances.
+                <p className="leading-6 w-full break-after-all break-words text-main-1 lg:hidden block pb-8">
+                  Get up-to-date information about products <br /> and services that will help build and sustain <br /> your finances.
+                </p>
+                <p className="leading-6 w-full break-after-all break-words text-main-1 lg:block hidden">
+                  Get up-to-date information about products and services that will help build and sustain  your finances.
                 </p>
               </div>
             </div>
-            <div className="sm:w-[430px] w-full h-auto relative">
+            <div className="lg:w-[430px] w-full h-auto relative">
               <div className="w-full relative flex justify-center items-center">
                 <form className="w-full gap-[15px] flex" method="POST">
                   <input

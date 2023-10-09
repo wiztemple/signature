@@ -8,6 +8,7 @@ import appleLogo from "../../assets/apple.svg";
 import cookieSvg from "../../assets/cookie.svg";
 import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
+import MobileHeader from "../../components/MobileHeader";
 
 interface HeroProps {
   title: string
@@ -60,8 +61,9 @@ const Home = () => {
   
   return (
     <div className="font-nunitoSans bg-white">
-      <Header />
+      <Header primaryBtnClassName="bg-hex-2" />
       <div className="h-screen bg-[#f9fafb] overflow-hidden">
+      <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
         {dots[0].dot === activeIndex && <Hero
           top="mt-[14%]"
           mt="mt-[17%] ml-24"

@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import Logo from "../../assets/logo.svg";
+import MobileHeader from "../../components/MobileHeader";
 
 const cards: {
   url: string;
@@ -45,6 +46,15 @@ const InstitutionalBanking = () => {
         logoUrl={Logo}
         showPrimaryBtnIcon={false}
         primaryBtnClassName="bg-transparent border-white !py-2.5 hover:bg-primaryyellow hover:border-primaryyellow border-white"
+      />
+         <MobileHeader
+        bg="bg-[#1e191b]/70"
+        textColor1="text-white"
+        textColor2="text-white"
+        primaryBtnClassName="bg-primaryyellow hover:bg-secondarybrown !py-2.5"
+        showPrimaryBtnIcon={false}
+        logoUrl={Logo}
+        strokeColor="white"
       />
       <CustomBanner
         display="block"

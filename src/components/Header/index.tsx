@@ -4,7 +4,6 @@ import Rocket from "../../assets/rocket.svg";
 import MenuCard from "../MenuCard";
 import { Link } from "react-router-dom";
 import MegaMenu from "../MegaMenu";
-import MobileHeader from "../MobileHeader";
 
 interface MenuPosition {
   top: number;
@@ -45,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({
   };
   return (
     <>
-      <div className="fixed h-auto w-screen z-50 sm:block hidden">
+      <div className="fixed h-auto w-screen z-50 lg:block hidden">
         <div
           className={`px-[50px] bg-transparent backdrop-blur-[20px] opacity-100 relative`}
         >
@@ -398,7 +397,6 @@ const Header: React.FC<HeaderProps> = ({
           )}
         </div>
       </div>
-      <MobileHeader />
     </>
   );
 };

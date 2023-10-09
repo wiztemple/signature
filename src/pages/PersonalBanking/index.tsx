@@ -3,6 +3,7 @@ import Card from "../../components/Card";
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import MobileHeader from "../../components/MobileHeader";
 import SectionCard from "../../components/SectionCard";
 
 const cards: { url: string, title: string, description: string, buttonName: string }[] = [
@@ -43,6 +44,9 @@ const PersonalBanking = () => {
     <div className="bg-white">
       {/* Header */}
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
+      <MobileHeader
+        primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white"
+      />
       {/* Custom Banner */}
       <CustomBanner
         display="hidden"
