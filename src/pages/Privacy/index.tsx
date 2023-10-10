@@ -250,7 +250,7 @@ const Privacy = () => {
             <div id="requet" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Possible Constraints Associated with Your Request</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">Refusing to provide us with your personal information may drastically affect our ability to assist you with our banking services and it may deny you the right to benefit from specific products or services. Furthermore, it should be noted that your request to rectify, erase, stop an automated decision or restrict the use of your personal data, may have an implication with respect to some or all of the services and products that you are benefiting from and that it is the Bank’s right to unilaterally suspend or terminate the business relationship and any or all of the services/products you are benefiting from as a result of any legal or operational implication that may result due to your request.</p>
-              </div>
+            </div>
             <div id="policy" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Retention Policy</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">The Bank will abide by its information retention policies with respect to your personal information and will ensure that they are securely disposed of at the end of the appropriate retention period as described below: </p>
@@ -268,19 +268,19 @@ const Privacy = () => {
             <div id="amendment" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Privacy Policy Amendment</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">We constantly review our policies and attempt to keep them up to date. Accordingly, we may change this Data Protection and Privacy Notice from time to time as the need arises. Any changes we may make to this Notice in the future will be posted on this page.</p>
-              </div>
+            </div>
             <div id="sites" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Third Party Sites</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">The Bank&apos;s website may contain links to other websites that may be of interest to our website visitors, for example: payment provider, advertising, LinkedIn, Facebook, YouTube, Instagram etc. Please be notified that we are not responsible for the privacy practices of other websites. We encourage you to be aware and read the privacy statements of each website that collects your personally identifiable information.</p>
-              </div>
+            </div>
             <div id="cookies" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Cookies</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">For the purpose of enhancing your experience when browsing the Bank&apos;s website, sometimes, we may use cookies to distinguish you from other users. Please refer to our “Cookies Disclaimer” for more details with respect to the cookies that we use and their purpose.</p>
-              </div>
+            </div>
             <div id="contact" className="mt-10">
               <h2 className="text-[30px] text-black font-bold">Contact us</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">For any request concerning the applied Data Protection and Privacy Notice, please contact our assigned Data Protection Officer on the following e-mail: <a className="text-hex-2" href="mailto:dpo@signaturebankng.com">dpo@signaturebankng.com</a> You can also reach us on the contact details stated under the <span className="text-hex-2">&quot;Contact Us&quot;</span> menu on our homepage (<a className="text-hex-2" href="https://signaturebankng.com">https://signaturebankng.com</a>).</p>
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -300,18 +300,6 @@ const Privacy = () => {
       <Footer />
     </div>
   );
-}
-
-{/* <div  className="mt-10">
-              <h2 className="text-[30px] text-black font-bold">Commitment to Protect Your Privacy</h2>
-              <p className="text-primarygray text-base leading-[2em] mt-2">The purpose of this Data Protection and Privacy Notice is to inform you about:</p>
-              </div>
-            
-            <li className="text-primarygray text-base leading-[2em] items-center">
-                <span className="-ml-2">The personal information we may process on you. </span>
-              </li>
-            
-            */}
-
+};
 
 export default Privacy;
