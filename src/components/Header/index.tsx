@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({
                 <a href="media" className={`${textColor1} text-sm py-2.5 px-3`}>
                   Media
                 </a>
-                <a href="#" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a href="branch-locator" className={`${textColor1} text-sm py-2.5 px-3`}>
                   Branch Locator
                 </a>
               </div>

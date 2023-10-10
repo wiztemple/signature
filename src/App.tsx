@@ -9,6 +9,7 @@ import DigitalBanking from "./pages/DigitalBanking";
 import Media from "./pages/Media";
 import Careers from "./pages/Careers";
 import AboutUs from "./pages/AboutUs";
+import BranchLocator from "./pages/BranchLocator";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/media" element={<Media />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/branch-locator" element={<BranchLocator />} />
           <Route path="/personal-banking" element={<PersonalBanking />} />
           <Route path="/private-banking" element={<PrivateBanking />} />
           <Route path="/business-banking" element={<Business />} />
