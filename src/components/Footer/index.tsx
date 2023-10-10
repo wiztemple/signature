@@ -102,11 +102,11 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Legal
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-main-1">Terms</a>
-                  <a className="block text-main-1">Privacy</a>
-                  <a className="block text-main-1">Cookies</a>
-                  <a className="block text-main-1">AML Policy</a>
-                  <a className="block text-main-1">Online Security Tips</a>
+                  <a href='terms' className="block text-main-1">Terms</a>
+                  <a href='privacy' className="block text-main-1">Privacy</a>
+                  <a href='cookies' className="block text-main-1">Cookies</a>
+                  <a href='aml-policy' className="block text-main-1">AML Policy</a>
+                  <a href='online-security-tips' className="block text-main-1">Online Security Tips</a>
                 </span>
               </div>
             </div>

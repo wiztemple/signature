@@ -10,6 +10,11 @@ import Media from "./pages/Media";
 import Careers from "./pages/Careers";
 import AboutUs from "./pages/AboutUs";
 import BranchLocator from "./pages/BranchLocator";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
+import AMLPolicy from "./pages/AMLPolicy";
+import OnlineSecurityTips from "./pages/OnlineSecurityTips";
 
 function App() {
   return (
@@ -27,6 +32,11 @@ function App() {
           <Route path="/institutional-banking" element={<InstitutionalBanking />} />
           <Route path="/digital-banking" element={<DigitalBanking />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
+          <Route path="/aml-policy" element={<AMLPolicy />} />
+          <Route path="/online-security-tips" element={<OnlineSecurityTips />} />
         </Routes>
       </BrowserRouter>
     </>
