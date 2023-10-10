@@ -3,6 +3,7 @@ import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
+import '../../App.css';
 
 
 const cores: { url: string, title: string }[] = [
@@ -15,22 +16,21 @@ const cores: { url: string, title: string }[] = [
 
 const boardOfDirectors: { url: string, name: string, title: string, alt: string }[] = [
   { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Dr. Mutiu Sunmonu, CON', title: 'Chairman' },
+  { url: 'https://framerusercontent.com/images/lxSPT1ijdqOEWCVLJb0LYL2G7E.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/39xDqtr7ksxq5CbdEbHYHCVo.jpg?scale-down-to=1024', name: 'Mr. Shedrack Odoh', alt: 'Mr. Shedrack Odoh', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/k2GWJF57CeJLzcLDzXdujmfI.jpg?scale-down-to=1024', name: 'Dr. Mutiu Sunmonu, CON', alt: 'Mrs. Chigorom Kalu', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/GOKQ3SOAJdv1eNRxlu0lu4ySr8.jpg', name: 'Alhaji Tijjani M. Borodo, LLM, FloD', alt: 'Alhaji Tijjani M. Borodo, LLM, FloD', title: 'Independent Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/9PeI9ez86dfLNn0vbtFP4VJlUQ.jpg?scale-down-to=1024', name: 'Mr. Uzoma Nwankwo', alt: 'Mr. Uzoma Nwankwo', title: 'Independent Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/y2Ex6mqfLWO3G9zFFKH1Hi3IzD4.jpg?scale-down-to=1024', name: 'Mrs. Nonye Ayeni', alt: 'Mrs. Nonye Ayeni', title: 'Managing Director' },
 ];
 
 const boardOfManagers: { url: string, name: string, title: string, alt: string }[] = [
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
-  { url: 'https://framerusercontent.com/images/yH1mKQmkGuxeLdET4bX3EBOkpz8.jpg?scale-down-to=1024', name: 'Mr. Alfred Temile', alt: 'Mr. Alfred Temile', title: 'Non-Executive Director' },
+  { url: 'https://framerusercontent.com/images/y2Ex6mqfLWO3G9zFFKH1Hi3IzD4.jpg?scale-down-to=1024', name: 'Mrs. Nonye Ayeni', alt: 'Mrs. Nonye Ayeni', title: 'Managing Director' },
+  { url: 'https://framerusercontent.com/images/3j62M9e6OAseQhFBRDD3d0DORCw.jpg?scale-down-to=1024', name: 'Ms. June Otigba', alt: 'Ms. June Otigba', title: 'Head, Retail Banking & Abuja Region' },
+  { url: 'https://framerusercontent.com/images/vSd6bBrTwRSIsVs5EWzYRNgIzQ.jpg?scale-down-to=1024', name: 'Mr. Ekundayo Yakubu', alt: 'Mr. Ekundayo Yakubu', title: 'Chief Financial Officer' },
+  { url: 'https://framerusercontent.com/images/ulWJosdkkYenJtn2zb8IZRYs.jpg?scale-down-to=1024', name: 'Mr. Omololu Ajayi', alt: 'Mr. Omololu Ajayi', title: 'Chief Information Officer' },
+  { url: 'https://framerusercontent.com/images/rlk3JbjQ6M8br1RbhCky4RHk.jpg?scale-down-to=1024', name: 'Mr. Ugonna Onyema', alt: 'Mr. Ugonna Onyema', title: 'Head, Human Capital Management' },
+  { url: 'https://framerusercontent.com/images/E5YP8QsuvJrJ5IMSPGDIxsEXs.jpg', name: 'Mr. Iwueze Ebere', alt: 'Mr. Iwueze Ebere', title: 'Company Secretary/Legal Adviser' },
 ];
 
 const slides: { name: string, url: string, path: string, alt: string, stroke:string, color: string }[] = [
@@ -61,14 +61,15 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
   return (
     <div className="bg-white">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
-      <div className="h-screen bg-main-7">
-        <div className="w-[50%] mx-auto pt-44">
+      <div className="h-screen bg-main-7 relative overflow-hidden">
+        <img className="absolute top-0 right-0" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
+        <div className="w-[50%] mx-auto pt-48">
           <h1 className="text-[64px] text-black leading-[1.2em] font-nunito text-center font-bold">Built on trust, service and innovation</h1>
           <p className="text-lg text-hex-11 font-nunito text-center px-10 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
         </div>
-        <div className="relative overflow-hidden">
-          <div className="" />
-            <div className="flex relative w-[3000px] z-20 gap-20 h-[257px]">
+        <div className="relative overflow-hidden mask w-full mt-20">
+          <div className="slider-container" />
+            <div className="flex relative slider w-[180%] z-20 gap-20 h-[257px]">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -76,11 +77,11 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
                   setOnFocus(true)
                   setCurrentIndex(index)
                 }}
-              onMouseLeave={() => setOnFocus(false)} className="relative cursor-pointer w-[180px] h-[203px]">
+              onMouseLeave={() => setOnFocus(false)} className="relative overflow-hidden cursor-pointer w-[180px] h-[203px]">
                 <svg className={`absolute ${slide.stroke} z-40`} width="180" height="203" viewBox="0 0 180 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.5" d="M175 119.5V128C175 166.66 143.66 198 105 198H75C36.34 198 5 166.66 5 128V119.5M175 83.5V75C175 36.34 143.66 5 105 5H75C36.34 5 5 36.34 5 75V83.5" strokeWidth="10" strokeMiterlimit="10" strokeLinecap="round" />
                 </svg>
-              <img className="rounded-[60px] left-5 top-[22px] absolute w-[140px] h-[160px] bg-cover object-cover" src={slide.url} alt={slide.alt} />
+              <img className="rounded-[60px] left-5 bg-primaryyellow top-[22px] absolute w-[140px] h-[160px] bg-cover object-cover" src={slide.url} alt={slide.alt} />
               {(onFous === true && currentIndex === index) && <div className={`rounded-[60px] ease-in-out text-center delay-500 duration-1000 transition-all inset-0 left-5 top-[22px] absolute text-white w-[140px] z-40 h-[160px] ${slide.color}`}>
                 <a href={slide.path} className="flex justify-center text-base font-bold text-white relative z-50 items-center h-full">
                   {slide.name}
@@ -182,16 +183,16 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           </div>
           {activeTab === "directors" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10 grid-rows-3">
             {boardOfDirectors.map((dierctor, index:number) => (
-              <div key={index} className="mb-20">
+              <div key={index} className="mb-10">
               <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={dierctor.url} alt={dierctor.alt} />
                 <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{dierctor.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{dierctor.title}</p>
             </div>
             ))}
           </div>)}
-          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10 grid-rows-3">
+          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 lg:grid-cols-3 gap-5 mt-10 grid-rows-2">
             {boardOfManagers.map((manager, index:number) => (
-              <div key={index} className="mb-20">
+              <div key={index} className="mb-10">
               <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={manager.url} alt={manager.alt} />
                 <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{manager.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{manager.title}</p>
