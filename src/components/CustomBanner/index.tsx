@@ -55,13 +55,13 @@ const CustomBanner = ({
           className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] p-[30px]`}
         >
           <div
-            className={`text-${color} lg:text-[64px] text-center font-bold font-nunitoSans leading-[1em]`}
+            className={`text-${color} lg:text-[64px] text-center font-bold leading-[1em]`}
           >
             <h1>{title1}</h1>
             <h1>{title2}</h1>
           </div>
           <p
-            className={`text-2xl font-nunitoSans flex justify-center text-center mt-4 text-${subColor}`}
+            className={`text-2xl flex justify-center text-center mt-4 text-${subColor}`}
           >
             <p className={`${textWidth}`}>{description}</p>
           </p>

@@ -49,14 +49,14 @@ const PrivateBanking = () => {
           background:
             "linear-gradient(rgb(18, 14, 16) 0%, rgb(18, 14, 16) 100%)",
         }}
-        className="text-black"
+        className="text-black font-nunitoSans"
       >
         <div className="lg:w-[85%] w-[90%] mx-auto pb-28">
           <div className="flex lg:flex-row flex-col justify-between pt-28">
-            <div className="text-[48px] lg:w-[45%] font-bold leading-[1.2em] text-white font-nunitoSans">
+            <div className="text-[48px] lg:w-[45%] font-bold leading-[1.2em] text-white">
               Experience the epitome of luxury banking
             </div>
-            <div className="lg:w-[25%] lg:mt-0 mt-4 text-uppergray text-lg font-nunitoSans">
+            <div className="lg:w-[25%] lg:mt-0 mt-4 text-uppergray text-lg">
               Exclusive and unparalleled access to a comprehensive suite of
               financial solutions
             </div>

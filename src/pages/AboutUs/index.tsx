@@ -59,13 +59,13 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
   
   
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunitoSans">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <div className="h-screen bg-main-7 relative overflow-hidden">
         <img className="absolute top-0 right-0" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
         <div className="w-[50%] mx-auto pt-48">
-          <h1 className="text-[64px] text-black leading-[1.2em] font-nunito text-center font-bold">Built on trust, service and innovation</h1>
-          <p className="text-lg text-hex-11 font-nunito text-center px-10 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
+          <h1 className="text-[64px] text-black leading-[1.2em] text-center font-bold">Built on trust, service and innovation</h1>
+          <p className="text-lg text-hex-11 text-center px-10 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
         </div>
         <div className="relative overflow-hidden mask w-full mt-20">
           <div className="slider-container" />
@@ -97,10 +97,10 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
         <div className="w-[80%] mx-auto py-28">
           <div className="flex items-center justify-between">
             <div className="w-full">
-            <h2 className="text-primaryblack text-[36px] font-bold font-nunito">Welcome to Signature Bank</h2>
-            <p className="text-primarygray font-nunito text-lg leading-[28px] w-[75%] mt-4">Signature Bank launched in 2022 to serve discerning customers who want to experience real banking. With specially designed financial products and services, we leverage digital solutions to provide you with tailor made solutions that suit your needs.</p>
-            <p className="text-primarygray font-nunito text-lg leading-[28px] w-[75%] mt-5">We are committed to helping you achieve your goals through exemplary financial services and products that will empower you and your business.</p>
-            <p className="text-primarygray font-nunito text-lg leading-[28px] w-[75%] mt-6">We want to be part of your journey by providing you with excellent customer service with access to innovative financial solutions.</p>
+            <h2 className="text-primaryblack text-[36px] font-bold">Welcome to Signature Bank</h2>
+            <p className="text-primarygray text-lg leading-[28px] w-[75%] mt-4">Signature Bank launched in 2022 to serve discerning customers who want to experience real banking. With specially designed financial products and services, we leverage digital solutions to provide you with tailor made solutions that suit your needs.</p>
+            <p className="text-primarygray text-lg leading-[28px] w-[75%] mt-5">We are committed to helping you achieve your goals through exemplary financial services and products that will empower you and your business.</p>
+            <p className="text-primarygray text-lg leading-[28px] w-[75%] mt-6">We want to be part of your journey by providing you with excellent customer service with access to innovative financial solutions.</p>
           </div>
           <div className="">
             <img className="rounded-[140px] h-[471px] bg-cover object-cover" src="https://framerusercontent.com/images/wL0MMQ2zOiT9PCn19u35JFkZD8.jpg" alt="" />
@@ -111,7 +111,7 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
       <div className="bg-main-9 pt-28">
         <div className="mx-auto w-[73%] border-b-2 border-main-2/10">
           <h1 className="text-[48px] text-center font-bold text-primaryblack tracking-[-0.96px]">Our Core Values</h1>
-          <p className="text-lg leading-[28px] text-center font-nunito text-primarygray mx-auto w-[55%] mt-4">Our values of professionalism, audacity, creativity, trust and service excellence are intrinsic to how we operate and how we serve our customers to deliver exemplary financial services.</p>
+          <p className="text-lg leading-[28px] text-center text-primarygray mx-auto w-[55%] mt-4">Our values of professionalism, audacity, creativity, trust and service excellence are intrinsic to how we operate and how we serve our customers to deliver exemplary financial services.</p>
           <div className="grid grid-cols-5 gap-[10px] grid-rows-1 mt-10">
             {cores.map((core, index:number) => (
               <div key={index} className="bg-hex-12 flex flex-col gap-5 h-[230px] justify-center items-center rounded-[20px]">
@@ -152,7 +152,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
       <div className="bg-main-9 py-16">
         <div className="w-[85%] mx-auto">
            <h1 className="text-[48px] text-center font-bold text-primaryblack tracking-[-0.96px]">Our Outstanding Leadership</h1>
-          <p className="text-lg leading-[28px] text-center font-nunito text-primarygray mx-auto w-[55%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
+          <p className="text-lg leading-[28px] text-center text-primarygray mx-auto w-[55%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
 
           <div className="flex justify-center mt-10">
             <div className="bg-white w-fit flex gap-[96px] p-5 rounded-[20px]">
@@ -185,7 +185,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
             {boardOfDirectors.map((dierctor, index:number) => (
               <div key={index} className="mb-10">
               <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={dierctor.url} alt={dierctor.alt} />
-                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{dierctor.name}</h3>
+                <h3 className="text-[26.83px] text-alternate font-medium text-center  mt-3">{dierctor.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{dierctor.title}</p>
             </div>
             ))}
@@ -194,7 +194,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
             {boardOfManagers.map((manager, index:number) => (
               <div key={index} className="mb-10">
               <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={manager.url} alt={manager.alt} />
-                <h3 className="text-[26.83px] text-alternate font-medium text-center font-nunito mt-3">{manager.name}</h3>
+                <h3 className="text-[26.83px] text-alternate font-medium text-center mt-3">{manager.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{manager.title}</p>
             </div>
             ))}

@@ -18,9 +18,9 @@ const SectionCard = ({ flexRow, cardTitle, cardDescription, src, black, gray, bu
         <img className="w-full h-[450px] object-cover bg-cover image-rendering-auto lg:rounded-[50px] rounded-[40px]" src={src} />
       </div>
       <div>
-        <div className={`text-${black} text-[30px] font-nunitoSans leading-[1.2em] mt-10 h-[38px] font-bold`}>{cardTitle}</div>
+        <div className={`text-${black} text-[30px] leading-[1.2em] mt-10 h-[38px] font-bold`}>{cardTitle}</div>
         <div className={`text-lg ${gray} ${extraClass} 2xl:w-full leading-[28px] lg:mt-5 mt-14`}>{cardDescription}</div>
-        <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} py-4 px-7 text-lg font-nunitoSans mt-6 rounded-[10px]`}>Contact Us</button>
+        <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} py-4 px-7 text-lg mt-6 rounded-[10px]`}>Contact Us</button>
       </div>
     </div>
   )

@@ -50,12 +50,12 @@ const DigitalBanking = () => {
             className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] w-[60%]`}
           >
             <div
-              className={`text-white lg:text-[64px] text-center font-bold font-nunitoSans leading-[1em]`}
+              className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
             >
               <h1>Limitless Banking</h1>
               {/* <h1>Worl</h1> */}
             </div>
-            <p className="text-2xl font-nunitoSans flex justify-center text-center mt-4 text-white">
+            <p className="text-2xl flex justify-center text-center mt-4 text-white">
               <p className="">
                 Do your transactions anytime, anywhere you want.
               </p>
@@ -101,11 +101,11 @@ const DigitalBanking = () => {
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
           <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em] font-nunito">
+            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
             </h1>
-            <p className="text-[#fff3f8] text-xl mt-5 font-nunito leading-[30px]">
+            <p className="text-[#fff3f8] text-xl mt-5 leading-[30px]">
               Download our easy to use Mobile application and access financial
               services anywhere you go.{" "}
             </p>
@@ -115,11 +115,11 @@ const DigitalBanking = () => {
             </div>
           </div>
           <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em] font-nunito">
+            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
             </h1>
-            <p className="text-[#fff3f8] text-xl font-nunito leading-[30px] mt-5">
+            <p className="text-[#fff3f8] text-xl leading-[30px] mt-5">
               No data, no issues bank with USSD *647#
             </p>
             <button
@@ -158,11 +158,11 @@ const DigitalBanking = () => {
             </div>
           </div>
           <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em] font-nunito">
+            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
             </h1>
-            <p className="text-[#fff3f8] text-xl font-nunito leading-[30px] mt-5">
+            <p className="text-[#fff3f8] text-xl leading-[30px] mt-5">
               Our Point-of-Sales terminals are available for all customers.
               Please visit the nearest Signature Bank branch or send a request.
             </p>
@@ -180,11 +180,11 @@ const DigitalBanking = () => {
             </div>
           </div>
           <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em] font-nunito">
+            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               Sign up for{" "}
               <span className="font-bold text-[#b49863]">eNaira</span>
             </h1>
-            <p className="text-[#fff3f8] text-xl mt-5 font-nunito leading-[30px]">
+            <p className="text-[#fff3f8] text-xl mt-5 leading-[30px]">
               Say hello to eNaira, the new digital currency issued and regulated
               by Nigeria's Central Bank. It offers the same value as physical
               Naira and promises safe, fast, and efficient transfers and

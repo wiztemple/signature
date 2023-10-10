@@ -5,7 +5,7 @@ import MobileHeader from "../../components/MobileHeader";
 
 const BranchLocator = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunitoSans">
       <Header primaryBtnClassName="bg-hex-2" />
       <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">

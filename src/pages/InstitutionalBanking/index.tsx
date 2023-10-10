@@ -74,13 +74,13 @@ const InstitutionalBanking = () => {
         title2="solutions for large institutions"
         description=""
       />
-      <div className="bg-white text-black">
+      <div className="bg-white text-black font-nunitoSans">
         <div className="w-[85%] mx-auto">
           <div className="flex lg:flex-row flex-col justify-between lg:py-28 py-10">
-            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
+            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828]">
               Banking solutions that deliver growth and sustainability.
             </div>
-            <div className="lg:w-[340px] text-[#555d68] text-lg lg:mt-0 mt-4 font-nunitoSans">
+            <div className="lg:w-[340px] text-[#555d68] text-lg lg:mt-0 mt-4">
               With a commitment to excellence, we offer tailored solutions
               designed to meet the specific requirements of large institutions
               with diverse banking needs.
@@ -103,7 +103,7 @@ const InstitutionalBanking = () => {
       </div>
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-10">
         <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-nunitoSans font-bold leading-[-0.96px] text-center">
+          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
             Built for the future, built for your progress.
           </h1>
           <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">

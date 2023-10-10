@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 
 const Media = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunitoSans">
       <Header />
       <div className="pt-[230px] pb-16 bg-[#f9f5f8]">
         <h1 className="text-center text-7xl font-bold text-alternate">

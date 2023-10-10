@@ -1,7 +1,7 @@
 import Logo from '../../assets/logo.svg'
 const Footer = ({ background = 'bg-hex-2' }) => {
   return (
-    <footer className={`w-full ${background} `}>
+    <footer className={`w-full ${background} font-nunitoSans`}>
       <div className="lg:p-[100px] p-5">
         <div className="flex flex-col flex-nowrap h-min justify-start items-start w-full relative">
           <div className="lg:flex lg:flex-row flex-col justify-between flex-nowrap pb-16 w-full relative h-min border-b border-b-[#894a69]">
@@ -39,14 +39,14 @@ const Footer = ({ background = 'bg-hex-2' }) => {
               </div>
             </div>
           </div>
-          <div className="border-b border-b-[#894a69] w-full py-16 font-nunitoSans">
+          <div className="border-b border-b-[#894a69] w-full py-16">
             <div className="grid sm:grid-cols-6 grid-cols-2 sm:gap-y-0 gap-y-[30px] sm:gap-x-0 gap-x-10">
               <div className="flex flex-col gap-4">
                 <span className="font-bold text-sm leading-5 text-main-2">
                   Products
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <a className="block text-main-1 font-nunitoSans">Accounts</a>
+                  <a className="block text-main-1">Accounts</a>
                   <a className="block text-main-1">Cards</a>
                 </span>
               </div>

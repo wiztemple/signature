@@ -73,13 +73,13 @@ const Business = () => {
         title2="growth"
         description="Attain new financial heights with our personalised banking solutions"
       />
-      <div className="bg-white text-black">
+      <div className="bg-white text-black font-nunitoSans">
         <div className="w-[85%] mx-auto">
           <div className="flex lg:flex-row flex-col justify-between lg:py-28 py-10">
-            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828] font-nunitoSans">
+            <div className="lg:text-[40px] text-[30px] lg:w-[45%] leading-[1.2em] font-bold text-[#101828]">
               Banking services designed to grow your business
             </div>
-            <div className="lg:w-[340px] text-[#555d68] lg:mt-0 mt-4 text-lg font-nunitoSans">
+            <div className="lg:w-[340px] text-[#555d68] lg:mt-0 mt-4 text-lg">
               Empowering you with the tools to drive your business forward and
               achieve your goals.
             </div>
@@ -101,10 +101,10 @@ const Business = () => {
       </div>
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-5">
         <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-nunitoSans font-bold leading-[-0.96px] text-center">
+          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
            Access simple business solutions that will certainly put your business ahead.
           </h1>
-          <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20 font-nunitoSans">
+          <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20">
             We take pride in offering you a superior banking experience
           </p>
           <SectionCard

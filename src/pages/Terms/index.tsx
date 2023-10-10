@@ -29,7 +29,7 @@ const tabs: { name: string, link: string }[] = [
 
 const Terms = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunitoSans">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <MobileHeader
         primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white"
