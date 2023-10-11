@@ -1,14 +1,12 @@
-import React, { useState, ReactNode, useRef } from "react";
+import React, { useState, ReactNode, useRef, useEffect } from "react";
+import lottie from "lottie-web";
 import Logo from "../../assets/altlogo.svg";
-import Rocket from "../../assets/rocket.svg";
+// import Rocket from "../../assets/rocket.svg";
 import MenuCard from "../MenuCard";
 import { Link } from "react-router-dom";
 import MegaMenu from "../MegaMenu";
+import animationData from "../../assets/lottie1.json";
 
-interface MenuPosition {
-  top: number;
-  left: number;
-}
 interface HeaderProps {
   bg?: string;
   textColor1?: string;
@@ -26,22 +24,29 @@ const Header: React.FC<HeaderProps> = ({
   showPrimaryBtnIcon = true,
 }) => {
   const [menuContent, setMenuContent] = useState<ReactNode | null>(null);
-  const [menuPosition, setMenuPosition] = useState<MenuPosition | null>(null);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const container = useRef(null);
 
   const handleMenuItemHover = (
     content: React.ReactNode,
-    event: React.MouseEvent<HTMLAnchorElement>
   ) => {
     setMenuContent(content);
-    if (event.currentTarget instanceof HTMLElement) {
-      const rect = event.currentTarget.getBoundingClientRect();
-      setMenuPosition({ top: rect.bottom, left: rect.left });
-    }
   };
-  const handleDropdownMouseLeave = () => {
+  const handleMenuMouseLeave = () => {
     setMenuContent(null);
   };
+
+
+  useEffect(() => {
+    if (container.current) {
+      lottie.loadAnimation({
+        animationData: animationData,
+        autoplay: true,
+        container: container.current,
+        loop: true,
+        renderer: "svg",
+      });
+    }
+  }, []);
   return (
     <>
       <div className="fixed h-auto w-screen z-50 lg:block hidden">
@@ -51,27 +56,42 @@ const Header: React.FC<HeaderProps> = ({
           <div className="relative">
             <div className="flex justify-between py-2 px-4 items-center">
               <div className="flex gap-[30px]">
-                <a href="/" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a
+                  href="/"
+                  className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
+                >
                   Home
                 </a>
-                <a href="/about-us" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a
+                  href="/about-us"
+                  className={`${textColor1} text-sm py-2 hover:bg-lightgold/10 hover:underline hover:text-lightgold rounded-[10px] px-3`}
+                >
                   About Us
                 </a>
                 <Link
                   to="/resources"
-                  className={`${textColor1} text-sm py-2.5 px-3`}
+                  className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Resources
                 </Link>
-                <a href="media" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a
+                  href="media"
+                  className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
+                >
                   Media
                 </a>
-                <a href="branch-locator" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a
+                  href="branch-locator"
+                  className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
+                >
                   Branch Locator
                 </a>
               </div>
               <div className="flex">
-                <a href="#" className={`${textColor1} text-sm py-2.5 px-3`}>
+                <a
+                  href="#"
+                  className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
+                >
                   Contact Us
                 </a>
               </div>
@@ -79,6 +99,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           <nav
             className={`flex justify-between items-center rounded-[50px] ${bg} backdrop-blur-[20px] opacity-100 h-[66px] px-6 py-2.5`}
+            onMouseLeave={handleMenuMouseLeave}
           >
             <div className="flex gap-10 items-center">
               <img
@@ -89,8 +110,8 @@ const Header: React.FC<HeaderProps> = ({
               <div className="flex gap-[5px] relative">
                 <Link
                   to="/personal-banking"
-                  className={`${textColor2} text-base py-2.5 px-3 relative`}
-                  onMouseEnter={(e) =>
+                  className={`${textColor2} text-base py-2.5 px-3 relative group`}
+                  onMouseEnter={() =>
                     handleMenuItemHover(
                       <MegaMenu
                         children={
@@ -140,19 +161,21 @@ const Header: React.FC<HeaderProps> = ({
                             Bank
                           </span>
                         }
-                      />,
-                      e
+                      />
                     )
                   }
                 >
-                  <span className="hover:bg-lightgold/10 hover:underline hover:text-lightgold block px-2 py-1 rounded-xl">
+                  <span className="group-hover:bg-lightgold/10 group-hover:underline group-hover:text-lightgold block px-2 py-1 rounded-xl">
                     Personal
                   </span>
+                  <div className="hidden group-hover:block absolute pt-5 rounded-[20px] shadow left-0">
+                    <MenuCard>{menuContent}</MenuCard>
+                  </div>
                 </Link>
                 <Link
                   to="/private-banking"
-                  className={`${textColor2} text-base py-2.5 px-3 relative`}
-                  onMouseEnter={(e) =>
+                  className={`${textColor2} text-base py-2.5 px-3 relative group`}
+                  onMouseEnter={() =>
                     handleMenuItemHover(
                       <MegaMenu
                         children={
@@ -202,19 +225,21 @@ const Header: React.FC<HeaderProps> = ({
                             Signature <br /> Bank
                           </span>
                         }
-                      />,
-                      e
+                      />
                     )
                   }
                 >
-                  <span className="hover:bg-lightgold/10 hover:underline hover:text-lightgold block px-2 py-1 rounded-xl">
+                  <span className="group-hover:bg-lightgold/10 group-hover:underline group-hover:text-lightgold block px-2 py-1 rounded-xl">
                     Private
                   </span>
+                  <div className="hidden group-hover:block absolute pt-5 rounded-[20px] shadow left-0">
+                    <MenuCard>{menuContent}</MenuCard>
+                  </div>
                 </Link>
                 <Link
                   to="/business-banking"
-                  className={`${textColor2} text-base py-2.5 px-3 relative`}
-                  onMouseEnter={(e) =>
+                  className={`${textColor2} text-base py-2.5 px-3 relative group`}
+                  onMouseEnter={() =>
                     handleMenuItemHover(
                       <MegaMenu
                         children={
@@ -264,19 +289,21 @@ const Header: React.FC<HeaderProps> = ({
                             Signature <br /> Bank
                           </span>
                         }
-                      />,
-                      e
+                      />
                     )
                   }
                 >
-                  <span className="hover:bg-lightgold/10 hover:underline hover:text-lightgold block px-2 py-1 rounded-xl">
+                  <span className="group-hover:bg-lightgold/10 group-hover:underline group-hover:text-lightgold block px-2 py-1 rounded-xl">
                     Business
                   </span>
+                  <div className="hidden group-hover:block absolute pt-5 rounded-[20px] shadow left-0">
+                    <MenuCard>{menuContent}</MenuCard>
+                  </div>
                 </Link>
                 <Link
                   to="/institutional-banking"
-                  className={`${textColor2} text-base py-2.5 px-3 relative`}
-                  onMouseEnter={(e) =>
+                  className={`${textColor2} text-base py-2.5 px-3 relative group`}
+                  onMouseEnter={() =>
                     handleMenuItemHover(
                       <MegaMenu
                         children={
@@ -312,19 +339,21 @@ const Header: React.FC<HeaderProps> = ({
                             Signature <br /> Bank
                           </span>
                         }
-                      />,
-                      e
+                      />
                     )
                   }
                 >
-                  <span className="hover:bg-lightgold/10 hover:underline hover:text-lightgold block px-2 py-1 rounded-xl">
+                  <span className="group-hover:bg-lightgold/10 group-hover:underline group-hover:text-lightgold block px-2 py-1 rounded-xl">
                     Institutional
                   </span>
+                  <div className="hidden group-hover:block absolute pt-5 rounded-[20px] shadow left-0]">
+                    <MenuCard>{menuContent}</MenuCard>
+                  </div>
                 </Link>
                 <Link
                   to="/digital-banking"
-                  className={`${textColor2} text-base py-2.5 px-3 relative`}
-                  onMouseEnter={(e) =>
+                  className={`${textColor2} text-base py-2.5 px-3 relative group`}
+                  onMouseEnter={() =>
                     handleMenuItemHover(
                       <MegaMenu
                         children={
@@ -361,14 +390,16 @@ const Header: React.FC<HeaderProps> = ({
                             Signature <br /> Bank
                           </span>
                         }
-                      />,
-                      e
+                      />
                     )
                   }
                 >
-                  <span className="hover:bg-lightgold/10 hover:underline hover:text-lightgold block px-2 py-1 rounded-xl">
+                  <span className="group-hover:bg-lightgold/10 group-hover:underline group-hover:text-lightgold block px-2 py-1 rounded-xl">
                     Digital
                   </span>
+                  <div className="hidden group-hover:block absolute pt-5 rounded-[20px] shadow left-0">
+                    <MenuCard>{menuContent}</MenuCard>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -377,24 +408,15 @@ const Header: React.FC<HeaderProps> = ({
               className={`${primaryBtnClassName} text-white py-[7px] px-[18px] rounded-[10px] flex items-center gap-1.5  border border-transparent leading-[1em]`}
             >
               {showPrimaryBtnIcon && (
-                <img src={Rocket} className="w-[22px] h-[22px]" alt="Rocket" />
+                <span
+                  className="w-[22px] h-[22px]"
+                  ref={container}
+                  id="animation-container"
+                />
               )}
               Open an Account - Launching Soon
             </button>
           </nav>
-          {menuContent && menuPosition && (
-            <div
-              ref={dropdownRef}
-              className="absolute mt-2.5 rounded-[20px] shadow left-0 backdrop-blur-[20px]"
-              style={{
-                top: menuPosition?.top ?? 0,
-                left: menuPosition?.left ?? 0,
-              }}
-              onMouseLeave={handleDropdownMouseLeave}
-            >
-              <MenuCard>{menuContent}</MenuCard>
-            </div>
-          )}
         </div>
       </div>
     </>

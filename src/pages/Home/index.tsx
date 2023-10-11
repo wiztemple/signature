@@ -45,7 +45,6 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => (
 );
 
 const Home = () => {
-
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -58,6 +57,7 @@ const Home = () => {
 
     return () => clearInterval(slideInterval);
   }, [activeIndex]);
+
   
   return (
     <div className="font-nunitoSans bg-white">

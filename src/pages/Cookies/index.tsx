@@ -25,17 +25,17 @@ const Cookies = () => {
         title="Cookie Policy"
         description="Signature Bank's cookie policy"
       />
-      <div className="w-[85%] mx-auto">
+      <div className="w-[85%] mx-auto scroll-smooth">
         <div className="flex lg:flex-row flex-col gap-10 lg:mt-20 mt-10">
           <TermsBar tabs={tabs} />
           <div className="lg:w-[75%]">
             <p className="text-primarygray text-lg leading-[28px]">Thank you for visiting https://signaturebankng.com/ ("Website"). This cookie notice applies to the Website, any website or branded pages on third party platforms (e.g. YouTube and Facebook) and applications accessed or used through such websites or platforms which are operated by or on behalf of Signature Bank Limited. By using a Signature Bank Site, you are consenting to our use of cookies and other tracking technology in accordance with this notice. If you do not agree to our use of cookies and other tracking technology in this way, you should set your browser settings accordingly or not use the Signature Bank Site. If you disable cookies that we use, this may impact your user experience while on the Signature Bank Site. When using a mobile device to connect to the internet, you should also refer to the privacy notice of the specific App you are using to understand its specific data collection practices.</p>
-            <div id="cookies" className="mt-10">
+            <div id="cookies" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">What are cookies?</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. See below for details on what information is collected by cookies and how we use that information. For more information about the kind of data we collect, please read our Privacy Notice:
                 http://signaturebankng.com/wp-content/uploads/2022/11/Signature-BankLimited-Data-Protection-and-Privacy-Notice.pdf</p>
             </div>
-            <div id="them" className="mt-10">
+            <div id="them" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">How and why does Signature use them?</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">
                 Signature Bank uses cookies to gain a better understanding on how visitors use this website. Cookies help us tailor Signature Bank websites to your personal needs, to improve their user-friendliness, gain customer satisfaction feedback on our websites (through designated partners) and to communicate to you elsewhere on the web.
@@ -44,7 +44,7 @@ const Cookies = () => {
                 To enable this some cookies are applied when you enter our sites (see links for various Signature Bank sites for further details). Signature Bank keeps all the information collected from cookies in a non–personally identifiable format. Signature Bank cookies located on your computer do not retain your name or your IP address.
               </p>
             </div>
-            <div id="use" className="mt-10">
+            <div id="use" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">What type of cookies does Signature Bank use?</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">The following types of cookies are used on Signature Bank websites.</p>
               <li className="text-primarygray text-base leading-[2em] items-center mt-10 font-bold">
@@ -82,15 +82,15 @@ const Cookies = () => {
               <p className="text-primarygray text-base leading-[2em] mt-10">DoubleClick cookies contain no personally identifiable information. Sometimes the DoubleClick cookie will contain an additional identifier that is similar in appearance to the cookie ID and is used to identify an ad campaign to which a user was exposed previously. We will not use any information reported by Google Analytics Demographics and Interest Reporting to identify any individual user of our site. </p>
               <p className="text-primarygray text-base leading-[2em] mt-10"><a className="text-hex-2 hover:text-primaryyellow" href="https://www.google.com/search?q=Find+out+more+about+Google+Analytics+Demographics+and+Interest+Reporting.&rlz=1C5CHFA_enNG984NG984&sourceid=chrome&ie=UTF-8">Find out more about Google Analytics Demographics and Interest Reporting.</a></p>
             </div>
-            <div id="websites" className="mt-10">
+            <div id="websites" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">Cookies used on our websites</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">If you wish to learn more about the specific cookies used on Signature Bank websites please visit the following pages: <a className="text-hex-2 hover:text-primaryyellow" href="https://signaturebankng.com"> https://signaturebankng.com</a></p>
             </div>
-            <div id="settings" className="mt-10">
+            <div id="settings" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">How can I change my cookie settings?</h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">Please ensure that your computer setting reflects whether you are happy to accept cookies or not. You can set your browser to warn you before accepting cookies, or you can simply set it to refuse them, although you may not have access to all the features of this website if you do so. See your browser 'help' button for how you can do this. You do not need to have cookies on to use or navigate through many parts of this and other Signature Bank websites. Remember that if you use different computers in different locations, you will need to ensure that each browser is adjusted to suit your cookie preferences. To delete the cookies and all information gathered, and otherwise change your cookie settings please click the following link. Change Cookie Settings The Site allows you to choose NOT to allow the services which create and use these cookies to run, although you may not have access to all the features of the Site if you do so. To do this now, just scroll up the page and click on the "Change Cookie Settings" link higher up.</p>
             </div>
-            <div id="updates" className="mt-10">
+            <div id="updates" className="mt-10 scroll-smooth">
               <h2 className="text-[30px] text-black font-bold">Legal Notice Update </h2>
               <p className="text-primarygray text-base leading-[2em] mt-2">We reserve the right to make any changes and corrections to this notice. Please refer to this page from time to time to review these and new additional information.</p>
             </div>
