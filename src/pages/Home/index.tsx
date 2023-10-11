@@ -272,24 +272,24 @@ const Home = () => {
         </div>
       </div>
       <div className="bg-white flex justify-center items-center flex-col py-28">
-       <h2 className="text-primaryblack text-[36px] leading-[44px] font-bold">Latest Publications</h2>
-        <p className="text-[#667084] text-xl lg:text-start text-center leading-[30px] mt-4">The latest news, publications, and resources from our team.</p>
+       <Reveal><h2 className="text-primaryblack text-[36px] leading-[44px] font-bold">Latest Publications</h2></Reveal>
+        <Reveal><p className="text-[#667084] text-xl lg:text-start lg:w-full w-[60%] mx-auto text-center leading-[30px] mt-4">The latest news, publications, and resources from our team.</p></Reveal>
         <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[85%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
           <div className="flex-1 flex lg:flex-row flex-col gap-4">
             <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
-            <div>
+            <Reveal>
               <h2 className="text-lg text-main-3 font-bold">CBN provides further update to the guidelines in the Foreign Exchange Market.</h2>
               <p className="text-base text-primarygray">The Director of Corporate Communications, Dr Isa AbdulMumin, has announced further policy changes in relation to FX which is aimed at…</p>
               <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button>
-            </div>
+            </Reveal>
           </div>
           <div className="flex-1 flex lg:flex-row flex-col gap-4">
             <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px]  object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
-            <div>
+            <Reveal>
               <h2 className="text-lg text-main-3 font-bold">Excitement as Signature Bank launches operation</h2>
               <p className="text-base text-primarygray">Signature Bank, on Monday, November 21, 2022 launched its operations into the Nigerian banking sector with unique services that are expected to deepen Nigeria's financial inclusion, targeting over 40 million…</p>
               <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 relative z-50">Read more</button>
-            </div>
+            </Reveal>
           </div>
         </div>
       </div>
