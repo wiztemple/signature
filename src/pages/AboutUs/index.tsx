@@ -82,7 +82,7 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
                   <path opacity="0.5" d="M175 119.5V128C175 166.66 143.66 198 105 198H75C36.34 198 5 166.66 5 128V119.5M175 83.5V75C175 36.34 143.66 5 105 5H75C36.34 5 5 36.34 5 75V83.5" strokeWidth="10" strokeMiterlimit="10" strokeLinecap="round" />
                 </svg>
               <img className="rounded-[60px] left-5 bg-primaryyellow top-[22px] absolute w-[140px] h-[160px] bg-cover object-cover" src={slide.url} alt={slide.alt} />
-              {(onFous === true && currentIndex === index) && <div className={`rounded-[60px] ease-in-out text-center delay-500 duration-1000 transition-all inset-0 left-5 top-[22px] absolute text-white w-[140px] z-40 h-[160px] ${slide.color}`}>
+              {(onFous === true && currentIndex === index) && <div className={`rounded-[60px] text-center inset-0 left-5 top-[22px] absolute text-white w-[140px] z-40 h-[160px] ${slide.color}`}>
                 <a href={slide.path} className="flex justify-center text-base font-bold text-white relative z-50 items-center h-full">
                   {slide.name}
                 </a>

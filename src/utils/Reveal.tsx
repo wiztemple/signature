@@ -18,7 +18,7 @@ export const Reveal = ({ children }: any) => {
     }, [control, inView]);
 
     return (
-        <>
+        <div>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 45 },
@@ -30,6 +30,6 @@ export const Reveal = ({ children }: any) => {
                 className='relative overflow-hidden'
                 ref={ref}
             >{children}</motion.div>
-        </>
+        </div>
     )
 };
