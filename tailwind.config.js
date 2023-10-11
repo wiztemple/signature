@@ -32,7 +32,9 @@ export default {
           10: '#303343e',
           11: '#667084',
           12: '#f3e7ed',
-          13: '#f5f5f5'
+          13: '#f5f5f5',
+          14: '#ededed',
+          15: '#ffe0f0',
         },
         gold: '#1f190f',
         alternate: '#101828',
@@ -57,6 +59,9 @@ export default {
       fontFamily: {
         nunito: ['Nunito', 'sans-serif'],
         nunitoSans: ['Nunito Sans', 'sans-serif'],
+      },
+      clipPath: {
+        'half-circle': 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)',
       },
     },
   },
