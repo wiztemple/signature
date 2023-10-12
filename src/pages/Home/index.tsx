@@ -71,7 +71,7 @@ const Home = () => {
     <div className="font-nunitoSans bg-white">
       <Header primaryBtnClassName="bg-hex-2" />
       <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
-      <div className="h-screen lg:block hidden bg-[#f9fafb] overflow-hidden">
+      <div className="2xl:h-[60vh] h-screen relative lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex && <Hero
           top="mt-[14%]"
           mt="mt-[17%] ml-24"
@@ -81,7 +81,7 @@ const Home = () => {
         />}
         {dots[2].dot === activeIndex && <Hero
           top="mt-[44px]"
-          mt="mt-[22%] ml-10"
+          mt="2xl:-mt-[5%] xl:-mt-[5%] mt-[22%] ml-10"
           title="Experience Freedom"
           description="Stay ahead with on-the-go banking."
           url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
@@ -90,17 +90,17 @@ const Home = () => {
           <div className="w-[85%] mx-auto h-full">
             <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
             <div className="flex justify-between items-center w-full h-full">
-              <div className={`text-black w-[45%] relative z-30 ${top} relative`}>
-                <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Experience Freedom</h1>
+              <div className="text-black w-[45%] z-30 relative">
+                <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold 2xl:-mt-96">Experience Freedom</h1>
                 <p className="text-xl font-nunitoSans text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
                 <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
               </div>
               <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
-              <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
+              <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover 2xl:top-[14%] top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
             </div>
           </div>
         </Slide>}
-        <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
+        <div className="absolute  bottom-5 z-40 text-black mx-auto w-full flex justify-center">
           <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-16 h-7 gap-2 rounded-[20px] flex justify-center items-center">
             {dots.map((tab, index) => <div onClick={() => setActiveIndex(tab.dot)} key={index} className={`cursor-pointer ${tab.dot === activeIndex ? "bg-white" : "bg-gray-200/50"} rounded-full w-[10px] h-[10px]`}></div>)}
           </div>
