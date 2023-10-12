@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export const Reveal = ({ children }: any) => {
+export const Reveal = ({ children, className }: any) => {
 
     const [ref, inView] = useInView();
 
@@ -18,8 +18,8 @@ export const Reveal = ({ children }: any) => {
     }, [control, inView]);
 
     return (
-        <div>
-            <motion.div
+        <div className={className}>
+            <motion.section
                 variants={{
                     hidden: { opacity: 0, y: 45 },
                     visible: { opacity: 1, y: 0 }
@@ -29,7 +29,7 @@ export const Reveal = ({ children }: any) => {
                 transition={{ duration: 0.65, delay: 0.33 }}
                 className='relative overflow-hidden'
                 ref={ref}
-            >{children}</motion.div>
+            >{children}</motion.section>
         </div>
     )
 };
