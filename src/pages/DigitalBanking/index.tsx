@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import appleLogo from "../../assets/apple.svg";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
+import { Reveal } from "../../utils/Reveal";
 
 const DigitalBanking = () => {
   return (
@@ -73,7 +74,8 @@ const DigitalBanking = () => {
       {/*  */}
       <div className="w-[85%] mx-auto mt-10">
         {/*  */}
-        <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center">
+        <Reveal>
+          <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center">
           <div>Bank in style</div>
           <div>with Signature Cards</div>
           <div>
@@ -89,18 +91,20 @@ const DigitalBanking = () => {
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
             <div className="w-[24%] rotate-60 rounded-[20px] absolute -bottom-5 border">
-              <img
+              {/* <img
                 className="w-full h-[400px] object-fill bg-center"
                 src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
                 alt=""
-              />
+              /> */}
             </div>
           </div>
         </div>
+        </Reveal>
         {/*  */}
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
-          <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
@@ -114,7 +118,9 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          </Reveal>
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
@@ -157,7 +163,9 @@ const DigitalBanking = () => {
               </div>
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          </Reveal>
+          <Reveal>
+             <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
@@ -179,7 +187,9 @@ const DigitalBanking = () => {
               />
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+         </Reveal>
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               Sign up for{" "}
               <span className="font-bold text-[#b49863]">eNaira</span>
@@ -201,6 +211,7 @@ const DigitalBanking = () => {
               />
             </div>
           </div>
+          </Reveal>
         </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
