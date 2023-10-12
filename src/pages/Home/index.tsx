@@ -124,19 +124,19 @@ const Home = () => {
         </div>
       </div>
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
-        <div className="text-black w-[85%] mx-auto">
+        <div className="text-black lg:w-[85%] w-[90%] mx-auto">
           <div className="flex lg:flex-row relative flex-col gap-5 lg:py-28 py-10">
             <div className="lg:w-[30%] sticky text-primaryblack">
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
               <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
-            <div className="grid lg:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
+            <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
               <Reveal>
                 <div
                   onMouseEnter={() => setOnCard(true)}
                   onMouseLeave={() => setOnCard(false)}
-                  className="h-[384px] bg-[#f1ebdf] overflow-hidden rounded-[20px] pt-6 relative">
+                  className="md:h-[384px] h-[384px] bg-[#f1ebdf] overflow-hidden rounded-[20px] pt-6 relative">
                   <div className="px-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
                     <button className={`${onCard === true && "bg-primaryyellow"} bg-hex-2 ease-in-out transition-all relative z-40 delay-75 duration-700 rounded-[8px] mt-4 text-white px-5 py-2.5`}>Lauching Soon</button>
@@ -153,10 +153,10 @@ const Home = () => {
                 <div
                   onMouseEnter={() => setOnCard2(true)}
                   onMouseLeave={() => setOnCard2(false)}
-                  style={{ backgroundColor: "rgb(255, 255, 255)" }} className="h-[340px] rounded-[20px] z-40 overflow-hidden relative">
+                  style={{ backgroundColor: "rgb(255, 255, 255)" }} className="md:h-[340px] h-[384px] rounded-[20px] z-40 overflow-hidden relative">
                   <div className="z-40 relative p-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Access Bespoke Banking Solutions For Your Business</h3>
-                    <button className={`${onCard2 === true && "bg-primaryyellow"} bg-hex-2 ${transition} rounded-[8px] mt-4 text-white px-5 py-2.5`}>See how</button>
+                    <button className={`${onCard2 === true && "bg-primaryyellow"} bg-hex-2 ${transition} rounded-[8px] mt-4 text-white lg:px-5 px-3 py-2.5`}>See how</button>
                   </div>
                   <div className={`absolute ${onCard2 === true ? "-bottom-24" : "-bottom-14"} ${transition} z-30`}>
                     <img className="z-30 bg-cover object-cover" src="https://framerusercontent.com/images/PekFpoVisifP2gP4AbGTCGBU3Y.png?scale-down-to=512" alt="" />
@@ -170,9 +170,9 @@ const Home = () => {
                   style={{ backgroundColor: "rgb(227, 212, 189)" }} className="rounded-[20px] overflow-hidden h-[384px]">
                   <div className="z-40 relative p-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Money Can&apos;t Stop You. Let&apos;s Support You.</h3>
-                    <button className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 rounded-[8px] ${transition} mt-4 text-white px-5 py-2.5`}>Coming soon</button>
+                    <button className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 rounded-[8px] ${transition} mt-4 text-white lg:px-5 px-3 py-2.5`}>Coming soon</button>
                     <div className="mt-4">
-                      <img className={`bg-cover object-cover ${transition} ${onCard3 === true && "scale-110"}`} src="https://framerusercontent.com/images/IhX3GJKlhJRxvbuaNZe0DoPnLw.png" alt="" />
+                      <img className={`bg-cover object-cover w-full ${transition} ${onCard3 === true && "scale-110"}`} src="https://framerusercontent.com/images/IhX3GJKlhJRxvbuaNZe0DoPnLw.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -182,16 +182,16 @@ const Home = () => {
                 <div
                   onMouseEnter={() => setOnCard4(true)}
                   onMouseLeave={() => setOnCard4(false)}
-                  style={{ backgroundColor: "rgb(27, 28, 29)" }} className="lg:h-[340px] h-[384px] rounded-[20px] relative">
+                  style={{ backgroundColor: "rgb(27, 28, 29)" }} className="md:h-[340px] h-[384px] rounded-[20px] relative">
                   <div className="text-white relative flex justify-end flex-col h-full w-full z-40 px-6 pb-10">
                     <h3 className="text-xl text-white font-nunitoSans font-bold">Exclusive Banking That Preserves Wealth</h3>
-                    <button className={`${onCard4 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5`}>Learn More</button>
+                    <button className={`${onCard4 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-32 py-2.5`}>Learn More</button>
                   </div>
                   {/* <div className="h-44 w-full absolute z-30 opacity-20 bottom-0 bg-black" /> */}
                   <img className={`w-full h-full bg-cover  ${transition} left-0 top-0 z-20 absolute object-cover rounded-[20px]`} src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
                 </div>
               </Reveal>
-              <div className="relative lg:-mt-11">
+              <div className="relative md:-mt-11">
                 <Reveal>
                   <div
                     onMouseEnter={() => setOnCard5(true)}
@@ -205,8 +205,8 @@ const Home = () => {
                     <div className="w-[130px] h-[30px] mt-2">
                       <img className="w-[80%]" src={appleLogo} alt="apple logo" />
                     </div>
-                    <div className={`flex justify-center ${onCard5 === true ? "mt-10" : "mt-14"} ${transition}`}>
-                      <img className="w-[75%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
+                    <div className={`flex justify-center ${onCard5 === true ? "md:mt-10 mt-8" : "md:mt-14 mt-11"} ${transition}`}>
+                      <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
                   </div>
                 </Reveal>
@@ -215,13 +215,13 @@ const Home = () => {
                 <div
                   onMouseEnter={() => setOnCard6(true)}
                   onMouseLeave={() => setOnCard6(false)}
-                  style={{ backgroundColor: "rgb(255, 255, 255)" }} className="lg:h-[340px] h-[384px] rounded-[20px] overflow-hidden p-6">
+                  style={{ backgroundColor: "rgb(255, 255, 255)" }} className="md:h-[340px] h-[384px] rounded-[20px] overflow-hidden p-6">
                   <div>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">No restrictions, no limitations.</h3>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Bank on-the-go.</h3>
                     <button type="button" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5`}>Coming Soon</button>
                     {/* dial */}
-                    <div className={`gap-4 flex w-[98%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
+                    <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">
                         <div className={`relative ${transition}`}>
                           <img className={`w-[40px] h-[40px] absolute ${transition} ${onCard6 === true && "-top-2.5 rotate-180"} -top-9 -left-3`} src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png" />
@@ -260,17 +260,19 @@ const Home = () => {
             </div>
             <div className="h-[353px] w-full mt-10 relative overflow-hidden">
               <div className="flex relative w-full justify-center mx-auto">
-                <img className="w-[300px] bg-cover lg:block hidden relative z-40 mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
-                <img className="w-[300px] bg-cover relative z-40 lg:-ml-16" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
+                <img className="w-[300px] bg-cover md:block hidden relative z-40 mt-10" src="https://framerusercontent.com/images/eFWsTDY52vMx1Sv2Rg5Uweg.png" alt="" />
+                <img className="w-[300px] bg-cover relative z-40 md:-ml-16" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
               </div>
-              <img className="w-[35%] absolute left-12 top-16 z-30" src="https://framerusercontent.com/images/rSYgkYVqa3gEd7bmGhOq4RkzFA.png?scale-down-to=1024" alt="" />
+              <img className="lg:w-[35%] absolute left-12 top-16 z-30" src="https://framerusercontent.com/images/rSYgkYVqa3gEd7bmGhOq4RkzFA.png?scale-down-to=1024" alt="" />
               <img className="w-[35%] absolute right-2 top-1 z-30" src="https://framerusercontent.com/images/er05LdZo66tT1ACAo4r7nUJOrs0.png?scale-down-to=1024" alt="" />
             </div>
-            <div className="border-t-4 w-full flex lg:gap-0 gap-3 mt-4 lg:flex-row flex-col">
+            <div className="md:border-t-4 w-full flex md:gap-0 gap-3 mt-4 md:flex-row flex-col">
               {banks.map((bank, index) => (
-                <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center lg:first:bg-transparent ${transition} lg:even:bg-transparent lg:last:bg-transparent first:bg-main-5 even:bg-main-6 last:bg-main-6 lg:border-t-4 -mt-1 lg:rounded-none rounded-[30px] cursor-pointer py-4 px-3 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
+                  <div onClick={() => setCurrentIndex(index)} key={index} className={`flex-1 text-center md:first:bg-transparent ${transition} md:even:bg-transparent md:last:bg-transparent first:bg-main-5 even:bg-main-6 last:bg-main-6 md:border-t-4 -mt-1 md:rounded-none rounded-[30px] cursor-pointer py-4 px-3 ${currentIndex === index ? "border-hex-2" : "border-hex-2/40"}`}>
+                <Reveal>
                   <h4 className="text-xl font-bold font-nunitoSans leading-[30px] text-primaryblack">{bank.title}</h4>
                   <p className="text-[#545c6c] leading-[24px] text-base font-nunitoSans">{bank.description}</p>
+                </Reveal>
                 </div>
               ))}
             </div>
@@ -280,11 +282,11 @@ const Home = () => {
       <div className="bg-white flex justify-center items-center flex-col py-28">
         <Reveal><h2 className="text-primaryblack text-[36px] leading-[44px] font-bold">Latest Publications</h2></Reveal>
         <Reveal><p className="text-[#667084] text-xl lg:text-start lg:w-full w-[60%] mx-auto text-center leading-[30px] mt-4">The latest news, publications, and resources from our team.</p></Reveal>
-        <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[85%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
-          <div className="flex-1 flex lg:flex-row flex-col gap-4">
-            <div className="lg:w-[240px] lg:h-[240px] h-[200px]">
-              <Reveal className="lg:w-[240px] lg:h-[240px] h-[200px]">
-                <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
+        <div className="flex md:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[90%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
+          <div className="flex-1 flex md:flex-row flex-col gap-4">
+            <div className="lg:w-[240px] lg:h-[240px] md:w-[160px] w-full h-[200px]">
+              <Reveal className="lg:w-[240px] lg:h-[240px] md:w-[160px] w-full h-[200px]">
+                <img className="rounded-[24px] lg:w-[240px] md:w-[160px] w-full lg:h-[240px] h-[200px] object-cover bg-cover" src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg" alt="" />
               </Reveal>
             </div>
             <Reveal>
@@ -293,16 +295,16 @@ const Home = () => {
               <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button>
             </Reveal>
           </div>
-          <div className="flex-1 flex lg:flex-row flex-col gap-4">
-            <div className="lg:w-[240px] lg:h-[240px] h-[200px]">
-              <Reveal className="lg:w-[240px] lg:h-[240px] h-[200px]">
-                <img className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px]  object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
+          <div className="flex-1 flex md:flex-row flex-col gap-4">
+            <div className="lg:w-[240px] lg:h-[240px] md:w-[160px] w-full h-[200px]">
+              <Reveal className="lg:w-[240px] lg:h-[240px] md:w-[160px] w-full h-[200px]">
+                <img className="rounded-[24px] lg:w-[240px] md:w-[160px] lg:h-[240px] w-full h-[200px]  object-cover bg-cover" src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048" alt="" />
               </Reveal>
             </div>
             <Reveal>
               <h2 className="text-lg text-main-3 font-bold">Excitement as Signature Bank launches operation</h2>
               <p className="text-base text-primarygray">Signature Bank, on Monday, November 21, 2022 launched its operations into the Nigerian banking sector with unique services that are expected to deepen Nigeria's financial inclusion, targeting over 40 million…</p>
-              <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 relative z-50">Read more</button>
+              <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 lg:mt-0 mt-2">Read more</button>
             </Reveal>
           </div>
         </div>
@@ -311,8 +313,8 @@ const Home = () => {
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate w-[90%]"
-          imgContainer=""
+          titleStyle="text-alternate md:w-[90%]"
+          imgContainer="lg:w-auto w-full"
           textColor="text-primarygray"
           title="Open an account with us in a few simple steps."
           description="Open an account with us and enjoy the benefits of personalized banking services."
