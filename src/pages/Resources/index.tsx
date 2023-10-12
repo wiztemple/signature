@@ -59,7 +59,7 @@ const Resources = () => {
             </div>
           </div>
           {activeTab === "downloads" && (
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 md:w-[90%] w-[50%] mx-auto mt-5 gap-5">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 lg:w-full md:w-[90%] w-[50%] mx-auto mt-5 gap-5">
               <DownloadCard
                 downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
                 cardText="Additional Account Opening Form"
