@@ -20,7 +20,7 @@ const PrivateBanking = () => {
         textColor1="text-white"
         textColor2="text-white"
         logoUrl={Logo}
-        primaryBtnClassName="bg-primaryyellow hover:bg-secondarybrown"
+        primaryBtnClassName="bg-primaryyellow hover:bg-secondarybrown !py-3"
         showPrimaryBtnIcon={false}
       />
       <MobileHeader

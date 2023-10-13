@@ -112,7 +112,7 @@ const MegaMenu: React.FC<MegaMenu> = ({
             </span>
             <span>
               <span className={`block font-bold text-${spanColor1}`}>
-                Chat with Us
+                Contact Us
               </span>
               <span className={`block text-${spanColor2} pt-2 text-sm`}>
                 Need help? Contact us.

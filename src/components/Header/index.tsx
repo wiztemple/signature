@@ -1,11 +1,11 @@
 import React, { useState, ReactNode, useRef, useEffect } from "react";
 import lottie from "lottie-web";
 import Logo from "../../assets/altlogo.svg";
-// import Rocket from "../../assets/rocket.svg";
 import MenuCard from "../MenuCard";
 import { Link } from "react-router-dom";
 import MegaMenu from "../MegaMenu";
 import animationData from "../../assets/lottie1.json";
+import AppStore from "../../assets/appstore.svg";
 
 interface HeaderProps {
   bg?: string;
@@ -32,16 +32,18 @@ const Header: React.FC<HeaderProps> = ({
   const handleMenuMouseLeave = () => {
     setMenuContent(null);
   };
+  const animationRef = useRef<any>(null);
 
   useEffect(() => {
-    if (container.current) {
-      lottie.loadAnimation({
+    if (container.current && !animationRef.current) {
+      const anim = lottie.loadAnimation({
         animationData,
         autoplay: true,
         container: container.current,
         loop: true,
-        renderer: "svg",
+        renderer: 'svg',
       });
+      animationRef.current = anim;
     }
   }, []);
 
@@ -111,8 +113,6 @@ const Header: React.FC<HeaderProps> = ({
               </div>
             </div>
           </div>
-          {/* <iframe src="https://lottie.host/?file=e63cd636-2a1e-4a7c-ab8a-7f19d1a6671a/EPxCFliCOt.json"></iframe> */}
-          {/* <iframe src="https://lottie.host/?file=e63cd636-2a1e-4a7c-ab8a-7f19d1a6671a/EPxCFliCOt.json"></iframe> */}
           <nav
             className={`flex justify-between items-center rounded-[50px] ${bg} backdrop-blur-[20px] opacity-100 h-[66px] px-6 py-2.5`}
             onMouseLeave={handleMenuMouseLeave}
@@ -136,10 +136,27 @@ const Header: React.FC<HeaderProps> = ({
                               Personal Banking
                             </span>
                             <Link
-                              to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
+                              to="/accounts"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
                             >
-                              <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+                              <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
+                                <svg
+                                  width="16"
+                                  height="20"
+                                  viewBox="0 0 16 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z"
+                                    fill="#6C1D45"
+                                  />
+                                  <path
+                                    d="M16 15.5C16 17.985 16 20 8 20C0 20 0 17.985 0 15.5C0 13.015 3.582 11 8 11C12.418 11 16 13.015 16 15.5Z"
+                                    fill="#6C1D45"
+                                  />
+                                </svg>
+                              </span>
                               <span>
                                 <span className="block font-bold text-alternate">
                                   Accounts
@@ -152,9 +169,24 @@ const Header: React.FC<HeaderProps> = ({
                             </Link>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2 mt-5"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2 mt-5"
                             >
-                              <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+                              <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
+                                <svg
+                                  width="20"
+                                  height="16"
+                                  viewBox="0 0 20 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M8 0H12C15.771 0 17.657 -1.19209e-07 18.828 1.172C19.672 2.015 19.908 3.229 19.974 5.25H0.026C0.092 3.229 0.328 2.015 1.172 1.172C2.343 -1.19209e-07 4.229 0 8 0ZM12 16H8C4.229 16 2.343 16 1.172 14.828C-1.19209e-07 13.657 0 11.771 0 8C0 7.558 9.33651e-08 7.142 0.00200009 6.75H19.998C20 7.142 20 7.558 20 8C20 11.771 20 13.657 18.828 14.828C17.657 16 15.771 16 12 16ZM4 11.25C3.80109 11.25 3.61032 11.329 3.46967 11.4697C3.32902 11.6103 3.25 11.8011 3.25 12C3.25 12.1989 3.32902 12.3897 3.46967 12.5303C3.61032 12.671 3.80109 12.75 4 12.75H8C8.19891 12.75 8.38968 12.671 8.53033 12.5303C8.67098 12.3897 8.75 12.1989 8.75 12C8.75 11.8011 8.67098 11.6103 8.53033 11.4697C8.38968 11.329 8.19891 11.25 8 11.25H4ZM10.5 11.25C10.3011 11.25 10.1103 11.329 9.96967 11.4697C9.82902 11.6103 9.75 11.8011 9.75 12C9.75 12.1989 9.82902 12.3897 9.96967 12.5303C10.1103 12.671 10.3011 12.75 10.5 12.75H12C12.1989 12.75 12.3897 12.671 12.5303 12.5303C12.671 12.3897 12.75 12.1989 12.75 12C12.75 11.8011 12.671 11.6103 12.5303 11.4697C12.3897 11.329 12.1989 11.25 12 11.25H10.5Z"
+                                    fill="#6C1D45"
+                                  />
+                                </svg>
+                              </span>
                               <span>
                                 <span className="block font-bold text-alternate">
                                   Cards
@@ -201,10 +233,27 @@ const Header: React.FC<HeaderProps> = ({
                               Private Banking
                             </span>
                             <Link
-                              to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
+                              to="/"
+                              className="flex cursor-pointer gap-4 hover:bg-black/10 rounded-[10px] p-2"
                             >
-                              <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+                              <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
+                                <svg
+                                  width="16"
+                                  height="20"
+                                  viewBox="0 0 16 20"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z"
+                                    fill="#6C1D45"
+                                  />
+                                  <path
+                                    d="M16 15.5C16 17.985 16 20 8 20C0 20 0 17.985 0 15.5C0 13.015 3.582 11 8 11C12.418 11 16 13.015 16 15.5Z"
+                                    fill="#6C1D45"
+                                  />
+                                </svg>
+                              </span>
                               <span>
                                 <span className="block font-bold text-white">
                                   Accounts
@@ -216,10 +265,25 @@ const Header: React.FC<HeaderProps> = ({
                               </span>
                             </Link>
                             <Link
-                              to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2 mt-5"
+                              to="/"
+                              className="flex cursor-pointer gap-4 hover:bg-black/10 rounded-[10px] p-2 mt-5"
                             >
-                              <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+                              <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
+                                <svg
+                                  width="20"
+                                  height="16"
+                                  viewBox="0 0 20 16"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    fillRule="evenodd"
+                                    clipRule="evenodd"
+                                    d="M8 0H12C15.771 0 17.657 -1.19209e-07 18.828 1.172C19.672 2.015 19.908 3.229 19.974 5.25H0.026C0.092 3.229 0.328 2.015 1.172 1.172C2.343 -1.19209e-07 4.229 0 8 0ZM12 16H8C4.229 16 2.343 16 1.172 14.828C-1.19209e-07 13.657 0 11.771 0 8C0 7.558 9.33651e-08 7.142 0.00200009 6.75H19.998C20 7.142 20 7.558 20 8C20 11.771 20 13.657 18.828 14.828C17.657 16 15.771 16 12 16ZM4 11.25C3.80109 11.25 3.61032 11.329 3.46967 11.4697C3.32902 11.6103 3.25 11.8011 3.25 12C3.25 12.1989 3.32902 12.3897 3.46967 12.5303C3.61032 12.671 3.80109 12.75 4 12.75H8C8.19891 12.75 8.38968 12.671 8.53033 12.5303C8.67098 12.3897 8.75 12.1989 8.75 12C8.75 11.8011 8.67098 11.6103 8.53033 11.4697C8.38968 11.329 8.19891 11.25 8 11.25H4ZM10.5 11.25C10.3011 11.25 10.1103 11.329 9.96967 11.4697C9.82902 11.6103 9.75 11.8011 9.75 12C9.75 12.1989 9.82902 12.3897 9.96967 12.5303C10.1103 12.671 10.3011 12.75 10.5 12.75H12C12.1989 12.75 12.3897 12.671 12.5303 12.5303C12.671 12.3897 12.75 12.1989 12.75 12C12.75 11.8011 12.671 11.6103 12.5303 11.4697C12.3897 11.329 12.1989 11.25 12 11.25H10.5Z"
+                                    fill="#6C1D45"
+                                  />
+                                </svg>
+                              </span>
                               <span>
                                 <span className="block font-bold text-white">
                                   Cards
@@ -267,7 +331,7 @@ const Header: React.FC<HeaderProps> = ({
                             </span>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -300,7 +364,7 @@ const Header: React.FC<HeaderProps> = ({
                             </Link>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2 mt-5"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -369,7 +433,7 @@ const Header: React.FC<HeaderProps> = ({
                             </span>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -437,7 +501,7 @@ const Header: React.FC<HeaderProps> = ({
                             </span>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -464,7 +528,7 @@ const Header: React.FC<HeaderProps> = ({
                             </Link>
                             <Link
                               to=""
-                              className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2 mt-5"
+                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] px-2 pt-2 pb-10 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -493,6 +557,12 @@ const Header: React.FC<HeaderProps> = ({
                                 <span className="block text-midblack pt-2 text-sm">
                                   Access 24/7 banking <br /> anywhere anytime
                                 </span>
+                                <a href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="block h-12 w-28 -mt-8" target="_blank">
+                                  <img src={AppStore} alt="App Store Link" />
+                                </a>
+                                <a href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="block h-12 w-28 -mt-2" target="_blank">
+                                  <img src={AppStore} alt="App Store Link" />
+                                </a>
                               </span>
                             </Link>
                           </>
