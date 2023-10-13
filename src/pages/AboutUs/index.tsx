@@ -5,10 +5,7 @@ import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import '../../App.css';
 import MobileHeader from "../../components/MobileHeader";
-<<<<<<< HEAD
-=======
 import { Reveal } from "../../utils/Reveal";
->>>>>>> c142024e916b2cd5eb2ac3f82264cd28ca5e9947
 
 
 const cores: { url: string, title: string }[] = [
