@@ -16,6 +16,8 @@ import Cookies from "./pages/Cookies";
 import AMLPolicy from "./pages/AMLPolicy";
 import OnlineSecurityTips from "./pages/OnlineSecurityTips";
 import MediaDetails from "./pages/MediaDetails";
+import Accounts from "./pages/Accounts";
+import Cards from "./pages/Cards";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/accounts" element={<Accounts />} />
+          <Route path="/cards" element={<Cards />} />
           <Route path="/media" element={<Media />} />
           <Route path="/media/:id" element={<MediaDetails />} />
           <Route path="/careers" element={<Careers />} />
