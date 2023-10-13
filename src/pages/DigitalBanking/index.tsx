@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 import appleLogo from "../../assets/apple.svg";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
+import { Reveal } from "../../utils/Reveal";
 
 const DigitalBanking = () => {
   return (
@@ -30,24 +31,24 @@ const DigitalBanking = () => {
       <div className="h-screen w-full overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
-            className=" absolute top-14 -right-10 w-[90%] z-20"
+            className="absolute top-14 -right-10 w-[90%] z-20"
             src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
             alt=""
           />
         </div>
         <div className="z-20 relative flex w-full justify-center h-full">
           <img
-            className="h-[670px] z-20 bottom-0 left-[17%] absolute object-center object-cover image-auto"
+            className="lg:h-[670px] z-20 md:bottom-0 h-full lg:left-[17%] absolute object-center object-cover image-auto"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
             alt=""
           />
         </div>
         <div
-          className={`text-white z-40 absolute w-full h-auto flex lg:mx-auto lg:justify-center bottom-14`}
+          className={`text-white z-40 absolute w-full h-auto flex :mx-auto justify-center bottom-14`}
         >
           <div
             style={{ backdropFilter: "blur(15px)" }}
-            className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] w-[60%]`}
+            className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] lg:w-[60%] w-[70%]`}
           >
             <div
               className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
@@ -73,7 +74,8 @@ const DigitalBanking = () => {
       {/*  */}
       <div className="w-[85%] mx-auto mt-10">
         {/*  */}
-        <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center">
+        <Reveal>
+          <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center">
           <div>Bank in style</div>
           <div>with Signature Cards</div>
           <div>
@@ -89,18 +91,20 @@ const DigitalBanking = () => {
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
             <div className="w-[24%] rotate-60 rounded-[20px] absolute -bottom-5 border">
-              <img
+              {/* <img
                 className="w-full h-[400px] object-fill bg-center"
                 src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
                 alt=""
-              />
+              /> */}
             </div>
           </div>
         </div>
+        </Reveal>
         {/*  */}
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 mt-20">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
-          <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
@@ -114,7 +118,9 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          </Reveal>
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
@@ -157,7 +163,9 @@ const DigitalBanking = () => {
               </div>
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+          </Reveal>
+          <Reveal>
+             <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
@@ -179,7 +187,9 @@ const DigitalBanking = () => {
               />
             </div>
           </div>
-          <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+         </Reveal>
+          <Reveal>
+            <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               Sign up for{" "}
               <span className="font-bold text-[#b49863]">eNaira</span>
@@ -201,6 +211,7 @@ const DigitalBanking = () => {
               />
             </div>
           </div>
+          </Reveal>
         </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">

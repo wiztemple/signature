@@ -1,35 +1,19 @@
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
+import Banner from "../../components/Banner";
+import { Reveal } from "../../utils/Reveal";
 
 const PrivateBanking = () => {
-  const useScrollAnimation = () => {
-    const controls = useAnimation();
-  
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        // Calculate scaling and opacity based on scroll position
-        const scale = 1 + scrollY / 10000;
-  
-        controls.start({ scale });
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, [controls]);
-  
-    return controls;
-  };
-  const controls = useScrollAnimation();
+
   return (
-    <>
+    <div style={{
+          background:
+            "linear-gradient(rgb(18, 14, 16) 0%, rgb(18, 14, 16) 100%)",
+        }}>
     <div className="">
       <Header
         bg="bg-[#1e191b]/70"
@@ -52,8 +36,8 @@ const PrivateBanking = () => {
         display="hidden"
         scaling=""
         heroBg="white"
-        bannerWidth="w-[59%]"
-        textWidth="w-[70%]"
+        bannerWidth="md:w-[59%] w-[70%]"
+        textWidth="lg:w-[70%]"
         top="top-[65%]"
         bg="bg-hex-5"
         color="white"
@@ -83,9 +67,9 @@ const PrivateBanking = () => {
               financial solutions
             </div>
           </div>
-          <motion.div  animate={controls}>
-          <SectionCard
-          extraClass="xl:w-[570px]"
+            <Reveal>
+              <SectionCard
+          extraClass="lg:w-[570px] md:w-[380px] w-full"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
@@ -96,9 +80,10 @@ const PrivateBanking = () => {
             flexRow=""
             display="block"
           />
-          </motion.div>
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+            <Reveal>
+              <SectionCard
+          extraClass="lg:w-[570px] md:w-[380px] w-full"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
@@ -109,8 +94,10 @@ const PrivateBanking = () => {
             flexRow="flex-row-reverse"
             display="block"
           />
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+            <Reveal>
+              <SectionCard
+          extraClass="lg:w-[570px] md:w-[380px] w-full"
             black="white"
             buttonBg="bg-primaryyellow"
             buttonColor="text-white"
@@ -121,11 +108,25 @@ const PrivateBanking = () => {
             flexRow=""
             display="block"
           />
+          </Reveal>
         </div>
       </div>
-    </div>
+      </div>
+      <div className="lg:w-[85%] w-[90%] mx-auto py-14">
+        <Banner
+          bannerBg="bg-bannerbg"
+          buttonStyle="bg-hex-2 text-white"
+          titleStyle="text-alternate w-[90%]"
+          imgContainer=""
+          textColor="text-primarygray"
+          title="Open an account with us in a few simple steps."
+          description="Open an account with us and enjoy the benefits of personalized banking services."
+          buttonName="Open an Account - Coming Soon"
+          url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
+        />
+      </div>
      <Footer background="bg-gold" />
-     </>
+     </div>
   );
 };
 export default PrivateBanking;

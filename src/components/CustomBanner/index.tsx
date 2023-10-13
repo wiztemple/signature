@@ -48,14 +48,14 @@ const CustomBanner = ({
         />
       </div>
       <div
-        className={`text-white z-40 absolute w-full h-auto flex lg:mx-auto lg:justify-center ${top}`}
+        className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center ${top}`}
       >
         <div
           style={{ backdropFilter: `${dropFilter}` }}
           className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] p-[30px]`}
         >
           <div
-            className={`text-${color} lg:text-[64px] text-center font-bold leading-[1em]`}
+            className={`text-${color} md:text-[64px] text-[42px] text-center font-bold leading-[1em]`}
           >
             <h1>{title1}</h1>
             <h1>{title2}</h1>

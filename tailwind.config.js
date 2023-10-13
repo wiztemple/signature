@@ -63,6 +63,9 @@ export default {
       clipPath: {
         'half-circle': 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)',
       },
+      screens: {
+        xl: "1900px"
+      }
     },
   },
   plugins: [],

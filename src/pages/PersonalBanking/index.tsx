@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import SectionCard from "../../components/SectionCard";
+import { Reveal } from "../../utils/Reveal";
 
 const cards: { url: string, title: string, description: string, buttonName: string }[] = [
   {
@@ -52,9 +53,9 @@ const PersonalBanking = () => {
         display="hidden"
         scaling=""
         heroBg="white"
-        bannerWidth="w-[62%]"
-        textWidth="w-[85%]"
-        top="top-[57%]"
+        bannerWidth="lg:w-[62%] w-[80%]"
+        textWidth="lg:w-[85%]"
+        top="lg:top-[57%] md:bottom-28 bottom-16"
         bg="bg-hex-4"
         color="hex-2"
         subColor="alternate"
@@ -90,11 +91,12 @@ const PersonalBanking = () => {
       </div>
       {/* sectionCard */}
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-10">
-        <div className="w-[90%] mx-auto">
-          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold lg:leading-[-0.96px] text-center">Built for the future, built for your progress.</h1>
-          <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">We take pride in offering you a superior banking experience</p>
-          <SectionCard
-          extraClass="xl:w-[570px]"
+        <div className="lg:w-[85%] w-[90%] mx-auto">
+          <Reveal><h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold lg:leading-[-0.96px] text-center">Built for the future, built for your progress.</h1></Reveal>
+          <Reveal><p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">We take pride in offering you a superior banking experience</p></Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -105,8 +107,10 @@ const PersonalBanking = () => {
             flexRow=""
             display="hidden"
           />
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -117,8 +121,10 @@ const PersonalBanking = () => {
             flexRow="flex-row-reverse"
             display="hidden"
           />
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -129,6 +135,7 @@ const PersonalBanking = () => {
             flexRow=""
             display="hidden"
           />
+          </Reveal>
         </div>
       </div>
       {/* banner */}

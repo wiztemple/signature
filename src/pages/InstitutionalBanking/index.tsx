@@ -58,11 +58,11 @@ const InstitutionalBanking = () => {
       />
       <CustomBanner
         display="block"
-        scaling="px-4 pt-[68px]"
+        scaling="lg:px-4 pt-[68px]"
         heroBg="bg-secondarybrown"
         bannerWidth="w-[69%]"
         textWidth="w-[85%]"
-        top="top-[61%]"
+        top="lg:top-[61%] md:bottom-28 bottom-16"
         bg="bg-hex-6"
         color="white"
         subColor="white"
@@ -86,7 +86,7 @@ const InstitutionalBanking = () => {
               with diverse banking needs.
             </div>
           </div>
-          <div className="grid lg:grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
                 key={index}
@@ -110,7 +110,7 @@ const InstitutionalBanking = () => {
             We take pride in offering you a superior banking experience
           </p>
           <SectionCard
-          extraClass="xl:w-[570px]"
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -122,7 +122,7 @@ const InstitutionalBanking = () => {
             display="hidden"
           />
           <SectionCard
-          extraClass="xl:w-[570px]"
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -134,7 +134,7 @@ const InstitutionalBanking = () => {
             display="hidden"
           />
           <SectionCard
-          extraClass="xl:w-[570px]"
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""

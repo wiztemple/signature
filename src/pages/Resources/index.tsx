@@ -9,6 +9,7 @@ import Logo2 from "../../assets/altlogo.svg";
 import Logo3 from "../../assets/logowhite.svg";
 import Symbol1 from "../../assets/symbol1.svg";
 import Symbol2 from "../../assets/symbol2.svg";
+import MobileHeader from "../../components/MobileHeader";
 const Resources = () => {
   const [activeTab, setActiveTab] = useState<string | undefined>("downloads");
 
@@ -17,13 +18,14 @@ const Resources = () => {
     setActiveTab(value);
   };
   return (
-    <div className="font-nunitoSans">
+    <div className="font-nunitoSans bg-white">
       <Header />
-      <div className="pt-[270px] pb-24 bg-[#f9f5f8]">
-        <h1 className="text-center text-7xl font-bold text-alternate">
+      <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
+      <div className="md:pt-[270px] pt-64 pb-24 bg-[#f9f5f8]">
+        <h1 className="text-center md:text-7xl text-[48px] font-bold text-alternate">
           Resources
         </h1>
-        <p className="text-center text-2xl pt-3 text-[#555d6c]">
+        <p className="text-center md:text-2xl text-lg w-[60%] mx-auto pt-3 text-[#555d6c]">
           Latest downloads, resources and all you need from Signature bank
         </p>
       </div>
@@ -57,7 +59,7 @@ const Resources = () => {
             </div>
           </div>
           {activeTab === "downloads" && (
-            <div className="w-full grid grid-cols-4 gap-5">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 lg:w-full md:w-[90%] w-[50%] mx-auto mt-5 gap-5">
               <DownloadCard
                 downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
                 cardText="Additional Account Opening Form"
@@ -79,7 +81,7 @@ const Resources = () => {
           {activeTab === "media" && (
             <div>
               <h1 className="text-5xl font-bold text-alternate pb-2.5">Logo</h1>
-              <div className="w-full grid grid-cols-4 gap-5">
+              <div className="w-full grid md:grid-cols-4 grid-cols-2 gap-5">
                 <LogoDownloadCard
                   bgColor="bg-hex-2"
                   img={Logo1}
@@ -104,7 +106,7 @@ const Resources = () => {
               <h1 className="text-5xl font-bold text-alternate pb-2.5 pt-28">
                 Symbol
               </h1>
-              <div className="w-full grid grid-cols-4 gap-5">
+              <div className="w-full grid md:grid-cols-4 grid-cols-2 gap-5">
                 <LogoDownloadCard
                   bgColor="bg-hex-2"
                   img={Symbol1}
@@ -130,7 +132,7 @@ const Resources = () => {
           )}
         </div>
       </div>
-      <div className="bg-white">
+      <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"

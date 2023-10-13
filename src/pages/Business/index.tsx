@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
+import { Reveal } from "../../utils/Reveal";
 
 const cards: {
   url: string;
@@ -59,9 +60,9 @@ const Business = () => {
         display="hidden"
         scaling=""
         heroBg="white"
-        bannerWidth="w-[56%]"
-        textWidth="w-[85%]"
-        top="top-[57.5%]"
+        bannerWidth="lg:w-[56%] w-[70%]"
+        textWidth="lg:w-[85%]"
+        top="lg:top-[57.5%] md:bottom-28 bottom-16"
         bg="bg-hex-6"
         color="white"
         subColor="white"
@@ -69,8 +70,8 @@ const Business = () => {
         alt="Business banking with Signature bank"
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(rgba(176, 93, 55, 0) 0%, rgb(176, 93, 55) 100%)"
-        title1="Accelerate your business"
-        title2="growth"
+        title1="Accelerate your business growth"
+        title2=""
         description="Attain new financial heights with our personalised banking solutions"
       />
       <div className="bg-white text-black font-nunitoSans">
@@ -84,7 +85,7 @@ const Business = () => {
               achieve your goals.
             </div>
           </div>
-          <div className="grid lg:grid-cols-3 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
             {cards.map((card, index) => (
               <Card
                 key={index}
@@ -100,15 +101,18 @@ const Business = () => {
         </div>
       </div>
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-5">
-        <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
+        <div className="w-[85%] mx-auto font-nunitoSans">
+          <Reveal>
+            <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
            Access simple business solutions that will certainly put your business ahead.
           </h1>
           <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20">
             We take pride in offering you a superior banking experience
           </p>
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -119,8 +123,10 @@ const Business = () => {
             flexRow=""
             display="hidden"
           />
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -131,8 +137,10 @@ const Business = () => {
             flexRow="flex-row-reverse"
             display="hidden"
           />
-          <SectionCard
-          extraClass="xl:w-[570px]"
+          </Reveal>
+          <Reveal>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -143,6 +151,7 @@ const Business = () => {
             flexRow=""
             display="hidden"
           />
+          </Reveal>
         </div>
       </div>
       <div className="w-[85%] mx-auto py-14">
