@@ -72,7 +72,7 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   <Link to="/about-us" className="block text-main-1">Team</Link>
                   <Link to="/careers" className="block text-main-1">Careers</Link>
                   <Link to="/resources" className="block text-main-1">Press</Link>
-                  <Link to="/contact" className="block text-main-1">Contact</Link>
+                  <Link to="/branch-locator" className="block text-main-1">Contact</Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">

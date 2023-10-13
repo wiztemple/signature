@@ -56,12 +56,12 @@ const Header: React.FC<HeaderProps> = ({
           <div className="relative">
             <div className="flex justify-between py-2 px-4 items-center">
               <div className="flex gap-[30px]">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Home
-                </a>
+                </Link>
                 <Link
                   to="/about-us"
                   className={`${textColor1} text-sm py-2 hover:bg-lightgold/10 hover:underline hover:text-lightgold rounded-[10px] px-3 group relative`}
@@ -90,26 +90,26 @@ const Header: React.FC<HeaderProps> = ({
                 >
                   Resources
                 </Link>
-                <a
-                  href="media"
+                <Link
+                  to="/media"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Media
-                </a>
-                <a
-                  href="branch-locator"
+                </Link>
+                <Link
+                  to="/branch-locator"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Branch Locator
-                </a>
+                </Link>
               </div>
               <div className="flex">
-                <a
-                  href="#"
+                <Link
+                  to="/branch-locator"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Contact Us
-                </a>
+                </Link>
               </div>
             </div>
           </div>
