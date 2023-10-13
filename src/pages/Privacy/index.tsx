@@ -23,7 +23,7 @@ const tabs: { name: string, link: string }[] = [
 
 const Privacy = () => {
   return (
-    <div className="bg-white font-nunitoSans">
+    <div className="bg-white font-nunitoSans scroll-smooth">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <MobileHeader
         primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white"

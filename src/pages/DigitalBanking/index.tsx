@@ -75,7 +75,7 @@ const DigitalBanking = () => {
       <div className="w-[85%] mx-auto mt-10">
         {/*  */}
         <Reveal>
-          <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center">
+          <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center font-nunitoSans">
           <div>Bank in style</div>
           <div>with Signature Cards</div>
           <div>
@@ -104,7 +104,7 @@ const DigitalBanking = () => {
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
           <Reveal>
-            <div className=" rounded-[30px] py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+            <div className="rounded-[30px] font-nunitoSans py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
@@ -120,7 +120,7 @@ const DigitalBanking = () => {
           </div>
           </Reveal>
           <Reveal>
-            <div className=" rounded-[30px] py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+            <div className="rounded-[30px] font-nunitoSans py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
@@ -165,7 +165,7 @@ const DigitalBanking = () => {
           </div>
           </Reveal>
           <Reveal>
-             <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+             <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden font-nunitoSans bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
@@ -189,7 +189,7 @@ const DigitalBanking = () => {
           </div>
          </Reveal>
           <Reveal>
-            <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+            <div className="rounded-[30px] font-nunitoSans py-10 px-6 h-[810px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               Sign up for{" "}
               <span className="font-bold text-[#b49863]">eNaira</span>
