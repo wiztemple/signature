@@ -43,6 +43,7 @@ function App() {
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/aml-policy" element={<AMLPolicy />} />
           <Route path="/online-security-tips" element={<OnlineSecurityTips />} />
+          <Route path="/cards" element={<Cards />} />
         </Routes>
       </BrowserRouter>
     </>

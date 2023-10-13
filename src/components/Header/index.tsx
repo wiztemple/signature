@@ -169,7 +169,7 @@ const Header: React.FC<HeaderProps> = ({
                               </span>
                             </Link>
                             <Link
-                              to=""
+                              to="/cards"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
@@ -234,7 +234,7 @@ const Header: React.FC<HeaderProps> = ({
                               Private Banking
                             </span>
                             <Link
-                              to="/"
+                              to="/accounts"
                               className="flex cursor-pointer gap-4 hover:bg-black/10 rounded-[10px] p-2"
                             >
                               <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
@@ -266,7 +266,7 @@ const Header: React.FC<HeaderProps> = ({
                               </span>
                             </Link>
                             <Link
-                              to="/"
+                              to="/cards"
                               className="flex cursor-pointer gap-4 hover:bg-black/10 rounded-[10px] p-2 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full flex justify-center items-center bg-[#f1ebdf]">
