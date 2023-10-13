@@ -1,6 +1,9 @@
-import { Link } from 'react-router-dom';
-import Logo from '../../assets/logo.svg'
-const Footer = ({ background = 'bg-hex-2' }) => {
+import { Link } from "react-router-dom";
+import Logo from "../../assets/logo.svg";
+import AppStore from "../../assets/appstore.svg";
+import GooglePlay from "../../assets/googleplay.svg";
+
+const Footer = ({ background = "bg-hex-2" }) => {
   return (
     <footer className={`w-full ${background} font-nunitoSans`}>
       <div className="lg:p-[100px] p-5">
@@ -12,10 +15,12 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Stay informed. Join our newsletter
                 </p>
                 <p className="leading-6 w-full break-after-all break-words text-main-1 lg:hidden block pb-8 font-nunitoSans">
-                  Get up-to-date information about products <br /> and services that will help build and sustain <br /> your finances.
+                  Get up-to-date information about products <br /> and services
+                  that will help build and sustain <br /> your finances.
                 </p>
                 <p className="leading-6 w-full break-after-all break-words text-main-1 lg:block hidden font-nunitoSans">
-                  Get up-to-date information about products and services that will help build and sustain  your finances.
+                  Get up-to-date information about products and services that
+                  will help build and sustain your finances.
                 </p>
               </div>
             </div>
@@ -47,8 +52,12 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Products
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <Link to="/accounts" className="block text-main-1">Accounts</Link>
-                  <Link to="/cards" className="block text-main-1">Cards</Link>
+                  <Link to="/accounts" className="block text-main-1">
+                    Accounts
+                  </Link>
+                  <Link to="/cards" className="block text-main-1">
+                    Cards
+                  </Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -56,11 +65,24 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Services
                 </span>
                 <span className="flex flex-col gap-3 sm:text-base">
-                  <Link to="/personal-banking" className="block text-main-1">Personal Banking</Link>
-                  <Link to="/private-banking" className="block text-main-1">Private Banking</Link>
-                  <Link to="/business-banking" className="block text-main-1">Business Banking</Link>
-                  <Link to="/institutional-banking" className="block text-main-1">Institutional Banking</Link>
-                  <Link to="/digital-banking" className="block text-main-1">Digital Banking</Link>
+                  <Link to="/personal-banking" className="block text-main-1">
+                    Personal Banking
+                  </Link>
+                  <Link to="/private-banking" className="block text-main-1">
+                    Private Banking
+                  </Link>
+                  <Link to="/business-banking" className="block text-main-1">
+                    Business Banking
+                  </Link>
+                  <Link
+                    to="/institutional-banking"
+                    className="block text-main-1"
+                  >
+                    Institutional Banking
+                  </Link>
+                  <Link to="/digital-banking" className="block text-main-1">
+                    Digital Banking
+                  </Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -68,11 +90,21 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   About Signature Bank
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <Link to="/about-us" className="block text-main-1">About Us</Link>
-                  <Link to="/about-us" className="block text-main-1">Team</Link>
-                  <Link to="/careers" className="block text-main-1">Careers</Link>
-                  <Link to="/resources" className="block text-main-1">Press</Link>
-                  <Link to="/branch-locator" className="block text-main-1">Contact</Link>
+                  <Link to="/about-us" className="block text-main-1">
+                    About Us
+                  </Link>
+                  <Link to="/about-us" className="block text-main-1">
+                    Team
+                  </Link>
+                  <Link to="/careers" className="block text-main-1">
+                    Careers
+                  </Link>
+                  <Link to="/resources" className="block text-main-1">
+                    Press
+                  </Link>
+                  <Link to="/branch-locator" className="block text-main-1">
+                    Contact
+                  </Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -80,10 +112,18 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Resources
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <Link to="/resources" className="block text-main-1">Forms</Link>
-                  <Link to="/resources" className="block text-main-1">Newsletter</Link>
-                  <Link to="/contact" className="block text-main-1">Support</Link>
-                  <Link to="/resources" className="block text-main-1">Media kit</Link>
+                  <Link to="/resources" className="block text-main-1">
+                    Forms
+                  </Link>
+                  <Link to="/resources" className="block text-main-1">
+                    Newsletter
+                  </Link>
+                  <Link to="/contact" className="block text-main-1">
+                    Support
+                  </Link>
+                  <Link to="/resources" className="block text-main-1">
+                    Media kit
+                  </Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -95,6 +135,20 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   <a className="block text-main-1">LinkedIn</a>
                   <a className="block text-main-1">Facebook</a>
                   <a className="block text-main-1">Instagram</a>
+                  <a
+                    href="https://apps.apple.com/ng/app/signature-mobile/id6446977188"
+                    className="block h-12 w-[110px] -mt-10"
+                    target="_blank"
+                  >
+                    <img src={AppStore} alt="App Store Link" />
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.signaturemobile"
+                    className="block h-12 w-[110px] -mt-5"
+                    target="_blank"
+                  >
+                    <img src={GooglePlay} alt="Google Plkay Link" />
+                  </a>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
@@ -102,11 +156,24 @@ const Footer = ({ background = 'bg-hex-2' }) => {
                   Legal
                 </span>
                 <span className="flex flex-col gap-3 text-base">
-                  <Link to='/terms' className="block text-main-1">Terms</Link>
-                  <Link to='/privacy' className="block text-main-1">Privacy</Link>
-                  <Link to='/cookies' className="block text-main-1">Cookies</Link>
-                  <Link to='/aml-policy' className="block text-main-1">AML Policy</Link>
-                  <Link to='/online-security-tips' className="block text-main-1">Online Security Tips</Link>
+                  <Link to="/terms" className="block text-main-1">
+                    Terms
+                  </Link>
+                  <Link to="/privacy" className="block text-main-1">
+                    Privacy
+                  </Link>
+                  <Link to="/cookies" className="block text-main-1">
+                    Cookies
+                  </Link>
+                  <Link to="/aml-policy" className="block text-main-1">
+                    AML Policy
+                  </Link>
+                  <Link
+                    to="/online-security-tips"
+                    className="block text-main-1"
+                  >
+                    Online Security Tips
+                  </Link>
                 </span>
               </div>
             </div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import MegaMenu from "../MegaMenu";
 import animationData from "../../assets/lottie1.json";
 import AppStore from "../../assets/appstore.svg";
+import GooglePlay from "../../assets/googleplay.svg";
 
 interface HeaderProps {
   bg?: string;
@@ -330,41 +331,8 @@ const Header: React.FC<HeaderProps> = ({
                               Business Banking
                             </span>
                             <Link
-                              to=""
+                              to="/accounts"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
-                            >
-                              <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
-                                <svg
-                                  width="16"
-                                  height="20"
-                                  viewBox="0 0 16 20"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z"
-                                    fill="#6C1D45"
-                                  />
-                                  <path
-                                    opacity="0.5"
-                                    d="M16 15.5C16 17.985 16 20 8 20C0 20 0 17.985 0 15.5C0 13.015 3.582 11 8 11C12.418 11 16 13.015 16 15.5Z"
-                                    fill="#6C1D45"
-                                  />
-                                </svg>
-                              </span>
-                              <span>
-                                <span className="block font-bold text-alternate">
-                                  Corporate Current <br /> Account
-                                </span>
-                                <span className="block text-midblack pt-2 text-sm">
-                                  Get a bank account best <br /> suited for your
-                                  financial goals
-                                </span>
-                              </span>
-                            </Link>
-                            <Link
-                              to=""
-                              className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
                                 <svg
@@ -527,7 +495,7 @@ const Header: React.FC<HeaderProps> = ({
                               </span>
                             </Link>
                             <Link
-                              to=""
+                              to="/accounts"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] px-2 pt-2 pb-10 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
@@ -560,8 +528,8 @@ const Header: React.FC<HeaderProps> = ({
                                 <a href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="block h-12 w-28 -mt-8" target="_blank">
                                   <img src={AppStore} alt="App Store Link" />
                                 </a>
-                                <a href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="block h-12 w-28 -mt-2" target="_blank">
-                                  <img src={AppStore} alt="App Store Link" />
+                                <a href="https://play.google.com/store/apps/details?id=com.signaturemobile" className="block h-12 w-28 -mt-2" target="_blank">
+                                  <img src={GooglePlay} alt="Google Plkay Link" />
                                 </a>
                               </span>
                             </Link>
