@@ -16,7 +16,8 @@ interface BannerProps {
 const Banner = ({ title, description, buttonName, url, bannerBg, titleStyle, textColor, buttonStyle, imgContainer }: BannerProps) => {
   return (
     <div className={`lg:rounded-[50px] rounded-[20px] font-nunitoSans relative lg:h-[410px] overflow-hidden ${bannerBg}`}>
-      <img className='absolute -top-32 rotate overflow-hidden' src={bannerSvg} alt="banner svg" />
+      {/* <img className='absolute -top-32 rotate overflow-hidden' src="https://lottie.host/?file=e63cd636-2a1e-4a7c-ab8a-7f19d1a6671a/EPxCFliCOt.json" alt="banner svg" /> */}
+      <iframe className='absolute w-full h-full' src="https://lottie.host/?file=e63cd636-2a1e-4a7c-ab8a-7f19d1a6671a/EPxCFliCOt.json"></iframe>
       <div className='text-primaryblack lg:px-10 p-4 flex lg:flex-row flex-col-reverse h-full items-center relative justify-between'>
         <div>
           <div className={`lg:text-[42px] text-[36px] mt-10 ${titleStyle} font-bold leading-[1.2em]`}>{title}</div>

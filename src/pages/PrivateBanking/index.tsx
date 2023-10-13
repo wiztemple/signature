@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import CustomBanner from "../../components/CustomBanner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -6,6 +8,26 @@ import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
 
 const PrivateBanking = () => {
+  const useScrollAnimation = () => {
+    const controls = useAnimation();
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const scrollY = window.scrollY;
+        // Calculate scaling and opacity based on scroll position
+        const scale = 1 + scrollY / 10000;
+  
+        controls.start({ scale });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [controls]);
+  
+    return controls;
+  };
+  const controls = useScrollAnimation();
   return (
     <>
     <div className="">
@@ -61,6 +83,7 @@ const PrivateBanking = () => {
               financial solutions
             </div>
           </div>
+          <motion.div  animate={controls}>
           <SectionCard
           extraClass="xl:w-[570px]"
             black="white"
@@ -73,6 +96,7 @@ const PrivateBanking = () => {
             flexRow=""
             display="block"
           />
+          </motion.div>
           <SectionCard
           extraClass="xl:w-[570px]"
             black="white"

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface MegaMenu {
-  children: ReactNode,
+  children: ReactNode;
   bgColor?: string;
   textColor?: string;
   spanColor1?: string;
@@ -9,43 +9,48 @@ interface MegaMenu {
   imageText?: ReactNode;
   imageUrl?: string;
   position?: string;
+  itemBg?: string;
 }
-const MegaMenu: React.FC<MegaMenu> = ({ children, bgColor, textColor, spanColor1, spanColor2, imageText, imageUrl, position = '-ml-32' }) => {
+const MegaMenu: React.FC<MegaMenu> = ({
+  children,
+  bgColor,
+  textColor,
+  spanColor1,
+  spanColor2,
+  imageText,
+  imageUrl,
+  position = "-ml-32",
+  itemBg = "bg-[#f1ebdf]",
+}) => {
   return (
-    <div className={`flex w-[980px] p-10 ${bgColor} rounded-[20px] ${position} font-nunitoSans`}>
+    <div
+      className={`flex w-[980px] p-10 ${bgColor} rounded-[20px] ${position} font-nunitoSans`}
+    >
       <div className="w-3/5 flex gap-x-4">
+        <div>{children}</div>
         <div>
-          {/* <span className="block text-hex-3 px-2 pb-5">Business Banking</span>
-          <Link
-            to=""
-            className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2"
-          >
-            <span className="w-10 h-10 rounded-full block bg-red-100"></span>
-            <span>
-              <span className="block font-bold text-alternate">Accounts</span>
-              <span className="block text-midblack pt-2 text-sm">
-                Get a bank account best <br /> suited for your financial goals
-              </span>
-            </span>
-          </Link>
-          <Link
-            to=""
-            className="flex cursor-pointer gap-4 hover:bg-slate-50 rounded-[10px] p-2 mt-5"
-          >
-            <span className="w-10 h-10 rounded-full block bg-red-100"></span>
-            <span>
-              <span className="block font-bold text-alternate">Cards</span>
-              <span className="block text-midblack pt-2 text-sm">
-                Access 24/7 banking <br /> anywhere anytime
-              </span>
-            </span>
-          </Link> */}
-          {children}
-        </div>
-        <div>
-          <span className={`block text-${textColor} px-2 pb-5`}>Self Services</span>
+          <span className={`block text-${textColor} px-2 pb-5`}>
+            Self Services
+          </span>
           <div className="flex cursor-pointer gap-4 rounded-lg p-2">
-            <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+            <span
+              className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M11.5116 0H13.186C14.765 0 15.5537 -5.17052e-08 16.0443 0.508337C16.5349 1.01667 16.5349 1.83383 16.5349 3.46988V16.6988H17.3721C17.5386 16.6988 17.6983 16.7673 17.8161 16.8894C17.9338 17.0114 18 17.1768 18 17.3494C18 17.5219 17.9338 17.6874 17.8161 17.8094C17.6983 17.9315 17.5386 18 17.3721 18H0.627907C0.461376 18 0.301665 17.9315 0.18391 17.8094C0.0661543 17.6874 0 17.5219 0 17.3494C0 17.1768 0.0661543 17.0114 0.18391 16.8894C0.301665 16.7673 0.461376 16.6988 0.627907 16.6988H1.46512V6.07229C1.46512 4.43624 1.46512 3.61908 1.95572 3.11075C2.44633 2.60241 3.23498 2.60241 4.81395 2.60241H8.16279C9.74177 2.60241 10.5304 2.60241 11.021 3.11075C11.5116 3.61908 11.5116 4.43624 11.5116 6.07229V16.6988H12.7674V5.99422C12.7674 5.24386 12.7674 4.55508 12.6946 3.99557C12.6151 3.3788 12.4267 2.72646 11.9093 2.19123C11.3919 1.65427 10.7623 1.45908 10.1679 1.37581C9.6346 1.30207 8.98074 1.3012 8.26828 1.3012C8.3386 0.965494 8.45665 0.711325 8.6534 0.508337C9.144 -5.17052e-08 9.93265 0 11.5116 0ZM3.34884 5.20482C3.34884 5.03227 3.41499 4.86679 3.53275 4.74477C3.6505 4.62276 3.81021 4.55422 3.97674 4.55422H9C9.16653 4.55422 9.32624 4.62276 9.444 4.74477C9.56175 4.86679 9.62791 5.03227 9.62791 5.20482C9.62791 5.37737 9.56175 5.54285 9.444 5.66486C9.32624 5.78688 9.16653 5.85542 9 5.85542H3.97674C3.81021 5.85542 3.6505 5.78688 3.53275 5.66486C3.41499 5.54285 3.34884 5.37737 3.34884 5.20482ZM3.34884 7.80723C3.34884 7.63468 3.41499 7.4692 3.53275 7.34718C3.6505 7.22517 3.81021 7.15663 3.97674 7.15663H9C9.16653 7.15663 9.32624 7.22517 9.444 7.34718C9.56175 7.4692 9.62791 7.63468 9.62791 7.80723C9.62791 7.97978 9.56175 8.14526 9.444 8.26727C9.32624 8.38929 9.16653 8.45783 9 8.45783H3.97674C3.81021 8.45783 3.6505 8.38929 3.53275 8.26727C3.41499 8.14526 3.34884 7.97978 3.34884 7.80723ZM3.34884 10.4096C3.34884 10.2371 3.41499 10.0716 3.53275 9.94959C3.6505 9.82758 3.81021 9.75904 3.97674 9.75904H9C9.16653 9.75904 9.32624 9.82758 9.444 9.94959C9.56175 10.0716 9.62791 10.2371 9.62791 10.4096C9.62791 10.5822 9.56175 10.7477 9.444 10.8697C9.32624 10.9917 9.16653 11.0602 9 11.0602H3.97674C3.81021 11.0602 3.6505 10.9917 3.53275 10.8697C3.41499 10.7477 3.34884 10.5822 3.34884 10.4096ZM6.48837 14.0964C6.6549 14.0964 6.81461 14.1649 6.93237 14.2869C7.05012 14.409 7.11628 14.5744 7.11628 14.747V16.6988H5.86046V14.747C5.86046 14.5744 5.92662 14.409 6.04438 14.2869C6.16213 14.1649 6.32184 14.0964 6.48837 14.0964Z"
+                  fill="#6C1D45"
+                />
+              </svg>
+            </span>
             <span>
               <span className={`block font-bold text-${spanColor1}`}>
                 Find a Branch or ATM
@@ -56,19 +61,55 @@ const MegaMenu: React.FC<MegaMenu> = ({ children, bgColor, textColor, spanColor1
             </span>
           </div>
           <div className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5">
-            <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+            <span
+              className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
+            >
+              <svg
+                width="16"
+                height="20"
+                viewBox="0 0 16 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z"
+                  fill="#6C1D45"
+                />
+                <path
+                  d="M16 15.5C16 17.985 16 20 8 20C0 20 0 17.985 0 15.5C0 13.015 3.582 11 8 11C12.418 11 16 13.015 16 15.5Z"
+                  fill="#6C1D45"
+                />
+              </svg>
+            </span>
             <span>
               <span className={`block font-bold text-${spanColor1}`}>
                 Open an Account
               </span>
               <span className={`block text-${spanColor2} pt-2 text-sm`}>
-                Start your financial <br /> journey with us. Get your <br />{" "}
+                Start your financial <br /> journey with us. Get your <br />
                 Signature account - <br /> Launching soon
               </span>
             </span>
           </div>
           <div className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5">
-            <span className="w-10 h-10 rounded-full block bg-red-100"></span>
+            <span
+              className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M2.86971 0.480927C4.89954 0.160064 6.94842 -0.000672063 9 2.11192e-06C11.0829 2.11192e-06 13.1289 0.16431 15.1303 0.480004C16.8257 0.749544 18 2.34832 18 4.14463V9.70158C18 11.4979 16.8257 13.0967 15.1303 13.3662C14.1414 13.5223 13.1476 13.6402 12.1509 13.7198C12.1001 13.7233 12.0508 13.7393 12.0067 13.7665C11.9626 13.7937 11.9248 13.8314 11.8963 13.8767L9.53486 17.6918C9.47615 17.7866 9.39662 17.8643 9.30331 17.9181C9.21001 17.9719 9.10582 18 9 18C8.89418 18 8.78999 17.9719 8.69669 17.9181C8.60339 17.8643 8.52385 17.7866 8.46514 17.6918L6.10371 13.8767C6.07515 13.8314 6.03738 13.7937 5.99326 13.7665C5.94915 13.7393 5.89986 13.7233 5.84914 13.7198C4.85239 13.6399 3.85862 13.5217 2.86971 13.3653C1.17429 13.0976 0 11.497 0 9.70066V4.14556C0 2.34924 1.17429 0.74862 2.86971 0.480927ZM4.5 5.53849C4.5 5.35487 4.56773 5.17878 4.68829 5.04895C4.80885 4.91912 4.97236 4.84618 5.14286 4.84618H12.8571C13.0276 4.84618 13.1912 4.91912 13.3117 5.04895C13.4323 5.17878 13.5 5.35487 13.5 5.53849C13.5 5.7221 13.4323 5.89819 13.3117 6.02802C13.1912 6.15786 13.0276 6.2308 12.8571 6.2308H5.14286C4.97236 6.2308 4.80885 6.15786 4.68829 6.02802C4.56773 5.89819 4.5 5.7221 4.5 5.53849ZM5.14286 7.61542C4.97236 7.61542 4.80885 7.68836 4.68829 7.81819C4.56773 7.94802 4.5 8.12412 4.5 8.30773C4.5 8.49134 4.56773 8.66743 4.68829 8.79727C4.80885 8.9271 4.97236 9.00004 5.14286 9.00004H9C9.1705 9.00004 9.33401 8.9271 9.45457 8.79727C9.57513 8.66743 9.64286 8.49134 9.64286 8.30773C9.64286 8.12412 9.57513 7.94802 9.45457 7.81819C9.33401 7.68836 9.1705 7.61542 9 7.61542H5.14286Z"
+                  fill="#6C1D45"
+                />
+              </svg>
+            </span>
             <span>
               <span className={`block font-bold text-${spanColor1}`}>
                 Chat with Us
@@ -82,14 +123,10 @@ const MegaMenu: React.FC<MegaMenu> = ({ children, bgColor, textColor, spanColor1
       </div>
       <div className="w-2/5 relative">
         <img
-          // src="https://framerusercontent.com/images/JCvRJtEtCSCOzL84Mf0m5lre29I.png?scale-down-to=512"
           src={imageUrl}
           className="rounded-xl w-[355px] h-[400px] object-cover"
           alt=""
         />
-        {/* <span className="text-white absolute bottom-8 text-[30px] leading-[1.1em] left-8 font-bold">
-          Live your best life <br /> with Signature <br /> Bank
-        </span> */}
         {imageText}
       </div>
     </div>

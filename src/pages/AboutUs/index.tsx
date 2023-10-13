@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import '../../App.css';
+import MobileHeader from "../../components/MobileHeader";
 
 
 const cores: { url: string, title: string }[] = [
@@ -61,6 +62,7 @@ const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
   return (
     <div className="bg-white font-nunitoSans">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
+      <MobileHeader primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white" />
       <div className="h-screen bg-main-7 relative overflow-hidden">
         <img className="absolute top-0 right-0" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
         <div className="w-[50%] mx-auto pt-48">
