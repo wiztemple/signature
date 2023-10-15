@@ -224,7 +224,7 @@ const Home = () => {
                     <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">
                         <div className={`relative ${transition}`}>
-                          <img className={`w-[40px] h-[40px] absolute ${transition} ${onCard6 === true && "-top-2.5 rotate-180"} -top-9 -left-3`} src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png" />
+                          <img className={`w-[40px] h-[40px] absolute ${transition} ${onCard6 === true && "-top-1 rotate-180"} -top-9 -left-3`} src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png" />
                           <img className="z-30" src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512" />
                         </div>
                         <div className="relative">

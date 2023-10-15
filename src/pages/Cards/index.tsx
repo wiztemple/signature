@@ -4,8 +4,8 @@ import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import tickSvg from "../../assets/tick.svg";
 import Banner from "../../components/Banner";
-import cardSvg from "../../assets/cards.png"
-import card from "../../assets/card.png"
+import cardSvg from "../../assets/card.png"
+import card from "../../assets/cards.png"
 
 const slides: { url: string, alt: string }[] = [
   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
@@ -15,6 +15,10 @@ const slides: { url: string, alt: string }[] = [
   { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/POXME8dVduwPVY7ZBj6MEJArYE.png?scale-down-to=512' },
   { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
   { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
+   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
+  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
+  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
+  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/5LpQCnxX1yp1hFoO251hK9KuTIM.png?scale-down-to=512' },
   
 ];
 
@@ -102,16 +106,16 @@ const Cards = () => {
         </div>
         <div className="relative mask w-full lg:mt-5 md:mt-32 mt-10">
           <div className="slider-container" />
-          <div className="flex w-[3000px] relative gap-5 z-20">
+          <div className="flex slider-left relative gap-5 z-20">
             {slides.map((slide, index) => (
               <div
                 key={index}
                 className="relative cursor-pointer w-[229px] h-[148px]">
-                <img className="left-5 bg-primaryyellow whitespace-nowrap rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
+                <img className="left-5 bg-primaryyellow whitespace-nowrap transition-all duration-500 delay-300 rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
               </div>
             ))}
           </div>
-          <div className="flex w-[3000px] relative mt-3 gap-5 z-20">
+          <div className="flex relative w-[3500px] mt-3 gap-5 z-20">
             {slides.map((slide, index) => (
               <div
                 key={index}
@@ -196,8 +200,8 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex items-center relative lg:pl-20 pl-5 rounded-[50px] py-10">
-                   <img className="bg-cover h-[400px] z-40 object-cover" src={cardSvg} alt="" />
+              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex items-center relative lg:pl-10 pl-5 rounded-[50px] py-10">
+                   <img className="bg-cover h-[420px] z-40 object-cover" src={cardSvg} alt="" />
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ html {
   }
 
   100% {
-    transform: translateX(2%);
+    transform: translateX(calc(-10%));
   }
 }
 
@@ -47,11 +47,12 @@ html {
   /* Adjust the animation duration as needed */
 }
 .slider-right {
-  animation: slide-left 20s linear infinite;
+  animation: slide-right 40s linear infinite;
   /* Adjust the animation duration as needed */
 }
 .slider-left {
-  animation: slideAnimation 2s linear infinite;
+  width: calc(250px * 20);
+  animation: slide-left 15s linear infinite;
   /* Adjust the animation duration as needed */
 }
 
