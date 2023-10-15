@@ -54,12 +54,6 @@ const AboutUs = () => {
 
   const [onFous, setOnFocus] = useState<boolean>(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-//   const [activeTab, setActiveTab] = useState<string | undefined>("directors");
-// const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
-//     const { value } = event.currentTarget.dataset;
-//     setActiveTab(value);
-// };
   
   const [currentCard, setCurrentCard] = useState<number>(0);
   
@@ -162,31 +156,6 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           <p className="text-lg leading-[28px] text-center text-primarygray mx-auto lg:w-[55%] md:w-[80%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
 
           <div className="flex justify-center mt-10">
-            {/* <div className="bg-white w-fit flex gap-[96px] sticky top-28 p-5 rounded-[20px]">
-              <button
-                type="button"
-                className={`py-3 text-xl text-[#9999] border-b-2 border-b-2-transparent font-medium focus:outline-none ${
-                  activeTab === "directors" && "text-hex-2 border-b-hex-2"
-                }`}
-                onClick={toggleTab}
-                id="directors"
-                data-value="directors"
-              >
-                board of Directors
-              </button>
-              <button
-                type="button"
-                className={`rounded py-3 text-xl font-medium text-[#9999] focus:outline-none ${
-                  activeTab === "managers" &&
-                  "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
-                }`}
-                onClick={toggleTab}
-                id="managers"
-                data-value="managers"
-              >
-                Executive Team
-              </button>
-            </div> */}
             <div className="text-primaryblack mx-auto flex justify-between w-[40%] px-5 text-2xl py-2 rounded-[10px] mt-20 border-white bg-[#ffffffb3] z-40 top-28 sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
