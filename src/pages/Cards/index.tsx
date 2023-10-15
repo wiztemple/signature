@@ -5,6 +5,7 @@ import MobileHeader from "../../components/MobileHeader";
 import tickSvg from "../../assets/tick.svg";
 import Banner from "../../components/Banner";
 import cardSvg from "../../assets/card.png"
+import shadowSvg from "../../assets/shadow.svg"
 import card from "../../assets/cards.png"
 
 const slides: { url: string, alt: string }[] = [
@@ -127,11 +128,11 @@ const Cards = () => {
         </div>
       </div>
       <div>
-        <div className="lg:w-[85%] w-[93%] mx-auto py-24">
+        <div className="lg:w-[85%] w-[93%] mx-auto py-24 relative">
           <h2 className="text-5xl text-primaryblack font-bold text-center tracking-[-0.96px]">A Card for every occasion</h2>
-          <div className="text-primaryblack mx-auto flex justify-center text-2xl gap-28 pt-24 bg-white rounded-[10px] sticky">
+          <div className="text-primaryblack mx-auto flex justify-between w-96 px-3 text-2xl mt-20 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
             {cardType.map((card, index) => (
-              <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer transition-all duration-500 delay-75 ease-in-out leading-[28px] relative`}>
+              <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}
              { currentCard === index && <div className="border-[3px] border-hex-2 w-16 mt-5 rounded-[20px] mx-auto" />}
             </div>
@@ -139,7 +140,7 @@ const Cards = () => {
           </div>
           {currentCard === 0 && (
             <>
-              <div className="flex md:flex-row lg:gap-16 gap-10 flex-col md:pt-28 pt-10">
+              <div className="flex md:flex-row lg:gap-16 gap-10 flex-col pt-10">
             <div className="flex-1">
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
@@ -200,8 +201,9 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex items-center relative lg:pl-10 pl-5 rounded-[50px] py-10">
-                   <img className="bg-cover h-[420px] z-40 object-cover" src={cardSvg} alt="" />
+              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
+                   <img className="bg-cover w-[80%] h-[420px] object-cover" src={cardSvg} alt="" />
+                   <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
           </div>
@@ -209,7 +211,7 @@ const Cards = () => {
           )}
           {currentCard === 1 && (
             <>
-              <div className="flex md:flex-row lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
+              <div className="flex md:flex-row lg:gap-16 gap-10 flex-col md:pt-14 pt-10">
             <div className="flex-1">
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
