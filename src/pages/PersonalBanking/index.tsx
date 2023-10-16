@@ -96,7 +96,7 @@ const PersonalBanking = () => {
           <Reveal><p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">We take pride in offering you a superior banking experience</p></Reveal>
           <Reveal>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          extraClass="lg:w-[550px] md:w-[350px] w-full"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
