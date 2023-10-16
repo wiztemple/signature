@@ -5,6 +5,8 @@ import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import locatorSvg from "../../assets/locator.svg";
 import locatorSvg1 from "../../assets/locator1.svg";
+import reportSvg from "../../assets/report.svg";
+import { Reveal } from "../../utils/Reveal";
 
 interface CProps {
   title: string
@@ -46,10 +48,12 @@ const locations:{name: string}[] = [
 ]
 
 const CompanyInformation = ({ title, details, extraDetails, extraStyle }: CProps) => (
-  <div className={`bg-[#faf7f2] lg:p-[40px] p-5 ${extraStyle} rounded-[20px]`}>
+  <div className={`bg-[#faf7f2] ${extraStyle} rounded-[20px]`}>
     <div className="flex gap-3 w-full">
-      <div className="bg-hex-2 w-[48px] h-[48px] whitespace-nowrap rounded-full">
-        {/* <img className="w-full h-full" src="" alt="" /> */}
+      <div className="bg-hex-2 relative w-[48px] h-[48px] rounded-full">
+        <div className="w-[48px] h-[48px]" >
+        <img className="w-full h-full" src={reportSvg} alt="hdhd" />
+        </div>
       </div>
       <div className="font-nunitoSans flex flex-col gap-3 mt-3">
         <h4 className="text-primaryblack text-xl font-bold">{title}</h4>
@@ -98,30 +102,33 @@ const BranchLocator = () => {
           <p className="text-primarygray text-lg lg:w-[55%] md:w-[80%] w-[62%] lg:mt-0 md:mt-2 mt-4 text-center">we have a ruputation of offering a seamless banking experience that promotes  good relationship with our customers</p>
         </div>
           <div className="flex md:flex-row flex-col md:items-start items-center lg:gap-20 gap-5 mt-16">
-            <div className="flex md:items-start items-center flex-col gap-4">
+            <Reveal>
+              <div className="flex md:items-start items-center flex-col gap-4">
               <CompanyInformation
-              extraStyle="md:w-[457px] w-[70%]"
+              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
               title="Send us a message"
               details="We&apos;re here to help."
               extraDetails="enquiries@signaturebankng.com"
             />
               <CompanyInformation
-              extraStyle="md:w-[457px] w-[70%]"
+              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
               title="Head Office"
               details="Visit our office HQ."
               extraDetails="Signature Bank Limited31B Gana Street, Maitama,Abuja FCT, Nigeria."
             />
               <CompanyInformation
-              extraStyle="md:w-[457px] w-[70%]"
+              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
               title="Call Us"
               details="Mon-Fri from 8am to 5pm."
               extraDetails="0700-00727272"
             />
             </div>
+            </Reveal>
             <div className="md:w-full w-[70%] font-nunitoSans">
               <h2 className="text-primaryblack text-[36px] text-center font-bold leading-[44px]">Get in touch</h2>
               <p className="text-primarygray text-xl leading-[30px] text-center mt-3">We&apos;d love to hear from you. Please fill out this form.</p>
-              <form className="mt-4">
+              <Reveal>
+                <form className="mt-4">
                 <Input
                   inputContainer=""
                   label="First Name"
@@ -189,6 +196,7 @@ const BranchLocator = () => {
                 </div>
                 <button className="bg-hex-2 text-white py-3 px-5 text-xs mt-4 font-bold rounded-[10px]">Submit</button>
               </form>
+              </Reveal>
             </div>
         </div>
       </div>
@@ -199,6 +207,7 @@ const BranchLocator = () => {
           <h1 className="md:text-[48px] text-[30px] text-primaryblack text-center font-bold">There is a branch nearby</h1>
           <p className="text-primarygray text-lg lg:w-[45%] md:w-[50%] w-[95%] mt-3 text-center">Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
             </div>
+          <Reveal>
             <div className="md:grid-cols-5 grid-cols-2 gap-2 grid grid-rows-1 lg:mt-10 sm:mt-16 mt-10">
               {locations.map((location, index) => (
                 <div
@@ -211,6 +220,7 @@ const BranchLocator = () => {
               </div>
               ))}
             </div>
+            </Reveal>
               </div>
         {/* map */}
         <div className="md:w-full w-[70%] mx-auto h-[500px] mt-4">
@@ -220,26 +230,26 @@ const BranchLocator = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto md:py-28 py-10">
         <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-1 gap-5">
           <CompanyInformation
-            extraStyle="w-full"
+            extraStyle="w-full h-48 p-5"
               title="Report Fraud"
               details="In the event that your bank account has been compromised, Please Call"
               extraDetails="0700-00727272"
             />
           <CompanyInformation
-            extraStyle="w-full"
+            extraStyle="w-full lg:p-[20px] p-5"
               title="Missing Card"
               details="If your Bank Card has been lost or stolen, Stop it immediately using our cellphone banking app or call us on"
               extraDetails="0700-00727272"
             />
           <CompanyInformation
-            extraStyle="w-full"
+            extraStyle="w-full lg:p-[20px] p-5"
               title="Feedback"
               details="We are always wanting to improve our services so if you have any complaints please call us on"
               extraDetails="0700-00727272"
             />
         </div>
       </div>
-      <div className="lg:w-[85%] w-[90%] mx-auto py-14">
+      <div className="lg:w-[85%] w-[90%] mx-auto pb-14">
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"

@@ -5,6 +5,7 @@ import appleLogo from "../../assets/apple.svg";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
 import { Reveal } from "../../utils/Reveal";
+import handPhone from "../../assets/handPhone.png"
 
 const DigitalBanking = () => {
   return (
@@ -116,7 +117,8 @@ const DigitalBanking = () => {
             <div className="gap-4 flex mt-5">
               <img src={appleLogo} alt="apple logo" />
               <img src={appleLogo} alt="apple logo" />
-            </div>
+              </div>
+              <Reveal><img className="w-full object-cover bg-cover -mt-44 h-[1070px]" src={handPhone} alt="" /></Reveal>
           </div>
           </Reveal>
           <Reveal>
