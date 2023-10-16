@@ -124,9 +124,9 @@ const Home = () => {
         </div>
       </div>
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
-        <div className="text-black lg:w-[85%] w-[90%] mx-auto">
+        <div className="text-black lg:w-[85%] w-[90%] relative mx-auto">
           <div className="flex lg:flex-row relative flex-col gap-5 lg:py-28 py-10">
-            <div className="lg:w-[30%] sticky text-primaryblack">
+            <div className="lg:w-[30%] h-full sticky top-32 text-primaryblack">
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
               <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
@@ -224,7 +224,7 @@ const Home = () => {
                     <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">
                         <div className={`relative ${transition}`}>
-                          <img className={`w-[40px] h-[40px] absolute ${transition} ${onCard6 === true && "-top-2.5 rotate-180"} -top-9 -left-3`} src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png" />
+                          <img className={`w-[40px] h-[40px] absolute ${transition} ${onCard6 === true && "mt-6 rotate-180"} -top-9 -left-3`} src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png" />
                           <img className="z-30" src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512" />
                         </div>
                         <div className="relative">

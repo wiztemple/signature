@@ -48,16 +48,14 @@ const slides: { name: string, url: string, path: string, alt: string, stroke:str
   { color: 'bg-primaryyellow/60',stroke: "stroke-primaryyellow", name: 'Digital Banking', path: '/digital-banking', alt: 'Personal Banking', url: 'https://framerusercontent.com/images/csHFzMjSvWHg0OXUzrTfKLl52s.jpg' },
 ];
 
+const cardType = [{name: "Board Of Directors"}, {name: "Executive Team"}]
+
 const AboutUs = () => {
 
   const [onFous, setOnFocus] = useState<boolean>(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const [activeTab, setActiveTab] = useState<string | undefined>("directors");
-const toggleTab = (event: React.MouseEvent<HTMLButtonElement>): void => {
-    const { value } = event.currentTarget.dataset;
-    setActiveTab(value);
-};
+  
+  const [currentCard, setCurrentCard] = useState<number>(0);
   
   
   return (
@@ -153,38 +151,21 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
         </div>
       </div>
       <div className="bg-main-9 py-16">
-        <div className="md:w-[85%] w-[90%] mx-auto">
+        <div className="md:w-[85%] w-[90%] mx-auto relative">
            <h1 className="md:text-[48px] text-[30px] lg:w-full md:w-[55%] w-full mx-auto text-center font-bold text-primaryblack lg:tracking-[-0.96px]">Our Outstanding Leadership</h1>
           <p className="text-lg leading-[28px] text-center text-primarygray mx-auto lg:w-[55%] md:w-[80%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
 
           <div className="flex justify-center mt-10">
-            <div className="bg-white w-fit flex gap-[96px] p-5 rounded-[20px]">
-              <button
-                type="button"
-                className={`py-3 text-xl text-[#9999] border-b-2 border-b-2-transparent font-medium focus:outline-none ${
-                  activeTab === "directors" && "text-hex-2 border-b-hex-2"
-                }`}
-                onClick={toggleTab}
-                id="directors"
-                data-value="directors"
-              >
-                board of Directors
-              </button>
-              <button
-                type="button"
-                className={`rounded py-3 text-xl font-medium text-[#9999] focus:outline-none ${
-                  activeTab === "managers" &&
-                  "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
-                }`}
-                onClick={toggleTab}
-                id="managers"
-                data-value="managers"
-              >
-                Executive Team
-              </button>
+            <div className="text-primaryblack mx-auto flex justify-between w-[40%] px-5 text-2xl py-2 rounded-[10px] mt-20 border-white bg-[#ffffffb3] z-40 top-28 sticky">
+            {cardType.map((card, index) => (
+              <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
+              {card.name}
+             { currentCard === index && <div className="border-[3px] border-hex-2 w-16 mt-5 rounded-[20px] mx-auto" />}
             </div>
+            ))}
           </div>
-          {activeTab === "directors" && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 grid-rows-3">
+          </div>
+          {currentCard ===0 && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 grid-rows-3">
             {boardOfDirectors.map((dierctor, index:number) => (
               <div key={index} className="mb-10">
                 <Reveal>
@@ -195,7 +176,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
             </div>
             ))}
           </div>)}
-          {activeTab == "managers" && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 grid-rows-2">
+          {currentCard === 1 && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 grid-rows-2">
             {boardOfManagers.map((manager, index:number) => (
               <div key={index} className="mb-10">
                 <Reveal>
