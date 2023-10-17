@@ -8,8 +8,15 @@ import appleLogo from "../../assets/apple.svg";
 import cookieSvg from "../../assets/cookie.svg";
 import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
+import messageSvg from "../../assets/message.svg";
+import instaSvg from "../../assets/insta.svg";
+import twitterSvg from "../../assets/twitter.svg";
+import linkedinSvg from "../../assets/linkedin.svg";
+import youtubeSvg from "../../assets/linkedin.svg";
+import musicSvg from "../../assets/music.svg";
 import MobileHeader from "../../components/MobileHeader";
 import { Reveal } from "../../utils/Reveal";
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 interface HeroProps {
   title: string
@@ -30,7 +37,7 @@ const banks: { title: string, description: string }[] = [
 const Hero = ({ title, description, url, mt, top }: HeroProps) => (
   <Slide className="h-full relative w-full z-40">
     <div className="lg:w-[85%] w-[90%] mx-auto h-full">
-      <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
+      <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="banner svg" />
       <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
         <div className={`text-black lg:w-[45%] relative z-30 ${top} relative`}>
           <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
@@ -132,7 +139,7 @@ const Home = () => {
               <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
-              <Reveal>
+              <ZoomOnScroll>
                 <div
                   onMouseEnter={() => setOnCard(true)}
                   onMouseLeave={() => setOnCard(false)}
@@ -148,8 +155,8 @@ const Home = () => {
                     <img className={`w-[96%] absolute ${onCard === true && "bottom-5"}  bottom-5 bg-cover ${transition} object-cover`} src="https://framerusercontent.com/images/1En9WFPFwPGkndRciPuMzvGz43A.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </Reveal>
-              <Reveal>
+              </ZoomOnScroll>
+              <ZoomOnScroll>
                 <div
                   onMouseEnter={() => setOnCard2(true)}
                   onMouseLeave={() => setOnCard2(false)}
@@ -162,8 +169,8 @@ const Home = () => {
                     <img className="z-30 bg-cover object-cover" src="https://framerusercontent.com/images/PekFpoVisifP2gP4AbGTCGBU3Y.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </Reveal>
-              <Reveal>
+              </ZoomOnScroll>
+              <ZoomOnScroll>
                 <div
                   onMouseEnter={() => setOnCard3(true)}
                   onMouseLeave={() => setOnCard3(false)}
@@ -176,23 +183,24 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Reveal>
+              </ZoomOnScroll>
               {/* SECTION2 */}
-              <Reveal>
+              <ZoomOnScroll>
                 <div
                   onMouseEnter={() => setOnCard4(true)}
                   onMouseLeave={() => setOnCard4(false)}
-                  style={{ backgroundColor: "rgb(27, 28, 29)" }} className="md:h-[340px] h-[384px] rounded-[20px] relative">
-                  <div className="text-white relative flex justify-end flex-col h-full w-full z-40 px-6 pb-10">
+                  className="md:h-[340px] h-[384px] rounded-[20px] relative">
+                  <div className="text-white relative z-40 flex justify-end rounded-[20px] flex-col h-full w-full px-6 pb-10">
                     <h3 className="text-xl text-white font-nunitoSans font-bold">Exclusive Banking That Preserves Wealth</h3>
                     <button className={`${onCard4 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-32 py-2.5`}>Learn More</button>
                   </div>
                   {/* <div className="h-44 w-full absolute z-30 opacity-20 bottom-0 bg-black" /> */}
-                  <img className={`w-full h-full bg-cover  ${transition} left-0 top-0 z-20 absolute object-cover rounded-[20px]`} src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
+                  <div style={{ background: "linear-gradient(rgba(22, 21, 18, 0) 0%, rgb(18, 18, 18) 100%)" }} className={`top-0 absolute w-full ${transition} opacity-90 h-full rounded-[20px] left-0 z-30`} />
+                  <img className={`w-full h-full bg-cover ${transition} left-0 top-0 z-20 absolute object-cover rounded-[20px]`} src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
                 </div>
-              </Reveal>
+              </ZoomOnScroll>
               <div className="relative md:-mt-11">
-                <Reveal>
+                <ZoomOnScroll>
                   <div
                     onMouseEnter={() => setOnCard5(true)}
                     onMouseLeave={() => setOnCard5(false)}
@@ -209,9 +217,9 @@ const Home = () => {
                       <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
                   </div>
-                </Reveal>
+                </ZoomOnScroll>
               </div>
-              <Reveal>
+              <ZoomOnScroll>
                 <div
                   onMouseEnter={() => setOnCard6(true)}
                   onMouseLeave={() => setOnCard6(false)}
@@ -238,7 +246,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </Reveal>
+              </ZoomOnScroll>
             </div>
           </div>
         </div>
@@ -313,11 +321,11 @@ const Home = () => {
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate md:w-[90%]"
-          imgContainer="lg:w-auto w-full"
-          textColor="text-primarygray"
-          title="Open an account with us in a few simple steps."
-          description="Open an account with us and enjoy the benefits of personalized banking services."
+          titleStyle="text-alternate md:w-[60%]"
+          imgContainer="lg:w-[40%] w-full"
+          textColor="text-primarygray md:text-xl"
+          title="Unlock new financial possibilities with us"
+          description="Open a Signature Bank account in just a few steps"
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
@@ -334,18 +342,19 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] lg:block hidden bg-white right-10 fixed bottom-3 w-[22%] z-50 h-11 px-4">
-        <div className="flex items-center h-full justify-between gap-3">
+      <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] lg:block hidden bg-white right-10 fixed bottom-3 w-[24%] z-50 h-11 px-4">
+        <div className="flex items-center h-full justify-between gap-2">
           <div className="flex gap-2">
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="" /></div>
+            <a href="mailto:enquiries@signaturebankng.com" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={messageSvg} alt="svg" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100083538721743" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={facebookSvg} alt="svg" /></a>
+            <a href="https://www.linkedin.com/company/signature-bank-nigeria/" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={instaSvg} alt="svg" /></a>
+            <a href="https://mobile.twitter.com/Signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={twitterSvg} alt="svg" /></a>
+            <a href="https://www.instagram.com/signaturebankng/?hl=en" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={linkedinSvg} alt="svg" /></a>
+            <a rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={youtubeSvg} alt="svg" /></a>
+            <a href="https://www.tiktok.com/@signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6"><img className="w-full h-full" src={musicSvg} alt="svg" /></a>
           </div>
           <div className="flex items-center gap-3">
-            <p className="text-sm text-[#101828b3]">Social</p>
+            <p className="text-sm text-[#101828b3]">social 👋🏾</p>
             <div>
               <img className="h-[14px] w-[14px]" src={closeSvg} alt="" />
             </div>

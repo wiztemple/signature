@@ -213,11 +213,11 @@ const Accounts = () => {
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate w-[90%]"
-          imgContainer=""
+          titleStyle="text-alternate md:w-[60%] w-full"
+          imgContainer="md:w-[40%] w-full"
           textColor="text-primarygray"
-          title="Open an account with us in a few simple steps."
-          description="Open an account with us and enjoy the benefits of personalized banking services."
+          title="Unlock new financial possibilities with us"
+          description="Open a Signature Bank account in few steps"
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />

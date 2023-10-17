@@ -6,7 +6,7 @@ import MobileHeader from "../../components/MobileHeader";
 import locatorSvg from "../../assets/locator.svg";
 import locatorSvg1 from "../../assets/locator1.svg";
 import reportSvg from "../../assets/report.svg";
-import { Reveal } from "../../utils/Reveal";
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 interface CProps {
   title: string
@@ -102,7 +102,7 @@ const BranchLocator = () => {
           <p className="text-primarygray text-lg lg:w-[55%] md:w-[80%] w-[62%] lg:mt-0 md:mt-2 mt-4 text-center">we have a ruputation of offering a seamless banking experience that promotes  good relationship with our customers</p>
         </div>
           <div className="flex md:flex-row flex-col md:items-start items-center lg:gap-20 gap-5 mt-16">
-            <Reveal>
+            <ZoomOnScroll>
               <div className="flex md:items-start items-center flex-col gap-4">
               <CompanyInformation
               extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
@@ -123,11 +123,11 @@ const BranchLocator = () => {
               extraDetails="0700-00727272"
             />
             </div>
-            </Reveal>
+            </ZoomOnScroll>
             <div className="md:w-full w-[70%] font-nunitoSans">
               <h2 className="text-primaryblack text-[36px] text-center font-bold leading-[44px]">Get in touch</h2>
               <p className="text-primarygray text-xl leading-[30px] text-center mt-3">We&apos;d love to hear from you. Please fill out this form.</p>
-              <Reveal>
+              <ZoomOnScroll>
                 <form className="mt-4">
                 <Input
                   inputContainer=""
@@ -196,7 +196,7 @@ const BranchLocator = () => {
                 </div>
                 <button className="bg-hex-2 text-white py-3 px-5 text-xs mt-4 font-bold rounded-[10px]">Submit</button>
               </form>
-              </Reveal>
+              </ZoomOnScroll>
             </div>
         </div>
       </div>
@@ -207,7 +207,7 @@ const BranchLocator = () => {
           <h1 className="md:text-[48px] text-[30px] text-primaryblack text-center font-bold">There is a branch nearby</h1>
           <p className="text-primarygray text-lg lg:w-[45%] md:w-[50%] w-[95%] mt-3 text-center">Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
             </div>
-          <Reveal>
+          <ZoomOnScroll>
             <div className="md:grid-cols-5 grid-cols-2 gap-2 grid grid-rows-1 lg:mt-10 sm:mt-16 mt-10">
               {locations.map((location, index) => (
                 <div
@@ -220,12 +220,14 @@ const BranchLocator = () => {
               </div>
               ))}
             </div>
-            </Reveal>
+            </ZoomOnScroll>
               </div>
         {/* map */}
-        <div className="md:w-full w-[70%] mx-auto h-[500px] mt-4">
+        <ZoomOnScroll>
+          <div className="md:w-full w-[70%] mx-auto h-[500px] mt-4">
 <iframe className="w-full h-full" src="https://maps.google.com/maps?q=9.080039249330586,7.500609953041856&amp;z=14&amp;output=embed"></iframe>
         </div>
+        </ZoomOnScroll>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto md:py-28 py-10">
         <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-1 gap-5">
@@ -253,11 +255,11 @@ const BranchLocator = () => {
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate w-[90%]"
-          imgContainer=""
+          titleStyle="text-alternate md:w-[60%] w-full"
+          imgContainer="md:w-[40%] w-full"
           textColor="text-primarygray"
-          title="Open an account with us in a few simple steps."
-          description="Open an account with us and enjoy the benefits of personalized banking services."
+          title="Take the bold step to Financial buoyancy"
+          description="Open a Signature Bank account in few steps"
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />

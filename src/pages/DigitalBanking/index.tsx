@@ -221,10 +221,10 @@ const DigitalBanking = () => {
           bannerBg="bg-[#ba975a]"
           buttonStyle="bg-hex-2 text-white"
           titleStyle="text-white w-[90%]"
-          imgContainer=""
+          imgContainer="md:w-[40%]"
           textColor="text-white"
-          title="Open an account with us in a few simple steps."
-          description="Open an account with us and enjoy the benefits of personalized banking services."
+          title="Experience limitless banking services"
+          description="Open a Signature Bank account in few steps"
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
