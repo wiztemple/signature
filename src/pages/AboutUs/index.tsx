@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import '../../App.css';
 import MobileHeader from "../../components/MobileHeader";
-import { Reveal } from "../../utils/Reveal";
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 
 const cores: { url: string, title: string }[] = [
@@ -122,8 +122,9 @@ const AboutUs = () => {
             ))}
           </div>
           <div className="pb-14">
-            <SectionCard
-              extraClass="w-[95%]"
+            <ZoomOnScroll>
+              <SectionCard
+              extraClass="w-[95%] md:mt-5 mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -134,8 +135,10 @@ const AboutUs = () => {
             flexRow=""
             display="hidden"
           />
-          <SectionCard
-            extraClass="w-[95%] tracking-[0px]"
+            </ZoomOnScroll>
+            <ZoomOnScroll>
+              <SectionCard
+            extraClass="w-[95%] tracking-[0px] md:mt-5 mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -147,6 +150,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
             flexRow="flex-row-reverse"
             display="hidden"
           />
+          </ZoomOnScroll>
           </div>
         </div>
       </div>
@@ -167,22 +171,22 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           {currentCard ===0 && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 grid-rows-3">
             {boardOfDirectors.map((dierctor, index:number) => (
               <div key={index} className="mb-10">
-                <Reveal>
+                <ZoomOnScroll>
                   <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={dierctor.url} alt={dierctor.alt} />
                 <h3 className="text-[26.83px] text-alternate font-bold font-nunitoSans text-center  mt-3">{dierctor.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{dierctor.title}</p>
-              </Reveal>
+              </ZoomOnScroll>
             </div>
             ))}
           </div>)}
           {currentCard === 1 && (<div className="text-primaryblack grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 grid-rows-2">
             {boardOfManagers.map((manager, index:number) => (
               <div key={index} className="mb-10">
-                <Reveal>
+                <ZoomOnScroll>
               <img className="h-[396px] border rounded-[90px] object-cover bg-cover" src={manager.url} alt={manager.alt} />
                 <h3 className="text-[26.83px] text-alternate font-bold font-nunitoSans text-center mt-3 hover:text-primaryyellow">{manager.name}</h3>
                 <p className="text-[18.78px] text-alternatew text-center mt-2">{manager.title}</p>
-                </Reveal>
+                </ZoomOnScroll>
             </div>
             ))}
           </div>)}
@@ -193,11 +197,11 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
         <Banner
           bannerBg="bg-bannerbg"
           buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate w-[90%]"
-          imgContainer=""
+          titleStyle="text-alternate md:w-[60%] w-full"
+          imgContainer="md:w-[40%] w-full"
           textColor="text-primarygray"
-          title="Open an account with us in a few simple steps."
-          description="Open an account with us and enjoy the benefits of personalized banking services."
+          title="Unlock new financial possibilities with us"
+          description="Open a Signature Bank account in few steps"
           buttonName="Open an Account - Coming Soon"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />

@@ -61,7 +61,7 @@ const Business = () => {
         scaling=""
         heroBg="white"
         bannerWidth="lg:w-[56%] w-[70%]"
-        textWidth="lg:w-[85%]"
+        textWidth="lg:w-[94%]"
         top="lg:top-[57.5%] md:bottom-28 bottom-16"
         bg="bg-hex-6"
         color="white"
@@ -72,7 +72,7 @@ const Business = () => {
         lineargradient="linear-gradient(rgba(176, 93, 55, 0) 0%, rgb(176, 93, 55) 100%)"
         title1="Accelerate your business growth"
         title2=""
-        description="Attain new financial heights with our personalised banking solutions"
+        description="Take advantage of our innovative solutions no matter the scale of your business."
       />
       <div className="bg-white text-black font-nunitoSans">
         <div className="w-[85%] mx-auto">
@@ -103,42 +103,42 @@ const Business = () => {
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-5">
         <div className="w-[85%] mx-auto font-nunitoSans">
           <Reveal>
-            <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
+            <h1 className="text-[#0f1728] lg:text-[48px] w-[90%] mx-auto text-[30px] font-bold leading-[1.2em] text-center">
            Access simple business solutions that will certainly put your business ahead.
           </h1>
-          <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20">
+          {/* <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20">
             We take pride in offering you a superior banking experience
-          </p>
+          </p> */}
           </Reveal>
           <Reveal>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          extraClass="lg:w-[570px] md:w-[350px] w-full md:mt-12 mt-6" 
             black="primaryblack"
             buttonBg=""
             buttonColor=""
             gray="primarygray"
-            src="https://framerusercontent.com/images/dwaQogkrt99Ybnxmpycv6sqPz8.jpg?scale-down-to=1024"
-            cardTitle="Personalized Financial Solutions"
-            cardDescription="At Signature Bank, we understand that every individual has unique financial goals and needs. Our personal banking services are tailored to empower your aspirations as we provide customized products and services that align with your preferences."
+            src="https://framerusercontent.com/images/f99FLM5uoPd4supb9MePBSqcbCA.jpg?scale-down-to=1024"
+            cardTitle="Comprehensive Business Banking Solutions"
+            cardDescription="We offer a comprehensive suite of banking products and services tailored to your business requirements. From our Signature Corporate Current Account designed to cater to the unique needs of corporates and entities, to our business loan options that provide flexible financing solutions."
             flexRow=""
             display="hidden"
           />
           </Reveal>
           <Reveal>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
             gray="primarygray"
-            src="https://framerusercontent.com/images/ui1R9E3KgKbepwNqccyZ52D220M.jpg?scale-down-to=1024"
-            cardTitle="Cutting-Edge Technology"
-            cardDescription="We leverage the latest advancements in banking technology to enhance convenience and simplify your transactions. With our secure online and mobile banking platforms, you can access your accounts, make payments, transfer funds, and monitor your finances anytime, anywhere without fear of unwanted activities."
+            src="https://framerusercontent.com/images/8Q2HE3imSshUvbjUU1t2SrP6nA.jpg?scale-down-to=1024"
+            cardTitle="Powered by Tech"
+            cardDescription="With our advanced online banking platform and secure mobile banking app, you can conveniently manage your accounts, initiate transactions, and access comprehensive financial insights anytime, anywhere."
             flexRow="flex-row-reverse"
             display="hidden"
           />
           </Reveal>
-          <Reveal>
+          {/* <Reveal>
             <SectionCard
           extraClass="lg:w-[570px] md:w-[350px] w-full"
             black="primaryblack"
@@ -151,7 +151,7 @@ const Business = () => {
             flexRow=""
             display="hidden"
           />
-          </Reveal>
+          </Reveal> */}
         </div>
       </div>
       <div className="w-[85%] mx-auto py-14">

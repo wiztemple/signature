@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const ZoomOnScroll = ({ children, className }: any) => {
+const ZoomOnScroll = ({ children }: any) => {
   const [ref, inView] = useInView();
   const controls = useAnimation();
 //   const [zoomed, setZoomed] = useState(false);
@@ -16,12 +16,12 @@ const ZoomOnScroll = ({ children, className }: any) => {
   }, [controls, inView]);
 
   const zoomVariants = {
-    zoomedIn: { scale: 1.12 },
-    zoomedOut: { scale: 1 },
+    zoomedIn: { scale: 1 },
+    zoomedOut: { scale: 0.9 },
   };
 
   return (
-    <div className={className}>
+    <div className="">
       <motion.section
         variants={zoomVariants}
         initial="zoomedOut"

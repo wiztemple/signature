@@ -37,7 +37,7 @@ const PrivateBanking = () => {
           scaling=""
           heroBg="white"
           bannerWidth="md:w-[59%] w-[70%]"
-          textWidth="lg:w-[70%]"
+          textWidth="lg:w-[90%]"
           top="top-[65%]"
           bg="bg-hex-5"
           color="white"
@@ -47,7 +47,7 @@ const PrivateBanking = () => {
           dropFilter="blur(15px)"
           lineargradient="linear-gradient(rgba(17, 14, 15, 0) 0%, rgb(17, 14, 15) 100%)"
           description="Experience Exclusivity, Privacy and Personalized Solutions"
-          title1="Welcome to Private"
+          title1="Welcome to Private Banking"
           title2="Banking"
         />
         <div
@@ -69,7 +69,7 @@ const PrivateBanking = () => {
             </div>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full"
+                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"
@@ -83,7 +83,7 @@ const PrivateBanking = () => {
             </Reveal>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full"
+                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"
@@ -92,12 +92,12 @@ const PrivateBanking = () => {
                 cardTitle="Wealth Management Advisory"
                 cardDescription="Our dedicated team of experienced wealth advisors will work closely with you to understand your financial objectives, risk appetite, and aspirations. With a deep understanding of global best practices, we will create a bespoke wealth management strategy that aligns with your goals and helps you preserve and grow your wealth."
                 flexRow="flex-row-reverse"
-                display="block"
+                display="hidden"
               />
             </Reveal>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full"
+                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"
@@ -114,11 +114,11 @@ const PrivateBanking = () => {
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
-          bannerBg="bg-bannerbg"
-          buttonStyle="bg-hex-2 text-white"
-          titleStyle="text-alternate w-[90%]"
+          bannerBg="bg-[#b9975b]"
+          buttonStyle="bg-dutyblack text-white"
+          titleStyle="text-white w-[90%]"
           imgContainer=""
-          textColor="text-primarygray"
+          textColor="text-uppergray"
           title="Open an account with us in a few simple steps."
           description="Open an account with us and enjoy the benefits of personalized banking services."
           buttonName="Open an Account - Coming Soon"

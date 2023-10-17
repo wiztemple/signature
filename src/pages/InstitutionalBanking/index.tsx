@@ -6,6 +6,7 @@ import Header from "../../components/Header";
 import SectionCard from "../../components/SectionCard";
 import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 const cards: {
   url: string;
@@ -70,7 +71,7 @@ const InstitutionalBanking = () => {
         alt="Business banking with Signature bank"
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(rgba(176, 93, 55, 0) 0%, rgb(176, 93, 55) 100%)"
-        title1="Custom made financial"
+        title1="Custom made financial solutions for large institutions"
         title2="solutions for large institutions"
         description=""
       />
@@ -109,42 +110,48 @@ const InstitutionalBanking = () => {
           <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">
             We take pride in offering you a superior banking experience
           </p>
-          <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          <ZoomOnScroll>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
-            src="https://framerusercontent.com/images/dwaQogkrt99Ybnxmpycv6sqPz8.jpg?scale-down-to=1024"
-            cardTitle="Personalized Financial Solutions"
-            cardDescription="At Signature Bank, we understand that every individual has unique financial goals and needs. Our personal banking services are tailored to empower your aspirations as we provide customized products and services that align with your preferences."
+            gray="text-primarygray"
+            src="	https://framerusercontent.com/images/PsKJOy7r7jgFvDi5Du5WYrjh24.jpg"
+            cardTitle="Access to specialized financial services"
+            cardDescription="Our institutional banking solutions are designed to provide businesses with the financial resources they need to grow and succeed. From loans and trade finance to cash management services, our range of solutions are customized to meet your specific needs."
             flexRow=""
             display="hidden"
           />
-          <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          </ZoomOnScroll>
+          <ZoomOnScroll>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
-            src="https://framerusercontent.com/images/ui1R9E3KgKbepwNqccyZ52D220M.jpg?scale-down-to=1024"
-            cardTitle="Cutting-Edge Technology"
-            cardDescription="We leverage the latest advancements in banking technology to enhance convenience and simplify your transactions. With our secure online and mobile banking platforms, you can access your accounts, make payments, transfer funds, and monitor your finances anytime, anywhere without fear of unwanted activities."
+            gray="text-primarygray"
+            src="https://framerusercontent.com/images/nNqmAzxzVST9lEPTiym3JzqrEU.jpg?scale-down-to=1024"
+            cardTitle="Efficient Collaboration and Partnership"
+            cardDescription="We believe in building strong partnerships with our institutional clients by embedding our team with theirs. Our relationship managers work closely with you, gaining a deep understanding of your needs and providing customized solutions critical to business growth."
             flexRow="flex-row-reverse"
             display="hidden"
           />
-          <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
+          </ZoomOnScroll>
+          <ZoomOnScroll>
+            <SectionCard
+          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
-            src="https://framerusercontent.com/images/lBUv4SG2dcEfqLW8gB19ubQxg.jpg?scale-down-to=1024"
-            cardTitle="Commitment to Security and Privacy"
-            cardDescription="Safeguarding your financial information is our top priority. We adhere to the highest security standards, implementing robust security protocols to protect your personal and financial data."
+            gray="text-primarygray"
+            src="https://framerusercontent.com/images/I2pBKyzhzxcK4B0Kla7xvJqxrr8.jpg?scale-down-to=1024"
+            cardTitle="Dedicated Support"
+            cardDescription="We understand that your business needs reliable and responsive round the clock support. Hence, our dedicated customer service team is available to assist you with any inquiries or concerns, ensuring that your banking experience is seamless and hassle-free."
             flexRow=""
             display="hidden"
           />
+          </ZoomOnScroll>
         </div>
       </div>
       <div className="w-[85%] mx-auto py-14">

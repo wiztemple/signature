@@ -58,7 +58,7 @@ const CustomBanner = ({
             className={`text-${color} md:text-[64px] text-[42px] text-center font-bold leading-[1em]`}
           >
             <h1>{title1}</h1>
-            <h1>{title2}</h1>
+            {/* <h1>{title2}</h1> */}
           </div>
           <p
             className={`text-2xl flex justify-center text-center mt-4 text-${subColor}`}

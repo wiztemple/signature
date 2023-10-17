@@ -1,4 +1,4 @@
-import { Reveal } from "../../utils/Reveal"
+import ZoomOnScroll from "../../utils/ZoomOnScroll"
 
 interface CardProps {
   cardTitle: string
@@ -12,7 +12,7 @@ interface CardProps {
 const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg }: CardProps) => {
   return (
       <div>
-          <Reveal>
+          <ZoomOnScroll>
                <div className={`${bg} rounded-[20px] h-auto p-[30px]`}>
               <div className="w-[117px] h-[97px] relative">
                   <img className="block w-full h-[117px] rounded-[10px]" src={src} alt="" sizes="117px"></img>
@@ -23,7 +23,7 @@ const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg }: Car
                   <a className="text-lg text-center font-nunitoSans" href="/">{buttonName}</a>
               </button>
           </div>
-         </Reveal>
+         </ZoomOnScroll>
       </div>
   );
 };
