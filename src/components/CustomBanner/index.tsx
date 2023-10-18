@@ -1,3 +1,5 @@
+import { Reveal } from "../../utils/Reveal";
+
 interface CustomBannerProps {
   src: string;
   alt: string;
@@ -5,7 +7,6 @@ interface CustomBannerProps {
   lineargradient: string;
   description: string;
   title1: string;
-  title2: string;
   bg: string;
   color: string;
   subColor: string;
@@ -15,6 +16,7 @@ interface CustomBannerProps {
   display: string;
   scaling: string;
   heroBg: string;
+  show: boolean
 }
 
 const CustomBanner = ({
@@ -24,7 +26,7 @@ const CustomBanner = ({
   lineargradient,
   description,
   title1,
-  title2,
+  show,
   bg,
   color,
   subColor,
@@ -40,13 +42,21 @@ const CustomBanner = ({
       <div className={`w-full ${display} mx-auto flex justify-center`}>
         <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[38.1%] rounded-full" />
       </div>
-      <div className={`z-40 h-full ${scaling}`}>
+      {show === true ? <Reveal>
+        <div className={`z-40 h-screen ${scaling}`}>
         <img
           className="h-full w-full rounded-inherit relative object-center object-cover image-auto"
           src={src}
           alt={alt}
         />
       </div>
+      </Reveal> : <div className={`z-40 h-full ${scaling}`}>
+        <img
+          className="h-full w-full rounded-inherit relative object-center object-cover image-auto"
+          src={src}
+          alt={alt}
+        />
+      </div>}
       <div
         className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center ${top}`}
       >
@@ -58,7 +68,6 @@ const CustomBanner = ({
             className={`text-${color} md:text-[64px] text-[42px] text-center font-bold leading-[1em]`}
           >
             <h1>{title1}</h1>
-            {/* <h1>{title2}</h1> */}
           </div>
           <p
             className={`text-2xl flex justify-center text-center mt-4 text-${subColor}`}

@@ -23,33 +23,98 @@ const slides: { url: string, alt: string }[] = [
   
 ];
 
-const section2Faq: { title: string, description: string[] }[] = [
+const sectionFaq: { title: string, description: string[] }[] = [
   {
-    title: "Feature",
+    title: "Business Credit Card",
     description: [
-      "Zero Minimum opening and operating balance ",
-      "Account maintenance charge (₦1/mille)",
-      "Access to e-banking services.",
+      "Expand your lines to credit and enter a whole new world of expansive business growth with our Signature Business Credit Cards. Enjoy juicy credit limits for your various business purchases.   ",
     ],
   },
   {
-    title: "Benefits",
+    title: "Platinum Credit Card ",
     description: [
-      "Newsletter on investment tips",
-      "Access to loans",
+      "Access extended credit limits on foreign currencies to your business and personal accounts through our Signature Platinum Credit Cards with global acceptability and no border restrictions.",
     ],
   },
   {
-    title: "Documentation Requirements",
+    title: "Retail Credit Card",
     description: [
-      "1 Passport photograph",
-      "Valid means of Identification",
-      "Bank Verification Number (BVN) of Applicant",
-      "Resident Permit – for foreigners",
-      "2 References",
+      "Get a Signature Retail Credit Card that for your personal payment needs. With our retail credit card you get access to an improved credit facility that allows you to make payments for items without access to liquid cash.",
     ],
   },
 ];
+
+const dollarCard: { title: string, description: string[] }[] = [
+  {
+    title: "Business Dollar Debit Card",
+    description: [
+      "Choose from our range of savings accounts, current accounts, special purpose, and domiciliary accounts to suit your specific needs. With competitive interest rates, flexible transactions, and a range of digital banking services, we make it easy for you to manage your finances and reach your financial goals. ",
+    ],
+  },
+  {
+    title: "Platinum Dollar Debit Card ",
+    description: [
+      "Choose from our range of savings accounts, current accounts, special purpose, and domiciliary accounts to suit your specific needs. With competitive interest rates, flexible transactions, and a range of digital banking services, we make it easy for you to manage your finances and reach your financial goals.",
+    ],
+  },
+  {
+    title: "Retail Dollar Debit Card",
+    description: [
+      "Choose from our range of savings accounts, current accounts, special purpose, and domiciliary accounts to suit your specific needs. With competitive interest rates, flexible transactions, and a range of digital banking services, we make it easy for you to manage your finances and reach your financial goals.",
+    ],
+  },
+];
+
+const nairaCard: { title: string, description: string[] }[] = [
+  {
+    title: "Signature Verve Naira Debit Cards",
+    description: [
+      `Enjoy full control of your account with Signature Verve Naira Debit cards. Our debit card is linked to your
+Savings or Current account, and allows you to make payments on WEB, POS, and use on the ATM`,
+      // "Account maintenance charge (₦1/mille)",
+      // "Access to e-banking services.",
+      `FEATURES:`,
+`The following exciting features are available on the signature verve naira debit card.
+- Free POS/WEB transactions
+- ATM cash withdrawal and funds transfer
+- Bills payment
+- 24 hours access to funds via e-channels
+- Highly secured with sophisticated PIN and Chip technology
+- 4 years validity period`
+    ],
+  },
+  {
+    title: "Business Debit Card",
+    description: [
+      "Manage all your business payments with our 3-D secure Signature Business Card tailor made for your business. Pay busines utility bills, purchase business essentials, make online payments, and access cash necessary for business growth.",
+    ],
+  },
+  {
+    title: "Platinum Debit Card ",
+    description: [
+      "Our Signature Platinum Debit Cards have global acceptability and no border restrictions. With our platinum card, you get access to foreign currency that is instrumental to business expansion. ",
+    ],
+  },
+  {
+    title: "Retail Debit Card",
+    description: [
+      "Get a Signature Retail Debit Card that suits your lifestyle. With our retail debit card you get access to round the clock, reliable financial instrument that ultimately caters to your payment needs and access to cash.",
+    ],
+  },
+  {
+    title: "Women Debit Card",
+    description: [
+      "We have introduced a special debit card specifically for women as we have taken into cognisance their specific needs and peculiarities and we aim to make payments absolutely seamless for them with our Special Women Debit Cards.",
+    ],
+  },
+  {
+    title: "Youth Debit Card",
+    description: [
+      "Finanicial management is also extremely important for the younger generation, as such, we have delivered a unique financial instrument to help youth plan their expenditure and make payments appropriately. Get the special Signature Youth Debit Card.",
+    ],
+  },
+];
+
 const faqs: { title: string, description: string[] }[] = [
   {
     title: "How do I get Signature Bank Verve Naira card?",
@@ -80,6 +145,24 @@ const faqs: { title: string, description: string[] }[] = [
       "- ATM/POS funds transfer.",
       "- Bills Payment.",
       "- Web Payment."
+    ],
+  },
+  {
+    title: "What is the maximum transaction daily limit?",
+    description: [
+      `Signature Tier 1 verve naira card:`,
+      "ATM/POS/WEB: N30,000",
+      "Signature Tier 2 verve naira card:",
+      "ATM/POS/WEB: N100,000",
+      "Signature Verve naira card (Tier3):",
+      "ATM: N100,000",
+      "POS/WEB: N2,000,000",
+    ],
+  },
+  {
+    title: "What is the validity period?",
+    description: [
+      `4 years:`
     ],
   },
 ];
@@ -146,20 +229,20 @@ const Cards = () => {
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
               <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
-                {section2Faq.map((faq, index) => (
+                {nairaCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
                       setOnFaq(!onFaq)
                       setActiveIndex(index)
                     }} className="flex gap-6 cursor-pointer items-center">
                       <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
+                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                     </div>
                     {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {faq.description.map((faq, index) => (
+                      {card.description.map((card, index) => (
                         <div key={index} className="flex items-start gap-2">
-                          <img src={tickSvg} alt="" />
-                          <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
+                          {/* <img src={tickSvg} alt="" /> */}
+                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
                         </div>
                       ))}
                     </div>)}
@@ -168,8 +251,9 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-full h-[584px] flex items-center md:pl-10 pl-3 bg-[#f7e7f3] rounded-[50px]">
-              <img className="h-[427px] object-cover bg-cover" src={card} alt="" />
+              <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                    <img className="h-[427px] object-cover bg-cover -ml-16" src={card} alt="" />
+                    <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
           </div>
@@ -179,7 +263,7 @@ const Cards = () => {
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
               <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
-                {section2Faq.map((faq, index) => (
+                {sectionFaq.map((faq, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
                       setOnFaq(!onFaq)
@@ -191,7 +275,7 @@ const Cards = () => {
                     {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                       {faq.description.map((faq, index) => (
                         <div key={index} className="flex items-start gap-2">
-                          <img src={tickSvg} alt="" />
+                          {/* <img src={tickSvg} alt="" /> */}
                           <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
                         </div>
                       ))}
@@ -217,20 +301,20 @@ const Cards = () => {
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
               <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
-                {section2Faq.map((faq, index) => (
+                {dollarCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
                       setOnFaq(!onFaq)
                       setActiveIndex(index)
                     }} className="flex gap-6 cursor-pointer items-center">
                       <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
+                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                     </div>
                     {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {faq.description.map((faq, index) => (
+                      {card.description.map((card, index) => (
                         <div key={index} className="flex items-start gap-2">
-                          <img src={tickSvg} alt="" />
-                          <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
+                          {/* <img src={tickSvg} alt="" /> */}
+                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
                         </div>
                       ))}
                     </div>)}
@@ -239,8 +323,9 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-full h-[584px] flex items-center pl-10 bg-[#f7e7f3] rounded-[50px]">
-              <img className="h-[427px] object-cover bg-cover" src={card} alt="" />
+              <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                    <img className="h-[427px] object-cover bg-cover -ml-16" src={card} alt="" />
+                    <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
           </div>
@@ -250,20 +335,20 @@ const Cards = () => {
               <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
               <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
-                {section2Faq.map((faq, index) => (
+                {dollarCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
                       setOnFaq(!onFaq)
                       setActiveIndex(index)
                     }} className="flex gap-6 cursor-pointer items-center">
                       <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
+                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                     </div>
                     {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {faq.description.map((faq, index) => (
+                      {card.description.map((card, index) => (
                         <div key={index} className="flex items-start gap-2">
-                          <img src={tickSvg} alt="" />
-                          <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
+                          {/* <img src={tickSvg} alt="" /> */}
+                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
                         </div>
                       ))}
                     </div>)}
@@ -272,8 +357,9 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-[600px] h-[584px] bg-[#f7e7f3] flex items-center relative pl-10 rounded-[50px] py-10">
-                   <img className="bg-cover h-[400px] z-40 object-cover" src={cardSvg} alt="" />
+              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
+                   <img className="bg-cover w-[80%] h-[420px] object-cover" src={cardSvg} alt="" />
+                   <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
           </div>

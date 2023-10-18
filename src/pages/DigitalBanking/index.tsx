@@ -6,6 +6,7 @@ import Logo from "../../assets/logo.svg";
 import MobileHeader from "../../components/MobileHeader";
 import { Reveal } from "../../utils/Reveal";
 import handPhone from "../../assets/handPhone.png"
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 const DigitalBanking = () => {
   return (
@@ -29,23 +30,27 @@ const DigitalBanking = () => {
       />
       {/* hero section */}
 
-      <div className="h-screen w-full overflow-hidden font-nunitoSans">
+      <div className="h-screen w-full lg:overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
-            className="absolute top-14 -right-10 w-[90%] z-20"
+            className="absolute top-14 -right-8 w-full z-20"
             src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
             alt=""
           />
         </div>
         <div className="z-20 relative flex w-full justify-center h-full">
-          <img
-            className="lg:h-[670px] z-20 md:bottom-0 h-full lg:left-[17%] absolute object-center object-cover image-auto"
+          <Reveal>
+            <div className="lg:h-[670px] md:w-[90%] w-full h-screen z-20 top-36 relative">
+              <img
+            className="bg-cover object-cover image-auto"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
-            alt=""
+            alt="man"
           />
+            </div>
+          </Reveal>
         </div>
         <div
-          className={`text-white z-40 absolute w-full h-auto flex :mx-auto justify-center bottom-14`}
+          className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center bottom-14`}
         >
           <div
             style={{ backdropFilter: "blur(15px)" }}
@@ -55,7 +60,7 @@ const DigitalBanking = () => {
               className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
             >
               <h1>Limitless Banking</h1>
-              {/* <h1>Worl</h1> */}
+
             </div>
             <p className="text-2xl flex justify-center text-center mt-4 text-white">
               <p className="">
@@ -118,7 +123,7 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
               <img src={appleLogo} alt="apple logo" />
               </div>
-              <Reveal><img className="w-full object-cover bg-cover -mt-44 h-[1070px]" src={handPhone} alt="" /></Reveal>
+              <ZoomOnScroll><img className="w-full object-cover bg-cover -mt-[120px] h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
           </div>
           </Reveal>
           <Reveal>
@@ -136,7 +141,8 @@ const DigitalBanking = () => {
             >
               Dial on mobile
             </button>
-            <div className="gap-4 flex mt-20">
+              <ZoomOnScroll>
+                <div className="gap-4 flex mt-20">
               <div className="flex relative justify-center w-full">
                 <div className="relative">
                   <img
@@ -164,6 +170,7 @@ const DigitalBanking = () => {
                 </div>
               </div>
             </div>
+            </ZoomOnScroll>
           </div>
           </Reveal>
           <Reveal>
@@ -182,12 +189,14 @@ const DigitalBanking = () => {
             >
               Learn More
             </button>
-            <div className="gap-4 flex justify-center mt-14">
+              <ZoomOnScroll>
+                <div className="gap-4 flex justify-center mt-14">
               <img
                 className="w-[70%]"
                 src="https://framerusercontent.com/images/47RYq01ACuY4sFSUp8mrRTbeoM0.png?scale-down-to=2048"
               />
             </div>
+            </ZoomOnScroll>
           </div>
          </Reveal>
           <Reveal>
@@ -206,12 +215,14 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
               <img src={appleLogo} alt="apple logo" />
             </div>
-            <div className="gap-4 flex justify-center mt-24">
+              <ZoomOnScroll>
+                <div className="gap-4 flex justify-center mt-24">
               <img
                 className="w-[72%] object-cover bg-cover bg-no-repeat"
                 src="https://framerusercontent.com/images/7bvEdP86K1ntVnA6USBkG21iEE.png"
               />
             </div>
+            </ZoomOnScroll>
           </div>
           </Reveal>
         </div>

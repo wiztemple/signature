@@ -58,6 +58,7 @@ const InstitutionalBanking = () => {
         strokeColor="white"
       />
       <CustomBanner
+        show={true}
         display="block"
         scaling="lg:px-4 pt-[68px]"
         heroBg="bg-secondarybrown"
@@ -72,7 +73,6 @@ const InstitutionalBanking = () => {
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(rgba(176, 93, 55, 0) 0%, rgb(176, 93, 55) 100%)"
         title1="Custom made financial solutions for large institutions"
-        title2="solutions for large institutions"
         description=""
       />
       <div className="bg-white text-black font-nunitoSans">

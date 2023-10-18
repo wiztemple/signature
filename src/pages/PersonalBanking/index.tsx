@@ -50,6 +50,7 @@ const PersonalBanking = () => {
       />
       {/* Custom Banner */}
       <CustomBanner
+        show={false}
         display="hidden"
         scaling=""
         heroBg="white"
@@ -64,7 +65,6 @@ const PersonalBanking = () => {
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"
         title1="Experience Transformational Banking"
-        title2="Transformational Banking"
         description="Attain new financial heights with our personalised banking solutions"
       />
       {/* Cards */}
@@ -99,7 +99,7 @@ const PersonalBanking = () => {
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
+            gray="text-primarygray"
             src="https://framerusercontent.com/images/dwaQogkrt99Ybnxmpycv6sqPz8.jpg?scale-down-to=1024"
             cardTitle="Personalized Financial Solutions"
             cardDescription="At Signature Bank, we understand that every individual has unique financial goals and needs. Our personal banking services are tailored to empower your aspirations as we provide customized products and services that align with your preferences."
@@ -111,7 +111,7 @@ const PersonalBanking = () => {
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
+            gray="text-primarygray"
             src="https://framerusercontent.com/images/ui1R9E3KgKbepwNqccyZ52D220M.jpg?scale-down-to=1024"
             cardTitle="Cutting-Edge Technology"
             cardDescription="We leverage the latest advancements in banking technology to enhance convenience and simplify your transactions. With our secure online and mobile banking platforms, you can access your accounts, make payments, transfer funds, and monitor your finances anytime, anywhere without fear of unwanted activities."
@@ -123,7 +123,7 @@ const PersonalBanking = () => {
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
+            gray="text-primarygray"
             src="https://framerusercontent.com/images/lBUv4SG2dcEfqLW8gB19ubQxg.jpg?scale-down-to=1024"
             cardTitle="Commitment to Security and Privacy"
             cardDescription="Safeguarding your financial information is our top priority. We adhere to the highest security standards, implementing robust security protocols to protect your personal and financial data."

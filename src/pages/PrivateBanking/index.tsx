@@ -33,6 +33,7 @@ const PrivateBanking = () => {
           strokeColor="white"
         />
         <CustomBanner
+          show={false}
           display="hidden"
           scaling=""
           heroBg="white"
@@ -48,7 +49,6 @@ const PrivateBanking = () => {
           lineargradient="linear-gradient(rgba(17, 14, 15, 0) 0%, rgb(17, 14, 15) 100%)"
           description="Experience Exclusivity, Privacy and Personalized Solutions"
           title1="Welcome to Private Banking"
-          title2="Banking"
         />
         <div
           style={{

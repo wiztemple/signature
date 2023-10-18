@@ -57,6 +57,7 @@ const Business = () => {
         strokeColor="white"
       />
       <CustomBanner
+        show={false}
         display="hidden"
         scaling=""
         heroBg="white"
@@ -71,7 +72,6 @@ const Business = () => {
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(rgba(176, 93, 55, 0) 0%, rgb(176, 93, 55) 100%)"
         title1="Accelerate your business growth"
-        title2=""
         description="Take advantage of our innovative solutions no matter the scale of your business."
       />
       <div className="bg-white text-black font-nunitoSans">
@@ -116,7 +116,7 @@ const Business = () => {
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
+            gray="text-primarygray"
             src="https://framerusercontent.com/images/f99FLM5uoPd4supb9MePBSqcbCA.jpg?scale-down-to=1024"
             cardTitle="Comprehensive Business Banking Solutions"
             cardDescription="We offer a comprehensive suite of banking products and services tailored to your business requirements. From our Signature Corporate Current Account designed to cater to the unique needs of corporates and entities, to our business loan options that provide flexible financing solutions."
@@ -130,7 +130,7 @@ const Business = () => {
             black="primaryblack"
             buttonBg=""
             buttonColor=""
-            gray="primarygray"
+            gray="text-primarygray"
             src="https://framerusercontent.com/images/8Q2HE3imSshUvbjUU1t2SrP6nA.jpg?scale-down-to=1024"
             cardTitle="Powered by Tech"
             cardDescription="With our advanced online banking platform and secure mobile banking app, you can conveniently manage your accounts, initiate transactions, and access comprehensive financial insights anytime, anywhere."
