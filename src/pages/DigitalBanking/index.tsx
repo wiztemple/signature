@@ -1,12 +1,14 @@
+import { Reveal } from "../../utils/Reveal";
+import ZoomOnScroll from "../../utils/ZoomOnScroll";
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import MobileHeader from "../../components/MobileHeader";
 import appleLogo from "../../assets/apple.svg";
 import Logo from "../../assets/logo.svg";
-import MobileHeader from "../../components/MobileHeader";
-import { Reveal } from "../../utils/Reveal";
-import handPhone from "../../assets/handPhone.png"
-import ZoomOnScroll from "../../utils/ZoomOnScroll";
+import handPhone from "../../assets/handPhone.png";
+import cards from "../../assets/groupCard.svg";
+
 
 const DigitalBanking = () => {
   return (
@@ -81,7 +83,7 @@ const DigitalBanking = () => {
       <div className="md:w-[85%] w-[90%] mx-auto mt-10">
         {/*  */}
         <Reveal>
-          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
+          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full h-[700px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
           <ZoomOnScroll><div className="text-5xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
           <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4">
@@ -95,16 +97,17 @@ const DigitalBanking = () => {
           </button>
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
-            <div className="w-[24%] rotate-60 rounded-[20px] absolute -bottom-5 border">
+            <div className="w-[83%] absolute -bottom-[320px]">
               {/* <img
                 className="w-full h-[400px] object-fill bg-center"
                 src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
                 alt=""
               /> */}
+                <ZoomOnScroll><img className="w-full h-full relative z-40 bg-cover object-cover" src={cards} alt="atm cards" /></ZoomOnScroll>
             </div>
             </div>
             <img
-            className="absolute opacity-50 -right-[500px] z-20"
+            className="absolute opacity-50 -bottom-48 -right-[400px] z-20"
             src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
             alt=""
           />
