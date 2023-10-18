@@ -42,9 +42,9 @@ const DigitalBanking = () => {
         </div>
         <div className="z-30 relative flex w-full justify-center h-full">
           <Reveal>
-            <div className="md:w-[90%] w-full h-screen z-20 top-36 relative">
+            <div className="lg:w-[90%] w-full h-screen z-20 top-36 relative">
               <img
-            className="bg-cover object-cover image-auto"
+            className="bg-cover object-cover  lg:w-auto lg:h-auto h-full w-full"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
             alt="man"
           />
@@ -83,7 +83,7 @@ const DigitalBanking = () => {
       <div className="md:w-[85%] w-[90%] mx-auto mt-10">
         {/*  */}
         <Reveal>
-          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full h-[700px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
+          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[550px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
           <ZoomOnScroll><div className="text-5xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
           <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4">
@@ -97,7 +97,7 @@ const DigitalBanking = () => {
           </button>
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
-            <div className="w-[83%] absolute -bottom-[320px]">
+            <div className="md:w-[83%] w-full absolute lg:-bottom-[320px] md:-bottom-44 -bottom-36">
               {/* <img
                 className="w-full h-[400px] object-fill bg-center"
                 src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
