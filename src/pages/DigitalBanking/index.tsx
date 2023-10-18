@@ -10,7 +10,7 @@ import ZoomOnScroll from "../../utils/ZoomOnScroll";
 
 const DigitalBanking = () => {
   return (
-    <div className="bg-hex-7">
+    <div className="bg-hex-7 font-nunitoSans">
       <Header
         bg="bg-[#1e191b]/70"
         textColor1="text-white"
@@ -33,14 +33,14 @@ const DigitalBanking = () => {
       <div className="h-screen w-full lg:overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
-            className="absolute top-14 -right-8 w-full z-20"
+            className="absolute top-4 -right-36 w-full z-20"
             src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
             alt=""
           />
         </div>
-        <div className="z-20 relative flex w-full justify-center h-full">
+        <div className="z-30 relative flex w-full justify-center h-full">
           <Reveal>
-            <div className="lg:h-[670px] md:w-[90%] w-full h-screen z-20 top-36 relative">
+            <div className="md:w-[90%] w-full h-screen z-20 top-36 relative">
               <img
             className="bg-cover object-cover image-auto"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
@@ -72,22 +72,21 @@ const DigitalBanking = () => {
         <div
           style={{
             background:
-              "linear-gradient(rgba(68, 11, 41, 0) 0%, rgb(68, 11, 41) 100%)",
+              "linear-gradient(rgba(68, 11, 41, 0) 0%, rgb(68, 11, 41) 95%)",
           }}
           className="h-[450px] absolute bottom-0 z-30 left-0 w-full"
         />
       </div>
       {/*  */}
-      <div className="w-[85%] mx-auto mt-10">
+      <div className="md:w-[85%] w-[90%] mx-auto mt-10">
         {/*  */}
         <Reveal>
-          <div className="bg-[#6c1d45]/20 w-full h-[550px] overflow-hidden flex flex-col items-center font-nunitoSans">
-          <div>Bank in style</div>
-          <div>with Signature Cards</div>
-          <div>
-            Get our safe and durable signature card for your business
-            transactions.
-          </div>
+          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
+          <ZoomOnScroll><div className="text-5xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
+          <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
+          <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4">
+            Get our safe and durable signature card for your business transactions.
+          </div></ZoomOnScroll>
           <button
             type="button"
             className="bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
@@ -103,14 +102,19 @@ const DigitalBanking = () => {
                 alt=""
               /> */}
             </div>
-          </div>
+            </div>
+            <img
+            className="absolute opacity-50 -right-[500px] z-20"
+            src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
+            alt=""
+          />
         </div>
         </Reveal>
         {/*  */}
         <div className="grid md:grid-cols-2 grid-cols-1 gap-10 mt-20">
           {/* frame1 */}
           <Reveal>
-            <div className="rounded-[30px] font-nunitoSans py-10 px-6 h-[750px] overflow-hidden bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+            <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="rounded-[30px] font-nunitoSans py-10 px-6 h-[750px] overflow-hidden">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
@@ -127,7 +131,7 @@ const DigitalBanking = () => {
           </div>
           </Reveal>
           <Reveal>
-            <div className="rounded-[30px] font-nunitoSans py-10 px-6 overflow-hidden h-[750px] bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+            <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="rounded-[30px] font-nunitoSans py-10 px-6 overflow-hidden h-[750px]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
@@ -174,7 +178,7 @@ const DigitalBanking = () => {
           </div>
           </Reveal>
           <Reveal>
-             <div className=" rounded-[30px] py-10 px-6 h-[810px] overflow-hidden font-nunitoSans bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
+             <div className="z-40 relative rounded-[30px] py-10 px-6 h-[810px] overflow-hidden font-nunitoSans bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
             <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
@@ -189,14 +193,21 @@ const DigitalBanking = () => {
             >
               Learn More
             </button>
-              <ZoomOnScroll>
+              <div className="relative z-40">
+                <ZoomOnScroll>
                 <div className="gap-4 flex justify-center mt-14">
               <img
                 className="w-[70%]"
                 src="https://framerusercontent.com/images/47RYq01ACuY4sFSUp8mrRTbeoM0.png?scale-down-to=2048"
               />
             </div>
-            </ZoomOnScroll>
+              </ZoomOnScroll>
+              </div>
+              <img
+            className="absolute -bottom-[400px] w-[1000px] h-[1000px] opacity-50 rotate-90 -right-12 z-20"
+            src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
+            alt=""
+          />
           </div>
          </Reveal>
           <Reveal>
