@@ -2,7 +2,6 @@ import { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
-import tickSvg from "../../assets/tick.svg";
 import Banner from "../../components/Banner";
 import cardSvg from "../../assets/card.png"
 import shadowSvg from "../../assets/shadow.svg"
