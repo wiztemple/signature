@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import bannerSvg from '../../assets/bannersvg.svg';
 import { Slide } from "../../utils/Slide";
 import appleLogo from "../../assets/apple.svg";
-// import cookieSvg from "../../assets/cookie.svg";
 import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
 import messageSvg from "../../assets/message.svg";
@@ -142,7 +141,7 @@ const Home = () => {
               <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard(true)}
                   onMouseLeave={() => setOnCard(false)}
@@ -158,8 +157,8 @@ const Home = () => {
                     <img className={`w-[96%] absolute ${onCard === true && "bottom-5"}  bottom-5 bg-cover ${transition} object-cover`} src="https://framerusercontent.com/images/1En9WFPFwPGkndRciPuMzvGz43A.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </ZoomOnScroll>
-              <ZoomOnScroll>
+              </Reveal>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard2(true)}
                   onMouseLeave={() => setOnCard2(false)}
@@ -172,8 +171,8 @@ const Home = () => {
                     <img className="z-30 bg-cover object-cover" src="https://framerusercontent.com/images/PekFpoVisifP2gP4AbGTCGBU3Y.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </ZoomOnScroll>
-              <ZoomOnScroll>
+              </Reveal>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard3(true)}
                   onMouseLeave={() => setOnCard3(false)}
@@ -186,9 +185,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
               {/* SECTION2 */}
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard4(true)}
                   onMouseLeave={() => setOnCard4(false)}
@@ -201,9 +200,9 @@ const Home = () => {
                   <div style={{ background: "linear-gradient(rgba(22, 21, 18, 0) 0%, rgb(18, 18, 18) 100%)" }} className={`top-0 absolute w-full ${transition} opacity-90 h-full rounded-[20px] left-0 z-30`} />
                   <img className={`w-full h-full bg-cover ${transition} left-0 top-0 z-20 absolute object-cover rounded-[20px]`} src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
               <div className="relative md:-mt-11">
-                <ZoomOnScroll>
+                <Reveal>
                   <div
                     onMouseEnter={() => setOnCard5(true)}
                     onMouseLeave={() => setOnCard5(false)}
@@ -220,9 +219,9 @@ const Home = () => {
                       <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
                   </div>
-                </ZoomOnScroll>
+                </Reveal>
               </div>
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard6(true)}
                   onMouseLeave={() => setOnCard6(false)}
@@ -249,7 +248,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
             </div>
           </div>
         </div>
