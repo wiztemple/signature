@@ -15,7 +15,6 @@ import youtubeSvg from "../../assets/linkedin.svg";
 import musicSvg from "../../assets/music.svg";
 import MobileHeader from "../../components/MobileHeader";
 import { Reveal } from "../../utils/Reveal";
-import ZoomOnScroll from "../../utils/ZoomOnScroll";
 import Cookies from "../../components/Cookies";
 
 interface HeroProps {
@@ -24,6 +23,7 @@ interface HeroProps {
   url: string
   mt: string
   top: string
+  link: string
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2, }, { dot: 3 },];
@@ -34,15 +34,15 @@ const banks: { title: string, description: string }[] = [
   { title: "Personalized Experience", description: "Personalise your banking and enjoy the Signature experience." },
 ];
 
-const Hero = ({ title, description, url, mt, top }: HeroProps) => (
+const Hero = ({ title, description, url, mt, top, link }: HeroProps) => (
   <Slide className="h-full relative w-full z-40">
     <div className="lg:w-[85%] w-[90%] mx-auto h-full">
       <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="banner svg" />
       <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
         <div className={`text-black lg:w-[45%] relative z-30 ${top} relative`}>
           <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
-          <p className="text-xl font-nunitoSans text-hex-8 mt-3">{description}</p>
-          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+          <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">{description}</p>
+          <a href={link} className="bg-hex-2 px-4 hover:bg-primaryyellow py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
         </div>
         <div className="text-black flex-1">
           <img className={`relative z-40 object-center bg-cover ${mt}`} src={url} alt="" />
@@ -81,6 +81,7 @@ const Home = () => {
       <div className="h-screen relative lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex &&
           <Hero
+          link="/about-us"
           top="2xl:mt-10 mt-[10%]"
           mt="2xl:mt-[11%] mt-[17%] ml-24 w-full h-full"
           title="Unlock Limitless Possibilities"
@@ -89,6 +90,7 @@ const Home = () => {
         />
         }
         {dots[2].dot === activeIndex && <Hero
+          link="/cards"
           top="mt-[44px]"
           mt="2xl:mt-[15%] mt-[24%] ml-28 w-[90%]"
           title="Make Your Mark"
@@ -101,8 +103,8 @@ const Home = () => {
             <div className="flex justify-between items-center w-full h-full">
               <div className="text-black w-[45%] z-30 relative">
                 <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Experience Freedom</h1>
-                <p className="text-xl font-nunitoSans text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+                <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">Stay ahead with on-the-go banking.</p>
+                <a href="/" className="bg-hex-2 hover:bg-primaryyellow ease-in-out transition-all delay-75 duration-100 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
               </div>
               <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
               <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover 2xl:top-[14%] top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
