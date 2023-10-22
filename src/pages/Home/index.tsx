@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import bannerSvg from '../../assets/bannersvg.svg';
 import { Slide } from "../../utils/Slide";
 import appleLogo from "../../assets/apple.svg";
-import cookieSvg from "../../assets/cookie.svg";
 import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
 import messageSvg from "../../assets/message.svg";
@@ -16,7 +15,7 @@ import youtubeSvg from "../../assets/linkedin.svg";
 import musicSvg from "../../assets/music.svg";
 import MobileHeader from "../../components/MobileHeader";
 import { Reveal } from "../../utils/Reveal";
-import ZoomOnScroll from "../../utils/ZoomOnScroll";
+import Cookies from "../../components/Cookies";
 
 interface HeroProps {
   title: string
@@ -24,6 +23,7 @@ interface HeroProps {
   url: string
   mt: string
   top: string
+  link: string
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2, }, { dot: 3 },];
@@ -34,18 +34,18 @@ const banks: { title: string, description: string }[] = [
   { title: "Personalized Experience", description: "Personalise your banking and enjoy the Signature experience." },
 ];
 
-const Hero = ({ title, description, url, mt, top }: HeroProps) => (
+const Hero = ({ title, description, url, mt, top, link }: HeroProps) => (
   <Slide className="h-full relative w-full z-40">
     <div className="lg:w-[85%] w-[90%] mx-auto h-full">
       <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="banner svg" />
       <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
         <div className={`text-black lg:w-[45%] relative z-30 ${top} relative`}>
           <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">{title}</h1>
-          <p className="text-xl font-nunitoSans text-hex-8 mt-3">{description}</p>
-          <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+          <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">{description}</p>
+          <a href={link} className="bg-hex-2 px-4 hover:bg-primaryyellow py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
         </div>
         <div className="text-black flex-1">
-          <img className={`w-full h-full relative z-40 object-center bg-cover ${mt}`} src={url} alt="" />
+          <img className={`relative z-40 object-center bg-cover ${mt}`} src={url} alt="" />
         </div>
       </div>
     </div>
@@ -78,19 +78,23 @@ const Home = () => {
     <div className="font-nunitoSans bg-white">
       <Header primaryBtnClassName="bg-hex-2" />
       <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
-      <div className="2xl:h-[60vh] h-screen relative lg:block hidden bg-[#f9fafb] overflow-hidden">
-        {dots[0].dot === activeIndex && <Hero
-          top="mt-[14%]"
-          mt="mt-[17%] ml-24"
+      <div className="h-screen relative lg:block hidden bg-[#f9fafb] overflow-hidden">
+        {dots[0].dot === activeIndex &&
+          <Hero
+          link="/about-us"
+          top="2xl:mt-10 mt-[10%]"
+          mt="2xl:mt-[11%] mt-[17%] ml-24 w-full h-full"
           title="Unlock Limitless Possibilities"
           description="We provide exceptional banking solutions by leveraging technology to accelerate your financial growth."
           url="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png"
-        />}
+        />
+        }
         {dots[2].dot === activeIndex && <Hero
+          link="/cards"
           top="mt-[44px]"
-          mt="2xl:-mt-[5%] xl:-mt-[5%] mt-[22%] ml-10"
-          title="Experience Freedom"
-          description="Stay ahead with on-the-go banking."
+          mt="2xl:mt-[15%] mt-[24%] ml-28 w-[90%]"
+          title="Make Your Mark"
+          description="We provide exceptional banking solutions by leveraging technology to accelerate your financial growth."
           url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
         />}
         {dots[1].dot === activeIndex && <Slide className="h-full relative w-full z-40">
@@ -98,9 +102,9 @@ const Home = () => {
             <img className='absolute -top-5 z-20 rotate overflow-hidden -ml-20' src={bannerSvg} alt="banner svg" />
             <div className="flex justify-between items-center w-full h-full">
               <div className="text-black w-[45%] z-30 relative">
-                <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold 2xl:-mt-96">Experience Freedom</h1>
-                <p className="text-xl font-nunitoSans text-hex-8 mt-3">Stay ahead with on-the-go banking.</p>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+                <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Experience Freedom</h1>
+                <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">Stay ahead with on-the-go banking.</p>
+                <a href="/" className="bg-hex-2 hover:bg-primaryyellow ease-in-out transition-all delay-75 duration-100 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
               </div>
               <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
               <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover 2xl:top-[14%] top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
@@ -108,7 +112,7 @@ const Home = () => {
           </div>
         </Slide>}
         <div className="absolute  bottom-5 z-40 text-black mx-auto w-full flex justify-center">
-          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-16 h-7 gap-2 rounded-[20px] flex justify-center items-center">
+          <div style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }} className="w-[68px] h-[29.2px] gap-2 rounded-[20px] flex justify-center items-center">
             {dots.map((tab, index) => <div onClick={() => setActiveIndex(tab.dot)} key={index} className={`cursor-pointer ${tab.dot === activeIndex ? "bg-white" : "bg-gray-200/50"} rounded-full w-[10px] h-[10px]`}></div>)}
           </div>
         </div>
@@ -139,7 +143,7 @@ const Home = () => {
               <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard(true)}
                   onMouseLeave={() => setOnCard(false)}
@@ -155,8 +159,8 @@ const Home = () => {
                     <img className={`w-[96%] absolute ${onCard === true && "bottom-5"}  bottom-5 bg-cover ${transition} object-cover`} src="https://framerusercontent.com/images/1En9WFPFwPGkndRciPuMzvGz43A.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </ZoomOnScroll>
-              <ZoomOnScroll>
+              </Reveal>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard2(true)}
                   onMouseLeave={() => setOnCard2(false)}
@@ -169,8 +173,8 @@ const Home = () => {
                     <img className="z-30 bg-cover object-cover" src="https://framerusercontent.com/images/PekFpoVisifP2gP4AbGTCGBU3Y.png?scale-down-to=512" alt="" />
                   </div>
                 </div>
-              </ZoomOnScroll>
-              <ZoomOnScroll>
+              </Reveal>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard3(true)}
                   onMouseLeave={() => setOnCard3(false)}
@@ -183,9 +187,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
               {/* SECTION2 */}
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard4(true)}
                   onMouseLeave={() => setOnCard4(false)}
@@ -198,9 +202,9 @@ const Home = () => {
                   <div style={{ background: "linear-gradient(rgba(22, 21, 18, 0) 0%, rgb(18, 18, 18) 100%)" }} className={`top-0 absolute w-full ${transition} opacity-90 h-full rounded-[20px] left-0 z-30`} />
                   <img className={`w-full h-full bg-cover ${transition} left-0 top-0 z-20 absolute object-cover rounded-[20px]`} src="https://framerusercontent.com/images/2QEr7668AEGZzFsB1qiZcUCmGY0.png" />
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
               <div className="relative md:-mt-11">
-                <ZoomOnScroll>
+                <Reveal>
                   <div
                     onMouseEnter={() => setOnCard5(true)}
                     onMouseLeave={() => setOnCard5(false)}
@@ -217,9 +221,9 @@ const Home = () => {
                       <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
                   </div>
-                </ZoomOnScroll>
+                </Reveal>
               </div>
-              <ZoomOnScroll>
+              <Reveal>
                 <div
                   onMouseEnter={() => setOnCard6(true)}
                   onMouseLeave={() => setOnCard6(false)}
@@ -246,7 +250,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </ZoomOnScroll>
+              </Reveal>
             </div>
           </div>
         </div>
@@ -331,17 +335,7 @@ const Home = () => {
         />
       </div>
       {/* cookies */}
-      <div className="flex justify-center mx-auto">
-        <div style={{ backdropFilter: "blur(20px)", backgroundColor: "rgba(255, 255, 255, 0.7)" }} className="h-auto lg:w-[45%] w-[80%] rounded-[16px] justify-center fixed bottom-3 z-40">
-          <div className="relative flex lg:flex-row flex-col items-center justify-between py-2 px-3">
-            <div className="flex lg:flex-row flex-col gap-4 items-center">
-              <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
-              <p className="text-main-4 text-sm lg:text-start lg: text-center leading-[1.5em] lg:w-[80%]">We use cookies to give you the best online experience. Find out more on how we use cookies in our <span className="text-hex-2">cookie policy</span></p>
-            </div>
-            <button className="bg-hex-2 whitespace-nowrap lg:w-auto w-full px-4 py-2 lg:my-0 my-4 text-sm rounded-[6px] text-white font-nunitoSans">Okay, Thanks</button>
-          </div>
-        </div>
-      </div>
+      <Cookies />
       <div style={{ backgroundColor: "rgba(243, 243, 243, 0.8)", backdropFilter: "blur(10px)" }} className="rounded-[20px] lg:block hidden bg-white right-10 fixed bottom-3 w-[24%] z-50 h-11 px-4">
         <div className="flex items-center h-full justify-between gap-2">
           <div className="flex gap-2">
