@@ -1,4 +1,5 @@
 import React from "react";
+import fileSvg from '../../assets/file.svg';
 
 interface CardProps {
   svgLink?: string;
@@ -17,16 +18,18 @@ const LogoDownloadCard: React.FC<CardProps> = ({ pngLink, svgLink, bgColor, img,
       <div className="flex gap-x-2">
       <a
           href={svgLink}
-          className="p-2.5 text-base font-bold rounded-[10px] text-hex-2 bg-pink mt-3 cursor-pointer"
+          className="p-2.5 text-base flex gap-1 font-bold rounded-[10px] text-hex-2 bg-pink mt-3 cursor-pointer"
           download
         >
+          <img src={fileSvg} alt="file download" />
           .svg
         </a>
         <a
           href={pngLink}
-          className="p-2.5 text-base font-bold rounded-[10px] text-hex-2 bg-pink mt-3 cursor-pointer"
+          className="p-2.5 text-base flex gap-1 font-bold rounded-[10px] text-hex-2 bg-pink mt-3 cursor-pointer"
           download
         >
+        <img src={fileSvg} alt="file download" />
           .png
         </a>
       </div>

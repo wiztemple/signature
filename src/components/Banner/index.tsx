@@ -31,7 +31,7 @@ const Banner = ({
         <div>
           <div className={`md:text-[42px] text-[36px] mt-10 ${titleStyle} font-bold leading-[1.2em]`}>{title}</div>
           <div className={`text-[20px] ${textColor} mt-5 md:w-[80%]`}>{description}</div>
-          <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonStyle} lg:mt-12 mt-6 text-lg px-6 py-4 rounded-[10px]`}>{buttonName}</button>
+          <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonStyle} lg:mt-12 mt-6 text-lg px-6 py-4 hover:bg-hex-1 ease-in-out duration-75 delay-75 transition-all rounded-[10px]`}>{buttonName}</button>
         </div>
         <div className={`${imgContainer}`}>
           <img

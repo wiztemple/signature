@@ -20,6 +20,7 @@ const Resources = () => {
     const { value } = event.currentTarget.dataset;
     setActiveTab(value);
   };
+
   return (
     <div className="font-nunitoSans bg-white">
       <Header />
@@ -91,15 +92,15 @@ const Resources = () => {
               />
               <DownloadCard
                 cardText="Signature Bank Account Opening Reference Form"
-                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+                downloadLink="https://framerusercontent.com/modules/assets/EIbAy6GubUZfJtGrpg8IfQpJMuE~y-8ktJXKahb1xUiZiw17Mgsq-2fHJ1A446D0joBouJ4.pdf"
               />
               <DownloadCard
                 cardText="Corporate Account Opening Form"
-                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+                downloadLink="https://framerusercontent.com/modules/assets/HFPfePaEVT5nrBERGuXtbMVpgS0~SJwG2_RXdjgBWfT3EguJWKR_nEaNbH7c-aMrOvo26oI.pdf"
               />
               <DownloadCard
                 cardText="Individual Account Opening Form"
-                downloadLink="https://framerusercontent.com/modules/assets/0FV1xKEkNK9UZqpP2NidGst30K0~BExZr_raEzZGuBE7i6hA-53KnFhwdfpd4VCa35Jb7a8.pdf"
+                downloadLink="https://framerusercontent.com/modules/assets/ylXCHuC2fKubucqkkL3lw9zCsC8~9IRN8ehBehuafSSX33gGs039j2Gw1Wtq1Ep6sPpyBy0.pdf"
               />
             </div>
           )}
@@ -108,32 +109,32 @@ const Resources = () => {
               <h1 className="text-5xl font-bold text-alternate pb-2.5">Logo</h1>
               <div className="w-full grid md:grid-cols-4 grid-cols-2 gap-5">
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
+                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                   bgColor="bg-hex-2"
                   img={Logo1}
                   imgSize="w-[186px] h-[48px]"
-                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
-                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
+                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                   bgColor="bg-alternateblack"
                   img={Logo1}
                   imgSize="w-[186px] h-[48px]"
-                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
-                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/ZNcMU1RI22RyL7nQLaNsleuDzk.svg"
+                  pngLink="https://framerusercontent.com/images/viERcgTm7QgYLBUtDc8ALdflPc.png"
                   bgColor="bg-white"
                   img={Logo2}
                   imgSize="w-[186px] h-[48px]"
-                  svgLink="https://framerusercontent.com/images/ZNcMU1RI22RyL7nQLaNsleuDzk.svg"
-                  pngLink="https://framerusercontent.com/images/viERcgTm7QgYLBUtDc8ALdflPc.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/yAnaSCQL0om1sFKcwBlrDlPo.svg"
+                  pngLink="https://framerusercontent.com/images/hcQ5BYCqTIgtnJVik0PiR51A.png"
                   bgColor="bg-alternateblack"
                   img={Logo3}
                   imgSize="w-[186px] h-[48px]"
-                  svgLink="https://framerusercontent.com/images/yAnaSCQL0om1sFKcwBlrDlPo.svg"
-                  pngLink="https://framerusercontent.com/images/hcQ5BYCqTIgtnJVik0PiR51A.png"
                 />
               </div>
               <h1 className="text-5xl font-bold text-alternate pb-2.5 pt-28">
@@ -141,32 +142,32 @@ const Resources = () => {
               </h1>
               <div className="w-full grid md:grid-cols-4 grid-cols-2 gap-5">
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                   bgColor="bg-hex-2"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
-                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
-                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                   bgColor="bg-alternateblack"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
-                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
-                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                   bgColor="bg-white"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
-                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
-                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
+                  svgLink="https://framerusercontent.com/images/ahXObpfu6IYBM6M3Zbt66hvReg.svg"
+                  pngLink="https://framerusercontent.com/images/HGo0n1EbYP2oeVDb35KIDGF0420.png"
                   bgColor="bg-alternateblack"
                   img={Symbol2}
                   imgSize="w-[120px] h-[129px]"
-                  svgLink="https://framerusercontent.com/images/ahXObpfu6IYBM6M3Zbt66hvReg.svg"
-                  pngLink="https://framerusercontent.com/images/HGo0n1EbYP2oeVDb35KIDGF0420.png"
                 />
               </div>
               <div className="text-alternate md:py-28 py-16">
