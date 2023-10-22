@@ -124,8 +124,8 @@ const Home = () => {
             <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full mt-24 h-full">
               <div className="text-black z-30 relative">
                 <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Unlock Limitless Possibilities</h1>
-                <p className="text-xl font-nunitoSans text-hex-8 mt-3">We provide exceptional banking solutions by leveraging technology to accelerate your financial growth.</p>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</button>
+                <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">We provide exceptional banking solutions by leveraging technology to accelerate your financial growth.</p>
+                <a href="/about-us" className="bg-hex-2 px-4 py-2 rounded-[10px] text-white font-nunitoSans">Learn More</a>
               </div>
               <div className="text-black flex-1">
                 <img className={`w-full h-full relative z-40 object-center bg-cover`} src="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png" alt="" />

@@ -21,12 +21,12 @@ export const Reveal = ({ children, className }: any) => {
         <div className={className}>
             <motion.section
                 variants={{
-                    hidden: { opacity: 0, y: 45 },
+                    hidden: { opacity: .1, y: 55 },
                     visible: { opacity: 1, y: 0 }
                 }}
                 initial="hidden"
                 animate={control}
-                transition={{ duration: 0.65, delay: 0.33 }}
+                transition={{ duration: 0.65, delay: 0.4 }}
                 className='relative overflow-hidden opacity-5'
                 ref={ref}
             >{children}</motion.section>

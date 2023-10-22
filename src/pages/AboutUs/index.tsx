@@ -160,7 +160,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           <p className="text-lg leading-[28px] text-center text-primarygray mx-auto lg:w-[55%] md:w-[80%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
           <div className="sticky top-0 w-full h-full">
              {/* <div className="flex justify-center relative mt-10"> */}
-            <div className="text-primaryblack mx-auto flex justify-between w-[42%] px-4 py-1 text-2xl mt-14 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
+            <div className="text-primaryblack mx-auto flex justify-between md:w-[42%] w-[90%] px-4 py-1 md:text-2xl text-xl mt-14 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}
