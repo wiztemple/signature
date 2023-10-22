@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({
         autoplay: true,
         container: container.current,
         loop: true,
-        renderer: 'svg',
+        renderer: "svg",
       });
       animationRef.current = anim;
     }
@@ -119,11 +119,13 @@ const Header: React.FC<HeaderProps> = ({
             onMouseLeave={handleMenuMouseLeave}
           >
             <div className="flex gap-10 items-center">
-              <img
-                src={logoUrl}
-                className="w-[142px] h-[38px]"
-                alt="App Logo"
-              />
+              <Link to="/">
+                <img
+                  src={logoUrl}
+                  className="w-[142px] h-[38px]"
+                  alt="App Logo"
+                />
+              </Link>
               <div className="flex gap-[5px] relative">
                 <Link
                   to="/personal-banking"
@@ -525,11 +527,22 @@ const Header: React.FC<HeaderProps> = ({
                                 <span className="block text-midblack pt-2 text-sm">
                                   Access 24/7 banking <br /> anywhere anytime
                                 </span>
-                                <a href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="block h-12 w-28 -mt-8" target="_blank">
+                                <a
+                                  href="https://apps.apple.com/ng/app/signature-mobile/id6446977188"
+                                  className="block h-12 w-28 -mt-8"
+                                  target="_blank"
+                                >
                                   <img src={AppStore} alt="App Store Link" />
                                 </a>
-                                <a href="https://play.google.com/store/apps/details?id=com.signaturemobile" className="block h-12 w-28 -mt-2" target="_blank">
-                                  <img src={GooglePlay} alt="Google Plkay Link" />
+                                <a
+                                  href="https://play.google.com/store/apps/details?id=com.signaturemobile"
+                                  className="block h-12 w-28 -mt-2"
+                                  target="_blank"
+                                >
+                                  <img
+                                    src={GooglePlay}
+                                    alt="Google Plkay Link"
+                                  />
                                 </a>
                               </span>
                             </Link>

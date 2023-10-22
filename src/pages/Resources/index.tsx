@@ -10,8 +10,8 @@ import Logo3 from "../../assets/logowhite.svg";
 import Symbol1 from "../../assets/symbol1.svg";
 import Symbol2 from "../../assets/symbol2.svg";
 import MobileHeader from "../../components/MobileHeader";
-import downloadSvg from "../../assets/download.svg"
-
+import downloadSvg from "../../assets/download.svg";
+import CopyToClipboardButton from "../../components/CopyToClipboardButton";
 
 const Resources = () => {
   const [activeTab, setActiveTab] = useState<string | undefined>("downloads");
@@ -23,7 +23,11 @@ const Resources = () => {
   return (
     <div className="font-nunitoSans bg-white">
       <Header />
-      <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
+      <MobileHeader
+        bg="bg-white"
+        textColor1="text-midblack"
+        primaryBtnClassName="bg-hex-2 !py-2.5"
+      />
       <div className="md:pt-[270px] pt-64 pb-24 bg-[#f9f5f8]">
         <h1 className="text-center md:text-7xl text-[48px] font-bold text-alternate">
           Resources
@@ -37,31 +41,45 @@ const Resources = () => {
           <div className="flex justify-center">
             <div className="bg-white w-fit  flex gap-[96px] p-5 rounded-[20px]">
               <div>
-                 <button
-                type="button"
-                className={`py-3 text-2xl text-[#9999] ${activeTab === "downloads" && "font-semibold text-hex-2 "} mb-1 focus:outline-none`}
-                onClick={toggleTab}
-                id="downloads"
-                data-value="downloads"
-              >
-                Downloads
+                <button
+                  type="button"
+                  className={`py-3 text-2xl text-[#9999] ${
+                    activeTab === "downloads" && "font-semibold text-hex-2 "
+                  } mb-1 focus:outline-none`}
+                  onClick={toggleTab}
+                  id="downloads"
+                  data-value="downloads"
+                >
+                  Downloads
                 </button>
-                <div className={`${activeTab === "downloads" && "border-[3px] w-16 mx-auto rounded-full border-hex-2"}`}></div>
-             </div>
+                <div
+                  className={`${
+                    activeTab === "downloads" &&
+                    "border-[3px] w-16 mx-auto rounded-full border-hex-2"
+                  }`}
+                ></div>
+              </div>
               <div>
                 <button
-                type="button"
-                className={`rounded py-3 text-2xl ${activeTab === "media" && "font-semibold"} text-[#9999] mb-1 focus:outline-none ${
-                  activeTab === "media" &&
-                  "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
-                }`}
-                onClick={toggleTab}
-                id="media"
-                data-value="media"
-              >
-                Media Kit
-              </button>
-              <div className={`${activeTab === "media" && "border-[3px] w-16 mx-auto rounded-full border-hex-2"}`}></div>
+                  type="button"
+                  className={`rounded py-3 text-2xl ${
+                    activeTab === "media" && "font-semibold"
+                  } text-[#9999] mb-1 focus:outline-none ${
+                    activeTab === "media" &&
+                    "text-hex-2 after:w-5 after:h-[2px] after:bg-hex-2"
+                  }`}
+                  onClick={toggleTab}
+                  id="media"
+                  data-value="media"
+                >
+                  Media Kit
+                </button>
+                <div
+                  className={`${
+                    activeTab === "media" &&
+                    "border-[3px] w-16 mx-auto rounded-full border-hex-2"
+                  }`}
+                ></div>
               </div>
             </div>
           </div>
@@ -93,21 +111,29 @@ const Resources = () => {
                   bgColor="bg-hex-2"
                   img={Logo1}
                   imgSize="w-[186px] h-[48px]"
+                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
+                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-alternateblack"
                   img={Logo1}
                   imgSize="w-[186px] h-[48px]"
+                  svgLink="https://framerusercontent.com/images/x7x0ksAcBMpWXY0v71Qz4qfSfIg.svg"
+                  pngLink="https://framerusercontent.com/images/J1Cx5S6dWQ4ZpKPGE8qBKmyKGE.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-white"
                   img={Logo2}
                   imgSize="w-[186px] h-[48px]"
+                  svgLink="https://framerusercontent.com/images/ZNcMU1RI22RyL7nQLaNsleuDzk.svg"
+                  pngLink="https://framerusercontent.com/images/viERcgTm7QgYLBUtDc8ALdflPc.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-alternateblack"
                   img={Logo3}
                   imgSize="w-[186px] h-[48px]"
+                  svgLink="https://framerusercontent.com/images/yAnaSCQL0om1sFKcwBlrDlPo.svg"
+                  pngLink="https://framerusercontent.com/images/hcQ5BYCqTIgtnJVik0PiR51A.png"
                 />
               </div>
               <h1 className="text-5xl font-bold text-alternate pb-2.5 pt-28">
@@ -118,76 +144,121 @@ const Resources = () => {
                   bgColor="bg-hex-2"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-alternateblack"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-white"
                   img={Symbol1}
                   imgSize="w-[120px] h-[129px]"
+                  svgLink="https://framerusercontent.com/images/GmT1PvPbzHrKrGx3KTcwh3t6j7k.svg"
+                  pngLink="https://framerusercontent.com/images/UNwtdO8l1qtAM9GzyOcaVsnphYI.png"
                 />
                 <LogoDownloadCard
                   bgColor="bg-alternateblack"
                   img={Symbol2}
                   imgSize="w-[120px] h-[129px]"
+                  svgLink="https://framerusercontent.com/images/ahXObpfu6IYBM6M3Zbt66hvReg.svg"
+                  pngLink="https://framerusercontent.com/images/HGo0n1EbYP2oeVDb35KIDGF0420.png"
                 />
               </div>
               <div className="text-alternate md:py-28 py-16">
-            <h1 className="text-5xl font-bold text-center">Colour Pallet</h1>
-            <p className="text-center text-2xl font-bold mt-10">Primary</p>
-            <div className="flex mt-5">
-              <div className="flex-1">
-                <div className="bg-hex-2 h-44 rounded-tl-[20px] rounded-bl-[20px] w-full" />
-                <p className="text-[#2D3442] text-center text-[29.61px] mt-3">Burgundy.</p>
-                <button className="mx-auto w-[130px] justify-center outline-none mt-1 flex items-center text-hex-2 font-semibold text-base p-2 rounded-[10px] bg-pink">
-                  <p>Copy</p>
-                  <input className="outline-none w-full cursor-pointer bg-pink text-center" value="#6C1D45" />
-                </button>
+                <h1 className="text-5xl font-bold text-center">
+                  Colour Pallet
+                </h1>
+                <p className="text-center text-2xl font-bold mt-10 pb-8">Primary</p>
+                <div className="flex  h-[215px]">
+                  <div className="flex-1">
+                    <div className="bg-hex-2 h-full rounded-tl-[20px] rounded-bl-[20px] w-full" />
+                    <p className="text-[#2D3442] text-center text-[29.61px] mt-3">
+                      Burgundy.
+                    </p>
+                    <div className="flex justify-center mt-1">
+                      <CopyToClipboardButton
+                        text="#6C1D45"
+                        bg="bg-pink"
+                        textColor="text-hex-2"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="bg-primaryyellow h-full rounded-br-[20px] rounded-tr-[20px] w-full" />
+                    <p className="text-[#2D3442] text-center text-[29.61px] mt-3">
+                      Beige brown.
+                    </p>
+                    <div className="flex justify-center mt-1">
+                      <CopyToClipboardButton
+                        text="#BB975B"
+                        bg="bg-main-12"
+                        textColor="text-primaryyellow"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="pt-36">
+                  <p className="text-center text-2xl font-bold pb-8">
+                    Primary
+                  </p>
+                  <div className="flex h-[215px]">
+                    <div className="flex-1">
+                      <div className="bg-[#A61890] h-full rounded-tl-[20px] rounded-bl-[20px] w-full" />
+                      <p className="text-[#2D3442] text-center text-[29.61px] mt-3">
+                        Purple
+                      </p>
+                      <div className="flex justify-center mt-1">
+                        <CopyToClipboardButton
+                          text="#A61890"
+                          bg="bg-[#fff0fd]"
+                          textColor="text-[#A61890]"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-[#B05C37] h-full w-full" />
+                      <p className="text-[#2D3442] text-center text-[29.61px] mt-3">
+                        Orange
+                      </p>
+                      <div className="flex justify-center mt-1">
+                        <CopyToClipboardButton
+                          text="#B05C37"
+                          bg="bg-[#fff1eb]"
+                          textColor="text-[#B05C37]"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-[#898d8e] h-full rounded-br-[20px] rounded-tr-[20px] w-full" />
+                      <p className="text-[#2D3442] text-center text-[29.61px] mt-3">
+                        Grey
+                      </p>
+                      <div className="flex justify-center mt-1">
+                        <CopyToClipboardButton
+                          text="#898D8E"
+                          bg="bg-[#e3ebed]"
+                          textColor="text-[#898d8e]"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1">
-                <div className="bg-primaryyellow h-44 rounded-br-[20px] rounded-tr-[20px] w-full" />
-                <p className="text-[#2D3442] text-center text-[29.61px] mt-3">Beige brown.</p>
-                <button className="mx-auto w-[130px] justify-center outline-none mt-1 flex items-center text-primaryyellow font-semibold text-base p-2 rounded-[10px] bg-main-12">
-                  <p>Copy</p>
-                  <input className="outline-none w-full cursor-pointer bg-main-12 text-center" value="#BB975B" />
-                </button>
-              </div>
-            </div>
-            <p className="text-center text-2xl font-bold mt-10">Primary</p>
-            <div className="flex mt-5">
-              <div className="flex-1">
-                <div className="bg-[#A61890] h-44 rounded-tl-[20px] rounded-bl-[20px] w-full" />
-                <p className="text-[#2D3442] text-center text-[29.61px] mt-3">Purple</p>
-                <button className="mx-auto w-[130px] justify-center outline-none mt-1 flex items-center text-[#A61890] font-semibold text-base p-2 rounded-[10px] bg-[#fff0fd]">
-                  <p>Copy</p>
-                  <input className="outline-none w-full cursor-pointer bg-[#fff0fd] text-center" value="#A61890" />
-                </button>
-              </div>
-              <div className="flex-1">
-                <div className="bg-[#B05C37] h-44 w-full" />
-                <p className="text-[#2D3442] text-center text-[29.61px] mt-3">Orange</p>
-                <button className="mx-auto w-[130px] justify-center outline-none mt-1 flex items-center text-[#B05C37] font-semibold text-base p-2 rounded-[10px] bg-[#fff1eb]">
-                  <p>Copy</p>
-                  <input className="outline-none w-full cursor-pointer bg-[#fff1eb] text-center" value="#B05C37" />
-                </button>
-              </div>
-              <div className="flex-1">
-                <div className="bg-[#898d8e] h-44 rounded-br-[20px] rounded-tr-[20px] w-full" />
-                <p className="text-[#2D3442] text-center text-[29.61px] mt-3">Grey</p>
-                <button className="mx-auto w-[130px] justify-center outline-none mt-1 flex items-center text-[#898d8e] font-semibold text-base p-2 rounded-[10px] bg-[#e3ebed]">
-                  <p>Copy</p>
-                  <input className="outline-none w-full cursor-pointer bg-[#e3ebed] text-center" value="#898D8E" />
-                </button>
-              </div>
-            </div>
-              </div>
-              <button type="button" className="bg-hex-2 gap-1 items-center mx-auto flex py-1 px-4 rounded-[6px] hover:bg-primaryyellow hover:scale-105 transition-all duration-150 delay-100">
-                <span><img src={downloadSvg} alt="" /></span>
+              <a
+                href="https://framerusercontent.com/modules/assets/9RWiqtx2Nz5UxvOFNW3MC4y5rY~bA7CNqk_35GsPZn6PBaeUqdYkd2-imm4rUmJ_-T8Un8.zip"
+                download
+                className="bg-hex-2 gap-1 w-fit items-center mx-auto mt-10 flex py-2 px-4 font-medium rounded-[6px] hover:bg-primaryyellow hover:scale-105 transition-all duration-150 delay-100"
+              >
+                <span>
+                  <img src={downloadSvg} alt="" />
+                </span>
                 Download .zip file
-              </button>
+              </a>
             </div>
           )}
         </div>

@@ -36,13 +36,13 @@ const MobileHeader: React.FC<HeaderProps> = ({
             <Link to="/" className={`${textColor1} text-sm py-2.5 px-2.5`}>
               Home
             </Link>
-            <Link to="/" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/about-us" className={`${textColor1} text-sm py-2.5 px-2.5`}>
               About Us
             </Link>
-            <Link to="/" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/branch-locator" className={`${textColor1} text-sm py-2.5 px-2.5`}>
               Branch Locator
             </Link>
-            <Link to="/" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/branch-locator" className={`${textColor1} text-sm py-2.5 px-2.5`}>
               Contact Us
             </Link>
           </div>
@@ -52,11 +52,13 @@ const MobileHeader: React.FC<HeaderProps> = ({
             className={`mt-1 w-full relative rounded-[50px] ${bg} backdrop-blur-[20px] `}
           >
             <div className="flex justify-between items-center h-[66px] py-[10px] px-5">
+              <Link to="/">
               <img
                 src={logoUrl}
                 className="w-[143px] h-[38px]"
                 alt="App Logo"
               />
+              </Link>
               <button className="" onClick={toggleMenu}>
                 {isOpen ? (
                   <svg
