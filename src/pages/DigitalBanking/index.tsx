@@ -86,7 +86,7 @@ const DigitalBanking = () => {
           <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-center mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
-          <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4">
+          <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4 px-2">
             Get our safe and durable signature card for your business transactions.
           </div></ZoomOnScroll>
           <button

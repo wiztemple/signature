@@ -286,7 +286,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="h-[427px] lg:w-auto w-[95%] lg:object-cover bg-cover lg:-ml-16" src={card} alt="" />
+                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={card} alt="" />
                     <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
@@ -320,7 +320,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
-                   <img className="bg-cover lg:w-[80%] w-[95%] h-[420px] lg:object-cover" src={cardSvg} alt="" />
+                   <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
                    <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
@@ -358,7 +358,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="h-[427px] object-cover bg-cover -ml-16" src={card} alt="" />
+                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={card} alt="" />
                     <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
@@ -392,7 +392,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
-                   <img className="bg-cover w-[80%] h-[420px] object-cover" src={cardSvg} alt="" />
+                   <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
                    <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
