@@ -82,7 +82,7 @@ const BranchLocator = () => {
             <img className="absolute lg:-bottom-10 md:bottom-10 bottom-0 md:right-44 right-0 md:w-[80%] h-screen w-full" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
             <div className="flex relative flex-col h-full items-center justify-center font-nunitoSans">
                 <h1 className="md:text-[72px] w-[60%] leading-[1.3em] text-center text-[36px] font-bold text-black">Contact Us</h1>
-                <p className="text-lg md:w-[40%] w-[60%] text-center leading-[1.7em] lg:mt-0 mt-2 text-hex-11">Need assistance with a specific transaction or issue? Our customer support team is available to help you resolve them.</p>
+                <p className="text-lg md:w-[40%] sm:w-[60%] w-[90%] text-center leading-[1.7em] lg:mt-0 mt-2 text-hex-11">Need assistance with a specific transaction or issue? Our customer support team is available to help you resolve them.</p>
           <div className="flex items-center pt-14"> 
             <img className="h-[232px] w-[207px] md:block hidden bg-cover object-cover rounded-[88px]" src="https://framerusercontent.com/images/fx0irxFFH7ZTEIeprqU9seNNzHM.png?scale-down-to=512" alt="" />
             <div className="md:flex hidden items-center">
@@ -90,7 +90,7 @@ const BranchLocator = () => {
               <div className="w-[230px] h-[180px] z-40 -ml-[140px] -rotate-90 bg-hex-2/60 rounded-full polygon" />
             {/* <div className="w-full h-full left-[70px] -rotate-90 bg-hex-2/60 rounded-full polygon" /> */}
             </div>
-            <div className="relative h-[232px] md:-ml-[116px] md:w-[500px] w-[400px]">
+            <div className="relative h-[232px] md:-ml-[116px] md:w-[500px] sm:w-[400px] w-[350px]">
               <img className="h-full w-full absolute bg-cover object-cover rounded-[88px]" src="https://framerusercontent.com/images/oYa3Hb3tW3oxYrJMJm1aWUVqM.jpg?scale-down-to=1024" alt="" />
             </div>
             <div className="relative md:block hidden -ml-4 w-[207px]">
@@ -104,7 +104,7 @@ const BranchLocator = () => {
         <div className="lg:w-[70%] w-[90%] mx-auto py-20">
         <div className="font-nunitoSans flex flex-col items-center">
           <h1 className="md:text-[48px] text-[30px] text-center md:w-full w-[80%] text-primaryblack font-bold">We Would Love To Hear From You</h1>
-          <p className="text-primarygray text-lg lg:w-[55%] md:w-[80%] w-[62%] lg:mt-0 md:mt-2 mt-4 text-center">we have a ruputation of offering a seamless banking experience that promotes  good relationship with our customers</p>
+          <p className="text-primarygray text-lg lg:w-[55%] md:w-[80%] sm:w-[62%] w-[80%] lg:mt-0 md:mt-2 mt-4 text-center">we have a ruputation of offering a seamless banking experience that promotes  good relationship with our customers</p>
         </div>
           <div className="flex md:flex-row flex-col md:items-start items-center lg:gap-20 gap-5 mt-16">
             <ZoomOnScroll>
@@ -112,7 +112,7 @@ const BranchLocator = () => {
                 <CompanyInformation
                   extraClassName="p-3"
                   url={chatSvg}
-              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
+              extraStyle="md:w-[457px] sm:w-[70%] w-full lg:p-[40px] p-5"
               title="Send us a message"
               details="We&apos;re here to help."
               extraDetails="enquiries@signaturebankng.com"
@@ -120,7 +120,7 @@ const BranchLocator = () => {
                 <CompanyInformation
                   extraClassName="p-[15px]"
                   url={locationSvg}
-              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
+              extraStyle="md:w-[457px] sm:w-[70%] w-full lg:p-[40px] p-5"
               title="Head Office"
               details="Visit our office HQ."
               extraDetails="Signature Bank Limited31B Gana Street, Maitama,Abuja FCT, Nigeria."
@@ -128,14 +128,14 @@ const BranchLocator = () => {
                 <CompanyInformation
                   extraClassName="p-[15px]"
                   url={telSvg}
-              extraStyle="md:w-[457px] w-[70%] lg:p-[40px] p-5"
+              extraStyle="md:w-[457px] sm:w-[70%] w-full lg:p-[40px] p-5"
               title="Call Us"
               details="Mon-Fri from 8am to 5pm."
               extraDetails="0700-00727272"
             />
             </div>
             </ZoomOnScroll>
-            <div className="md:w-full w-[70%] font-nunitoSans">
+            <div className="md:w-full sm:w-[70%] w-[90%] font-nunitoSans">
               <h2 className="text-primaryblack text-[36px] text-center font-bold leading-[44px]">Get in touch</h2>
               <p className="text-primarygray text-xl leading-[30px] text-center mt-3">We&apos;d love to hear from you. Please fill out this form.</p>
               <ZoomOnScroll>
@@ -213,7 +213,7 @@ const BranchLocator = () => {
       </div>
       </div>
       <div>
-        <div className="lg:w-[85%] md:w-[90%] w-[70%] mx-auto">
+        <div className="lg:w-[85%] md:w-[90%] sm:w-[70%] w-[90%] mx-auto">
           <div className="font-nunitoSans flex flex-col items-center">
           <h1 className="md:text-[48px] text-[30px] text-primaryblack text-center font-bold">There is a branch nearby</h1>
           <p className="text-primarygray text-lg lg:w-[45%] md:w-[50%] w-[95%] mt-3 text-center">Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
@@ -238,7 +238,7 @@ const BranchLocator = () => {
               </div>
         {/* map */}
         <ZoomOnScroll>
-          <div className="md:w-full w-[70%] mx-auto h-[500px] mt-4">
+          <div className="md:w-full sm:w-[70%] w-full mx-auto h-[500px] mt-4">
 <iframe className="w-full h-full" src={locator}></iframe>
         </div>
         </ZoomOnScroll>
@@ -248,7 +248,7 @@ const BranchLocator = () => {
           <CompanyInformation
             extraClassName="p-3"
             url={chatSvg}
-            extraStyle="w-full h-48 p-5"
+            extraStyle="w-full lg:h-48 md:h-64 h-auto p-5"
               title="Report Fraud"
               details="In the event that your bank account has been compromised, Please Call"
               extraDetails="0700-00727272"

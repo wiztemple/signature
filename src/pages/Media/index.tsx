@@ -31,14 +31,14 @@ const Media = () => {
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
       <div className="pt-[230px] pb-16 bg-[#f9f5f8]">
-        <h1 className="text-center md:text-7xl text-[48px] leading-[1.2em] w-[60%] mx-auto font-bold text-alternate">
+        <h1 className="text-center md:text-7xl text-[48px] leading-[1.2em] sm:w-[60%] w-[90%] mx-auto font-bold text-alternate">
           Media & Publications
         </h1>
         <p className="text-center md:text-2xl text-lg md:w-[55%] w-[70%] mx-auto pt-3 text-[#555d6c]">
           Learn about everything, from customer&apos;s success stories to getting informed with our latests news
         </p>
       </div>
-      <div className="mx-auto lg:w-[58%] md:w-[90%] w-[60%]">
+      <div className="mx-auto lg:w-[58%] md:w-[90%] sm:w-[60%] w-[90%]">
         <div className="md:py-20 py-10 w-full relative">
         {details.map((detail) => (
           <div key={detail.id} className="flex md:flex-row flex-col mb-10 gap-6 items-center">

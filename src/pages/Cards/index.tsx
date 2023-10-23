@@ -220,7 +220,7 @@ const Cards = () => {
         <img className="absolute w-full h-full top-0 right-0" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
         <div className="lg:w-[50%] md:w-[80%] w-full mx-auto lg:pt-64 md:pt-96 pt-36">
           <h1 className="md:text-[64px] text-[48px] text-black leading-[1.2em] text-center font-bold">Signature Cards</h1>
-          <p className="text-lg text-hex-11 text-center px-10 mt-4">Make payments with confidence. Shopping, traveling, or just buying groceries? Our Signature Cards are perfect for you</p>
+          <p className="text-lg text-hex-11 text-center sm:px-10 px-5 mt-4">Make payments with confidence. Shopping, traveling, or just buying groceries? Our Signature Cards are perfect for you</p>
         </div>
         <div className="relative mask w-full lg:mt-5 md:mt-32 mt-10">
           <div className="slider-container" />
@@ -228,7 +228,7 @@ const Cards = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="relative cursor-pointer w-[229px] h-[148px]">
+                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
                 <img className="left-5 bg-primaryyellow whitespace-nowrap transition-all duration-500 delay-300 rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
               </div>
             ))}
@@ -237,7 +237,7 @@ const Cards = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="relative cursor-pointer w-[229px] h-[148px]">
+                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
                 <img className="left-5 bg-primaryyellow whitespace-nowrap rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
               </div>
             ))}
@@ -247,7 +247,7 @@ const Cards = () => {
       <div>
         <div className="lg:w-[85%] w-[93%] mx-auto py-24 relative">
           <h2 className="text-5xl text-primaryblack font-bold text-center tracking-[-0.96px]">A Card for every occasion</h2>
-          <div className="text-primaryblack mx-auto flex justify-between w-96 px-3 text-2xl mt-20 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
+          <div className="text-primaryblack mx-auto flex justify-between sm:w-96 w-[90%] px-3 text-2xl mt-20 border-white bg-[#ffffffb3] z-40 sm:top-28 top-32 rounded-[10px] sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}
@@ -286,7 +286,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="h-[427px] object-cover bg-cover -ml-16" src={card} alt="" />
+                    <img className="h-[427px] lg:w-auto w-[95%] lg:object-cover bg-cover lg:-ml-16" src={card} alt="" />
                     <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
@@ -320,7 +320,7 @@ const Cards = () => {
             </div>
             <div className="flex-1">
               <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
-                   <img className="bg-cover w-[80%] h-[420px] object-cover" src={cardSvg} alt="" />
+                   <img className="bg-cover lg:w-[80%] w-[95%] h-[420px] lg:object-cover" src={cardSvg} alt="" />
                    <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>

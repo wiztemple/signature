@@ -65,8 +65,8 @@ const AboutUs = () => {
       <div className="lg:h-screen md:h-[90vh] h-screen bg-main-7 relative overflow-hidden">
         <img className="absolute w-full h-full top-0 right-0" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="" />
         <div className="lg:w-[50%] md:w-[80%] w-full mx-auto lg:pt-48 md:pt-96 pt-48">
-          <h1 className="md:text-[64px] text-[48px] text-black leading-[1.2em] text-center font-bold">Built on trust, service and innovation</h1>
-          <p className="text-lg text-hex-11 text-center px-10 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
+          <h1 className="md:text-[64px] sm:text-[48px] text-3xl text-black leading-[1.2em] text-center font-bold">Built on trust, service and innovation</h1>
+          <p className="text-lg text-hex-11 text-center sm:px-10 px-4 mt-5">We're not just a bank, we're a tech-driven financial institution that's constantly pushing the boundaries to bring you the best possible customer experience.</p>
         </div>
         <div className="relative overflow-hidden mask w-full lg:mt-20 md:mt-32 mt-10">
           <div className="slider-container" />
@@ -160,7 +160,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           <p className="text-lg leading-[28px] text-center text-primarygray mx-auto lg:w-[55%] md:w-[80%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
           <div className="sticky top-0 w-full h-full">
              {/* <div className="flex justify-center relative mt-10"> */}
-            <div className="text-primaryblack mx-auto flex justify-between md:w-[42%] w-[90%] px-4 py-1 md:text-2xl text-xl mt-14 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
+            <div className="text-primaryblack mx-auto flex justify-between md:w-[42%] w-[90%] px-4 py-1 md:text-2xl sm:text-xl text-base mt-14 border-white bg-[#ffffffb3] z-40 top-28 rounded-[10px] sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}
