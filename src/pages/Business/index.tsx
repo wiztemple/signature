@@ -61,7 +61,7 @@ const Business = () => {
         display="hidden"
         scaling=""
         heroBg="white"
-        bannerWidth="lg:w-[56%] w-[70%]"
+        bannerWidth="lg:w-[56%] sm:w-[80%] w-full"
         textWidth="lg:w-[94%]"
         top="lg:top-[57.5%] md:bottom-28 bottom-16"
         bg="bg-hex-6"
@@ -112,7 +112,7 @@ const Business = () => {
           </Reveal>
           <Reveal>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full md:mt-12 mt-6" 
+          extraClass="lg:w-[570px] md:w-[350px] w-full sm:mt-12 mt-20" 
             black="primaryblack"
             buttonBg=""
             buttonColor=""

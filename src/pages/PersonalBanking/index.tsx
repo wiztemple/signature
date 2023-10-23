@@ -54,7 +54,7 @@ const PersonalBanking = () => {
         display="hidden"
         scaling=""
         heroBg="white"
-        bannerWidth="lg:w-[62%] w-[80%]"
+        bannerWidth="lg:w-[62%] sm:w-[80%] w-full"
         textWidth="lg:w-[85%]"
         top="lg:top-[57%] md:bottom-28 bottom-16"
         bg="bg-hex-4"
@@ -95,7 +95,7 @@ const PersonalBanking = () => {
           <Reveal><h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold lg:leading-[-0.96px] text-center font-nunitoSans">Built for the future, built for your progress.</h1></Reveal>
           <Reveal><p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10 font-nunitoSans">We take pride in offering you a superior banking experience</p></Reveal>
             <SectionCard
-          extraClass="lg:w-[550px] md:w-[350px] w-full md:mt-5 mt-3"
+          extraClass="lg:w-[550px] md:w-[350px] w-full lg:mt-5 sm:mt-5 mt-12"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -107,7 +107,7 @@ const PersonalBanking = () => {
             display="hidden"
           />
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full md:mt-5 mt-3"
+          extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-5 sm:mt-5 mt-12"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -119,7 +119,7 @@ const PersonalBanking = () => {
             display="hidden"
           />
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full md:mt-5 mt-3"
+          extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-5 mt-12"
             black="primaryblack"
             buttonBg=""
             buttonColor=""

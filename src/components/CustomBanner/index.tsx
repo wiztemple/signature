@@ -62,7 +62,7 @@ const CustomBanner = ({
       >
         <div
           style={{ backdropFilter: `${dropFilter}` }}
-          className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] p-[30px]`}
+          className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] md:p-[30px] py-[30px] px-[10px]`}
         >
           <div
             className={`text-${color} md:text-[64px] text-[42px] text-center font-bold leading-[1em]`}

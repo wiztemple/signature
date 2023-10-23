@@ -66,7 +66,8 @@ export default {
         'half-circle': 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)',
       },
       screens: {
-        xl: "1900px"
+        xl: "1900px",
+        sm: '540px',
       }
     },
   },

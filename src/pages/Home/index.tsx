@@ -137,10 +137,10 @@ const Home = () => {
       <div style={{ background: "linear-gradient(180deg,#f9fafb 0%,rgba(245,234,213,1) 100%)" }}>
         <div className="text-black lg:w-[85%] w-[90%] relative mx-auto">
           <div className="flex lg:flex-row relative flex-col gap-5 lg:py-28 py-10">
-            <div className="lg:w-[30%] h-full sticky top-32 text-primaryblack">
+            <div className="lg:w-[30%] h-full lg:sticky top-32 text-primaryblack">
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
               <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
-              <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
+              <p className="text-hex-9 lg:text-start text-center lg:w-full w-[90%] mx-auto text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
               <Reveal>

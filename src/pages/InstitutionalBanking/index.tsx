@@ -62,7 +62,7 @@ const InstitutionalBanking = () => {
         display="block"
         scaling="lg:px-4 pt-[68px]"
         heroBg="bg-secondarybrown"
-        bannerWidth="w-[69%]"
+        bannerWidth="md:w-[69%] sm:w-[80%] w-full"
         textWidth="w-[85%]"
         top="lg:top-[61%] md:bottom-28 bottom-16"
         bg="bg-hex-6"
@@ -112,7 +112,7 @@ const InstitutionalBanking = () => {
           </p>
           <ZoomOnScroll>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
+          extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-3 mt-10"
             black="primaryblack"
             buttonBg=""
             buttonColor=""
@@ -126,7 +126,7 @@ const InstitutionalBanking = () => {
           </ZoomOnScroll>
           <ZoomOnScroll>
             <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full mt-3"
+          extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-3 mt-10"
             black="primaryblack"
             buttonBg=""
             buttonColor=""

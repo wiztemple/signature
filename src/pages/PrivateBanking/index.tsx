@@ -37,7 +37,7 @@ const PrivateBanking = () => {
           display="hidden"
           scaling=""
           heroBg="white"
-          bannerWidth="md:w-[59%] w-[70%]"
+          bannerWidth="md:w-[59%] sm:w-[80%] w-full"
           textWidth="lg:w-[90%]"
           top="top-[65%]"
           bg="bg-hex-5"
@@ -69,7 +69,7 @@ const PrivateBanking = () => {
             </div>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
+                extraClass="lg:w-[570px] md:w-[380px] w-full lg:mt-5 md:mt-12 sm:mt-3 mt-12"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"
@@ -83,7 +83,7 @@ const PrivateBanking = () => {
             </Reveal>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
+                extraClass="lg:w-[570px] md:w-[380px] w-full lg:mt-5 md:mt-12 sm:mt-3 mt-12"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"
@@ -97,7 +97,7 @@ const PrivateBanking = () => {
             </Reveal>
             <Reveal>
               <SectionCard
-                extraClass="lg:w-[570px] md:w-[380px] w-full md:mt-5 mt-3"
+                extraClass="lg:w-[570px] md:w-[380px] w-full lg:mt-5 sm:mt-3 mt-12"
                 black="white"
                 buttonBg="bg-primaryyellow"
                 buttonColor="text-white"

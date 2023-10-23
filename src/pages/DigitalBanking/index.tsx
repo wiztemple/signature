@@ -12,7 +12,7 @@ import cards from "../../assets/groupCard.svg";
 
 const DigitalBanking = () => {
   return (
-    <div className="bg-hex-7 font-nunitoSans">
+    <div className="bg-hex-7 font-nunitoSans overflow-hidden">
       <Header
         bg="bg-[#1e191b]/70"
         textColor1="text-white"
@@ -32,7 +32,7 @@ const DigitalBanking = () => {
       />
       {/* hero section */}
 
-      <div className="h-screen w-full lg:overflow-hidden font-nunitoSans">
+      <div className="h-screen relative w-full lg:overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
             className="absolute top-4 -right-36 w-full z-20"
@@ -40,11 +40,11 @@ const DigitalBanking = () => {
             alt=""
           />
         </div>
-        <div className="z-30 relative flex w-full justify-center h-full">
+        <div className="z-30 relative flex w-full overflow-hidden justify-center h-full">
           <Reveal>
-            <div className="lg:w-[90%] w-full h-screen z-20 top-36 relative">
+            <div className="lg:w-[90%] w-full h-screen overflow-hidden z-20 md:top-36 relative">
               <img
-            className="bg-cover object-cover  lg:w-auto lg:h-auto h-full w-full"
+            className="bg-cover object-cover lg:w-auto lg:h-auto h-full w-full"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
             alt="man"
           />
@@ -56,7 +56,7 @@ const DigitalBanking = () => {
         >
           <div
             style={{ backdropFilter: "blur(15px)" }}
-            className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] lg:w-[60%] w-[70%]`}
+            className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] lg:w-[60%] sm:w-[70%] w-full`}
           >
             <div
               className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
@@ -80,12 +80,12 @@ const DigitalBanking = () => {
         />
       </div>
       {/*  */}
-      <div className="md:w-[85%] w-[90%] mx-auto mt-10">
+      <div className="lg:w-[85%] w-[90%] relative z-40 mx-auto">
         {/*  */}
         <Reveal>
-          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[550px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
-          <ZoomOnScroll><div className="text-5xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
-          <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
+          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
+          <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
+          <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-center mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
           <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4">
             Get our safe and durable signature card for your business transactions.
           </div></ZoomOnScroll>
@@ -97,7 +97,7 @@ const DigitalBanking = () => {
           </button>
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
-            <div className="md:w-[83%] w-full absolute lg:-bottom-[320px] md:-bottom-44 -bottom-36">
+            <div className="lg:w-[83%] md:w-[150%] w-[300%] absolute lg:-bottom-[320px] md:-bottom-[500px] sm:-bottom-[630px] -bottom-[400px]">
               {/* <img
                 className="w-full h-[400px] object-fill bg-center"
                 src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
@@ -118,7 +118,7 @@ const DigitalBanking = () => {
           {/* frame1 */}
           <Reveal>
             <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="rounded-[30px] font-nunitoSans py-10 px-6 h-[750px] overflow-hidden">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
+            <h1 className="text-white md:text-5xl text-3xl font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">No constraints,</span>{" "}
               bank anywhere, anytime
             </h1>
@@ -130,12 +130,12 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
               <img src={appleLogo} alt="apple logo" />
               </div>
-              <ZoomOnScroll><img className="w-full object-cover bg-cover -mt-[120px] h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
+              <ZoomOnScroll><img className="w-full object-cover bg-cover lg:-mt-[100px] md:-mt-44 sm:-mt-24 -mt-32 h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
           </div>
           </Reveal>
           <Reveal>
             <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="rounded-[30px] font-nunitoSans py-10 px-6 overflow-hidden h-[750px]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
+            <h1 className="text-white md:text-5xl text-3xl font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Bank on USSD,</span>{" "}
               simply dial *647#
             </h1>
@@ -157,12 +157,12 @@ const DigitalBanking = () => {
                     src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png"
                   />
                   <img
-                    className="w-[145px] h-[275px] mt-14"
+                    className="lg:w-[145px] w-[220px] h-[275px] mt-14"
                     src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512"
                   />
                 </div>
                 <img
-                  className="w-[145px] h-[275px] -ml-4 z-40 mt-24"
+                  className="w-[145px] h-[275px] md:-ml-4 -ml-10 z-40 mt-24"
                   src="https://framerusercontent.com/images/p9WiW5JMIQep3kcBIAHTOM6aa8g.png?scale-down-to=512"
                 />
                 <div className="relative mt-28">
@@ -182,7 +182,7 @@ const DigitalBanking = () => {
           </Reveal>
           <Reveal>
              <div className="z-40 relative rounded-[30px] py-10 px-6 h-[810px] overflow-hidden font-nunitoSans bg-[#6c1d45]/20 from-[rgb(94,15,56)] via-transparent to-[rgb(65,10,39)]">
-            <h1 className="text-white text-[48px] font-bold leading-[1.2em]">
+            <h1 className="text-white md:text-5xl text-3xl font-bold leading-[1.2em]">
               <span className="font-bold text-[#b49863]">Signature Bank,</span>{" "}
               POS terminals
             </h1>
@@ -200,7 +200,7 @@ const DigitalBanking = () => {
                 <ZoomOnScroll>
                 <div className="gap-4 flex justify-center mt-14">
               <img
-                className="w-[70%]"
+                className="lg:w-[70%] w-full"
                 src="https://framerusercontent.com/images/47RYq01ACuY4sFSUp8mrRTbeoM0.png?scale-down-to=2048"
               />
             </div>
@@ -230,9 +230,9 @@ const DigitalBanking = () => {
               <img src={appleLogo} alt="apple logo" />
             </div>
               <ZoomOnScroll>
-                <div className="gap-4 flex justify-center mt-24">
+                <div className="gap-4 flex justify-center lg:mt-24 mt-10">
               <img
-                className="w-[72%] object-cover bg-cover bg-no-repeat"
+                className="lg:w-[72%] w-full object-cover bg-cover bg-no-repeat"
                 src="https://framerusercontent.com/images/7bvEdP86K1ntVnA6USBkG21iEE.png"
               />
             </div>

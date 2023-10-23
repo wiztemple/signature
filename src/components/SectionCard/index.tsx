@@ -28,7 +28,7 @@ const SectionCard = ({ flexRow, cardTitle, cardDescription, src, black, gray, bu
         <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} py-4 px-7 text-lg mt-6 rounded-[10px]`}>Contact Us</button>
        </Reveal>
       </div>
-    </div>s
+    </div>
     </ZoomOnScroll>
   )
 }
