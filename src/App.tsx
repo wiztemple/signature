@@ -18,6 +18,7 @@ import OnlineSecurityTips from "./pages/OnlineSecurityTips";
 import MediaDetails from "./pages/MediaDetails";
 import Accounts from "./pages/Accounts";
 import Cards from "./pages/Cards";
+import SignatureMobileApp from "./pages/SignatureMobileApp";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/aml-policy" element={<AMLPolicy />} />
           <Route path="/online-security-tips" element={<OnlineSecurityTips />} />
           <Route path="/cards" element={<Cards />} />
+          <Route path="/signature-mobile-app" element={<SignatureMobileApp />} />
         </Routes>
       </BrowserRouter>
     </>
