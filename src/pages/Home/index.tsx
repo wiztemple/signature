@@ -104,7 +104,7 @@ const Home = () => {
               <div className="text-black w-[45%] z-30 relative">
                 <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">Experience Freedom</h1>
                 <p className="text-xl font-nunitoSans text-hex-8 mt-3 mb-5">Stay ahead with on-the-go banking.</p>
-                <a href="/" className="bg-hex-2 hover:bg-primaryyellow ease-in-out transition-all delay-75 duration-100 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
+                <a href="/signature-mobile-app" className="bg-hex-2 hover:bg-primaryyellow ease-in-out transition-all delay-75 duration-100 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">Learn More</a>
               </div>
               <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
               <img className={` absolute w-[42%] z-40 object-center right-16 bg-cover 2xl:top-[14%] top-[23%]`} src='https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png' alt="" />
