@@ -45,7 +45,7 @@ const InstitutionalBanking = () => {
   return (
     <div className="bg-white font-nunitoSans">
       <Header
-        gradient="linear-gradient(to bottom, #B05C37 -55%, transparent 100%)"
+        gradient="linear-gradient(to bottom, #B05C37 -60%, transparent 100%)"
         bg="bg-[#1e191b]/70"
         textColor1="text-white"
         textColor2="text-white"

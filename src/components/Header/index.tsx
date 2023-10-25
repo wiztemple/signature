@@ -15,7 +15,7 @@ interface HeaderProps {
   logoUrl?: string;
   primaryBtnClassName?: string;
   showPrimaryBtnIcon?: boolean;
-  gradient: string
+  gradient?: string
 }
 const Header: React.FC<HeaderProps> = ({
   bg = "bg-white/60",
