@@ -10,7 +10,7 @@ interface IProps {
 
 const AboutModal = ({handleClick, name, url, title, description}:IProps) => {
     return (
-        <div className="bg-black/90 z-50 fixed top-0 left-0 h-screen overflow-hidden inset-0 items-center justify-center flex">
+        <div className={`bg-black/90 z-50 fixed top-0 left-0 h-screen overflow-hidden inset-0 items-center justify-center flex`}>
             <div className="bg-white sm:w-[693px] w-[95%] sm:h-[508px] h-[90vh] font-nunitoSans rounded-[40px] p-5 relative">
                 <img onClick={handleClick} className="-mt-10 absolute right-0" src={closeSvg} alt="close icon" />
                 <div className="flex sm:flex-row flex-col gap-5">

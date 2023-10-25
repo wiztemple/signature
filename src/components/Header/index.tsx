@@ -15,6 +15,7 @@ interface HeaderProps {
   logoUrl?: string;
   primaryBtnClassName?: string;
   showPrimaryBtnIcon?: boolean;
+  gradient: string
 }
 const Header: React.FC<HeaderProps> = ({
   bg = "bg-white/60",
@@ -23,6 +24,7 @@ const Header: React.FC<HeaderProps> = ({
   logoUrl = Logo,
   primaryBtnClassName,
   showPrimaryBtnIcon = true,
+  gradient = ""
 }) => {
   const [menuContent, setMenuContent] = useState<ReactNode | null>(null);
   const container = useRef(null);
@@ -52,6 +54,7 @@ const Header: React.FC<HeaderProps> = ({
     <>
       <div className="fixed h-auto w-screen z-50 lg:block hidden">
         <div
+          style={{background: `${gradient}`}}
           className={`px-[50px] backdrop-blur-[10px] opacity-100 relative`}
         >
           <div className="relative">
