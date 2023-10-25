@@ -26,6 +26,7 @@ interface HeroProps {
   mt: string;
   top: string;
   show: boolean
+  link: string
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }];
@@ -47,7 +48,7 @@ const banks: { title: string; description: string }[] = [
   },
 ];
 
-const Hero = ({ title, description, url, mt, top, show }: HeroProps) => {
+const Hero = ({ title, description, url, mt, top, show, link }: HeroProps) => {
   const container = useRef(null);
   const animationRef = useRef<any>(null);
 
@@ -64,6 +65,7 @@ const Hero = ({ title, description, url, mt, top, show }: HeroProps) => {
       animationRef.current = anim;
     }
   }, []);
+  
   return (
     <Slide className="h-full relative w-full z-40">
       <div className="lg:w-[85%] w-[90%] mx-auto h-full">
@@ -82,9 +84,11 @@ const Hero = ({ title, description, url, mt, top, show }: HeroProps) => {
             <p className="text-xl font-nunitoSans text-hex-8 mt-3">
               {description}
             </p>
-            <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">
+            <a target="_blank" rel="noopener" href={link}>
+              <button className="bg-hex-2 px-4 py-3 hover:bg-primaryyellow rounded-[10px] text-white mt-4 font-nunitoSans">
               Learn More
             </button>
+            </a>
           </div>
           {show === false ? <div className="text-black flex-1">
             <img
@@ -141,6 +145,7 @@ const Home = () => {
       <div className="h-screen lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex && (
           <Hero
+            link="/about-us"
             show={false}
             top="mt-[14%]"
             mt="mt-[17%] ml-24"
@@ -151,6 +156,7 @@ const Home = () => {
         )}
         {dots[1].dot === activeIndex && (
           <Hero
+            link="/signature-mobile-app"
             show={true}
             top="mt-[44px]"
             mt="mt-[22%] ml-10"
@@ -161,6 +167,7 @@ const Home = () => {
         )}
         {dots[2].dot === activeIndex && (
           <Hero
+            link="/cards"
             show={false}
             top="mt-[44px]"
             mt="mt-[22%] ml-10"
@@ -432,9 +439,7 @@ const Home = () => {
                 announced further policy changes in relation to FX which is
                 aimed at…
               </p>
-              <button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">
-                Read more
-              </button>
+              <a href="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market-1"><button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button></a>
             </div>
           </div>
           <div className="flex-1 flex lg:flex-row flex-col gap-4">

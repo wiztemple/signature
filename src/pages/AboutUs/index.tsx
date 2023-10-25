@@ -142,7 +142,7 @@ const AboutUs = () => {
             </ZoomOnScroll>
             <ZoomOnScroll>
               <SectionCard
-            extraClass="w-[95%] tracking-[0px] md:mt-5 mt-3"
+            extraClass="w-[95%] tracking-[0px] md:mt-1 mt-3"
             black="primaryblack"
             buttonBg=""
             buttonColor=""

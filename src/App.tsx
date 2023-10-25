@@ -30,7 +30,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/not-found" element={<NotFound />} />
+          <Route path="/404" element={<NotFound />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/cards" element={<Cards />} />
