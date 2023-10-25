@@ -114,6 +114,7 @@ const Home = () => {
   // const [onCard4, setOnCard4] = useState<boolean>(false);
   // const [onCard5, setOnCard5] = useState<boolean>(false);
   // const [onCard6, setOnCard6] = useState<boolean>(false);
+  // const transition = "bg-cover ease-in-out transition-all delay-75 duration-700"
   const [close, setClose] = useState<boolean>(true);
 
   const nextSlide = () => {
