@@ -189,16 +189,6 @@ const Home = () => {
       <div className="h-screen lg:hidden block bg-[#f9fafb] overflow-hidden py-20">
         <div className="h-full relative w-full z-40">
           <div className="w-[90%] mx-auto h-full">
-            {/* <img
-              className="absolute top-20 z-20 w-full rotate overflow-hidden"
-              src={bannerSvg}
-              alt="banner svg"
-            /> */}
-            {/* <div
-              className="fixed w-screen h-screen -left-20 right-0 top-0 -bottom-20 overflow-hidden -z-[1]"
-              ref={container2}
-              id="animation-container"
-            ></div> */}
             <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full mt-24 h-full">
               <div className={`text-black z-30 relative`}>
                 <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">
@@ -231,17 +221,10 @@ const Home = () => {
       >
         <div className="text-black w-[85%] mx-auto">
           <div className="flex lg:flex-row flex-col gap-5 lg:py-28 py-10">
-            <div className="lg:w-[30%] text-primaryblack">
-              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">
-                All You Need{" "}
-              </h2>
-              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">
-                In One Place
-              </h2>
-              <p className="text-hex-9 lg:text-start text-center text-lg font-nunitoSans leading-[28px] mt-4">
-                We are constantly looking for innovative solutions to help you
-                meet your financial goals.
-              </p>
+            <div className="lg:w-[30%] h-full lg:sticky top-32 text-primaryblack">
+              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">All You Need </h2>
+              <h2 className="text-[36px] lg:text-start text-center font-nunitoSans font-bold leading-[44px]">In One Place</h2>
+              <p className="text-hex-9 lg:text-start text-center lg:w-full w-[90%] mx-auto text-lg font-nunitoSans leading-[28px] mt-4">We are constantly looking for innovative solutions to help you meet your financial goals.</p>
             </div>
             <div className="grid md:grid-cols-3 grid-cols-1 grid-rows-2 lg:gap-5 gap-8 w-full">
               <Reveal>
