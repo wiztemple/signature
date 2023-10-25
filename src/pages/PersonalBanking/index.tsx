@@ -7,33 +7,38 @@ import MobileHeader from "../../components/MobileHeader";
 import SectionCard from "../../components/SectionCard";
 import { Reveal } from "../../utils/Reveal";
 
-const cards: { url: string, title: string, description: string, buttonName: string }[] = [
+const cards: { url: string, title: string, description: string, buttonName: string, link: string }[] = [
   {
     url: "https://framerusercontent.com/images/hFULY64HSxNlieXQDxDF2XD13AA.png",
+    link: "",
     title: "Signature Savings Account",
     description: "Start building your savings with our attractive interest rates and flexible deposit and withdrawal options.",
     buttonName: "Open an Account"
   },
   {
     url: "https://framerusercontent.com/images/xUakLXfAp9hDiKFMhJL2sbfLhmc.png",
+    link: "",
     title: "Signature Current Account",
     description: "Manage your day-to-day transactions with ease and enjoy access to a range of banking services.",
     buttonName: "Open an Account"
   },
   {
     url: "https://framerusercontent.com/images/qXGYkj1ONzvdceSrwBEKAownPAU.png",
+    link: "",
     title: "Grow With Personal Loans",
     description: "Get financial support for your dreams and aspirations with our competitive personal loan options.",
     buttonName: "Coming Soon"
   },
   {
     url: "https://framerusercontent.com/images/NeWuUuzZ3MDTHXELs9JrOZnxWc8.png",
+    link: "/cards",
     title: "Signature Bank Cards",
     description: "Enjoy seamless transactions and exclusive perks with our range of personalized debit and credit cards.",
     buttonName: "Learn More"
   },
   {
     url: "https://framerusercontent.com/images/CFfaM23YU7Zm84gfR4YEZezntYM.png",
+    link: "/signature-mobile-app",
     title: "Signature Mobile App",
     description: "Bank on the go, access your accounts anytime, anywhere with our user-friendly and secure mobile app.",
     buttonName: "Learn More"
@@ -50,6 +55,7 @@ const PersonalBanking = () => {
       />
       {/* Custom Banner */}
       <CustomBanner
+        extraClass="h-[260px]"
         show={false}
         display="hidden"
         scaling=""
@@ -64,7 +70,7 @@ const PersonalBanking = () => {
         alt="Lady using signature bank personal banking"
         dropFilter="blur(15px)"
         lineargradient="linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"
-        title1="Experience Transformational Banking"
+        title1={<span>Experience <br /> Transformational Banking</span>}
         description="Attain new financial heights with our personalised banking solutions"
       />
       {/* Cards */}
@@ -77,6 +83,7 @@ const PersonalBanking = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-2 gap-[30px] justify-center relative overflow-visible p-0 w-full lg:pb-28 pb-10">
             {cards.map((card, index) => (
               <Card
+                link={card.link}
                 key={index}
                 bg="bg-cardbg/90"
                 buttonBg="bg-hex-2"

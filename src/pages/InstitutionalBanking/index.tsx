@@ -15,31 +15,31 @@ const cards: {
   buttonName: string;
 }[] = [
   {
-    url: "https://framerusercontent.com/images/hFULY64HSxNlieXQDxDF2XD13AA.png",
-    title: "Signature Savings Account",
+    url: "https://framerusercontent.com/images/e7XY9f4WRRlTWnCt3BDX0wjbCY.png",
+    title: "Signature Corporate Account",
     description:
-      "Start building your savings with our attractive interest rates and flexible deposit and withdrawal options.",
+      "We offer an extensive suite of financial services that play a vital role in driving the success of your business.",
     buttonName: "Coming Soon",
   },
   {
-    url: "https://framerusercontent.com/images/xUakLXfAp9hDiKFMhJL2sbfLhmc.png",
-    title: "Signature Current Account",
+    url: "https://framerusercontent.com/images/SG3yLELqqeIXVt2YmwRauErXdU.png",
+    title: "Business  POS  Terminals",
     description:
-      "Manage your day-to-day transactions with ease and enjoy access to a range of banking services.",
+      "Make your business simple and easy. Get a POS terminal that offers you reliable services to boost your business activities.",
     buttonName: "Coming Soon",
   },
   {
-    url: "https://framerusercontent.com/images/qXGYkj1ONzvdceSrwBEKAownPAU.png",
-    title: "Grow With Personal Loans",
+    url: "https://framerusercontent.com/images/tBYfk7w5BBsv2UuBwhZDwRwlPqU.png",
+    title: "Signature Business Loans",
     description:
-      "Get financial support for your dreams and aspirations with our competitive personal loan options.",
+      "Money can no longer stand in the way. By accessing Business Loans, we will support your business to scale up and thrive.",
     buttonName: "Coming Soon",
   },
 ];
 
 const InstitutionalBanking = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white font-nunitoSans">
       <Header
         bg="bg-[#1e191b]/70"
         textColor1="text-white"
@@ -58,6 +58,7 @@ const InstitutionalBanking = () => {
         strokeColor="white"
       />
       <CustomBanner
+        extraClass=""
         show={true}
         display="block"
         scaling="lg:px-4 pt-[68px]"
@@ -90,6 +91,7 @@ const InstitutionalBanking = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
+                link=""
                 key={index}
                 bg="bg-cardbadge"
                 buttonBg="bg-primaryblown"
@@ -104,12 +106,12 @@ const InstitutionalBanking = () => {
       </div>
       <div className="bg-[#fcf8fb] text-black lg:py-20 py-10">
         <div className="w-[85%] mx-auto">
-          <h1 className="text-[#0f1728] lg:text-[48px] text-[30px] font-bold leading-[-0.96px] text-center">
-            Built for the future, built for your progress.
+          <h1 className="text-[#0f1728] w-[90%] mx-auto lg:text-[48px] text-[30px] font-bold leading-[1.1em] text-center">
+            Access simple business solutions that will certainly put your business ahead.
           </h1>
-          <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">
+          {/* <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">
             We take pride in offering you a superior banking experience
-          </p>
+          </p> */}
           <ZoomOnScroll>
             <SectionCard
           extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-3 mt-10"

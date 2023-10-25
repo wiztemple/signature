@@ -5,11 +5,18 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { Slide } from "../../utils/Slide";
 import appleLogo from "../../assets/apple.svg";
-import cookieSvg from "../../assets/cookie.svg";
+import googleLogo from "../../assets/google.svg";
 import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
+import messageSvg from "../../assets/message.svg";
+import instaSvg from "../../assets/insta.svg";
+import twitterSvg from "../../assets/twitter.svg";
+import linkedinSvg from "../../assets/linkedin.svg";
+import youtubeSvg from "../../assets/youtube.svg";
+import musicSvg from "../../assets/music.svg";
 import MobileHeader from "../../components/MobileHeader";
 import animationData from "../../assets/gradient.json";
+import CookiesP from "../../components/Cookies";
 
 interface HeroProps {
   title: string;
@@ -93,6 +100,8 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => {
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const [close, setClose] = useState<boolean>(true);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -422,12 +431,12 @@ const Home = () => {
               Banking anytime, anywhere
             </p>
             <div className="flex justify-center gap-4 mt-3 mx-auto">
-              <div className="w-[120px] h-[30px]">
-                <img className="w-full" src={appleLogo} alt="apple logo" />
-              </div>
-              <div className="w-[120px] h-[30px]">
-                <img className="w-full" src={appleLogo} alt="apple logo" />
-              </div>
+              <a target="_blank" rel="noopener" href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="h-[35px]">
+                <img className="h-full" src={appleLogo} alt="apple logo" />
+              </a>
+              <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.signaturemobile" className="w-[120px] h-[30px]">
+                <img className="w-full" src={googleLogo} alt="apple logo" />
+              </a>
             </div>
             <div className="h-[353px] w-full mt-10 relative overflow-hidden">
               <div className="flex relative w-full justify-center mx-auto">
@@ -453,7 +462,7 @@ const Home = () => {
                 alt=""
               />
             </div>
-            <div className="border-t-4 w-full flex lg:gap-0 gap-3 mt-4 lg:flex-row flex-col">
+            <div className="md:border-t-4 w-full flex md:gap-0 gap-3 md:flex-row flex-col">
               {banks.map((bank, index) => (
                 <div
                   onClick={() => setCurrentIndex(index)}
@@ -540,61 +549,22 @@ const Home = () => {
         />
       </div>
       {/* cookies */}
-      <div className="flex justify-center mx-auto">
-        <div
-          style={{
-            backdropFilter: "blur(20px)",
-            backgroundColor: "rgba(255, 255, 255, 0.7)",
-          }}
-          className="h-auto lg:w-[45%] w-[80%] rounded-[16px] justify-center fixed bottom-3 z-40"
-        >
-          <div className="relative flex lg:flex-row flex-col items-center justify-between py-2 px-3">
-            <div className="flex lg:flex-row flex-col gap-4 items-center">
-              <img className="w-12 h-14" src={cookieSvg} alt="cookie" />
-              <p className="text-main-4 text-sm lg:text-start lg: text-center leading-[1.5em] lg:w-[80%]">
-                We use cookies to give you the best online experience. Find out
-                more on how we use cookies in our{" "}
-                <span className="text-hex-2">cookie policy</span>
-              </p>
-            </div>
-            <button className="bg-hex-2 whitespace-nowrap lg:w-auto w-full px-4 py-2 lg:my-0 my-4 text-sm rounded-[6px] text-white font-nunitoSans">
-              Okay, Thanks
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        style={{
-          backgroundColor: "rgba(243, 243, 243, 0.8)",
-          backdropFilter: "blur(10px)",
-        }}
-        className="rounded-[20px] lg:block hidden bg-white right-10 fixed bottom-3 w-[22%] z-50 h-11 px-4"
-      >
-        <div className="flex items-center h-full justify-between gap-3">
-          <div className="flex gap-2">
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-            <div className="bg-white p-1.5 rounded-full w-6 h-6">
-              <img className="w-full h-full" src={facebookSvg} alt="" />
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <p className="text-sm text-[#101828b3]">Social</p>
-            <div>
-              <img className="h-[14px] w-[14px]" src={closeSvg} alt="" />
+      <CookiesP />
+      <div className={`rounded-[20px] backdrop-blur-md lg:block hidden bg-[#f3f3f3cc] right-6 fixed bottom-3 ${close === true ? "w-[25%]" : "w-fit"} z-50 h-11 px-4`}>
+        <div className="flex items-center h-full justify-between gap-2">
+          {close === true ? <div className="flex gap-2">
+            <a href="mailto:enquiries@signaturebankng.com" rel="noopener" target="_blank" className="bg-white hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 p-1.5 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45 rounded-full w-6 h-6"><img className="w-full h-full" src={messageSvg} alt="svg" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100083538721743" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-700 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={facebookSvg} alt="svg" /></a>
+            <a href="https://www.linkedin.com/company/signature-bank-nigeria/" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={instaSvg} alt="svg" /></a>
+            <a href="https://mobile.twitter.com/Signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={twitterSvg} alt="svg" /></a>
+            <a href="https://www.instagram.com/signaturebankng/?hl=en" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 "><img className="w-full h-full" src={linkedinSvg} alt="svg" /></a>
+            <a rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 hover:bg-gradient-to-r hover:from-red-300 hover:to-red-500 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={youtubeSvg} alt="svg" /></a>
+            <a href="https://www.tiktok.com/@signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-6 h-6 hover:bg-gradient-to-tr hover:from-red-500 hover:to-teal-300 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={musicSvg} alt="svg" /></a>
+          </div> : null}
+          <div className="flex items-center gap-3 whitespace-nowrap">
+            <p className="text-sm text-[#101828b3]">social 👋🏾</p>
+            <div className="cursor-pointer" onClick={() => setClose(!close)}>
+              <img className="h-[14px] whitespace-nowrap w-[14px]" src={closeSvg} alt="" />
             </div>
           </div>
         </div>

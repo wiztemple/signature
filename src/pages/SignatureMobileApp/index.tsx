@@ -5,6 +5,7 @@ import MobileHeader from "../../components/MobileHeader";
 import tickSvg from "../../assets/tick.svg";
 import { faqs } from "../../data/faqs";
 import appleSvg from "../../assets/apple.svg";
+import googleSvg from "../../assets/google.svg";
 import Footer from "../../components/Footer";
 
 const names:{name: string}[] = [
@@ -45,13 +46,13 @@ const SignatureMobileApp = () => {
         <div className="bg-white font-nunitoSans">
             <Header primaryBtnClassName="bg-hex-2" />
             <MobileHeader bg="bg-white" textColor1="text-midblack" primaryBtnClassName="bg-hex-2 !py-2.5" />
-            <div className="bg-main-7 md:pt-32 pt-44 xl:h-[50vh] lg:h-screen md:h-[50vh] h-auto text-primaryblack overflow-hidden">
+            <div className="bg-main-7 md:pt-32 pt-44 2xl:h-[90vh] xl:h-[50vh] lg:h-screen md:h-[50vh] h-auto text-primaryblack overflow-hidden">
                 <div className="md:flex justify-between w-[85%] h-full items-center mx-auto">
                     <div>
-                        <h1 className="lg:text-[64px] text-[52px] md:text-start text-center leading-[1.1em] text-hex-2 font-bold">Enjoy the <br /> ease of banking <br /> on-the-go</h1>
+                        <h1 className="lg:text-[64px] text-[52px] leading-[1.1em] text-hex-2 font-bold">Enjoy the <br /> ease of banking <br /> on-the-go</h1>
                     </div>
-                    <div className="flex-1 lg:ml-36 mt-2">
-                        <img className="xl:w-[50%] w-[80.6%] h-full bg-cover mx-auto object-cover" src="https://framerusercontent.com/images/uv61l0HfxhndhTisCpGJIDgjs.png?scale-down-to=512" alt="Signature Careers" />
+                    <div className="flex-1 lg:ml-24 mt-2">
+                        <img className="xl:w-[50%] w-[75.6%] h-full bg-cover mx-auto object-cover" src="https://framerusercontent.com/images/uv61l0HfxhndhTisCpGJIDgjs.png?scale-down-to=512" alt="Signature Careers" />
                     </div>
                 </div>
             </div>
@@ -89,8 +90,12 @@ const SignatureMobileApp = () => {
                                 </div>
                             ))}
                             <div className="flex gap-5 items-center mt-5">
+                                <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp">
+                                <img src={googleSvg} alt="apple logo" />
+                                </a>
+                                <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843">
                                 <img src={appleSvg} alt="apple logo" />
-                                <img src={appleSvg} alt="apple logo" />
+                                </a>
                             </div>
                         </div>
                         <div className="flex-1 md:mt-0 mt-14">
@@ -103,8 +108,12 @@ const SignatureMobileApp = () => {
                                 </div>
                             ))}
                             <div className="flex gap-5 items-center mt-5">
+                                <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp">
+                                    <img src={googleSvg} alt="google logo" />
+                                </a>
+                                <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843">
                                 <img src={appleSvg} alt="apple logo" />
-                                <img src={appleSvg} alt="apple logo" />
+                                </a>
                             </div>
                         </div>
                     </div>

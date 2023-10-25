@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import appleLogo from "../../assets/apple.svg";
+import googleLogo from "../../assets/google.svg";
 import Logo from "../../assets/logo.svg";
 import handPhone from "../../assets/handPhone.png";
 import cards from "../../assets/groupCard.svg";
@@ -89,12 +90,14 @@ const DigitalBanking = () => {
           <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4 px-2">
             Get our safe and durable signature card for your business transactions.
           </div></ZoomOnScroll>
-          <button
+          <a href="/cards" className="relative z-40">
+            <button
             type="button"
             className="bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
           >
             Learn More
           </button>
+          </a>
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
             <div className="lg:w-[83%] md:w-[150%] w-[300%] absolute lg:-bottom-[320px] md:-bottom-[500px] sm:-bottom-[630px] -bottom-[400px]">
@@ -127,7 +130,7 @@ const DigitalBanking = () => {
               services anywhere you go.{" "}
             </p>
             <div className="gap-4 flex mt-5">
-              <img src={appleLogo} alt="apple logo" />
+              <img src={googleLogo} alt="apple logo" />
               <img src={appleLogo} alt="apple logo" />
               </div>
               <ZoomOnScroll><img className="w-full object-cover bg-cover lg:-mt-[100px] md:-mt-44 sm:-mt-24 -mt-32 h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
@@ -226,8 +229,8 @@ const DigitalBanking = () => {
               payments.
             </p>
             <div className="gap-4 flex mt-5">
-              <img src={appleLogo} alt="apple logo" />
-              <img src={appleLogo} alt="apple logo" />
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img src={googleLogo} alt="apple logo" /></a>
+                <a target="_blank" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843"><img src={appleLogo} alt="apple logo" /></a>
             </div>
               <ZoomOnScroll>
                 <div className="gap-4 flex justify-center lg:mt-24 mt-10">

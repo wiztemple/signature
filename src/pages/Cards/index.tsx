@@ -114,7 +114,7 @@ Savings or Current account, and allows you to make payments on WEB, POS, and use
 ];
 
 
-const cardType = [{name: "Naira Card"}, {name: "Debit Card"}]
+const cardType = [{name: "Naira Card"}, {name: "Dollar Card"}]
 
 const Cards = () => {
 
@@ -160,7 +160,7 @@ const Cards = () => {
       <div>
         <div className="lg:w-[85%] w-[93%] mx-auto py-24 relative">
           <h2 className="text-5xl text-primaryblack font-bold text-center tracking-[-0.96px]">A Card for every occasion</h2>
-          <div className="text-primaryblack mx-auto flex justify-between sm:w-96 w-[90%] px-3 text-2xl mt-20 border-white bg-[#ffffffb3] z-40 sm:top-28 top-32 rounded-[10px] sticky">
+          <div className="text-primaryblack mx-auto flex justify-between sm:w-96 w-[90%] px-3 text-2xl mt-20 border-white bg-[#ffffffb3] backdrop-blur-md z-40 md:top-32 sm:top-28 top-32 rounded-[10px] sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}
@@ -175,7 +175,7 @@ const Cards = () => {
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
+              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                 {nairaCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
@@ -198,9 +198,9 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={card} alt="" />
-                    <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
+              <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                    <img className="bg-cover object-cover md:w-[85%] w-full" src={card} alt="" />
+                    <img className="bg-cover z-40 md:-ml-20 -ml-5 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ const Cards = () => {
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
+              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                 {sectionFaq.map((faq, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
@@ -247,7 +247,7 @@ const Cards = () => {
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
               <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
+              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                 {dollarCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {
@@ -270,8 +270,8 @@ const Cards = () => {
               </div>
             </div>
             <div className="flex-1">
-              <div className="w-full h-[584px] flex flex-col justify-center items-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={card} alt="" />
+              <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                    <img className="bg-cover object-cover md:w-[85%] w-full" src={card} alt="" />
                     <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
               </div>
             </div>
@@ -281,7 +281,7 @@ const Cards = () => {
               <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Credit Cards</h2>
               <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
               <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] border-b w-full mt-5 bg-main-11 py-2 px-5">
+              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                 {dollarCard.map((card, index) => (
                   <div key={index} className=" even:my-7">
                     <div onClick={() => {

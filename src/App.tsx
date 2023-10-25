@@ -19,6 +19,9 @@ import MediaDetails from "./pages/MediaDetails";
 import Accounts from "./pages/Accounts";
 import Cards from "./pages/Cards";
 import SignatureMobileApp from "./pages/SignatureMobileApp";
+import MediaCbn from "./pages/MediaDetails/MediaCbn";
+import MediaBank from "./pages/MediaDetails/MediaBank";
+import MediaSignature from "./pages/MediaDetails/MediaSignature";
 
 function App() {
   return (
@@ -30,9 +33,13 @@ function App() {
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/media" element={<Media />} />
-          <Route path="/media/:id" element={<MediaDetails />} />
+          <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market" element={<MediaDetails />} />
+          <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market-1" element={<MediaCbn />} />
+          <Route path="/media-publication/excitement-as-signature-bank-launches-operation" element={<MediaSignature />} />
+          <Route path="/media-publication/alex-otti-s-signature-bank-will-set-pace-in-innovative-banking" element={<MediaBank />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/branch-locator" element={<BranchLocator />} />
+          <Route path="/contact" element={<BranchLocator />} />
           <Route path="/personal-banking" element={<PersonalBanking />} />
           <Route path="/private-banking" element={<PrivateBanking />} />
           <Route path="/business-banking" element={<Business />} />

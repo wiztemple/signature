@@ -6,7 +6,7 @@ interface CustomBannerProps {
   dropFilter: string;
   lineargradient: string;
   description: string;
-  title1: string;
+  title1: any;
   bg: string;
   color: string;
   subColor: string;
@@ -17,12 +17,12 @@ interface CustomBannerProps {
   scaling: string;
   heroBg: string;
   show: boolean
+  extraClass: string
 }
 
 const CustomBanner = ({
   src,
   alt,
-  dropFilter,
   lineargradient,
   description,
   title1,
@@ -36,6 +36,7 @@ const CustomBanner = ({
   display,
   scaling,
   heroBg,
+  extraClass
 }: CustomBannerProps) => {
   return (
     <div className={`relative h-screen ${heroBg} w-full overflow-hidden font-nunitoSans`}>
@@ -58,11 +59,11 @@ const CustomBanner = ({
         />
       </div>}
       <div
-        className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center ${top}`}
+        className={`text-white z-40 absolute w-full ${extraClass} flex mx-auto justify-center ${top}`}
       >
         <div
-          style={{ backdropFilter: `${dropFilter}` }}
-          className={`text-[60px] ${bannerWidth} ${bg} rounded-[20px] md:p-[30px] py-[30px] px-[10px]`}
+          // style={{ backdropFilter: `${dropFilter}` }}
+          className={`text-[60px] backdrop-blur-md ${bannerWidth} ${bg} rounded-[20px] md:p-[30px] py-[30px] px-[10px]`}
         >
           <div
             className={`text-${color} md:text-[64px] text-[42px] text-center font-bold leading-[1em]`}
@@ -70,7 +71,7 @@ const CustomBanner = ({
             <h1>{title1}</h1>
           </div>
           <p
-            className={`text-2xl flex justify-center text-center mt-4 text-${subColor}`}
+            className={`text-2xl flex justify-center text-center mt-2 text-${subColor}`}
           >
             <p className={`${textWidth}`}>{description}</p>
           </p>

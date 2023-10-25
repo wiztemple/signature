@@ -23,6 +23,8 @@ const Banner = ({
   buttonStyle,
   imgContainer,
 }: BannerProps) => {
+
+
   return (
     <div className={`lg:rounded-[50px] rounded-[20px] font-nunitoSans relative lg:h-[410px] overflow-hidden ${bannerBg}`}>
       <img className="absolute w-[2000px] h-[1500px] rotate -top-96 left-10" src="https://framerusercontent.com/images/lrpi5BupBslKQxBnserqWJ30fDs.png" alt="svg" />

@@ -33,6 +33,7 @@ const PrivateBanking = () => {
           strokeColor="white"
         />
         <CustomBanner
+          extraClass=""
           show={false}
           display="hidden"
           scaling=""
