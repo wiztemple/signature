@@ -108,7 +108,12 @@ const Hero = ({ title, description, url, mt, top, show }: HeroProps) => {
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState<number>(1);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
+  // const [onCard, setOnCard] = useState<boolean>(false);
+  // const [onCard2, setOnCard2] = useState<boolean>(false);
+  // const [onCard3, setOnCard3] = useState<boolean>(false);
+  // const [onCard4, setOnCard4] = useState<boolean>(false);
+  // const [onCard5, setOnCard5] = useState<boolean>(false);
+  // const [onCard6, setOnCard6] = useState<boolean>(false);
   const [close, setClose] = useState<boolean>(true);
 
   const nextSlide = () => {
