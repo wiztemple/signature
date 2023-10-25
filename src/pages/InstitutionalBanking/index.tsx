@@ -88,13 +88,13 @@ const InstitutionalBanking = () => {
               with diverse banking needs.
             </div>
           </div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-28">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[25px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
                 link=""
                 key={index}
                 bg="bg-cardbadge"
-                buttonBg="bg-primaryblown"
+                buttonBg={`bg-[#b05c37] ${index === 2 ? "mt-[27px]": "mt-14"}`}
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}

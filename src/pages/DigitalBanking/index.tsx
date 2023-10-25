@@ -31,7 +31,6 @@ const DigitalBanking = () => {
         logoUrl={Logo}
         strokeColor="white"
       />
-      {/* hero section */}
 
       <div className="h-screen relative w-full lg:overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
@@ -101,11 +100,6 @@ const DigitalBanking = () => {
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
             <div className="lg:w-[83%] md:w-[150%] w-[300%] absolute lg:-bottom-[320px] md:-bottom-[500px] sm:-bottom-[630px] -bottom-[400px]">
-              {/* <img
-                className="w-full h-[400px] object-fill bg-center"
-                src="https://framerusercontent.com/images/YPez6dHwfFEyzqWU5wbuNGWLAs.png?scale-down-to=1024"
-                alt=""
-              /> */}
                 <ZoomOnScroll><img className="w-full h-full relative z-40 bg-cover object-cover" src={cards} alt="atm cards" /></ZoomOnScroll>
             </div>
             </div>

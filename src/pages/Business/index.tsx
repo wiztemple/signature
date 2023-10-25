@@ -86,13 +86,13 @@ const Business = () => {
               achieve your goals.
             </div>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-[30px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-[25px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
             {cards.map((card, index) => (
               <Card
                 link="/"
                 key={index}
                 bg="bg-cardbadge"
-                buttonBg="bg-secondaryblown"
+                buttonBg={`bg-[#b05c37] ${index === 2 ? "mt-[27px]": "mt-14"}`}
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}
@@ -108,9 +108,6 @@ const Business = () => {
             <h1 className="text-[#0f1728] lg:text-[48px] w-[90%] mx-auto text-[30px] font-bold leading-[1.2em] text-center">
            Access simple business solutions that will certainly put your business ahead.
           </h1>
-          {/* <p className="text-center lg:block hidden text-2xl text-[#101828] mt-3 mb-20">
-            We take pride in offering you a superior banking experience
-          </p> */}
           </Reveal>
           <Reveal>
             <SectionCard
