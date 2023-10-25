@@ -453,9 +453,7 @@ const Home = () => {
                 that are expected to deepen Nigeria's financial inclusion,
                 targeting over 40 million…
               </p>
-              <button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5">
-                Read more
-              </button>
+              <a href="/media-publication/excitement-as-signature-bank-launches-operation"><button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 lg:mt-0 mt-2">Read more</button></a>
             </div>
           </div>
         </div>
