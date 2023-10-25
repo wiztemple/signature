@@ -94,7 +94,7 @@ const Business = () => {
                 link="/"
                 key={index}
                 bg="bg-cardbadge h-[475px]"
-                buttonBg={`bg-[#b05c37] ${index === 2 ? "mt-[27px]": "mt-14"}`}
+                buttonBg={`bg-[#b05c37] hover:bg-[#7E3A1F]  ${index === 2 ? "mt-[27px]": "mt-14"}`}
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}
@@ -139,20 +139,6 @@ const Business = () => {
             display="hidden"
           />
           </Reveal>
-          {/* <Reveal>
-            <SectionCard
-          extraClass="lg:w-[570px] md:w-[350px] w-full"
-            black="primaryblack"
-            buttonBg=""
-            buttonColor=""
-            gray="primarygray"
-            src="https://framerusercontent.com/images/lBUv4SG2dcEfqLW8gB19ubQxg.jpg?scale-down-to=1024"
-            cardTitle="Commitment to Security and Privacy"
-            cardDescription="Safeguarding your financial information is our top priority. We adhere to the highest security standards, implementing robust security protocols to protect your personal and financial data."
-            flexRow=""
-            display="hidden"
-          />
-          </Reveal> */}
         </div>
       </div>
       <div className="w-[85%] mx-auto py-14">

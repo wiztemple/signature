@@ -42,7 +42,7 @@ function App() {
           <Route path="/media-publication/excitement-as-signature-bank-launches-operation" element={<MediaSignature />} />
           <Route path="/media-publication/alex-otti-s-signature-bank-will-set-pace-in-innovative-banking" element={<MediaBank />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/branch-locator" element={<BranchLocator />} />
+          <Route path="/branch-locator/:name" element={<BranchLocator />} />
           <Route path="/contact" element={<BranchLocator />} />
           <Route path="/personal-banking" element={<PersonalBanking />} />
           <Route path="/private-banking" element={<PrivateBanking />} />

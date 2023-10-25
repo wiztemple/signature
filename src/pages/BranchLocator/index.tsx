@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -9,6 +9,7 @@ import telSvg from "../../assets/tel.svg";
 import chatSvg from "../../assets/chat.svg";
 import locationSvg from "../../assets/location.svg";
 import ZoomOnScroll from "../../utils/ZoomOnScroll";
+import { useParams } from "react-router-dom";
 
 interface CProps {
   title: string
@@ -71,7 +72,16 @@ const CompanyInformation = ({ title, details, extraDetails, extraStyle, url, ext
 const BranchLocator = () => {
 
   const [activeIndex, setActiveIndex] = useState<number>(1);
-  const [locator, setLocator] = useState<string>("https://maps.google.com/maps?q=9.080039249330586,7.500609953041856&z=14&output=embed")
+  const [locator, setLocator] = useState<string>("https://maps.google.com/maps?q=9.080039249330586,7.500609953041856&z=14&output=embed");
+
+  const {name} = useParams();
+
+  useEffect(() => {
+    const targetDiv = document.getElementById(`${name}`);
+    if (targetDiv) {
+      targetDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   return (
     <div className="bg-white font-nunitoSans">
@@ -219,7 +229,7 @@ const BranchLocator = () => {
           <p className="text-primarygray text-lg lg:w-[45%] md:w-[50%] w-[95%] mt-3 text-center">Find our nearest branch and ATM locations for convenient and accessible banking services.</p>
             </div>
           <ZoomOnScroll>
-            <div id="branch-locator" className="md:grid-cols-5 grid-cols-2 gap-2 grid grid-rows-1 lg:mt-10 sm:mt-16 mt-10">
+            <div id="map" className="md:grid-cols-5 grid-cols-2 gap-2 grid grid-rows-1 lg:mt-10 sm:mt-16 mt-10">
               {locations.map((location, index) => (
                 <div
                   onClick={() => {

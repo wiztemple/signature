@@ -101,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({
                   Media
                 </Link>
                 <Link
-                  to="/branch-locator"
+                  to="/branch-locator/map"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Branch Locator
@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({
               </div>
               <div className="flex">
                 <Link
-                  to="/branch-locator"
+                  to="/contact"
                   className={`${textColor1} text-sm py-2 px-3 hover:bg-lightgold/10 rounded-[10px]`}
                 >
                   Contact Us

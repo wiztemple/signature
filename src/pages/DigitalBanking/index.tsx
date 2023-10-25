@@ -92,7 +92,7 @@ const DigitalBanking = () => {
           <a href="/cards" className="relative z-40">
             <button
             type="button"
-            className="bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+            className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
           >
             Learn More
           </button>
@@ -141,7 +141,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
             >
               Dial on mobile
             </button>
@@ -189,7 +189,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
             >
               Learn More
             </button>

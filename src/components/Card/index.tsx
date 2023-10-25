@@ -21,9 +21,11 @@ const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg, link,
               </div>
               <div className="text-[28.85px] w-[90%] font-bold leading-[1.1em] mt-3">{cardTitle}</div>
               <div className="text-lg leading-[1.7em] mt-6 text-primarygray font-normal">{cardDescription}</div>
-              <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} transition-all delay-100 duration-200 text-white py-4 px-7 rounded-[10px]`}>
-            <a className="text-lg text-center font-nunitoSans" href={link}>{buttonName}</a>
+            <a className="text-lg text-center font-nunitoSans" href={link}>
+              <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} text-white py-4 px-7 rounded-[10px]`}>
+              {buttonName}
               </button>
+              </a>
           </div>
          </ZoomOnScroll>
       </div>

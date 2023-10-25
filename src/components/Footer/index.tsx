@@ -102,7 +102,7 @@ const Footer = ({ background = "bg-hex-2" }) => {
                   <Link to="/resources" className="block text-main-1">
                     Press
                   </Link>
-                  <Link to="/branch-locator" className="block text-main-1">
+                  <Link to="/contact" className="block text-main-1">
                     Contact
                   </Link>
                 </span>

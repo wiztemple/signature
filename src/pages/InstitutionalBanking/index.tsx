@@ -26,7 +26,7 @@ const cards: {
   {
     url: "https://framerusercontent.com/images/b4ZgmA0vEA334owkTFdKKGjq18.png",
     title: "Public Sector Institution Banking",
-    link: '/contacts',
+    link: '/contact',
     description:
       "Specialized banking solutions tailored for government agencies and ministries. Our services cater to your unique requirements, for seamless collections, payments, and financial management.",
     buttonName: "Contact us",
@@ -34,7 +34,7 @@ const cards: {
   {
     url: "https://framerusercontent.com/images/O9K27sirtHvkK7RauE7iXbZTwcA.png",
     title: "Non-Government Institution Banking",
-    link: '/contacts',
+    link: '/contact',
     description:
       "Customized solutions designed to support the financial needs of NGOs, foundations, educational institutions, religious organizations, and other non-profit entities.",
     buttonName: "Contact us",
@@ -100,7 +100,7 @@ const InstitutionalBanking = () => {
                 link={card.link}
                 key={index}
                 bg="bg-cardbadge h-auto"
-                buttonBg={`bg-[#b05c37] mt-14`}
+                buttonBg={`bg-[#b05c37] hover:bg-[#7E3A1F] mt-14`}
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}
@@ -115,9 +115,6 @@ const InstitutionalBanking = () => {
           <h1 className="text-[#0f1728] w-[90%] mx-auto lg:text-[48px] text-[30px] font-bold leading-[1.1em] text-center">
             Access simple business solutions that will certainly put your business ahead.
           </h1>
-          {/* <p className="text-center text-2xl text-[#101828] mt-3 lg:mb-20 mb-10">
-            We take pride in offering you a superior banking experience
-          </p> */}
           <ZoomOnScroll>
             <SectionCard
           extraClass="lg:w-[570px] md:w-[350px] w-full lg:mt-3 mt-10"

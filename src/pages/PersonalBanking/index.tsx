@@ -87,7 +87,7 @@ const PersonalBanking = () => {
                 link={card.link}
                 key={index}
                 bg="bg-cardbg/90"
-                buttonBg="bg-hex-2 mt-12"
+                buttonBg="bg-hex-2 mt-12 hover:bg-hex-1"
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}

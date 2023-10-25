@@ -25,9 +25,11 @@ const SectionCard = ({ flexRow, cardTitle, cardDescription, src, black, gray, bu
           <Reveal>
             <div className={`text-${black} text-[30px] leading-[1.2em] mt-10 h-[38px] font-bold`}>{cardTitle}</div>
             <div className={`text-lg ${gray} ${extraClass} 2xl:w-full leading-[28px]`}>{cardDescription}</div>
-            <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} py-4 px-7 text-lg mt-6 rounded-[10px]`}>
-              <a href="/contact">Contact Us</a>
-            </button>
+              <a href="/contact">
+              <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} py-4 px-7 text-lg mt-6 rounded-[10px]`}>
+                Contact Us
+              </button>
+              </a>
           </Reveal>
         </div>
       </div>
