@@ -1,20 +1,18 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 interface IProps {
-    children: ReactNode
+  children: ReactNode
 }
 
-function SmoothScrollLink({ children }: IProps) {
+const ScrollToTop = ({children}: IProps) => {
+  const { pathname } = useLocation();
 
-  const handleNavigation = (event: React.MouseEvent) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
-  return <div onClick={handleNavigation}>{children} </div>;
-}
+  return <div>{children}</div>;
+};
 
-export default SmoothScrollLink;
+export default ScrollToTop;

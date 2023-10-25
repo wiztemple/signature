@@ -23,11 +23,13 @@ import MediaCbn from "./pages/MediaDetails/MediaCbn";
 import MediaBank from "./pages/MediaDetails/MediaBank";
 import MediaSignature from "./pages/MediaDetails/MediaSignature";
 import NotFound from "./pages/NotFound.tsx";
+import ScrollToTop from "./utils/ScrollToTop.tsx";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/404" element={<NotFound />} />
@@ -56,7 +58,8 @@ function App() {
           <Route path="/cards" element={<Cards />} />
           <Route path="/signature-mobile-app" element={<SignatureMobileApp />} />
         </Routes>
-      </BrowserRouter>
+        </ScrollToTop>
+        </BrowserRouter>
     </>
   );
 }
