@@ -18,21 +18,21 @@ const cards: {
     url: "https://framerusercontent.com/images/e7XY9f4WRRlTWnCt3BDX0wjbCY.png",
     title: "Signature Corporate Account",
     description:
-      "We offer an extensive suite of financial services that play a vital role in driving the success of your business.",
+      "Specifically designed to cater to the banking needs of large institutions like yours by providing comprehensive solutions to support your financial operations efficiently.",
     buttonName: "Coming Soon",
   },
   {
-    url: "https://framerusercontent.com/images/SG3yLELqqeIXVt2YmwRauErXdU.png",
-    title: "Business  POS  Terminals",
+    url: "https://framerusercontent.com/images/b4ZgmA0vEA334owkTFdKKGjq18.png",
+    title: "Public Sector Institution Banking",
     description:
-      "Make your business simple and easy. Get a POS terminal that offers you reliable services to boost your business activities.",
+      "Specialized banking solutions tailored for government agencies and ministries. Our services cater to your unique requirements, for seamless collections, payments, and financial management.",
     buttonName: "Coming Soon",
   },
   {
-    url: "https://framerusercontent.com/images/tBYfk7w5BBsv2UuBwhZDwRwlPqU.png",
-    title: "Signature Business Loans",
+    url: "https://framerusercontent.com/images/O9K27sirtHvkK7RauE7iXbZTwcA.png",
+    title: "Non-Government Institution Banking",
     description:
-      "Money can no longer stand in the way. By accessing Business Loans, we will support your business to scale up and thrive.",
+      "Customized solutions designed to support the financial needs of NGOs, foundations, educational institutions, religious organizations, and other non-profit entities.",
     buttonName: "Coming Soon",
   },
 ];
@@ -93,8 +93,8 @@ const InstitutionalBanking = () => {
               <Card
                 link=""
                 key={index}
-                bg="bg-cardbadge"
-                buttonBg={`bg-[#b05c37] ${index === 2 ? "mt-[27px]": "mt-14"}`}
+                bg="bg-cardbadge h-auto"
+                buttonBg={`bg-[#b05c37] mt-14`}
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}

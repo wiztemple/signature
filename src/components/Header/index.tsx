@@ -52,7 +52,7 @@ const Header: React.FC<HeaderProps> = ({
     <>
       <div className="fixed h-auto w-screen z-50 lg:block hidden">
         <div
-          className={`px-[50px] bg-transparent backdrop-blur-[20px] opacity-100 relative`}
+          className={`px-[50px] backdrop-blur-[10px] opacity-100 relative`}
         >
           <div className="relative">
             <div className="flex justify-between py-2 px-4 items-center">

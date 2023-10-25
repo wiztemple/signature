@@ -91,7 +91,7 @@ const Business = () => {
               <Card
                 link="/"
                 key={index}
-                bg="bg-cardbadge"
+                bg="bg-cardbadge h-[475px]"
                 buttonBg={`bg-[#b05c37] ${index === 2 ? "mt-[27px]": "mt-14"}`}
                 src={card.url}
                 cardTitle={card.title}
