@@ -22,6 +22,7 @@ import SignatureMobileApp from "./pages/SignatureMobileApp";
 import MediaCbn from "./pages/MediaDetails/MediaCbn";
 import MediaBank from "./pages/MediaDetails/MediaBank";
 import MediaSignature from "./pages/MediaDetails/MediaSignature";
+import NotFound from "./pages/NotFound.tsx";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/not-found" element={<NotFound />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/cards" element={<Cards />} />
