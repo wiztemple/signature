@@ -68,7 +68,11 @@ export default {
       screens: {
         xl: "1900px",
         sm: '540px',
-      }
+      },
+       backgroundColor: {
+         shadowpink: 'rgb(243, 226, 235)',
+         shadowbeige: 'rgb(236, 217, 207)'
+      },
     },
   },
   plugins: [],

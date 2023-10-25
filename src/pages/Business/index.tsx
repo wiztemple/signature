@@ -90,6 +90,7 @@ const Business = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-1 gap-[25px] justify-center relative overflow-visible p-0 w-full pb-10 lg:pb-28">
             {cards.map((card, index) => (
               <Card
+                 extraClass="bg-shadowbeige"
                 link="/"
                 key={index}
                 bg="bg-cardbadge h-[475px]"

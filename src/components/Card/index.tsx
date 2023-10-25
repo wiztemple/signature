@@ -8,14 +8,15 @@ interface CardProps {
   bg: string
   buttonBg: string
   link: string
+  extraClass: string
 }
 
-const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg, link }: CardProps) => {
+const Card = ({ cardTitle, cardDescription, buttonName, src, bg, buttonBg, link, extraClass }: CardProps) => {
   return (
       <div>
           <ZoomOnScroll>
                <div className={`${bg} rounded-[20px] p-[30px]`}>
-              <div className="w-[117px] h-[97px] relative">
+          <div className={`w-[98px] h-[97px] ${extraClass} overflow-hidden rounded-[20px] relative`}>
                   <img className="block w-full h-[117px] rounded-[10px]" src={src} alt="" sizes="117px"></img>
               </div>
               <div className="text-[28.85px] w-[90%] font-bold leading-[1.1em] mt-3">{cardTitle}</div>

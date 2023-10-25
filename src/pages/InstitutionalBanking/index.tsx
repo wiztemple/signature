@@ -96,6 +96,7 @@ const InstitutionalBanking = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[25px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
+                 extraClass="bg-shadowbeige"
                 link={card.link}
                 key={index}
                 bg="bg-cardbadge h-auto"

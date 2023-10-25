@@ -83,10 +83,11 @@ const PersonalBanking = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:grid-rows-2 gap-[30px] justify-center relative overflow-visible p-0 w-full lg:pb-28 pb-10">
             {cards.map((card, index) => (
               <Card
+                extraClass="bg-shadowpink"
                 link={card.link}
                 key={index}
                 bg="bg-cardbg/90"
-                buttonBg="bg-hex-2"
+                buttonBg="bg-hex-2 mt-12"
                 src={card.url}
                 cardTitle={card.title}
                 cardDescription={card.description}
