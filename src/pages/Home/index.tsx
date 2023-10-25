@@ -24,6 +24,7 @@ interface HeroProps {
   url: string;
   mt: string;
   top: string;
+  show: boolean
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }];
@@ -45,7 +46,7 @@ const banks: { title: string; description: string }[] = [
   },
 ];
 
-const Hero = ({ title, description, url, mt, top }: HeroProps) => {
+const Hero = ({ title, description, url, mt, top, show }: HeroProps) => {
   const container = useRef(null);
   const animationRef = useRef<any>(null);
 
@@ -84,13 +85,20 @@ const Hero = ({ title, description, url, mt, top }: HeroProps) => {
               Learn More
             </button>
           </div>
-          <div className="text-black flex-1">
+          {show === false ? <div className="text-black flex-1">
             <img
               className={`w-full h-full relative z-40 object-center bg-cover ${mt}`}
               src={url}
               alt=""
             />
-          </div>
+          </div> : <>
+              <div className="text-black h-screen backdrop:blur-md rounded-[175px] relative z-40 mt-[12.5%] w-[36%] bg-[#eaecf080]" />
+              <img
+                  className={` absolute w-[50%] z-40 object-center -right-10 bg-cover top-[20%]`}
+                  src="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
+                  alt=""
+                />
+          </>}
         </div>
       </div>
     </Slide>
@@ -126,6 +134,7 @@ const Home = () => {
       <div className="h-screen lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex && (
           <Hero
+            show={false}
             top="mt-[14%]"
             mt="mt-[17%] ml-24"
             title="Unlock Limitless Possibilities"
@@ -133,8 +142,19 @@ const Home = () => {
             url="https://framerusercontent.com/images/RBrg2DQg02GRb93W6tUeDp1hTE.png"
           />
         )}
+        {dots[1].dot === activeIndex && (
+          <Hero
+            show={true}
+            top="mt-[44px]"
+            mt="mt-[22%] ml-10"
+            title="Experience Freedom"
+            description="Stay ahead with on-the-go banking."
+            url="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
+          />
+        )}
         {dots[2].dot === activeIndex && (
           <Hero
+            show={false}
             top="mt-[44px]"
             mt="mt-[22%] ml-10"
             title="Experience Freedom"
@@ -142,7 +162,7 @@ const Home = () => {
             url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
           />
         )}
-        {dots[1].dot === activeIndex && (
+        {/* {dots[1].dot === activeIndex && (
           <Slide className="h-full relative w-full z-40">
             <div className="w-[85%] mx-auto h-full">
               <div className="flex justify-between items-center w-full h-full">
@@ -159,10 +179,7 @@ const Home = () => {
                     Learn More
                   </button>
                 </div>
-                <div
-                  style={{ backdropFilter: "blur(10px)" }}
-                  className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]"
-                />
+                <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
                 <img
                   className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`}
                   src="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
@@ -171,7 +188,7 @@ const Home = () => {
               </div>
             </div>
           </Slide>
-        )}
+        )} */}
         <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
           <div
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
