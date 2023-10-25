@@ -167,33 +167,6 @@ const Home = () => {
             url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
           />
         )}
-        {/* {dots[1].dot === activeIndex && (
-          <Slide className="h-full relative w-full z-40">
-            <div className="w-[85%] mx-auto h-full">
-              <div className="flex justify-between items-center w-full h-full">
-                <div
-                  className={`text-black w-[45%] relative z-30 ${top} relative`}
-                >
-                  <h1 className="text-[64px] text-hex-2 font-nunitoSans leading-[1em] font-bold">
-                    Experience Freedom
-                  </h1>
-                  <p className="text-xl font-nunitoSans text-hex-8 mt-3">
-                    Stay ahead with on-the-go banking.
-                  </p>
-                  <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">
-                    Learn More
-                  </button>
-                </div>
-                <div style={{ backdropFilter: "blur(10px)" }} className="text-black h-screen rounded-[175px] relative z-40 mt-[12.5%] w-[35%] bg-[#eaecf080]" />
-                <img
-                  className={` absolute w-[42%] z-40 object-center right-16 bg-cover top-[23%]`}
-                  src="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
-                  alt=""
-                />
-              </div>
-            </div>
-          </Slide>
-        )} */}
         <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
           <div
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
