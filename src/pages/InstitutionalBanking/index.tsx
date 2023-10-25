@@ -13,27 +13,31 @@ const cards: {
   title: string;
   description: string;
   buttonName: string;
+  link: string
 }[] = [
   {
     url: "https://framerusercontent.com/images/e7XY9f4WRRlTWnCt3BDX0wjbCY.png",
     title: "Signature Corporate Account",
+    link: '/accounts',
     description:
       "Specifically designed to cater to the banking needs of large institutions like yours by providing comprehensive solutions to support your financial operations efficiently.",
-    buttonName: "Coming Soon",
+    buttonName: "Open Account",
   },
   {
     url: "https://framerusercontent.com/images/b4ZgmA0vEA334owkTFdKKGjq18.png",
     title: "Public Sector Institution Banking",
+    link: '/contacts',
     description:
       "Specialized banking solutions tailored for government agencies and ministries. Our services cater to your unique requirements, for seamless collections, payments, and financial management.",
-    buttonName: "Coming Soon",
+    buttonName: "Contact us",
   },
   {
     url: "https://framerusercontent.com/images/O9K27sirtHvkK7RauE7iXbZTwcA.png",
     title: "Non-Government Institution Banking",
+    link: '/contacts',
     description:
       "Customized solutions designed to support the financial needs of NGOs, foundations, educational institutions, religious organizations, and other non-profit entities.",
-    buttonName: "Coming Soon",
+    buttonName: "Contact us",
   },
 ];
 
@@ -91,7 +95,7 @@ const InstitutionalBanking = () => {
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-[25px] justify-center relative overflow-visible p-0 w-full pb-28">
             {cards.map((card, index) => (
               <Card
-                link=""
+                link={card.link}
                 key={index}
                 bg="bg-cardbadge h-auto"
                 buttonBg={`bg-[#b05c37] mt-14`}

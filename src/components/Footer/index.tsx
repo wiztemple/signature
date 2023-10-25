@@ -179,7 +179,7 @@ const Footer = ({ background = "bg-hex-2" }) => {
             </div>
           </div>
           <div className="sm:flex justify-between w-full pt-8">
-            <img src={Logo} alt="App Logo" />
+            <Link to="/"><img src={Logo} alt="App Logo" /></Link>
             <span className="w-fit text-main-2 block pt-5 sm:pt-0">
               © 2023 Signature Bank Ltd. All rights reserved.
             </span>
