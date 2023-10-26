@@ -16,6 +16,7 @@ import youtubeSvg from "../../assets/youtube.svg";
 import musicSvg from "../../assets/music.svg";
 import MobileHeader from "../../components/MobileHeader";
 import animationData from "../../assets/gradient.json";
+import frameData from "../../assets/swoosh.json";
 import CookiesP from "../../components/Cookies";
 import { Reveal } from "../../utils/Reveal";
 
@@ -27,6 +28,7 @@ interface HeroProps {
   top: string;
   show: boolean
   link: string
+  isFrame: boolean
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }];
@@ -48,9 +50,11 @@ const banks: { title: string; description: string }[] = [
   },
 ];
 
-const Hero = ({ title, description, url, mt, top, show, link }: HeroProps) => {
+const Hero = ({ title, description, url, mt, top, show, link, isFrame }: HeroProps) => {
   const container = useRef(null);
   const animationRef = useRef<any>(null);
+  const frame = useRef(null);
+  const frameRef = useRef<any>(null);
 
   useEffect(() => {
     if (container.current && !animationRef.current) {
@@ -63,6 +67,20 @@ const Hero = ({ title, description, url, mt, top, show, link }: HeroProps) => {
       });
       anim.setSpeed(0.3);
       animationRef.current = anim;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (frame.current && !frameRef.current) {
+      const anim = lottie.loadAnimation({
+        animationData: frameData,
+        autoplay: true,
+        container: frame.current,
+        loop: true,
+        renderer: "svg",
+      });
+      anim.setSpeed(0.6);
+      frameRef.current = anim;
     }
   }, []);
   
@@ -91,8 +109,13 @@ const Hero = ({ title, description, url, mt, top, show, link }: HeroProps) => {
             </a>
           </div>
           {show === false ? <div className="text-black flex-1">
+            {isFrame === true && <div
+              className="absolute lg:w-[850px] w-screen lg:-right-44 lg:top-12 lg:-bottom-72 bottom-16 overflow-hidden z-40"
+              ref={frame}
+              id="animation-frame"
+            ></div>}
             <img
-              className={`w-full h-full relative z-40 object-center bg-cover ${mt}`}
+              className={`w-full h-full relative z-30 object-center bg-cover ${mt}`}
               src={url}
               alt=""
             />
@@ -145,6 +168,7 @@ const Home = () => {
       <div className="h-screen lg:block hidden bg-[#f9fafb] overflow-hidden">
         {dots[0].dot === activeIndex && (
           <Hero
+            isFrame={false}
             link="/about-us"
             show={false}
             top="mt-[14%]"
@@ -156,6 +180,7 @@ const Home = () => {
         )}
         {dots[1].dot === activeIndex && (
           <Hero
+            isFrame={false}
             link="/signature-mobile-app"
             show={true}
             top="mt-[44px]"
@@ -167,6 +192,7 @@ const Home = () => {
         )}
         {dots[2].dot === activeIndex && (
           <Hero
+            isFrame={true}
             link="/cards"
             show={false}
             top="mt-[44px]"
