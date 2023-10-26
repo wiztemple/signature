@@ -4,9 +4,11 @@ import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import Banner from "../../components/Banner";
 import cardSvg from "../../assets/card.png"
+import dollarCardSvg from "../../assets/dollarcard.svg"
 import shadowSvg from "../../assets/shadow.svg"
 import card from "../../assets/cards.png"
 import { faqs } from "../../data/faqs";
+import { AnimatePresence, motion } from "framer-motion";
 
 const slides: { url: string, alt: string }[] = [
   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
@@ -65,6 +67,27 @@ const dollarCard: { title: string, description: string[] }[] = [
   },
 ];
 
+const creditDollar: { title: string, description: string[] }[] = [
+  {
+    title: "Business Credit Card",
+    description: [
+      "Expand your lines to credit and enter a whole new world of expansive business growth with our Signature Business Credit Cards. Enjoy juicy credit limits for your various business purchases.",
+    ],
+  },
+  {
+    title: "Platinum Credit Card ",
+    description: [
+      "Access extended credit limits on foreign currencies to your business and personal accounts through our Signature Platinum Credit Cards with global acceptability and no border restrictions.",
+    ],
+  },
+  {
+    title: "Retail Credit Card",
+    description: [
+      "Get a Signature Retail Credit Card that for your personal payment needs. With our retail credit card you get access to an improved credit facility that allows you to make payments for items without access to liquid cash.",
+    ],
+  },
+];
+
 const nairaCard: { title: string, description: string[] }[] = [
   {
     title: "Signature Verve Naira Debit Cards",
@@ -119,6 +142,10 @@ const cardType = [{name: "Naira Card"}, {name: "Dollar Card"}]
 const Cards = () => {
 
   const [onFaq, setOnFaq] = useState<boolean>(false);
+  const [openDebitNaira, setOpenDebitNaira] = useState<boolean>(false);
+  const [openCreditNaira, setOpenCreditNaira] = useState<boolean>(false);
+  const [openDebitDollar, setOpenDebitDollar] = useState<boolean>(false);
+  const [openCreditDollar, setOpenCreditDollar] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const [currentCard, setCurrentCard] = useState<number>(0);
@@ -160,156 +187,184 @@ const Cards = () => {
       <div>
         <div className="lg:w-[85%] w-[93%] mx-auto py-24 relative">
           <h2 className="text-5xl text-primaryblack font-bold text-center tracking-[-0.96px]">A Card for every occasion</h2>
-          <div className="text-primaryblack mx-auto flex justify-between sm:w-96 w-[90%] px-3 text-2xl mt-20 border-white bg-[#ffffffb3] backdrop-blur-md z-40 md:top-32 sm:top-28 top-32 rounded-[10px] sticky">
+          <div className="text-primaryblack mx-auto flex justify-between sm:w-96 w-[90%] px-3 text-2xl mt-20 border-white bg-[#ffffffb3] backdrop-blur-md z-40 md:top-[118px] sm:top-28 top-[150px] rounded-[10px] sticky">
             {cardType.map((card, index) => (
-              <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
-              {card.name}
-             { currentCard === index && <div className="border-[3px] border-hex-2 w-16 mt-5 rounded-[20px] mx-auto" />}
-            </div>
+              <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold" : "text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
+                {card.name}
+                {currentCard === index && <div className="border-[3px] border-hex-2 w-16 mt-5 rounded-[20px] mx-auto" />}
+              </div>
             ))}
           </div>
           {currentCard === 0 && (
             <>
               <div className="flex md:flex-row lg:gap-16 gap-10 flex-col pt-10">
-            <div className="flex-1">
-              <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
-              <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-              <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
-                {nairaCard.map((card, index) => (
-                  <div key={index} className=" even:my-7">
-                    <div onClick={() => {
-                      setOnFaq(!onFaq)
-                      setActiveIndex(index)
-                    }} className="flex gap-6 cursor-pointer items-center">
-                      <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
-                    </div>
-                    {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {card.description.map((card, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          {/* <img src={tickSvg} alt="" /> */}
-                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+                <div className="flex-1">
+                  <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
+                  <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
+                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
+                    {nairaCard.map((card, index) => (
+                      <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
+                        <div onClick={() => {
+                          setOpenDebitNaira(!openDebitNaira)
+                          setActiveIndex(index)
+                        }} className="flex gap-6 cursor-pointer items-center">
+                          <span className={`text-hex-9 text-3xl ${(openDebitNaira === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                          <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                         </div>
-                      ))}
-                    </div>)}
+                        <AnimatePresence>
+                          {(openDebitNaira === true && activeIndex === index) && (<motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openDebitNaira ? 'auto' : 0, opacity: openDebitNaira ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                            {card.description.map((card, index) => (
+                              <div key={index} className="flex items-start gap-2">
+                                {/* <img src={tickSvg} alt="" /> */}
+                                <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+                              </div>
+                            ))}
+                          </motion.div>)}
+                        </AnimatePresence>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            <div className="flex-1">
-              <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                </div>
+                <div className="flex-1">
+                  <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
                     <img className="bg-cover object-cover md:w-[85%] w-full" src={card} alt="" />
                     <img className="bg-cover z-40 md:-ml-20 -ml-5 mt-6 object-cover" src={shadowSvg} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex md:flex-row-reverse lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
-            <div className="flex-1">
-              <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
-              <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-              <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
-                {sectionFaq.map((faq, index) => (
-                  <div key={index} className=" even:my-7">
-                    <div onClick={() => {
-                      setOnFaq(!onFaq)
-                      setActiveIndex(index)
-                    }} className="flex gap-6 cursor-pointer items-center">
-                      <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
-                    </div>
-                    {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {faq.description.map((faq, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          {/* <img src={tickSvg} alt="" /> */}
-                          <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
-                        </div>
-                      ))}
-                    </div>)}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
-                   <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
-                   <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
+              <div className="flex md:flex-row-reverse lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
+                <div className="flex-1">
+                  <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
+                  <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
+                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
+                    {sectionFaq.map((faq, index) => (
+                      <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
+                        <div onClick={() => {
+                          setOpenCreditNaira(!openCreditNaira)
+                          setActiveIndex(index)
+                        }} className="flex gap-6 cursor-pointer items-center">
+                          <span className={`text-hex-9 text-3xl ${(openCreditNaira === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                          <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
+                        </div>
+                        <AnimatePresence>
+                          {(openCreditNaira === true && activeIndex === index) && (<motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openCreditNaira ? 'auto' : 0, opacity: openCreditNaira ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                            className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                            {faq.description.map((faq, index) => (
+                              <div key={index} className="flex items-start gap-2">
+                                {/* <img src={tickSvg} alt="" /> */}
+                                <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
+                              </div>
+                            ))}
+                          </motion.div>)}
+                        </AnimatePresence>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
+                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
+                    <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
             </>
           )}
           {currentCard === 1 && (
             <>
               <div className="flex md:flex-row lg:gap-16 gap-10 flex-col md:pt-14 pt-10">
-            <div className="flex-1">
-              <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
-              <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-              <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
-                {dollarCard.map((card, index) => (
-                  <div key={index} className=" even:my-7">
-                    <div onClick={() => {
-                      setOnFaq(!onFaq)
-                      setActiveIndex(index)
-                    }} className="flex gap-6 cursor-pointer items-center">
-                      <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
-                    </div>
-                    {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {card.description.map((card, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          {/* <img src={tickSvg} alt="" /> */}
-                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+                <div className="flex-1">
+                  <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
+                  <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements. Choose a card</p>
+                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
+                    {dollarCard.map((card, index) => (
+                      <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
+                        <div onClick={() => {
+                          setOpenDebitDollar(!openDebitDollar)
+                          setActiveIndex(index)
+                        }} className="flex gap-6 cursor-pointer items-center">
+                          <span className={`text-hex-9 text-3xl ${(openDebitDollar === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                          <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                         </div>
-                      ))}
-                    </div>)}
+                        <AnimatePresence>
+                          {(openDebitDollar === true && activeIndex === index) && (<motion.div
+                          initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openDebitDollar ? 'auto' : 0, opacity: openDebitDollar ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                          className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                          {card.description.map((card, index) => (
+                            <div key={index} className="flex items-start gap-2">
+                              {/* <img src={tickSvg} alt="" /> */}
+                              <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+                            </div>
+                          ))}
+                        </motion.div>)}
+                        </AnimatePresence>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                <div className="flex-1">
+                  <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
+                    <img className="bg-cover object-cover md:w-[85%] w-full" src={dollarCardSvg} alt="cards" />
+                    <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="svg" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <div className="w-full h-[584px] flex flex-col justify-center pt-4 md:pl-8 pl-2 bg-[#f7e7f3] rounded-[50px]">
-                    <img className="bg-cover object-cover md:w-[85%] w-full" src={card} alt="" />
-                    <img className="bg-cover z-40 -ml-20 mt-6 object-cover" src={shadowSvg} alt="" />
-              </div>
-            </div>
-          </div>
-          <div className="flex md:flex-row-reverse lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
-            <div className="flex-1">
-              <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Credit Cards</h2>
-              <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
-              <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
-              <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
-                {dollarCard.map((card, index) => (
-                  <div key={index} className=" even:my-7">
-                    <div onClick={() => {
-                      setOnFaq(!onFaq)
-                      setActiveIndex(index)
-                    }} className="flex gap-6 cursor-pointer items-center">
-                      <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
-                    </div>
-                    {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
-                      {card.description.map((card, index) => (
-                        <div key={index} className="flex items-start gap-2">
-                          {/* <img src={tickSvg} alt="" /> */}
-                          <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+              <div className="flex md:flex-row-reverse lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
+                <div className="flex-1">
+                  <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Credit Cards</h2>
+                  <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
+                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
+                    {creditDollar.map((card, index) => (
+                      <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
+                        <div onClick={() => {
+                          setOpenCreditDollar(!openCreditDollar)
+                          setActiveIndex(index)
+                        }} className="flex gap-6 cursor-pointer items-center">
+                          <span className={`text-hex-9 text-3xl ${(openCreditDollar === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                          <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{card.title}</span>
                         </div>
-                      ))}
-                    </div>)}
+                        <AnimatePresence>
+                          {(openCreditDollar === true && activeIndex === index) && (<motion.div
+                         initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openDebitDollar ? 'auto' : 0, opacity: openDebitDollar ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                          className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                          {card.description.map((card, index) => (
+                            <div key={index} className="flex items-start gap-2">
+                              {/* <img src={tickSvg} alt="" /> */}
+                              <p className="text-base font-nunitoSans text-hex-9">{card}</p>
+                            </div>
+                          ))}
+                        </motion.div>)}
+                        </AnimatePresence>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                <div className="flex-1">
+                  <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
+                    <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
+                    <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="flex-1">
-              <div className="lg:w-[600px] w-full h-[584px] bg-[#f7e7f3] flex flex-col justify-center relative lg:pl-10 pl-5 rounded-[50px] pt-10">
-                   <img className="bg-cover lg:w-[80%] w-[95%] sm:h-[420px] h-[350px] lg:object-cover" src={cardSvg} alt="" />
-                   <img className="bg-cover z-40 -ml-10 mt-5 object-cover" src={shadowSvg} alt="" />
-              </div>
-            </div>
-          </div>
             </>
           )}
           <div className="flex md:flex-row-reverse items-center lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
@@ -326,26 +381,26 @@ const Cards = () => {
       <div>
         <h2><h2 className="text-5xl text-primaryblack font-bold text-center pt-20 tracking-[-0.96px]">Frequently asked questions</h2></h2>
         <div className="h-auto rounded-[20px] border-b md:w-[70%] w-[90%] mx-auto mt-10 mb-36 bg-[#f2f2f2] py-2 px-5">
-                {faqs.map((faq, index) => (
-                  <div key={index} className="last:border-none border-b py-2 items-center">
-                    <div onClick={() => {
-                      setOnFaq(!onFaq)
-                      setActiveIndex(index)
-                    }} className="flex gap-6 cursor-pointer items-center">
-                      <span className={`text-hex-9/70 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
-                      <span className="text-[#333333] text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
-                    </div>
-                    {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 my-3 pl-10 pr-5">
-                      {faq.description.map((faq, index) => (
-                        <div key={index} className="flex items-start w-[93%] gap-1">
-                          {/* <img src={tickSvg} alt="" /> */}
-                          <p className="text-base font-nunitoSans font-bold text-hex-9/80">{faq}</p>
-                        </div>
-                      ))}
-                    </div>)}
+          {faqs.map((faq, index) => (
+            <div key={index} className="last:border-none border-b py-2 items-center">
+              <div onClick={() => {
+                setOnFaq(!onFaq)
+                setActiveIndex(index)
+              }} className="flex gap-6 cursor-pointer items-center">
+                <span className={`text-hex-9/70 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                <span className="text-[#333333] text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
+              </div>
+              {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 my-3 pl-10 pr-5">
+                {faq.description.map((faq, index) => (
+                  <div key={index} className="flex items-start w-[93%] gap-1">
+                    {/* <img src={tickSvg} alt="" /> */}
+                    <p className="text-base font-nunitoSans font-bold text-hex-9/80">{faq}</p>
                   </div>
                 ))}
-              </div>
+              </div>)}
+            </div>
+          ))}
+        </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
@@ -364,4 +419,5 @@ const Cards = () => {
     </div>
   );
 };
+
 export default Cards;
