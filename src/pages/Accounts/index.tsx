@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import tickSvg from "../../assets/tick.svg";
 import Banner from "../../components/Banner";
+import { AnimatePresence, motion } from "framer-motion";
 
 const sectionFaq: { title: string, description: string[] }[] = [
   {
@@ -101,6 +102,8 @@ const section3Faq: { title: string, description: string[] }[] = [
 const Accounts = () => {
 
   const [onFaq, setOnFaq] = useState<boolean>(false);
+  const [openCurrent, setOpenCurrent] = useState<boolean>(false);
+  const [openCorperate, setOpenCorperate] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
@@ -130,14 +133,21 @@ const Accounts = () => {
                     <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index)&& "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
                     <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
                   </div>
-                  {(onFaq && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                  <AnimatePresence>
+                    {(onFaq && activeIndex === index) && (<motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: onFaq ? 'auto' : 0, opacity: onFaq ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                    className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                     {faq.description.map((faq, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <img src={tickSvg} alt="" />
                         <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
                       </div>
                     ))}
-                  </div>)}
+                  </motion.div>)}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
@@ -155,20 +165,27 @@ const Accounts = () => {
               {section2Faq.map((faq, index) => (
                 <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
                   <div onClick={() => {
-                    setOnFaq(!onFaq)
+                    setOpenCurrent(!openCurrent)
                     setActiveIndex(index)
                   }} className="flex gap-6 cursor-pointer items-center">
-                    <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                    <span className={`text-hex-9 text-3xl ${(openCurrent === true && activeIndex === index) && "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
                     <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
                   </div>
-                  {(onFaq === true && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                  <AnimatePresence>
+                    {(openCurrent === true && activeIndex === index) && (<motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openCurrent ? 'auto' : 0, opacity: openCurrent ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                    className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                     {faq.description.map((faq, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <img src={tickSvg} alt="" />
                         <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
                       </div>
                     ))}
-                  </div>)}
+                  </motion.div>)}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
@@ -186,20 +203,27 @@ const Accounts = () => {
               {section3Faq.map((faq, index) => (
                 <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
                   <div onClick={() => {
-                    setOnFaq(!onFaq)
+                    setOpenCorperate(!openCorperate)
                     setActiveIndex(index)
                   }} className="flex gap-6 cursor-pointer items-center">
-                    <span className={`text-hex-9 text-3xl ${(onFaq === true && activeIndex === index)&& "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
+                    <span className={`text-hex-9 text-3xl ${(openCorperate === true && activeIndex === index)&& "rotate-45"} transition-all ease-in-out delay-100 duration-300 font-nunitoSans font-medium`}>+</span>
                     <span className="text-hex-9 text-base leading-[2em] font-nunitoSans mt-1 font-bold">{faq.title}</span>
                   </div>
-                  {(onFaq && activeIndex === index) && (<div className="flex flex-col gap-3 mt-4 pl-10 pr-5">
+                  <AnimatePresence>
+                    {(openCorperate && activeIndex === index) && (<motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                            animate={{ height: openCorperate ? 'auto' : 0, opacity: openCorperate ? 1 : 0, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3 }}
+                    className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                     {faq.description.map((faq, index) => (
                       <div key={index} className="flex items-start gap-2">
                         <img src={tickSvg} alt="" />
                         <p className="text-base font-nunitoSans text-hex-9">{faq}</p>
                       </div>
                     ))}
-                  </div>)}
+                  </motion.div>)}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>
