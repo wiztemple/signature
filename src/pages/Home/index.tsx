@@ -504,7 +504,7 @@ const Home = () => {
       </div>
       {/* cookies */}
       <CookiesP />
-      <div className={`rounded-[20px] backdrop-blur-md lg:block hidden bg-[#f3f3f3cc] right-6 fixed bottom-3 ${close === true ? "w-[25%]" : "w-fit"} z-50 h-11 px-4`}>
+      <div className={`rounded-[20px] backdrop-blur-md lg:block hidden bg-[#f3f3f3cc] z-40 right-6 fixed bottom-3 ${close === true ? "w-[350px]" : "w-fit"} z-40 h-11 px-4`}>
         <div className="flex items-center h-full justify-between gap-2">
           {close === true ? <div className="flex gap-2">
             <a href="mailto:enquiries@signaturebankng.com" rel="noopener" target="_blank" className="bg-white hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 p-1.5 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45 rounded-full w-[26px] h-[26px]"><img className="w-full h-full" src={messageSvg} alt="svg" /></a>
@@ -516,9 +516,9 @@ const Home = () => {
             <a href="https://www.tiktok.com/@signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-tr hover:from-red-500 hover:to-teal-300 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={musicSvg} alt="svg" /></a>
           </div> : null}
           <div className="flex items-center gap-1.5 whitespace-nowrap">
-            <p className="text-sm text-[#101828b3]">social 👋🏾</p>
-            <div className="cursor-pointer" onClick={() => setClose(!close)}>
-              <img className="h-[14px] whitespace-nowrap w-[14px]" src={closeSvg} alt="" />
+            <p className="text-sm text-[#101828b3]">social {close === true && "👋🏾"}</p>
+            <div className={`cursor-pointer ${close === true && "rotate-90"} duration-150 delay-150 transition-all ease-in-out`} onClick={() => setClose(!close)}>
+              <img className="h-[14px] whitespace-nowrap w-[14px]" src={closeSvg} alt="svg" />
             </div>
           </div>
         </div>
