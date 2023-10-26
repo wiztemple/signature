@@ -1,9 +1,30 @@
+import { useEffect, useRef } from "react";
+import lottie from "lottie-web";
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
+import animationData from "../../assets/swoosh.json";
 
 const Careers = () => {
+
+   const container = useRef(null);
+  const animationRef = useRef<any>(null);
+
+  useEffect(() => {
+    if (container.current && !animationRef.current) {
+      const anim = lottie.loadAnimation({
+        animationData,
+        autoplay: true,
+        container: container.current,
+        loop: true,
+        renderer: "svg",
+      });
+      anim.setSpeed(0.6);
+      animationRef.current = anim;
+    }
+  }, []);
+
   return (
     <div className="bg-white font-nunitoSans">
       <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
@@ -17,6 +38,11 @@ const Careers = () => {
             <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4">See Openings</button>
           </div>
           <div className="md:mt-32 mt-6 relative w-full">
+            <div
+              className="absolute lg:w-[850px] w-screen lg:-right-28 right-0 lg:top-12 lg:-bottom-72 bottom-16 left-0 lg:left-0 overflow-hidden z-40"
+              ref={container}
+              id="animation-container"
+            ></div>
             <img className="w-[88%] h-full bg-cover object-cover" src="https://framerusercontent.com/images/LD2YvlIeQiCY3FnMyDO9j5kXNM.png" alt="Signature Careers" />
           </div>
         </div>
