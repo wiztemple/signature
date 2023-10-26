@@ -11,8 +11,8 @@ import musicSvg from "../../assets/music.svg";
 
 function SocialNav() {
     
-  const [showItems, setShowItems] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const [showItems, setShowItems] = useState(true);
+  const [isMounted, setIsMounted] = useState(true);
 
     const toggleItems = () => {
         setShowItems(!showItems);
