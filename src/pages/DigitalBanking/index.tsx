@@ -32,17 +32,17 @@ const DigitalBanking = () => {
         strokeColor="white"
       />
 
-      <div className="h-screen relative w-full lg:overflow-hidden font-nunitoSans">
+      <div className="h-screen relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
-            className="absolute top-4 -right-36 w-full z-20"
+            className="absolute md:top-4 mt-14 md:left-0 md:-right-36 -left-60 h-screen w-full z-20"
             src="https://framerusercontent.com/images/yaKi2r9uBWv0fG5wicgNzHmYU.png?scale-down-to=2048"
             alt=""
           />
         </div>
         <div className="z-30 relative flex w-full overflow-hidden justify-center h-full">
           <Reveal>
-            <div className="lg:w-[90%] w-full h-screen overflow-hidden z-20 md:top-36 relative">
+            <div className="lg:w-[90%] sm:w-full w-[600px] h-screen overflow-hidden md:left-0 -left-28 z-40 md:top-36 mt-8 relative">
               <img
             className="bg-cover object-cover lg:w-auto lg:h-auto h-full w-full"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
@@ -52,11 +52,11 @@ const DigitalBanking = () => {
           </Reveal>
         </div>
         <div
-          className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center bottom-14`}
+          className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center md:bottom-14 bottom-0`}
         >
           <div
             style={{ backdropFilter: "blur(15px)" }}
-            className={`text-[60px] bg-[#67194130] rounded-[20px] p-[30px] lg:w-[60%] sm:w-[70%] w-full`}
+            className={`text-[60px] bg-[#67194130] rounded-[20px] md:p-[30px] p-4 lg:w-[60%] sm:w-[70%] w-full`}
           >
             <div
               className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
@@ -80,7 +80,7 @@ const DigitalBanking = () => {
         />
       </div>
       {/*  */}
-      <div className="lg:w-[85%] w-[90%] relative z-40 mx-auto">
+      <div className="lg:w-[85%] w-[90%] md:pt-0 pt-10 relative z-40 mx-auto">
         {/*  */}
         <Reveal>
           <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
@@ -122,11 +122,11 @@ const DigitalBanking = () => {
             <p className="text-[#fff3f8] text-xl mt-5 leading-[30px]">
               Download our easy to use Mobile application and access financial
               services anywhere you go.{" "}
-            </p>
-            <div className="gap-4 flex mt-5">
-              <img src={googleLogo} alt="apple logo" />
-              <img src={appleLogo} alt="apple logo" />
-              </div>
+              </p>
+              <div className="gap-4 relative z-40 flex mt-5">
+                <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img src={googleLogo} alt="apple logo" /></a>
+                <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843"><img src={appleLogo} alt="apple logo" /></a>
+            </div>
               <ZoomOnScroll><img className="w-full object-cover bg-cover lg:-mt-[100px] md:-mt-44 sm:-mt-24 -mt-32 h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
           </div>
           </Reveal>

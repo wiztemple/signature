@@ -41,7 +41,7 @@ const CustomBanner = ({
   return (
     <div className={`relative h-screen ${heroBg} w-full overflow-hidden font-nunitoSans`}>
       <div className={`w-full ${display} mx-auto flex justify-center`}>
-        <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute w-[38.1%] rounded-full" />
+        <div className="bg-primaryyellow bottom-[123px] h-[470px] absolute md:w-[38.1%] w-[24%] rounded-full" />
       </div>
       {show === true ? <Reveal>
         <div className={`z-40 h-screen ${scaling}`}>
