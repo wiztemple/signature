@@ -63,7 +63,7 @@ const InstitutionalBanking = () => {
         strokeColor="white"
       />
       <CustomBanner
-        extraClass=""
+        extraClass="xl:h-48 lg:h-auto"
         show={true}
         display="block"
         scaling="lg:px-4 pt-[68px]"

@@ -32,7 +32,7 @@ const DigitalBanking = () => {
         strokeColor="white"
       />
 
-      <div className="h-screen relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
+      <div className="h-screen xl:h-[50vh] 2xl:h-[10vh] relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
             className="absolute md:top-4 mt-14 md:left-0 md:-right-36 -left-60 h-screen w-full z-20"
@@ -42,7 +42,7 @@ const DigitalBanking = () => {
         </div>
         <div className="z-30 relative flex w-full overflow-hidden justify-center h-full">
           <Reveal>
-            <div className="lg:w-[90%] sm:w-full w-[600px] h-screen overflow-hidden md:left-0 -left-28 z-40 md:top-36 mt-8 relative">
+            <div className="lg:w-[90%] xl:w-full md:w-[1200px] sm:w-[1000px] w-[800px] h-screen overflow-hidden lg:left-0 -left-28 z-40 md:top-36 mt-8 relative">
               <img
             className="bg-cover object-cover lg:w-auto lg:h-auto h-full w-full"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"

@@ -58,7 +58,7 @@ const Business = () => {
         strokeColor="white"
       />
       <CustomBanner
-        extraClass="h-[262px]"
+        extraClass="xl:h-[184px] h-[262px]"
         show={false}
         display="hidden"
         scaling=""
@@ -93,7 +93,7 @@ const Business = () => {
                  extraClass="bg-shadowbeige"
                 link="/"
                 key={index}
-                bg="bg-cardbadge md:h-[475px] h-auto"
+                bg="bg-cardbadge lg:h-[475px] h-auto"
                 buttonBg={`bg-[#b05c37] hover:bg-[#7E3A1F]  ${index === 2 ? "mt-[27px]": "mt-14"}`}
                 src={card.url}
                 cardTitle={card.title}

@@ -95,7 +95,7 @@ const Hero = ({ title, description, url, mt, top, show, link, isFrame }: HeroPro
             <p className="text-xl font-nunitoSans text-hex-8 mt-3">
               {description}
             </p>
-            <a target="_blank" rel="noopener" href={link}>
+            <a href={link}>
               <button className="bg-hex-2 px-4 py-3 hover:bg-primaryyellow rounded-[10px] text-white mt-4 font-nunitoSans">
               Learn More
             </button>

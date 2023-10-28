@@ -31,7 +31,7 @@ const Careers = () => {
       <MobileHeader
         primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white"
       />
-      <div className="bg-main-7 h-screen overflow-hidden">
+      <div className="bg-main-7 md:h-screen h-auto overflow-hidden">
         <div className="flex lg:flex-row flex-col justify-between items-center h-full text-primaryblack w-[85%] mx-auto">
           <div className="lg:mt-28 md:mt-64 mt-44">
             <h1 className="md:text-[72px] text-[48px] w-full text-hex-2 leading-[1.3em] font-bold">Make Your Mark with Signature Bank</h1>
@@ -70,7 +70,7 @@ const Careers = () => {
                 <img className="h-[250px] w-full object-cover bg-cover rounded-[20px]" src="https://framerusercontent.com/images/PyCKuY2iSMK52l7bamx8etZqIQ.jpg" alt="Signature Careers" />
                 <h3 className="text-primaryblack text-[28.56px] mt-5 leading-[1em] font-bold">Management Trainee</h3>
                 <h3 className="text-lg leading-[28px] mt-4 text-hex-9">This programme is open to young, bright, purpose driven graduates with potential and a record of excellence. The Bank provides the right environment, training, mentoring and exposure to nurture young talent and position them for a future of endless possibilities.</h3>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4">No Job Opening(s)</button>
+                <button className="bg-hex-2 px-4 py-2 hover:bg-primaryyellow rounded-[10px] text-white mt-4 transition-all duration-500 delay-300 ease-in-out">No Job Opening(s)</button>
               </div>
             </div>
             <div className="flex-1">
@@ -78,7 +78,7 @@ const Careers = () => {
                 <img className="h-[250px] w-full object-cover bg-cover rounded-[20px]" src="https://framerusercontent.com/images/Fwu1zhneYJHLHonTc2cAeZdA.jpg" alt="Signature Careers" />
                 <h3 className="text-primaryblack text-[28.56px] mt-5 leading-[1em] font-bold">Experienced Hires</h3>
                 <h3 className="text-lg leading-[28px] mt-4 text-hex-9">Professionals with expertise, competence and evident potential for leadership are always welcome in Signature Bank. Here, you are given the platform to exhibit and develop your leadership potential, skills, and knowledge. Let your passion take you to places you never thought possible.</h3>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4">No Job Opening(s)</button>
+                <button className="bg-hex-2 px-4 py-2 hover:bg-primaryyellow transition-all duration-500 delay-300 ease-in-out rounded-[10px] text-white mt-4">No Job Opening(s)</button>
               </div>
             </div>
           </div>
