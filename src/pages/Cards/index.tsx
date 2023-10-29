@@ -173,7 +173,7 @@ const Cards = () => {
               </div>
             ))}
           </div>
-          <div className="flex relative w-[3500px] mt-3 gap-5 z-20">
+          <div className="flex slider-left relative w-[3500px] mt-3 gap-5 z-20">
             {slides.map((slide, index) => (
               <div
                 key={index}
