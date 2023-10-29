@@ -37,9 +37,10 @@ html {
   }
 }
 
-.slider-container {
-  overflow: hidden;
-  width: 100%;
+.slider-left {
+  width: calc(250px * 20);
+  animation: slide-left 15s linear infinite;
+  /* Adjust the animation duration as needed */
 }
 
 .slider {
@@ -48,11 +49,6 @@ html {
 }
 .slider-right {
   animation: slide-right 40s linear infinite;
-  /* Adjust the animation duration as needed */
-}
-.slider-left {
-  width: calc(250px * 20);
-  animation: slide-left 15s linear infinite;
   /* Adjust the animation duration as needed */
 }
 
