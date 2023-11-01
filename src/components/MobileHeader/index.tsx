@@ -118,7 +118,8 @@ const MobileHeader: React.FC<HeaderProps> = ({
                   <Link to="/digital-banking" className={`p-2 ${textColor2}`}>
                     Digital
                   </Link>
-                  <button
+                  <Link
+                  to="https://aos.signaturebankng.com/" target="_blank"
                     type="button"
                     className={`${primaryBtnClassName} text-white py-[7px] px-[18px] mb-5 rounded-[10px] flex items-center gap-1.5  border border-transparent leading-[1em]`}
                   >
@@ -130,7 +131,7 @@ const MobileHeader: React.FC<HeaderProps> = ({
                       />
                     )}
                     Open an Account - Launching Soon
-                  </button>
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>

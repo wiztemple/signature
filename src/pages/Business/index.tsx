@@ -150,7 +150,7 @@ const Business = () => {
           textColor="text-primarygray"
           title="Enter a whole new world of business advancement"
           description="Open an account with us in a few simple steps."
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

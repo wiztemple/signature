@@ -9,6 +9,7 @@ import shadowSvg from "../../assets/shadow.svg"
 import card from "../../assets/cards.png"
 import { faqs } from "../../data/faqs";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const slides: { url: string, alt: string }[] = [
   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
@@ -201,7 +202,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {nairaCard.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -242,7 +243,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link>
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {sectionFaq.map((faq, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -287,7 +288,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements. Choose a card</p>
-                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {dollarCard.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -328,7 +329,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Credit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
-                  <button className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account - Coming Soon</button>
+                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link>
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {creditDollar.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -411,7 +412,7 @@ const Cards = () => {
           textColor="text-primarygray"
           title="Take the bold step to Financial buoyancy"
           description="Open a Signature Bank account in few steps"
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

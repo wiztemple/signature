@@ -12,6 +12,7 @@ import frameData from "../../assets/swoosh.json";
 import CookiesP from "../../components/Cookies";
 import { Reveal } from "../../utils/Reveal";
 import SocialNav from "../../components/SocialNav";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   title: string;
@@ -291,7 +292,7 @@ const Home = () => {
                   style={{ backgroundColor: "rgb(227, 212, 189)" }} className="rounded-[20px] overflow-hidden h-[384px]">
                   <div className="z-40 relative p-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Money Can&apos;t Stop You. Let&apos;s Support You.</h3>
-                    <button className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 rounded-[8px] ${transition} mt-4 text-white lg:px-5 px-3 py-2.5`}>Coming soon</button>
+                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 block w-fit rounded-[8px] ${transition} mt-4 text-white lg:px-5 px-3 py-2.5`}>Coming soon</Link>
                     <div className="mt-4">
                       <img className={`bg-cover object-cover w-full ${transition} ${onCard3 === true && "scale-110"}`} src="https://framerusercontent.com/images/IhX3GJKlhJRxvbuaNZe0DoPnLw.png" alt="" />
                     </div>
@@ -341,7 +342,7 @@ const Home = () => {
                   <div>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">No restrictions, no limitations.</h3>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Bank on-the-go.</h3>
-                    <button type="button" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-[50%] py-2.5`}>Coming Soon</button>
+                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 block w-fit px-4 rounded-[8px] mt-4 text-white py-2.5`}>Coming Soon</Link>
                     {/* dial */}
                     <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">
@@ -491,7 +492,7 @@ const Home = () => {
           textColor="text-primarygray"
           title="Open an account with us in a few simple steps."
           description="Open an account with us and enjoy the benefits of personalized banking services."
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

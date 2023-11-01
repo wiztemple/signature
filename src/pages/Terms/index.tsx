@@ -231,7 +231,7 @@ You must not use any part of the materials on our website for commercial purpose
           textColor="text-primarygray"
           title="Open an account with us in a few simple steps."
           description="Open an account with us and enjoy the benefits of personalized banking services."
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

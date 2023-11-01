@@ -75,7 +75,7 @@ const Media = () => {
           textColor="text-primarygray"
           title="Unlock new financial possibilities with us"
           description="Unlock new financial possibilities with us"
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

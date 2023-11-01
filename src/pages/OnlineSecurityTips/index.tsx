@@ -214,7 +214,7 @@ If you see anyone or anything suspicious, cancel your transaction and leave imme
           textColor="text-primarygray"
           title="Open an account with us in a few simple steps."
           description="Open an account with us and enjoy the benefits of personalized banking services."
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>

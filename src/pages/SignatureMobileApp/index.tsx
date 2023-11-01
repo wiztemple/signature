@@ -259,7 +259,7 @@ const SignatureMobileApp = () => {
           textColor="text-primarygray md:text-xl"
           title="Unlock new financial possibilities with us"
           description="Open a Signature Bank account in just a few steps"
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/XuTTuxNqq78uVLDqe5bmNkmn7hE.png?scale-down-to=1024"
         />
       </div>

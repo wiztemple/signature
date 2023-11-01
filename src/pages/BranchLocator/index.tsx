@@ -290,7 +290,7 @@ const BranchLocator = () => {
           textColor="text-primarygray"
           title="Take the bold step to Financial buoyancy"
           description="Open a Signature Bank account in few steps"
-          buttonName="Open an Account - Coming Soon"
+          buttonName="Open an Account"
           url="https://framerusercontent.com/images/8kftVCBZ5JSM9eOT81gA2QGiiQ.jpg?scale-down-to=1024"
         />
       </div>
