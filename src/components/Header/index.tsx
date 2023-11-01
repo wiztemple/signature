@@ -577,8 +577,9 @@ const Header: React.FC<HeaderProps> = ({
                 </Link>
               </div>
             </div>
-            <button
-              type="button"
+            <Link
+              to="https://aos.signaturebankng.com/"
+              target="_blank"
               className={`${primaryBtnClassName} text-white py-[7px] px-[18px] rounded-[10px] flex items-center gap-1.5  border border-transparent leading-[1em]`}
             >
               {showPrimaryBtnIcon && (
@@ -588,8 +589,8 @@ const Header: React.FC<HeaderProps> = ({
                   id="animation-container"
                 />
               )}
-              Open an Account - Launching Soon
-            </button>
+              Open an Account
+            </Link>
           </nav>
         </div>
       </div>
