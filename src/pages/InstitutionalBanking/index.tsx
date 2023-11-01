@@ -162,7 +162,7 @@ const InstitutionalBanking = () => {
       <div className="w-[85%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-secondarybrown text-white"
+          buttonStyle="bg-secondarybrown hover:bg-darkbrown text-white"
           titleStyle="text-alternate w-[90%]"
           imgContainer=""
           textColor="text-primarygray"

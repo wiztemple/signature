@@ -69,7 +69,7 @@ const Media = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-hex-2 text-white"
+          buttonStyle="bg-hex-2 text-white hover:bg-hex-1"
           titleStyle="text-alternate md:w-[60%] w-full"
           imgContainer="md:w-[40%] w-full"
           textColor="text-primarygray"

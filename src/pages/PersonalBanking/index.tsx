@@ -144,7 +144,7 @@ const PersonalBanking = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-hex-2 text-white"
+          buttonStyle="bg-hex-2 text-white hover:bg-hex-1"
           titleStyle="text-alternate w-[90%]"
           imgContainer=""
           textColor="text-primarygray"

@@ -144,7 +144,7 @@ const Business = () => {
       <div className="w-[85%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-secondarybrown text-white"
+          buttonStyle="bg-secondarybrown text-white hover:bg-darkbrown"
           titleStyle="text-alternate w-[90%]"
           imgContainer=""
           textColor="text-primarygray"

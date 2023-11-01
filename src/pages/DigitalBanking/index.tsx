@@ -92,7 +92,7 @@ const DigitalBanking = () => {
           <a href="/cards" className="relative z-40">
             <button
             type="button"
-            className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+            className="hover:bg-darkyellow transition-all duration-200 delay-150 ease-in-out bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
           >
             Learn More
           </button>
@@ -141,7 +141,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-darkyellow transition-all ease-in-out duration-200 delay-200 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
             >
               Dial on mobile
             </button>
@@ -189,7 +189,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-darkyellow transition-all ease-in-out duration-200 delay-200 text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
             >
               Learn More
             </button>
@@ -241,7 +241,7 @@ const DigitalBanking = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-[#ba975a]"
-          buttonStyle="bg-hex-2 text-white"
+          buttonStyle="bg-hex-2 text-white hover:bg-hex-1"
           titleStyle="text-white w-[90%]"
           imgContainer="md:w-[40%]"
           textColor="text-white"
