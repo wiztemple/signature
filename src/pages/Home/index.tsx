@@ -322,12 +322,12 @@ const Home = () => {
                     style={{ backgroundColor: "rgb(227, 212, 189)" }} className="overflow-hidden rounded-[20px] h-[384px] pt-6 px-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Make Everyday Banking Seamless</h3>
                     <p className="text-base text-[#30353f] leading-[17px]">Get the Signature Bank app</p>
-                    <div className="w-[130px] h-[30px] mt-2">
+                    <a target="_blank" rel="noopener" href="https://apps.apple.com/ng/app/signature-mobile/id6446977188" className="w-[130px] h-[30px] mt-2">
                       <img className="w-[80%]" src={appleLogo} alt="apple logo" />
-                    </div>
-                    <div className="w-[130px] h-[30px] mt-2">
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.signaturemobile" className="w-[130px] h-[30px] mt-2">
                       <img className="w-[80%]" src={googleLogo} alt="apple logo" />
-                    </div>
+                    </a>
                     <div className={`flex justify-center ${onCard5 === true ? "md:mt-10 mt-8" : "md:mt-14 mt-11"} ${transition}`}>
                       <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
