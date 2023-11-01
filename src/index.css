@@ -37,9 +37,10 @@ html {
   }
 }
 
-.slider-container {
-  overflow: hidden;
-  width: 100%;
+.slider-left {
+  width: calc(250px * 20);
+  animation: slide-left 15s linear infinite;
+  /* Adjust the animation duration as needed */
 }
 
 .slider {
@@ -48,11 +49,6 @@ html {
 }
 .slider-right {
   animation: slide-right 40s linear infinite;
-  /* Adjust the animation duration as needed */
-}
-.slider-left {
-  width: calc(250px * 20);
-  animation: slide-left 15s linear infinite;
   /* Adjust the animation duration as needed */
 }
 
@@ -72,6 +68,29 @@ html {
 .polygon{
     clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
 }
+
+.gradientText{
+  text-align: center;
+  letter-spacing: 1px;
+  background-image: linear-gradient(0deg, rgb(108, 29, 69) 0%, rgb(255, 201, 107) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300%, 300%;
+  /* animation: gradient 8s ease-in-out infinite; */
+}
+
+/* @keyframes gradient {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+} */
 
 
 @tailwind base;

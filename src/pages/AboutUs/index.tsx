@@ -164,7 +164,7 @@ Deploying cutting-edge technology and a highly motivated workforce to deliver su
           <p className="text-lg leading-[28px] text-center text-primarygray mx-auto lg:w-[55%] md:w-[80%] mt-4">To bring you the most impactful products and services you deserve. Signature Bank is led by an honorable, trustworthy board of directors and managed by an experienced, talented executive team.</p>
           <div className="sticky top-0 w-full h-full">
              {/* <div className="flex justify-center relative mt-10"> */}
-            <div className="text-primaryblack mx-auto flex justify-between md:w-[42%] w-[90%] px-4 py-1 md:text-2xl sm:text-xl text-base mt-14 border-white md:bg-[#ffffffb3] backdrop-blur-md bg-[#edededcc] z-40 md:top-28 sm:top-36 top-40 md:rounded-[10px] rounded-[30px] sticky">
+            <div className="text-primaryblack mx-auto flex justify-between lg:w-[42%] md:w-[62%] w-[90%] px-4 py-1 md:text-2xl sm:text-xl text-base mt-14 border-white md:bg-[#ffffffb3] backdrop-blur-md bg-[#edededcc] z-40 md:top-28 sm:top-36 top-36 md:rounded-[10px] rounded-[30px] sticky">
             {cardType.map((card, index) => (
               <div onClick={() => setCurrentCard(index)} key={index} className={`${currentCard === index ? "text-hex-2 font-bold":"text-[#999999]"} cursor-pointer sticky transition-all duration-500 delay-75 ease-in-out py-4 leading-[28px]`}>
               {card.name}

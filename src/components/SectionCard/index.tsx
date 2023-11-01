@@ -26,7 +26,7 @@ const SectionCard = ({ flexRow, cardTitle, cardDescription, src, black, gray, bu
             <div className={`text-${black} text-[30px] leading-[1.2em] mt-10 h-[38px] font-bold`}>{cardTitle}</div>
             <div className={`text-lg ${gray} ${extraClass} 2xl:w-full leading-[28px]`}>{cardDescription}</div>
               <a href="/contact">
-              <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} hover:bg-[#8B7C48]/90 py-4 px-7 text-lg mt-6 rounded-[10px]`}>
+              <button style={{ backdropFilter: "blur(50px)" }} className={`${buttonBg} ${display} ${buttonColor} hover:bg-[#8f7445] py-4 px-7 text-lg mt-6 rounded-[10px]`}>
                 Contact Us
               </button>
               </a>

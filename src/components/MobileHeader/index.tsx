@@ -32,17 +32,17 @@ const MobileHeader: React.FC<HeaderProps> = ({
     <div className="fixed h-auto z-50 w-screen block lg:hidden">
       <div className={`w-full bg-transparent backdrop-blur-[20px] relative`}>
         <div className="relative w-full flex justify-center items-stretch">
-          <div className="flex py-2 items-center w-full px-6 justify-between">
-            <Link to="/" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+          <div className="flex py-2 items-center w-full px-5 justify-between">
+            <Link to="/" className={`${textColor1} text-sm py-2.5 px-2`}>
               Home
             </Link>
-            <Link to="/about-us" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/about-us" className={`${textColor1} text-sm py-2.5 px-2`}>
               About Us
             </Link>
-            <Link to="/branch-locator" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/branch-locator/map" className={`${textColor1} text-sm py-2.5 px-2`}>
               Branch Locator
             </Link>
-            <Link to="/branch-locator" className={`${textColor1} text-sm py-2.5 px-2.5`}>
+            <Link to="/contact" className={`${textColor1} text-sm py-2.5 px-2`}>
               Contact Us
             </Link>
           </div>

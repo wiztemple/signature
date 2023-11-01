@@ -49,18 +49,18 @@ const NotFound = () => {
       />
       <div className="h-screen text-alternate">
         <div
-          className="fixed w-screen h-screen right-0 top-0  overflow-hidden z-20"
+          className="fixed w-screen h-screen right-0 top-0 overflow-hidden z-20"
           ref={container}
           id="animation-container"
         ></div>
         <div className="relative z-30 flex justify-center flex-col items-center h-full">
-          <h1 className="md:text-[216px] text-[175px] font-bold">404</h1>
+          <h1 className="md:text-[260px] text-[175px] tracking-[-19.6px] leading-[1.3em] gradientText font-bold">404</h1>
           <div
-              className="absolute lg:w-[850px] w-screen lg:left-72 right-0 lg:top-12 lg:-bottom-72 bottom-16 left-0 lg:right-0 overflow-hidden z-30"
+              className="absolute lg:w-[850px] w-screen lg:left-72 right-0 lg:top-12 lg:-bottom-64 bottom-16 left-0 lg:right-0 overflow-hidden z-30"
               ref={frame}
               id="animation-frame"
             ></div>
-        <h2 className="text-[#333333] z-40 md:w-[45%] w-[90%] text-2xl relative -mt-5 text-center">The page you are looking for doesn't exist or has been moved. Please go back to the homepage.</h2>
+        <h2 className="text-[#333333] z-40 md:w-[45%] w-[90%] text-2xl relative -mt-2 text-center">The page you are looking for doesn't exist or has been moved. Please go back to the homepage.</h2>
         <a className="bg-hex-2 relative z-40 text-white mt-7 px-5 py-3 rounded-[10px] hover:bg-primaryyellow" href="/">Go Back Home</a>
         </div>
       </div>

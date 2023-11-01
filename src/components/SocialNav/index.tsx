@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import facebookSvg from "../../assets/facebook.svg";
 import closeSvg from "../../assets/close.svg";
-import messageSvg from "../../assets/message.svg";
-import instaSvg from "../../assets/insta.svg";
-import twitterSvg from "../../assets/twitter.svg";
-import linkedinSvg from "../../assets/linkedin.svg";
-import youtubeSvg from "../../assets/youtube.svg";
-import musicSvg from "../../assets/music.svg";
+import MessageSvg from "../../assets/message";
+import Facebook from '../../assets/facebook';
+import Insta from '../../assets/insta';
+import Twitter from '../../assets/twitter';
+import Linkedin from '../../assets/linkedin';
+import Youtube from '../../assets/youtube';
+import Music from '../../assets/music';
+
 
 function SocialNav() {
     
@@ -31,13 +32,13 @@ function SocialNav() {
                             exit={{ opacity: 0, x: 20 }}
                             transition={{ duration: 0.3 }}
                             className="flex gap-2 ">
-                            <a href="mailto:enquiries@signaturebankng.com" rel="noopener" target="_blank" className="bg-white hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-700 p-1.5 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45 rounded-full w-[26px] h-[26px]"><img className="w-full h-full" src={messageSvg} alt="svg" /></a>
-                            <a href="https://www.facebook.com/profile.php?id=100083538721743" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-r hover:from-blue-400 hover:to-blue-700 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={facebookSvg} alt="svg" /></a>
-                            <a href="https://www.linkedin.com/company/signature-bank-nigeria/" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-500 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={instaSvg} alt="svg" /></a>
-                            <a href="https://mobile.twitter.com/Signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-r hover:from-blue-300 hover:to-blue-400 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={twitterSvg} alt="svg" /></a>
-                            <a href="https://www.instagram.com/signaturebankng/?hl=en" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-r hover:from-red-200 hover:to-red-600 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={linkedinSvg} alt="svg" /></a>
-                            <a rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-r hover:from-red-300 hover:to-red-500 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={youtubeSvg} alt="svg" /></a>
-                            <a href="https://www.tiktok.com/@signaturebankng" rel="noopener" target="_blank" className="bg-white p-1.5 rounded-full w-[26px] h-[26px] hover:bg-gradient-to-tr hover:from-red-500 hover:to-teal-300 transition-all ease-in-out duration-300 delay-150 hover:-rotate-45"><img className="w-full h-full" src={musicSvg} alt="svg" /></a>
+                            <MessageSvg />
+                            <Facebook />
+                            <Insta />
+                            <Twitter />
+                            <Linkedin />
+                            <Youtube />
+                            <Music />
                         </motion.div>)}
                     </AnimatePresence>
                     <div className="flex items-center gap-1.5 whitespace-nowrap">
