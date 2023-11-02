@@ -10,14 +10,14 @@ import { Reveal } from "../../utils/Reveal";
 const cards: { url: string, title: string, description: string, buttonName: string, link: string }[] = [
   {
     url: "https://framerusercontent.com/images/hFULY64HSxNlieXQDxDF2XD13AA.png",
-    link: "",
+    link: "/accounts",
     title: "Signature Savings Account",
     description: "Start building your savings with our attractive interest rates and flexible deposit and withdrawal options.",
     buttonName: "Open an Account"
   },
   {
     url: "https://framerusercontent.com/images/xUakLXfAp9hDiKFMhJL2sbfLhmc.png",
-    link: "",
+    link: "/accounts",
     title: "Signature Current Account",
     description: "Manage your day-to-day transactions with ease and enjoy access to a range of banking services.",
     buttonName: "Open an Account"
