@@ -68,7 +68,10 @@ export default {
         'half-circle': 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)',
       },
       screens: {
-        xl: "1900px",
+        'portrait': { 'raw': '(orientation: portrait)' },
+        'landscape': { 'raw': '(orientation: landscape)' },
+        'print': { 'raw': 'print' },
+        xl: "1700px",
         sm: '540px',
       },
        backgroundColor: {
