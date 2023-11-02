@@ -32,7 +32,7 @@ const DigitalBanking = () => {
         strokeColor="white"
       />
 
-      <div className="h-[830px] relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
+      <div className="h-screen relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
             className="absolute md:top-4 mt-14 md:left-0 md:-right-36 -left-60 h-screen w-full z-20"
