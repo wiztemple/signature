@@ -9,21 +9,8 @@ import shadowSvg from "../../assets/shadow.svg"
 import card from "../../assets/cards.png"
 import { faqs } from "../../data/faqs";
 import { AnimatePresence, motion } from "framer-motion";
+import { CardToLeft, CardToRight } from "../../utils/CardSlider";
 
-const slides: { url: string, alt: string }[] = [
-  {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/5LpQCnxX1yp1hFoO251hK9KuTIM.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/POXME8dVduwPVY7ZBj6MEJArYE.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/5LpQCnxX1yp1hFoO251hK9KuTIM.png?scale-down-to=512' },
-  
-];
 
 const sectionFaq: { title: string, description: string[] }[] = [
   {
@@ -164,24 +151,8 @@ const Cards = () => {
         </div>
         <div className="relative mask w-full lg:mt-5 md:mt-32 mt-10">
           <div className="slider-container" />
-          <div className="flex slider-left relative gap-5 z-20">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
-                <img className="left-5 bg-primaryyellow whitespace-nowrap transition-all duration-500 delay-300 rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
-              </div>
-            ))}
-          </div>
-          <div className="flex slider-left relative w-[3500px] mt-3 gap-5 z-20">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
-                <img className="left-5 bg-primaryyellow whitespace-nowrap rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
-              </div>
-            ))}
-          </div>
+          <CardToLeft />
+          <div className="mt-2"><CardToRight /></div>
         </div>
       </div>
       <div>
@@ -348,7 +319,6 @@ const Cards = () => {
                           className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                           {card.description.map((card, index) => (
                             <div key={index} className="flex items-start gap-2">
-                              {/* <img src={tickSvg} alt="" /> */}
                               <p className="text-base font-nunitoSans text-hex-9">{card}</p>
                             </div>
                           ))}
