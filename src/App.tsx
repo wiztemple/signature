@@ -37,6 +37,7 @@ function App() {
           <Route path="/accounts" element={<Accounts />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/media" element={<Media />} />
+          <Route path="/media-publication/:id" element={<MediaDetails />} />
           <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market" element={<MediaDetails />} />
           <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market-1" element={<MediaCbn />} />
           <Route path="/media-publication/excitement-as-signature-bank-launches-operation" element={<MediaSignature />} />
