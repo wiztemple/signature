@@ -47,11 +47,13 @@ export default {
         primarygray: '#667084',
         primaryblack: '#0f1728',
         primaryyellow: '#b9975b',
+        darkyellow: '#957334',
         secondarygray: '#bbbbbb',
         uppergray: '#dddddd',
         cardbadge: '#f8efea',
         primaryblown: '#8a4224',
         secondarybrown: '#b05c37',
+        darkbrown: '#97421e',
         pink: '#ffdbed',
         alternateblack: '#0c0c0c',
         dutyblack: '#040304',
@@ -66,7 +68,7 @@ export default {
         'half-circle': 'polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%)',
       },
       screens: {
-        xl: "1900px",
+        xl: "1700px",
         sm: '540px',
       },
        backgroundColor: {

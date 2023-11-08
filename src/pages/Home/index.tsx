@@ -260,8 +260,10 @@ const Home = () => {
                   onMouseLeave={() => setOnCard(false)}
                   className="md:h-[384px] h-[384px] bg-[#f1ebdf] overflow-hidden rounded-[20px] pt-6 relative">
                   <div className="px-6">
-                    <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
-                    <button className={`${onCard === true && "bg-primaryyellow"} bg-hex-2 ease-in-out transition-all relative z-40 delay-75 duration-700 rounded-[8px] mt-4 text-white px-5 py-2.5`}>Lauching Soon</button>
+                    <h3 className="text-xl font-nunitoSans font-bold text-hex-10 mb-4">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
+                    <a href="/cards" className={`${onCard === true && "bg-primaryyellow"} bg-hex-2 ease-in-out transition-all relative z-40 delay-75 duration-700 rounded-[8px] text-white px-5 py-2.5`}>
+                      Lauching Soon
+                    </a>
                   </div>
                   <div className="w-full absolute -bottom-20 flex flex-col items-center gap-3">
                     <img className={`w-[96%] absolute ${onCard === true ? "bottom-[140px]" : "bottom-24"} z-30 ${transition} object-cover`} src="https://framerusercontent.com/images/pqfPy3VB6tQcckqXMXimpn2jo.png?scale-down-to=512" alt="" />
@@ -277,8 +279,8 @@ const Home = () => {
                   onMouseLeave={() => setOnCard2(false)}
                   style={{ backgroundColor: "rgb(255, 255, 255)" }} className="md:h-[340px] h-[384px] rounded-[20px] z-40 overflow-hidden relative">
                   <div className="z-40 relative p-6">
-                    <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Access Bespoke Banking Solutions For Your Business</h3>
-                    <button className={`${onCard2 === true && "bg-primaryyellow"} bg-hex-2 ${transition} rounded-[8px] mt-4 text-white lg:px-5 px-3 py-2.5`}>See how</button>
+                    <h3 className="text-xl font-nunitoSans font-bold text-hex-10 mb-4">Access Bespoke Banking Solutions For Your Business</h3>
+                    <a href="/institutional-banking" className={`${onCard2 === true && "bg-primaryyellow"} bg-hex-2 ${transition} rounded-[8px] mt-4 text-white lg:px-5 px-3 py-2.5`}>See how</a>
                   </div>
                   <div className={`absolute ${onCard2 === true ? "-bottom-24" : "-bottom-14"} ${transition} z-30`}>
                     <img className="z-30 bg-cover object-cover" src="https://framerusercontent.com/images/PekFpoVisifP2gP4AbGTCGBU3Y.png?scale-down-to=512" alt="" />
@@ -306,8 +308,8 @@ const Home = () => {
                   onMouseLeave={() => setOnCard4(false)}
                   className="md:h-[340px] h-[384px] rounded-[20px] relative">
                   <div className="text-white relative z-40 flex justify-end rounded-[20px] flex-col h-full w-full px-6 pb-10">
-                    <h3 className="text-xl text-white font-nunitoSans font-bold">Exclusive Banking That Preserves Wealth</h3>
-                    <button className={`${onCard4 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] mt-4 text-white w-32 py-2.5`}>Learn More</button>
+                    <h3 className="text-xl text-white font-nunitoSans font-bold mb-4">Exclusive Banking That Preserves Wealth</h3>
+                    <a href="/private-banking" className={`${onCard4 === true && "bg-primaryyellow"} ${transition} bg-hex-2 rounded-[8px] text-white w-32 text-center py-2.5`}>Learn More</a>
                   </div>
                   {/* <div className="h-44 w-full absolute z-30 opacity-20 bottom-0 bg-black" /> */}
                   <div style={{ background: "linear-gradient(rgba(22, 21, 18, 0) 0%, rgb(18, 18, 18) 100%)" }} className={`top-0 absolute w-full ${transition} opacity-90 h-full rounded-[20px] left-0 z-30`} />
@@ -322,12 +324,12 @@ const Home = () => {
                     style={{ backgroundColor: "rgb(227, 212, 189)" }} className="overflow-hidden rounded-[20px] h-[384px] pt-6 px-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Make Everyday Banking Seamless</h3>
                     <p className="text-base text-[#30353f] leading-[17px]">Get the Signature Bank app</p>
-                    <div className="w-[130px] h-[30px] mt-2">
-                      <img className="w-[80%]" src={appleLogo} alt="apple logo" />
-                    </div>
-                    <div className="w-[130px] h-[30px] mt-2">
-                      <img className="w-[80%]" src={googleLogo} alt="apple logo" />
-                    </div>
+                    <a target="_blank" rel="noopener" href="https://apps.apple.com/ng/app/signature-mobile/id6446977188">
+                      <img className="w-[40%] mt-2" src={appleLogo} alt="apple logo" />
+                    </a>
+                    <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.signaturemobile">
+                      <img className="w-[45%] mt-1.5" src={googleLogo} alt="apple logo" />
+                    </a>
                     <div className={`flex justify-center ${onCard5 === true ? "md:mt-10 mt-8" : "md:mt-14 mt-11"} ${transition}`}>
                       <img className="md:w-[75%] w-[55%] object-cover bg-cover" src="https://framerusercontent.com/images/hY94RU6GHmyPfbTQBoA1uq06g.png" alt="" />
                     </div>
@@ -486,7 +488,7 @@ const Home = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-bannerbg"
-          buttonStyle="bg-hex-2 text-white"
+          buttonStyle="bg-hex-2 text-white hover:bg-hex-1"
           titleStyle="text-alternate w-[90%]"
           imgContainer=""
           textColor="text-primarygray"

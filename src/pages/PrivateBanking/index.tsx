@@ -116,7 +116,7 @@ const PrivateBanking = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-[#b9975b]"
-          buttonStyle="bg-dutyblack text-white"
+          buttonStyle="bg-dutyblack hover:bg-dutyblack/90 text-white"
           titleStyle="text-white w-[90%]"
           imgContainer=""
           textColor="text-uppergray"

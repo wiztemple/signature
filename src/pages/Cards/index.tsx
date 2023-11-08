@@ -9,22 +9,8 @@ import shadowSvg from "../../assets/shadow.svg"
 import card from "../../assets/cards.png"
 import { faqs } from "../../data/faqs";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { CardToLeft, CardToRight } from "../../utils/CardSlider";
 
-const slides: { url: string, alt: string }[] = [
-  {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/5LpQCnxX1yp1hFoO251hK9KuTIM.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/POXME8dVduwPVY7ZBj6MEJArYE.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-   {  alt: 'Personal Banking', url: 'https://framerusercontent.com/images/IdAjTDC1X43zBVcCNP3zIe8dw.png' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/ILI4zioZsAhv2tkI1JrZ3XXNOo.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: 'https://framerusercontent.com/images/EG1qrnQT3u6azhAF7dd0u4egtBg.png?scale-down-to=512' },
-  { alt: 'Personal Banking', url: '	https://framerusercontent.com/images/5LpQCnxX1yp1hFoO251hK9KuTIM.png?scale-down-to=512' },
-  
-];
 
 const sectionFaq: { title: string, description: string[] }[] = [
   {
@@ -165,24 +151,8 @@ const Cards = () => {
         </div>
         <div className="relative mask w-full lg:mt-5 md:mt-32 mt-10">
           <div className="slider-container" />
-          <div className="flex slider-left relative gap-5 z-20">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
-                <img className="left-5 bg-primaryyellow whitespace-nowrap transition-all duration-500 delay-300 rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
-              </div>
-            ))}
-          </div>
-          <div className="flex slider-left relative w-[3500px] mt-3 gap-5 z-20">
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="relative cursor-pointer sm:w-[229px] w-[198px] sm:h-[148px] h-[130px]">
-                <img className="left-5 bg-primaryyellow whitespace-nowrap rounded-[10px] w-full h-full bg-cover object-cover" src={slide.url} alt={slide.alt} />
-              </div>
-            ))}
-          </div>
+          <CardToLeft />
+          <div className="mt-2"><CardToRight /></div>
         </div>
       </div>
       <div>
@@ -202,7 +172,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
+                  {/* <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 w-1/2 rounded-[10px] mt-3">Open an Account</Link> */}
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {nairaCard.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -243,7 +213,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements.  Choose a card</p>
-                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link>
+                  {/* <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link> */}
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {sectionFaq.map((faq, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -288,7 +258,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Dollar Debit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">All cards were designed with your specific needs in mind and made to deliver on your unique requirements. Choose a card</p>
-                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
+                  {/* <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out block transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link> */}
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {dollarCard.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -329,7 +299,7 @@ const Cards = () => {
                 <div className="flex-1">
                   <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Credit Cards</h2>
                   <p className="text-primarygray text-lg mt-5">There's something for every stage of life at Signature Bank. Here's your flexible route to financial freedom.</p>
-                  <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link>
+                  {/* <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3 block">Open an Account</Link> */}
                   <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
                     {creditDollar.map((card, index) => (
                       <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -349,7 +319,6 @@ const Cards = () => {
                           className="flex flex-col gap-3 mt-4 pl-10 pr-5">
                           {card.description.map((card, index) => (
                             <div key={index} className="flex items-start gap-2">
-                              {/* <img src={tickSvg} alt="" /> */}
                               <p className="text-base font-nunitoSans text-hex-9">{card}</p>
                             </div>
                           ))}

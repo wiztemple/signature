@@ -16,8 +16,8 @@ const ZoomOnScroll = ({ children }: any) => {
   }, [controls, inView]);
 
   const zoomVariants = {
-    zoomedIn: { scale: 1 },
-    zoomedOut: { scale: 0.9 },
+    zoomedIn: { scale: 1, opacity: 1 },
+    zoomedOut: { scale: 0.9, opacity: .1 },
   };
 
   return (

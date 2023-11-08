@@ -32,7 +32,7 @@ const DigitalBanking = () => {
         strokeColor="white"
       />
 
-      <div className="h-screen xl:h-[50vh] 2xl:h-[10vh] relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
+      <div className="h-auto relative md:pb-0 pb-5 w-full overflow-hidden font-nunitoSans">
         <div className="w-full mx-auto relative flex justify-center">
           <img
             className="absolute md:top-4 mt-14 md:left-0 md:-right-36 -left-60 h-screen w-full z-20"
@@ -40,9 +40,9 @@ const DigitalBanking = () => {
             alt=""
           />
         </div>
-        <div className="z-30 relative flex w-full overflow-hidden justify-center h-full">
+        <div className="z-30 relative flex w-full overflow-hidden lg:pb-24 justify-center h-full">
           <Reveal>
-            <div className="lg:w-[90%] xl:w-full md:w-[1200px] sm:w-[1000px] w-[800px] h-screen overflow-hidden lg:left-0 -left-28 z-40 md:top-36 mt-8 relative">
+            <div className="lg:w-[90%] xl:w-full md:w-[1200px] sm:w-[1000px] w-[800px] h-full overflow-hidden lg:left-0 -left-28 z-40 md:top-36 relative">
               <img
             className="bg-cover object-cover lg:w-auto lg:h-auto h-full w-full"
             src="	https://framerusercontent.com/images/90iLC8eLJFKBsYO5b61ZtAyUlzw.png"
@@ -52,11 +52,11 @@ const DigitalBanking = () => {
           </Reveal>
         </div>
         <div
-          className={`text-white z-40 absolute w-full h-auto flex mx-auto justify-center md:bottom-14 bottom-0`}
+          className={`text-white z-40 absolute w-full flex mx-auto justify-center bottom-0`}
         >
           <div
-            style={{ backdropFilter: "blur(15px)" }}
-            className={`text-[60px] bg-[#67194130] rounded-[20px] md:p-[30px] p-4 lg:w-[60%] sm:w-[70%] w-full`}
+            // style={{ backdropFilter: "blur(15px)" }}
+            className={`text-[60px] bg-[#67194130] backdrop-blur-md rounded-[20px] md:p-[30px] p-4 lg:w-[60%] sm:w-[70%] w-full`}
           >
             <div
               className={`text-white lg:text-[64px] text-center font-bold leading-[1em]`}
@@ -80,26 +80,26 @@ const DigitalBanking = () => {
         />
       </div>
       {/*  */}
-      <div className="lg:w-[85%] w-[90%] md:pt-0 pt-10 relative z-40 mx-auto">
+      <div className="lg:w-[85%] w-[90%] md:pt-0 pt-10 mt-10 relative z-40 mx-auto">
         {/*  */}
         <Reveal>
-          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[650px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
+          <div style={{ background: "radial-gradient(135.2% 84.9946% at 48.1033% 33.3333%, rgb(94, 15, 56) 0%, rgb(65, 10, 39) 100%)"}} className="w-full lg:h-[700px] md:h-[620px] h-[550px] z-40 relative pt-20 rounded-[50px] overflow-hidden flex flex-col items-center font-nunitoSans">
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-primaryyellow">Bank in style</div></ZoomOnScroll>
           <ZoomOnScroll><div className="md:text-5xl text-4xl font-bold leading-[1em] text-center mt-4 text-white">with Signature Cards</div></ZoomOnScroll>
-          <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4 px-2">
+          <ZoomOnScroll><div className="text-xl text-center text-[#fff3f8] mt-4 w-[90%] mx-auto">
             Get our safe and durable signature card for your business transactions.
           </div></ZoomOnScroll>
           <a href="/cards" className="relative z-40">
             <button
             type="button"
-            className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+            className="hover:bg-darkyellow transition-all duration-200 delay-150 ease-in-out bg-primaryyellow text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
           >
             Learn More
           </button>
           </a>
           <div className="w-full flex justify-center relative h-full">
             {/* signature cards */}
-            <div className="lg:w-[83%] md:w-[150%] w-[300%] absolute lg:-bottom-[320px] md:-bottom-[500px] sm:-bottom-[630px] -bottom-[400px]">
+            <div className="lg:px-24 lg:mt-14 mt-16">
                 <ZoomOnScroll><img className="w-full h-full relative z-40 bg-cover object-cover" src={cards} alt="atm cards" /></ZoomOnScroll>
             </div>
             </div>
@@ -141,7 +141,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-darkyellow transition-all ease-in-out duration-200 delay-200 text-lg text-white py-4 px-7 mt-5 rounded-[10px]"
             >
               Dial on mobile
             </button>
@@ -189,7 +189,7 @@ const DigitalBanking = () => {
             </p>
             <button
               type="button"
-              className="bg-primaryyellow hover:bg-[#8B7C48]/90 text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
+              className="bg-primaryyellow hover:bg-darkyellow transition-all ease-in-out duration-200 delay-200 text-lg mt-6 text-white py-4 px-7 rounded-[10px]"
             >
               Learn More
             </button>
@@ -241,7 +241,7 @@ const DigitalBanking = () => {
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
         <Banner
           bannerBg="bg-[#ba975a]"
-          buttonStyle="bg-hex-2 text-white"
+          buttonStyle="bg-hex-2 text-white hover:bg-hex-1"
           titleStyle="text-white w-[90%]"
           imgContainer="md:w-[40%]"
           textColor="text-white"

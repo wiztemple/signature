@@ -123,7 +123,7 @@ const Accounts = () => {
           <div className="flex-1">
             <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Savings</h2>
             <p className="text-primarygray text-lg mt-5">Our Signature Savings account is perfect for customers aged 18 years and above who are looking to save money while earning an attractive interest rate. With our Signature Savings account, you can enjoy unlimited deposits and withdrawals, depending on the documentation provided, at a zero minimum opening balance.</p>
-            <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm block hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
+            <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm block hover:bg-primaryyellow ease-in-out transition-all w-[25%] duration-1000 delay-50 text-white py-3 text-center rounded-[10px] mt-3">Open an Account</Link>
             <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
               {sectionFaq.map((faq, index) => (
                 <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -160,8 +160,8 @@ const Accounts = () => {
         <div className="flex md:flex-row-reverse lg:gap-16 gap-10 flex-col md:pt-20 pt-10">
           <div className="flex-1">
             <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Current</h2>
-            <p className="text-primarygray text-lg mt-5">Our Signature Current account is designed to cater to the transactional needs of individuals aged 18 years and above. You can open this account with zero minimum opening and operating balance, and access our e-banking services.</p>
-            <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
+            <p className="text-primarygray text-lg mt-5 mb-5">Our Signature Current account is designed to cater to the transactional needs of individuals aged 18 years and above. You can open this account with zero minimum opening and operating balance, and access our e-banking services.</p>
+            <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-3.5 px-5 rounded-[10px]">Coming Soon</Link>
             <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
               {section2Faq.map((faq, index) => (
                 <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">
@@ -199,7 +199,7 @@ const Accounts = () => {
           <div className="flex-1">
             <h2 className="text-primaryblack text-3xl font-bold leading-[28px]">Signature Corporate</h2>
             <p className="text-primarygray text-lg mt-5">Our Signature Corporate account is specially designed to meet the banking needs of corporates, NGOs, Trust fund, Schools, Churches, Embassies & High Commissions etc.</p>
-            <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm block hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link>
+            {/* <Link to="https://aos.signaturebankng.com/" target="_blank" className="bg-hex-2 text-sm block hover:bg-primaryyellow ease-in-out transition-all duration-1000 delay-50 text-white py-4 px-7 rounded-[10px] mt-3">Open an Account</Link> */}
             <div className="h-auto rounded-[20px] w-full mt-5 bg-main-11 py-2 px-5">
               {section3Faq.map((faq, index) => (
                 <div key={index} className="py-4 last:border-0 border-b border-[#0000000d]">

@@ -19,9 +19,6 @@ import MediaDetails from "./pages/MediaDetails";
 import Accounts from "./pages/Accounts";
 import Cards from "./pages/Cards";
 import SignatureMobileApp from "./pages/SignatureMobileApp";
-import MediaCbn from "./pages/MediaDetails/MediaCbn";
-import MediaBank from "./pages/MediaDetails/MediaBank";
-import MediaSignature from "./pages/MediaDetails/MediaSignature";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./utils/ScrollToTop.tsx";
 
@@ -38,10 +35,6 @@ function App() {
           <Route path="/cards" element={<Cards />} />
           <Route path="/media" element={<Media />} />
           <Route path="/media-publication/:id" element={<MediaDetails />} />
-          <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market" element={<MediaDetails />} />
-          <Route path="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market-1" element={<MediaCbn />} />
-          <Route path="/media-publication/excitement-as-signature-bank-launches-operation" element={<MediaSignature />} />
-          <Route path="/media-publication/alex-otti-s-signature-bank-will-set-pace-in-innovative-banking" element={<MediaBank />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/branch-locator/:name" element={<BranchLocator />} />
           <Route path="/contact" element={<BranchLocator />} />
