@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import lottie from "lottie-web";
+import { createClient } from "contentful"
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -12,7 +13,7 @@ import frameData from "../../assets/swoosh.json";
 import CookiesP from "../../components/Cookies";
 import { Reveal } from "../../utils/Reveal";
 import SocialNav from "../../components/SocialNav";
-import { Link } from "react-router-dom";
+import { Link, createRoutesFromChildren } from "react-router-dom";
 
 interface HeroProps {
   title: string;
@@ -23,6 +24,28 @@ interface HeroProps {
   show: boolean
   link: string
   isFrame: boolean
+}
+
+interface PostFields {
+  fields: {
+    postImage?: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+    postTitle?: string;
+    blogSummary?: string;
+  };
+  contentTypeId: string;
+}
+
+interface Post {
+  sys: {
+    id: string;
+  };
+  fields: PostFields;
 }
 
 const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }];
@@ -137,7 +160,24 @@ const Home = () => {
   const [onCard5, setOnCard5] = useState<boolean>(false);
   const [onCard6, setOnCard6] = useState<boolean>(false);
   const transition = "bg-cover ease-in-out transition-all delay-75 duration-700";
-  // const [close, setClose] = useState<boolean>(true);
+  const client = createClient({
+    space: "o79q5kozn1j6",
+    accessToken: "4nOV0Nu2nu_89kgusv-uBI7F27zePqrH_liBGMlw_wM",
+  });
+
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    const getEntries = async () => {
+      try {
+        const entries = await client.getEntries<PostFields>();
+        setPosts(entries.items as unknown as Post[]);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getEntries();
+  }, []);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -444,27 +484,48 @@ const Home = () => {
         <p className="text-[#667084] text-xl lg:text-start text-center leading-[30px] mt-4">
           The latest news, publications, and resources from our team.
         </p>
+        {/* <div className="md:py-20 py-10 w-full relative">
+  {posts.slice(0, 2).map((post: Post) => (
+    <div key={post.sys.id} className="flex md:flex-row flex-col mb-10 gap-6 items-center">
+      <div className="flex-1">
+        <img
+          className="rounded-[10px] w-full h-[300px] object-cover bg-cover"
+          src={post.fields.postImage?.fields.file.url}
+          alt={post.fields.postTitle}
+        />
+      </div>
+      <div className="flex-1">
+        <h2 className="text-2xl text-main-3 font-bold">{post.fields.postTitle}</h2>
+        <p className="text-base text-primarygray leading-[2em]">{post.fields.blogSummary}</p>
+        <Link to={`/media-publication/${post.sys.id}`}>
+          <button className="bg-hex-3 hover-bg-hex-2 transition-all delay-100 duration-1000 ease-in-out mt-3 rounded-[8px] text-white px-5 py-2.5">
+            Read more
+          </button>
+        </Link>
+      </div>
+    </div>
+  ))}
+</div> */}
         <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[85%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
-          <div className="flex-1 flex lg:flex-row flex-col gap-4">
+          {posts.slice(0, 2).map((post: any) => (
+            <div className="flex-1 flex lg:flex-row flex-col gap-4">
             <img
               className="rounded-[24px] lg:w-[240px] lg:h-[240px] h-[200px] object-cover bg-cover"
-              src="https://framerusercontent.com/images/Q7yK6b8OgphElaqypVACvrLz4.jpg"
-              alt=""
+              src={post.fields.postImage?.fields.file.url}
+              alt={post.fields.postTitle}
             />
             <div>
               <h2 className="text-lg text-main-3 font-bold">
-                CBN provides further update to the guidelines in the Foreign
-                Exchange Market.
+              {post.fields.postTitle}
               </h2>
               <p className="text-base text-primarygray">
-                The Director of Corporate Communications, Dr Isa AbdulMumin, has
-                announced further policy changes in relation to FX which is
-                aimed at…
+              {post.fields.blogSummary}
               </p>
-              <a href="/media-publication/cbn-provides-further-update-to-the-guidelines-in-the-foreign-exchange-market-1"><button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button></a>
+              <Link to={`/media-publication/${post.sys.id}`}><button className="bg-hex-2 mt-3 rounded-[8px] text-white px-5 py-2.5">Read more</button></Link>
             </div>
           </div>
-          <div className="flex-1 flex lg:flex-row flex-col gap-4">
+          ))}
+          {/* <div className="flex-1 flex lg:flex-row flex-col gap-4">
             <img
               className="rounded-[24px] lg:w-[240px] lg:h-[240px] object-cover bg-cover"
               src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048"
@@ -482,7 +543,7 @@ const Home = () => {
               </p>
               <a href="/media-publication/excitement-as-signature-bank-launches-operation"><button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 lg:mt-0 mt-2">Read more</button></a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
