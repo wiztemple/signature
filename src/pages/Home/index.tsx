@@ -13,7 +13,7 @@ import frameData from "../../assets/swoosh.json";
 import CookiesP from "../../components/Cookies";
 import { Reveal } from "../../utils/Reveal";
 import SocialNav from "../../components/SocialNav";
-import { Link, createRoutesFromChildren } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 interface HeroProps {
   title: string;
@@ -484,28 +484,6 @@ const Home = () => {
         <p className="text-[#667084] text-xl lg:text-start text-center leading-[30px] mt-4">
           The latest news, publications, and resources from our team.
         </p>
-        {/* <div className="md:py-20 py-10 w-full relative">
-  {posts.slice(0, 2).map((post: Post) => (
-    <div key={post.sys.id} className="flex md:flex-row flex-col mb-10 gap-6 items-center">
-      <div className="flex-1">
-        <img
-          className="rounded-[10px] w-full h-[300px] object-cover bg-cover"
-          src={post.fields.postImage?.fields.file.url}
-          alt={post.fields.postTitle}
-        />
-      </div>
-      <div className="flex-1">
-        <h2 className="text-2xl text-main-3 font-bold">{post.fields.postTitle}</h2>
-        <p className="text-base text-primarygray leading-[2em]">{post.fields.blogSummary}</p>
-        <Link to={`/media-publication/${post.sys.id}`}>
-          <button className="bg-hex-3 hover-bg-hex-2 transition-all delay-100 duration-1000 ease-in-out mt-3 rounded-[8px] text-white px-5 py-2.5">
-            Read more
-          </button>
-        </Link>
-      </div>
-    </div>
-  ))}
-</div> */}
         <div className="flex lg:flex-row flex-col lg:gap-4 gap-8 lg:w-[75%] w-[85%] mx-auto lg:h-[240px] lg:mt-14 mt-10">
           {posts.slice(0, 2).map((post: any) => (
             <div className="flex-1 flex lg:flex-row flex-col gap-4">
@@ -525,25 +503,6 @@ const Home = () => {
             </div>
           </div>
           ))}
-          {/* <div className="flex-1 flex lg:flex-row flex-col gap-4">
-            <img
-              className="rounded-[24px] lg:w-[240px] lg:h-[240px] object-cover bg-cover"
-              src="https://framerusercontent.com/images/cBtUkCjjDXHdpLUs6Ky1h2KLLnk.jpg?scale-down-to=2048"
-              alt=""
-            />
-            <div>
-              <h2 className="text-lg text-main-3 font-bold">
-                Excitement as Signature Bank launches operation
-              </h2>
-              <p className="text-base text-primarygray">
-                Signature Bank, on Monday, November 21, 2022 launched its
-                operations into the Nigerian banking sector with unique services
-                that are expected to deepen Nigeria's financial inclusion,
-                targeting over 40 million…
-              </p>
-              <a href="/media-publication/excitement-as-signature-bank-launches-operation"><button className="bg-hex-2 rounded-[8px] text-white px-5 py-2.5 lg:mt-0 mt-2">Read more</button></a>
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="lg:w-[85%] w-[90%] mx-auto py-14">
