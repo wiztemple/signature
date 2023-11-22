@@ -23,7 +23,7 @@ const USSDBanking: React.FC = () => {
             <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
             <MobileHeader primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white" />
             <CustomBanner
-                extraClass="h-[260px]"
+                extraClass="md:h-[260px] h-auto"
                 overlay_height='300px'
                 show={false}
                 display="hidden"
@@ -43,10 +43,10 @@ const USSDBanking: React.FC = () => {
                 description="With *647# banking; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
             />
             <div className='bg-main-13 py-20'>
-                <div className='w-[85%] mx-auto flex'>
+                <div className='w-[85%] mx-auto md:flex'>
                     <div className='w-full'>
                         <h2 className='text-[40px] font-bold leading-[1.2em] w-full tracking-[-0.8px] text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
-                        <p className='text-lg text-hex-9 leading-7 w-[70%] mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
+                        <p className='text-lg text-hex-9 leading-7 md:w-[70%] mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
                             Just dial *647# to bank without limits!</p>
                     </div>
                     <div className="flex relative justify-center w-full">
