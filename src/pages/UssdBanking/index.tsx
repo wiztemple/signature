@@ -42,7 +42,7 @@ const USSDBanking: React.FC = () => {
                 title1="Bank on-the-go"
                 description="With *647# banking; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
             />
-            <div className='bg-main-13 md:py-20 py-14'>
+            <div className='bg-main-13 py-14'>
                 <div className='w-[85%] mx-auto md:flex'>
                     <div className='w-full'>
                         <h2 className='text-[40px] font-bold leading-[1.2em] w-full tracking-[-0.8px] text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
@@ -52,17 +52,17 @@ const USSDBanking: React.FC = () => {
                     <div className="flex relative justify-center w-full md:mt-0 mt-14">
                         <div className="relative">
                             <img
-                                className="md:w-[60px] md:h-[60px] w-[50px] h-[50px] absolute -mt-5 -left-2"
+                                className="md:w-[60px] md:h-[60px] w-[50px] h-[50px] absolute -mt-5 md:-left-10 -left-2"
                                 src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png"
                             />
                             <img
                                 className="md:w-[141px] md:h-[250px] h-[200px] hover:scale-105 md:-ml-0 -ml-2 transition-all duration-200 delay-150 ease-in-out"
-                                src="https://framerusercontent.com/images/p9WiW5JMIQep3kcBIAHTOM6aa8g.png?scale-down-to=512"
+                                src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512"
                             />
                         </div>
                         <img
-                            className="md:w-[125px] md:h-[250px] h-[200px] z-40 hover:scale-105 md:-ml-0 -ml-4 transition-all duration-200 delay-150 ease-in-out"
-                            src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512"
+                            className="md:w-[125px] md:h-[250px] h-[200px] z-40 hover:scale-105 md:-ml-1 -ml-4 transition-all duration-200 delay-150 ease-in-out"
+                            src="https://framerusercontent.com/images/p9WiW5JMIQep3kcBIAHTOM6aa8g.png?scale-down-to=512"
                         />
                         <div className="relative">
                             <img
