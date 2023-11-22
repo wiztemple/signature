@@ -52,7 +52,7 @@ const USSDBanking: React.FC = () => {
                     <div className="flex relative justify-center w-full md:mt-0 mt-14">
                         <div className="relative">
                             <img
-                                className="md:w-[60px] md:h-[60px] w-[50px] h-[50px] absolute -mt-5 md:-left-10 -left-2"
+                                className="md:w-[60px] md:h-[60px] w-[50px] h-[50px] absolute -mt-5 -left-10"
                                 src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png"
                             />
                             <img
