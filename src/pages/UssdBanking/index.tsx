@@ -43,15 +43,38 @@ const USSDBanking: React.FC = () => {
                 description="With *647# banking; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
             />
             <div className='bg-main-13 py-20'>
-                <div className='w-[85%] mx-auto flex h-full'>
-                    <div>
-                        <h2 className='text-[40px] font-bold leading-[1.2em] tracking-[-0.8px] w-7/12 text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
-                        <p className='text-lg text-hex-9 leading-7 w-2/6 mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
+                <div className='w-[85%] mx-auto flex'>
+                    <div className='w-full'>
+                        <h2 className='text-[40px] font-bold leading-[1.2em] w-full tracking-[-0.8px] text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
+                        <p className='text-lg text-hex-9 leading-7 w-[70%] mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
                             Just dial *647# to bank without limits!</p>
                     </div>
-                    {/* <div>
-                        <img src="	https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512" alt="" />
-                    </div> */}
+                    <div className="flex relative justify-center w-full">
+                <div className="relative">
+                  <img
+                    className="w-[65px] h-[65px] absolute -mt-5 -left-11"
+                    src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png"
+                  />
+                  <img
+                    className="lg:w-[145px] w-[220px] h-[275px]"
+                    src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512"
+                  />
+                </div>
+                <img
+                  className="w-[145px] h-[275px] md:ml-1 -ml-10 z-40"
+                  src="https://framerusercontent.com/images/p9WiW5JMIQep3kcBIAHTOM6aa8g.png?scale-down-to=512"
+                />
+                <div className="relative">
+                  <img
+                    className="w-[55px] h-[55px] absolute -right-14"
+                    src="	https://framerusercontent.com/images/YPGmOKb8M6uMoz0bP9XXR91j23E.png"
+                  />
+                  <img
+                    className="w-[145px] h-[275px] -ml-2"
+                    src="https://framerusercontent.com/images/UKjzIgRxSraxI4Qtnjw1OpDdjh4.png?scale-down-to=512"
+                  />
+                </div>
+              </div>
                 </div>
             </div>
             <div className='w-[85%] mx-auto'>
