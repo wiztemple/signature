@@ -473,7 +473,7 @@ const Header: React.FC<HeaderProps> = ({
                               Digital Banking
                             </span>
                             <Link
-                              to=""
+                              to="/647-USSD-banking"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] p-2"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
