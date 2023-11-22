@@ -18,6 +18,7 @@ interface CustomBannerProps {
   heroBg: string;
   show: boolean
   extraClass: string
+  overlay_height?: string
 }
 
 const CustomBanner = ({
@@ -36,7 +37,8 @@ const CustomBanner = ({
   display,
   scaling,
   heroBg,
-  extraClass
+  extraClass,
+  overlay_height="450px"
 }: CustomBannerProps) => {
   return (
     <div className={`relative h-screen ${heroBg} w-full overflow-hidden font-nunitoSans`}>
@@ -79,7 +81,7 @@ const CustomBanner = ({
       </div>
       <div
         style={{ background: `${lineargradient}` }}
-        className="h-[450px] absolute bottom-0 left-0 w-full"
+        className={`h-[${overlay_height}] absolute bottom-0 left-0 w-full`}
       />
     </div>
   );

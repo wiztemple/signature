@@ -1,0 +1,136 @@
+import React from 'react';
+import Header from '../../components/Header';
+import MobileHeader from '../../components/MobileHeader';
+import Footer from '../../components/Footer';
+import Banner from '../../components/Banner';
+import TermsBar from '../../components/TermsBar';
+import CustomBanner from '../../components/CustomBanner';
+
+const tabs: { name: string, link: string }[] = [
+  { name: 'Account opening', link: '#account' },
+  { name: 'Registration on USSD (for existing customers)', link: '#register' },
+  { name: 'Transfers (Interbank & Intrabank)', link: '#transfer' },
+  { name: 'Balance Enquiry', link: '#balance' },
+  { name: 'Airtime and Data', link: '#airtime' },
+  { name: 'Bills Payment', link: '#bill_payment' },
+  { name: 'PIN Reset', link: '#pin_reset' },
+  { name: 'Opt Out', link: '#opt_out' },
+];
+
+const USSDBanking: React.FC = () => {
+    return (
+        <div className='bg-white font-nunitoSans'>
+            <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
+            <MobileHeader primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white" />
+            <CustomBanner
+                extraClass="h-[260px]"
+                overlay_height='300px'
+                show={false}
+                display="hidden"
+                scaling=""
+                heroBg="white"
+                bannerWidth="lg:w-[62%] sm:w-[80%] w-full"
+                textWidth="lg:w-[85%]"
+                top=" bottom-0"
+                bg="bg-hex-4"
+                color="hex-2"
+                subColor="alternate"
+                src="https://framerusercontent.com/images/iCyep7PrAG0iHA7RUmJ9h9aoK8w.jpg"
+                alt="Lady using signature bank personal banking"
+                dropFilter="blur(15px)"
+                lineargradient="linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"
+                title1="Bank on-the-go"
+                description="With *647# banking; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
+            />
+            <div className='bg-main-13 py-20'>
+                <div className='w-[85%] mx-auto flex h-full'>
+                    <div>
+                        <h2 className='text-[40px] font-bold leading-[1.2em] tracking-[-0.8px] w-7/12 text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
+                        <p className='text-lg text-hex-9 leading-7 w-2/6 mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
+                            Just dial *647# to bank without limits!</p>
+                    </div>
+                    {/* <div>
+                        <img src="	https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512" alt="" />
+                    </div> */}
+                </div>
+            </div>
+            <div className='w-[85%] mx-auto'>
+                <div className="flex lg:flex-row flex-col gap-10 lg:mt-20 mt-10">
+                    <TermsBar color='text-primaryblack' title='Features' tabs={tabs} />
+                    <div className="lg:w-[75%]">
+                        <div id='account'>
+                            <h2 className="text-[30px] text-black font-bold">Account opening</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">This service enables customers with smart or feature phones to open a Signature Bank savings account by dialling the USSD string and following the screen prompts.</p>
+                            <strong className='text-main-4 text-base leading-[2em]'>Requirement:</strong>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers will provide their BVN, DOB and other personal data as requested by the service to open an account.</p>
+                        </div>
+                        <div id='register' className='mt-8'>
+                            <h2 className="text-[30px] text-black font-bold">Registration on USSD (for existing customers)</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Existing Customers can register on the USSD platform by dialling the string and choosing the registration option.</p>
+                            <p className='text-main-4 text-base leading-[2em]'>Requirement:</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers will need to provide their Signature Bank individual account number and fill in other necessary fields as requested by the service to register successfully.</p>
+                        </div>
+                        <div id='transfer' className='mt-8'>
+                            <h2 className="text-[30px] text-black font-bold">Transfers (Interbank & Intrabank)</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. Those works are protected by copyright laws, and treaties around the world. All such rights are reserved. </p>
+                            <p className='text-main-4 text-base leading-[2em]'>You may print, , copy and may download extracts, of any page(s) from our website for your personal reference and you may draw the attention of others within your organization to material posted on our website.</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>You must not modify the paper or digital copies of any materials you have printed , copied or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text. </p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Our status (and that of any identified contributors) as the authors of material on our website must always be acknowledged.
+                                You must not use any part of the materials on our website for commercial purposes without obtaining a license to do so from us or our licensors (where applicable).</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>If you print, copy, or download any part of our website in breach of these Terms of Website Use, your right to use our website will cease immediately and you must, at our option, return or destroy any copies of the materials you have made whether modified or unmodified.</p>
+                        </div>
+                        <div id='balance' className='mt-8'>
+                            <h2 className="text-[30px] text-black font-bold">Balance Enquiry</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. Those works are protected by copyright laws, and treaties around the world. All such rights are reserved.</p>
+                            <p className='text-main-4 text-base leading-[2em]'>You may print, , copy and may download extracts, of any page(s) from our website for your personal reference and you may draw the attention of others within your organization to material posted on our website.</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>You must not modify the paper or digital copies of any materials you have printed , copied or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text. </p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Our status (and that of any identified contributors) as the authors of material on our website must always be acknowledged.
+                                You must not use any part of the materials on our website for commercial purposes without obtaining a license to do so from us or our licensors (where applicable).</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>If you print, copy, or download any part of our website in breach of these Terms of Website Use, your right to use our website will cease immediately and you must, at our option, return or destroy any copies of the materials you have made whether modified or unmodified.</p>
+                        </div>
+                        <div id='airtime' className='mt-10'>
+                            <h2 className="text-[30px] text-black font-bold">Airtime and Data</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can buy Airtime and Data using the USSD service by dialling the string and choosing the Airtime and Data option and following the screen prompts to input necessary parameters.</p>
+                            <strong className='text-main-4 text-base leading-[2em]'>Requirement:</strong>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers can only buy airtime and data using the USSD service after they have registered successfully on the platform, their account is funded and not on PND.</p>
+                        </div>
+                        <div id='bill_payment' className='mt-10'>
+                            <h2 className="text-[30px] text-black font-bold">Bills Payment</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can pay for different utility bills (DSTV, GOTV, Electricity etc) using the USSD service by dialling the string and choosing the Bills payment option and following the screen prompts to input necessary parameters.</p>
+                            <strong className='text-main-4 text-base leading-[2em]'>Requirement:</strong>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers can only make bills payment using the service after they have registered successfully on the platform, their account is funded and not on PND.</p>
+                        </div>
+                        <div id='pin_reset' className='mt-10'>
+                            <h2 className="text-[30px] text-black font-bold">PIN Reset</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can reset their transaction PIN on USSD service by dialling the string and choosing the PIN reset option and following the screen prompts to input necessary parameters.</p>
+                            <strong className='text-main-4 text-base leading-[2em]'>Requirement:</strong>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers can only reset their USSD transaction PIN after they have registered successfully on the platform, PIN change can be done using Card (Card option is coming soon) or their DOB and other required parameters.</p>
+                        </div>
+                        <div id='opt_out' className='mt-10'>
+                            <h2 className="text-[30px] text-black font-bold">Opt Out</h2>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can opt out of USSD service by dialling the string and choosing the Opt out option and following the screen prompts to input necessary parameters.</p>
+                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers who opt out of the service cannot re-register on the platform unless the Bank is contacted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="lg:w-[85%] w-[90%] mx-auto py-20">
+                <Banner
+                    bannerBg="bg-bannerbg"
+                    buttonStyle="bg-hex-2 text-white"
+                    titleStyle="text-alternate w-[70%]"
+                    imgContainer="w-[45%]"
+                    textColor="text-primarygray"
+                    title="Take the bold step to Financial buoyancy"
+                    description="Open a Signature Bank account in few steps"
+                    buttonName="Open an Account - Coming Soon"
+                    url="https://framerusercontent.com/images/XuTTuxNqq78uVLDqe5bmNkmn7hE.png"
+                />
+            </div>
+            <Footer />
+        </div>
+    );
+};
+
+export default USSDBanking;

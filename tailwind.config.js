@@ -19,7 +19,8 @@ export default {
           9: '#fcf8fb',
           10: '#A61890',
           11: '#fff9fd',
-          12: '#fff9f0'
+          12: '#fff9f0',
+          13: '#e9e4dd'
         },
         hex: {
           1: '#5a193a',

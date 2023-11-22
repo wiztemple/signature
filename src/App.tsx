@@ -21,6 +21,7 @@ import Cards from "./pages/Cards";
 import SignatureMobileApp from "./pages/SignatureMobileApp";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./utils/ScrollToTop.tsx";
+import USSDBanking from "./pages/UssdBanking/index.tsx";
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
           <Route path="/online-security-tips" element={<OnlineSecurityTips />} />
           <Route path="/cards" element={<Cards />} />
           <Route path="/signature-mobile-app" element={<SignatureMobileApp />} />
+          <Route path="/647-USSD-banking" element={<USSDBanking />} />
         </Routes>
         </ScrollToTop>
         </BrowserRouter>
