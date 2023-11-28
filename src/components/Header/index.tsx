@@ -23,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({
   textColor2 = "text-midblack",
   logoUrl = Logo,
   primaryBtnClassName,
-  showPrimaryBtnIcon = true,
   gradient = ""
 }) => {
   const [menuContent, setMenuContent] = useState<ReactNode | null>(null);
