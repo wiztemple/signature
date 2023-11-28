@@ -319,7 +319,6 @@ const BranchLocator = () => {
           </div>
           <ZoomOnScroll>
             <div
-              id="map"
               className="md:grid-cols-5 grid-cols-2 gap-2 grid grid-rows-1 lg:mt-10 sm:mt-16 mt-10"
             >
               {locations.map((location, index) => (

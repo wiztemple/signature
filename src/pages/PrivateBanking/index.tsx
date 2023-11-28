@@ -17,6 +17,7 @@ const PrivateBanking = () => {
       <div className="">
         <Header
           bg="bg-[#1e191b]/70"
+          gradient="linear-gradient(to bottom, rgba(31, 26, 27, 0.5) 50%, rgba(31, 26, 27, 0) 100%)"
           textColor1="text-white"
           textColor2="text-white"
           logoUrl={Logo}

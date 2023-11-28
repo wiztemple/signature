@@ -109,7 +109,7 @@ const Accounts = () => {
 
   return (
     <div className="bg-white">
-      <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
+      <Header gradient="linear-gradient(to bottom, rgba(249, 250, 251, 0.9) 0%, rgba(249, 250, 251, 0) 90%)" primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <MobileHeader
         primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5" bg="bg-white"
       />
