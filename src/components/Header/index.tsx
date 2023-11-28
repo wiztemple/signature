@@ -499,8 +499,9 @@ const Header: React.FC<HeaderProps> = ({
                                 </span>
                               </span>
                             </Link>
-                            <Link
-                              to="/accounts"
+                            <a
+                              href="https://play.google.com/store/apps/details?id=com.signaturemobile"
+                              target="_blank"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] px-2 pt-2 pb-10 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
@@ -544,11 +545,11 @@ const Header: React.FC<HeaderProps> = ({
                                 >
                                   <img
                                     src={GooglePlay}
-                                    alt="Google Plkay Link"
+                                    alt="Google Play Link"
                                   />
                                 </a>
                               </span>
-                            </Link>
+                            </a>
                           </>
                         }
                         bgColor="bg-white"
@@ -582,13 +583,6 @@ const Header: React.FC<HeaderProps> = ({
               target="_blank"
               className={`${primaryBtnClassName} text-white py-[7px] px-[18px] rounded-[10px] flex items-center gap-1.5  border border-transparent leading-[1em]`}
             >
-              {showPrimaryBtnIcon && (
-                <span
-                  className="w-[22px] h-[22px]"
-                  ref={container}
-                  id="animation-container"
-                />
-              )}
               Open an Account
             </Link>
           </nav>

@@ -261,13 +261,13 @@ const Home = () => {
                 <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">
                   Unlock Limitless Possibilities
                 </h1>
-                <p className="text-xl font-nunitoSans text-hex-8 mt-3">
+                <p className="text-xl font-nunitoSans text-hex-8 mt-3 pb-5">
                   We provide exceptional banking solutions by leveraging
                   technology to accelerate your financial growth.
                 </p>
-                <button className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-4 font-nunitoSans">
+                <Link to="/about-us" className="bg-hex-2 px-4 py-2 rounded-[10px] text-white mt-6 font-nunitoSans">
                   Learn More
-                </button>
+                </Link>
               </div>
               <div className="text-black flex-1">
                 <img
@@ -302,7 +302,7 @@ const Home = () => {
                   <div className="px-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10 mb-4">Use Our Safe And Unique Signature Cards For All Your Payment Needs.</h3>
                     <a href="/cards" className={`${onCard === true && "bg-primaryyellow"} bg-hex-2 ease-in-out transition-all relative z-40 delay-75 duration-700 rounded-[8px] text-white px-5 py-2.5`}>
-                      Lauching Soon
+                      Learn More
                     </a>
                   </div>
                   <div className="w-full absolute -bottom-20 flex flex-col items-center gap-3">
@@ -384,7 +384,7 @@ const Home = () => {
                   <div>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">No restrictions, no limitations.</h3>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Bank on-the-go.</h3>
-                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 block w-fit px-4 rounded-[8px] mt-4 text-white py-2.5`}>Coming Soon</Link>
+                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 block w-fit px-4 rounded-[8px] mt-4 text-white py-2.5`}>Learn More</Link>
                     {/* dial */}
                     <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">

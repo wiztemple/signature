@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../../assets/altlogo.svg";
-import Rocket from "../../assets/rocket.svg";
 
 interface HeaderProps {
   textColor1?: string;
@@ -20,7 +19,6 @@ const MobileHeader: React.FC<HeaderProps> = ({
   logoUrl = Logo,
   bg,
   primaryBtnClassName,
-  showPrimaryBtnIcon,
   strokeColor = "#C5A4B5",
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -123,14 +121,7 @@ const MobileHeader: React.FC<HeaderProps> = ({
                     type="button"
                     className={`${primaryBtnClassName} text-white py-[7px] px-[18px] mb-5 rounded-[10px] flex items-center gap-1.5  border border-transparent leading-[1em]`}
                   >
-                    {showPrimaryBtnIcon && (
-                      <img
-                        src={Rocket}
-                        className="w-[22px] h-[22px]"
-                        alt="Rocket"
-                      />
-                    )}
-                    Open an Account - Launching Soon
+                    Open an Account
                   </Link>
                 </motion.div>
               )}

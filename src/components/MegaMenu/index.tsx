@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface MegaMenu {
   children: ReactNode;
@@ -32,7 +33,7 @@ const MegaMenu: React.FC<MegaMenu> = ({
           <span className={`block text-${textColor} px-2 pb-5`}>
             Self Services
           </span>
-          <div className="flex cursor-pointer gap-4 rounded-lg p-2">
+          <Link to="/branch-locator/map" className="flex cursor-pointer gap-4 rounded-lg p-2 hover:bg-hex-2/5">
             <span
               className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
             >
@@ -59,8 +60,8 @@ const MegaMenu: React.FC<MegaMenu> = ({
                 Find a branch closest to <br /> you
               </span>
             </span>
-          </div>
-          <div className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5">
+          </Link>
+          <Link to="/accounts" className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5 hover:bg-hex-2/5">
             <span
               className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
             >
@@ -90,8 +91,8 @@ const MegaMenu: React.FC<MegaMenu> = ({
                 Signature account - <br /> Launching soon
               </span>
             </span>
-          </div>
-          <div className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5">
+          </Link>
+          <Link to="/contact" className="flex cursor-pointer gap-4  rounded-lg p-2 mt-5 hover:bg-hex-2/5">
             <span
               className={`w-10 h-10 rounded-full ${itemBg}  flex justify-center items-center`}
             >
@@ -118,7 +119,7 @@ const MegaMenu: React.FC<MegaMenu> = ({
                 Need help? Contact us.
               </span>
             </span>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="w-2/5 relative">
