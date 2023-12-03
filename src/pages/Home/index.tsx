@@ -24,6 +24,7 @@ interface HeroProps {
   show: boolean
   link: string
   isFrame: boolean
+  lastImage?: boolean
 }
 
 interface PostFields {
@@ -48,7 +49,7 @@ interface Post {
   fields: PostFields;
 }
 
-const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }];
+const dots: { dot: number }[] = [{ dot: 1 }, { dot: 2 }, { dot: 3 }, { dot: 4 }];
 
 const banks: { title: string; description: string }[] = [
   {
@@ -67,7 +68,7 @@ const banks: { title: string; description: string }[] = [
   },
 ];
 
-const Hero = ({ title, description, url, mt, top, show, link, isFrame }: HeroProps) => {
+const Hero = ({ title, description, url, mt, top, show, link, isFrame, lastImage = false }: HeroProps) => {
   const container = useRef(null);
   const animationRef = useRef<any>(null);
   const frame = useRef(null);
@@ -102,51 +103,89 @@ const Hero = ({ title, description, url, mt, top, show, link, isFrame }: HeroPro
   }, []);
   
   return (
-    <Slide className="h-full relative w-full z-40">
+    <>
       <div className="lg:w-[85%] w-[90%] mx-auto h-full">
-        <div
-          className="fixed w-screen h-screen -left-20 right-0 top-0 -bottom-20 overflow-hidden -z-[1]"
-          ref={container}
-          id="animation-container"
-        ></div>
-        <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
+        <Slide className="h-full relative w-full z-40">
           <div
-            className={`text-black lg:w-[45%] relative z-30 ${top} relative`}
-          >
-            <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">
-              {title}
-            </h1>
-            <p className="text-xl font-nunitoSans text-hex-8 mt-3">
-              {description}
-            </p>
-            <a href={link}>
-              <button className="bg-hex-2 px-4 py-3 hover:bg-primaryyellow rounded-[10px] text-white mt-4 font-nunitoSans">
-              Learn More
-            </button>
-            </a>
-          </div>
-          {show === false ? <div className="text-black flex-1">
-            {isFrame === true && <div
-              className="absolute lg:w-[850px] w-screen lg:-right-44 lg:top-12 lg:-bottom-72 bottom-16 overflow-hidden z-40"
-              ref={frame}
-              id="animation-frame"
-            ></div>}
-            <img
-              className={`w-full h-full relative z-30 object-center bg-cover ${mt}`}
-              src={url}
-              alt=""
-            />
-          </div> : <>
-              <div className="text-black h-screen backdrop:blur-md rounded-[175px] relative z-40 mt-[12.5%] w-[36%] bg-[#eaecf080]" />
+            className="fixed w-screen h-screen -left-20 right-0 top-0 -bottom-20 overflow-hidden -z-[1]"
+            ref={container}
+            id="animation-container"
+          ></div>
+          <div className="flex lg:flex-row flex-col justify-between relative z-40 items-center w-full h-full">
+            <div
+              className={`text-black lg:w-[45%] relative z-30 ${top} relative`}
+            >
+              <h1 className="lg:text-[64px] text-[36px] text-hex-2 font-nunitoSans leading-[1em] font-bold">
+                {title}
+              </h1>
+              <p className="text-xl font-nunitoSans text-hex-8 mt-3">
+                {description}
+              </p>
+              <a href={link}>
+                <button className="bg-hex-2 px-4 py-3 hover:bg-primaryyellow rounded-[10px] text-white mt-4 font-nunitoSans">
+                  Learn More
+                </button>
+              </a>
+            </div>
+            {show === false ? <div className="text-black flex-1">
+              {isFrame === true && <div
+                className="absolute lg:w-[850px] w-screen lg:-right-44 lg:top-12 lg:-bottom-72 bottom-16 overflow-hidden z-40"
+                ref={frame}
+                id="animation-frame"
+              ></div>}
               <img
+                className={`w-full h-full relative z-30 object-center bg-cover ${mt}`}
+                src={url}
+                alt=""
+              />
+            </div> : <>
+              {lastImage === false ? <><div className="text-black h-screen backdrop:blur-md rounded-[175px] relative z-40 mt-[12.5%] w-[36%] bg-[#eaecf080]" />
+                <img
                   className={` absolute w-[50%] z-40 object-center -right-10 bg-cover top-[20%]`}
                   src="https://framerusercontent.com/images/YP5wt0ZQnMobsLhO7jhlynAAio.png"
                   alt=""
-                />
-          </>}
-        </div>
+                /></> : <>
+                <div className="text-black h-[600px] backdrop:blur-md rounded-[175px] absolute right-0 z-30 mt-[9.5%] w-[36%] bg-[#eaecf080]" />
+                <div
+                  className="absolute lg:w-[850px] w-screen lg:-right-44 lg:bottom-10 bottom-16 overflow-hidden z-40"
+                  ref={frame}
+                  id="animation-frame"
+                ></div>
+                <div className="h-screen relative z-30 flex items-center">
+                  <div className="flex relative mt-48 mr-4 justify-center w-full">
+                    <div className="relative h-full">
+                      <img
+                        className="w-[81px] h-[82px] absolute left-0 -mt-20"
+                        src="https://framerusercontent.com/images/LcyrFPA26JWdNobi5ZaWYeuZgA.png"
+                      />
+                      <img
+                        className="lg:w-[200px] w-[220px] md:h-[382px] h-[275px]"
+                        src="https://framerusercontent.com/images/Q3Z59fcA1YlyPzIjt7ADmzYnAZ4.png?scale-down-to=512"
+                      />
+                    </div>
+                    <img
+                      className="w-[220px] md:h-[382px] relative h-[275px] md:-ml-8 -ml-10 z-20 mt-3"
+                      src="https://framerusercontent.com/images/p9WiW5JMIQep3kcBIAHTOM6aa8g.png?scale-down-to=512"
+                    />
+                    <div className="relative z-30">
+                      <img
+                        className="w-[73px] h-[73px] absolute -mt-16 right-0"
+                        src="	https://framerusercontent.com/images/YPGmOKb8M6uMoz0bP9XXR91j23E.png"
+                      />
+                      <img
+                        className="w-[220px] md:h-[382px] h-[275px] -ml-10 mt-4"
+                        src="https://framerusercontent.com/images/UKjzIgRxSraxI4Qtnjw1OpDdjh4.png?scale-down-to=512"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </>
+              }
+            </>}
+          </div>
+        </Slide>
       </div>
-    </Slide>
+    </>
   );
 };
 
@@ -236,10 +275,23 @@ const Home = () => {
             url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
           />
         )}
+        {dots[3].dot === activeIndex && (
+          <Hero
+            isFrame={true}
+            link="/647-USSD-banking"
+            show={true}
+            lastImage={true}
+            top="mt-[44px]"
+            mt="mt-[22%] ml-10"
+            title="The magic of *647#"
+            description="Dial. Discover. Delight"
+            url="https://framerusercontent.com/images/QgQXRLJTwx5NqjV4oPeHZf4rFf8.png"
+          />
+        )}
         <div className="absolute bottom-5 z-40 text-black mx-auto w-full flex justify-center">
           <div
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-            className="w-16 h-7 gap-2 rounded-[20px] flex justify-center items-center"
+            className="w-auto px-2 h-7 gap-2 rounded-[20px] flex justify-center items-center"
           >
             {dots.map((tab, index) => (
               <div
