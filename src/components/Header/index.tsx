@@ -498,9 +498,7 @@ const Header: React.FC<HeaderProps> = ({
                                 </span>
                               </span>
                             </Link>
-                            <a
-                              href="https://play.google.com/store/apps/details?id=com.signaturemobile"
-                              target="_blank"
+                            <Link to="/signature-mobile-app"
                               className="flex cursor-pointer gap-4 hover:bg-hex-2/5 rounded-[10px] px-2 pt-2 pb-10 mt-5"
                             >
                               <span className="w-10 h-10 rounded-full bg-[#fcedeb] flex justify-center items-center">
@@ -548,7 +546,7 @@ const Header: React.FC<HeaderProps> = ({
                                   />
                                 </a>
                               </span>
-                            </a>
+                            </Link>
                           </>
                         }
                         bgColor="bg-white"

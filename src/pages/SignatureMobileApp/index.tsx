@@ -6,7 +6,7 @@ import MobileHeader from "../../components/MobileHeader";
 import tickSvg from "../../assets/tick.svg";
 import { faqs } from "../../data/faqs";
 import appleSvg from "../../assets/apple.svg";
-import googleSvg from "../../assets/google.svg";
+import googleSvg from "../../assets/googleplay.svg";
 import Footer from "../../components/Footer";
 import animationData from "../../assets/swoosh.json";
 
@@ -155,7 +155,7 @@ const SignatureMobileApp = () => {
                   rel="noopener"
                   href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp"
                 >
-                  <img src={googleSvg} alt="apple logo" />
+                  <img className="w-[170px] h-[51px]" src={googleSvg} alt="apple logo" />
                 </a>
                 <a
                   target="_blank"
@@ -189,7 +189,7 @@ const SignatureMobileApp = () => {
                   rel="noopener"
                   href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp"
                 >
-                  <img src={googleSvg} alt="google logo" />
+                  <img className="w-[170px] h-[51px]" src={googleSvg} alt="google logo" />
                 </a>
                 <a
                   target="_blank"

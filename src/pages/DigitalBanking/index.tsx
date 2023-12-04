@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import MobileHeader from "../../components/MobileHeader";
 import appleLogo from "../../assets/apple.svg";
-import googleLogo from "../../assets/google.svg";
+import googleLogo from "../../assets/googleplay.svg";
 import Logo from "../../assets/logo.svg";
 import handPhone from "../../assets/handPhone.png";
 import cards from "../../assets/groupCard.svg";
@@ -124,7 +124,7 @@ const DigitalBanking = () => {
               services anywhere you go.{" "}
               </p>
               <div className="gap-4 relative z-40 flex mt-5">
-                <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img src={googleLogo} alt="apple logo" /></a>
+                <a target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img className="w-[170px] h-[51px]" src={googleLogo} alt="apple logo" /></a>
                 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843"><img src={appleLogo} alt="apple logo" /></a>
             </div>
               <ZoomOnScroll><img className="w-full object-cover bg-cover lg:-mt-[100px] md:-mt-44 sm:-mt-24 -mt-32 h-[900px]" src={handPhone} alt="" /></ZoomOnScroll>
@@ -223,7 +223,7 @@ const DigitalBanking = () => {
               payments.
             </p>
             <div className="gap-4 flex mt-5">
-                <a target="_blank" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img src={googleLogo} alt="apple logo" /></a>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=ng.gov.cbn.speed.wallet.temp&pli=1"> <img className="w-[170px] h-[51px]" src={googleLogo} alt="apple logo" /></a>
                 <a target="_blank" href="https://apps.apple.com/us/app/enaira-speed-wallet/id1587292843"><img src={appleLogo} alt="apple logo" /></a>
             </div>
               <ZoomOnScroll>

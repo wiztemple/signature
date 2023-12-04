@@ -6,7 +6,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import { Slide } from "../../utils/Slide";
 import appleLogo from "../../assets/apple.svg";
-import googleLogo from "../../assets/google.svg";
+import googleLogo from "../../assets/googleplay.svg";
 import MobileHeader from "../../components/MobileHeader";
 import animationData from "../../assets/gradient.json";
 import frameData from "../../assets/swoosh.json";

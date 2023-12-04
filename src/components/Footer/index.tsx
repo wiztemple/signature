@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.svg";
-import AppStore from "../../assets/appstore.svg";
+import AppStore from "../../assets/appstor.png";
 import GooglePlay from "../../assets/googleplay.svg";
 
 const Footer = ({ background = "bg-hex-2" }) => {
@@ -130,25 +130,25 @@ const Footer = ({ background = "bg-hex-2" }) => {
                 <span className="font-bold text-sm leading-5 text-main-2">
                   Social
                 </span>
-                <span className="flex flex-col gap-3 text-base">
+                <span className="flex flex-col text-base">
                   <a className="block text-main-1">Twitter</a>
-                  <a className="block text-main-1">LinkedIn</a>
-                  <a className="block text-main-1">Facebook</a>
-                  <a className="block text-main-1">Instagram</a>
-                  <a
-                    href="https://apps.apple.com/ng/app/signature-mobile/id6446977188"
-                    className="block h-12 w-[110px] -mt-10"
+                  <a className="block text-main-1 pt-3">LinkedIn</a>
+                  <a className="block text-main-1 pt-3">Facebook</a>
+                  <a className="block text-main-1 pt-3">Instagram</a>
+                  <Link
+                    to="https://apps.apple.com/ng/app/signature-mobile/id6446977188"
+                    className="block h-12 w-[110px] pt-3"
                     target="_blank"
                   >
                     <img src={AppStore} alt="App Store Link" />
-                  </a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.signaturemobile"
-                    className="block h-12 w-[110px] -mt-5"
+                  </Link>
+                  <Link
+                    to="https://play.google.com/store/apps/details?id=com.signaturemobile"
+                    className="block h-12 w-[110px] pt-3"
                     target="_blank"
                   >
                     <img src={GooglePlay} alt="Google Plkay Link" />
-                  </a>
+                  </Link>
                 </span>
               </div>
               <div className="flex flex-col gap-4">
