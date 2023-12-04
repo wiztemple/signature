@@ -386,7 +386,7 @@ const Home = () => {
                   style={{ backgroundColor: "rgb(227, 212, 189)" }} className="rounded-[20px] overflow-hidden h-[384px]">
                   <div className="z-40 relative p-6">
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Money Can&apos;t Stop You. Let&apos;s Support You.</h3>
-                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 block w-fit rounded-[8px] ${transition} mt-4 text-white lg:px-5 px-3 py-2.5`}>Coming soon</Link>
+                    <button type="button" className={`${onCard3 === true && "bg-primaryyellow"} bg-hex-2 block w-fit rounded-[8px] ${transition} mt-4 text-white lg:px-5 px-3 py-2.5`}>Coming soon</button>
                     <div className="mt-4">
                       <img className={`bg-cover object-cover w-full ${transition} ${onCard3 === true && "scale-110"}`} src="https://framerusercontent.com/images/IhX3GJKlhJRxvbuaNZe0DoPnLw.png" alt="" />
                     </div>
@@ -436,7 +436,7 @@ const Home = () => {
                   <div>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">No restrictions, no limitations.</h3>
                     <h3 className="text-xl font-nunitoSans font-bold text-hex-10">Bank on-the-go.</h3>
-                    <Link to="https://aos.signaturebankng.com/" target="_blank" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 block w-fit px-4 rounded-[8px] mt-4 text-white py-2.5`}>Learn More</Link>
+                    <Link to="/647-USSD-banking" className={`${onCard6 === true && "bg-primaryyellow"} ${transition} bg-hex-2 block w-fit px-4 rounded-[8px] mt-4 text-white py-2.5`}>Learn More</Link>
                     {/* dial */}
                     <div className={`gap-4 flex md:w-[98%] w-[80%] justify-center mx-auto ${onCard6 === true ? "mt-6" : "mt-12"} ${transition}`}>
                       <div className="flex relative justify-center w-full ml-4">
