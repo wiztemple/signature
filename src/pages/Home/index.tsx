@@ -107,7 +107,7 @@ const Hero = ({ title, description, url, mt, top, show, link, isFrame, lastImage
       <div className="lg:w-[85%] w-[90%] mx-auto h-full">
         <Slide className="h-full relative w-full z-40">
           <div
-            className="fixed w-screen h-screen -left-20 right-0 top-0 -bottom-20 overflow-hidden -z-[1]"
+            className="fixed w-screen h-screen right-0 top-0 -bottom-20 overflow-hidden -z-[1]"
             ref={container}
             id="animation-container"
           ></div>
