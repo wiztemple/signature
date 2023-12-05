@@ -35,7 +35,7 @@ const USSDBanking: React.FC = () => {
                 bg="bg-hex-4"
                 color="hex-2"
                 subColor="alternate"
-                src="https://framerusercontent.com/images/iCyep7PrAG0iHA7RUmJ9h9aoK8w.jpg"
+                src="https://framerusercontent.com/images/q94EFo9FStCjRZHXa2or6arrnPs.jpg"
                 alt="Lady using signature bank personal banking"
                 dropFilter="blur(15px)"
                 lineargradient="linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"
