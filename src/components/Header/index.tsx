@@ -530,14 +530,14 @@ const Header: React.FC<HeaderProps> = ({
                                 </span>
                                 <a
                                   href="https://apps.apple.com/ng/app/signature-mobile/id6446977188"
-                                  className="block h-12 w-28 -mt-8"
+                                  className="block h-12 w-28 -mt-6"
                                   target="_blank"
                                 >
                                   <img src={AppStore} alt="App Store Link" />
                                 </a>
                                 <a
                                   href="https://play.google.com/store/apps/details?id=com.signaturemobile"
-                                  className="block h-12 w-28 -mt-2"
+                                  className="block h-12 w-28 mt-8"
                                   target="_blank"
                                 >
                                   <img

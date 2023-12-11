@@ -23,11 +23,11 @@ const Resources = () => {
 
   return (
     <div className="font-nunitoSans bg-white">
-      <Header />
+      <Header primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-[9px]" />
       <MobileHeader
         bg="bg-white"
         textColor1="text-midblack"
-        primaryBtnClassName="bg-hex-2 !py-2.5"
+        primaryBtnClassName="bg-hex-2 hover:bg-primaryyellow !py-2.5"
       />
       <div className="md:pt-[270px] pt-64 pb-24 bg-[#f9f5f8]">
         <h1 className="text-center md:text-7xl text-[48px] font-bold text-alternate">

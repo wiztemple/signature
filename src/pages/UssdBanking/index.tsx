@@ -14,7 +14,6 @@ const tabs: { name: string, link: string }[] = [
   { name: 'Airtime and Data', link: '#airtime' },
   { name: 'Bills Payment', link: '#bill_payment' },
   { name: 'PIN Reset', link: '#pin_reset' },
-  { name: 'Opt Out', link: '#opt_out' },
 ];
 
 const USSDBanking: React.FC = () => {
@@ -40,12 +39,12 @@ const USSDBanking: React.FC = () => {
                 dropFilter="blur(15px)"
                 lineargradient="linear-gradient(180deg,rgba(249,245,248,0) 0%,#F9F5F8 100%)"
                 title1="Bank on-the-go"
-                description="With *647# banking; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
+                description="With *647#; transfer money, check balance, buy airtime, pay bills and lots more anytime and anywhere, using any type of phone without need for internet connectivity or data."
             />
             <div className='bg-main-13 py-14'>
                 <div className='w-[85%] mx-auto md:flex'>
                     <div className='w-full'>
-                        <h2 className='text-[40px] font-bold leading-[1.2em] w-full tracking-[-0.8px] text-alternate'>*647# is a Quick, Convenient, Secure and Easy Way of Banking</h2>
+                        <h2 className='text-[40px] font-bold leading-[1.2em] w-full tracking-[-0.8px] text-hex-2'>*647# is a quick, convenient, secure and easy way of banking</h2>
                         <p className='text-lg text-hex-9 leading-7 md:w-[70%] mt-3'>With any type of mobile phone, you are just one dial away from enjoying the 647 lifestyle.
                             Just dial *647# to bank without limits!</p>
                     </div>
@@ -95,7 +94,7 @@ const USSDBanking: React.FC = () => {
                         </div>
                         <div id='transfer' className='mt-8'>
                             <h2 className="text-[30px] text-black font-bold">Transfers (Interbank & Intrabank)</h2>
-                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. Those works are protected by copyright laws, and treaties around the world. All such rights are reserved. </p>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. These works are protected by copyright laws, and treaties around the world. All such rights are reserved. </p>
                             <p className='text-main-4 text-base leading-[2em]'>You may print, , copy and may download extracts, of any page(s) from our website for your personal reference and you may draw the attention of others within your organization to material posted on our website.</p>
                             <p className='text-primarygray text-base leading-[2em] mt-4'>You must not modify the paper or digital copies of any materials you have printed , copied or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text. </p>
                             <p className='text-primarygray text-base leading-[2em] mt-4'>Our status (and that of any identified contributors) as the authors of material on our website must always be acknowledged.
@@ -104,7 +103,7 @@ const USSDBanking: React.FC = () => {
                         </div>
                         <div id='balance' className='mt-8'>
                             <h2 className="text-[30px] text-black font-bold">Balance Enquiry</h2>
-                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. Those works are protected by copyright laws, and treaties around the world. All such rights are reserved.</p>
+                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-8">We are the owner or the licensee of all intellectual property rights on our Website (including but not limited to the listed services and other intellectual property rights offered on or via the Website) and in the material published on it. These works are protected by copyright laws, and treaties around the world. All such rights are reserved.</p>
                             <p className='text-main-4 text-base leading-[2em]'>You may print, , copy and may download extracts, of any page(s) from our website for your personal reference and you may draw the attention of others within your organization to material posted on our website.</p>
                             <p className='text-primarygray text-base leading-[2em] mt-4'>You must not modify the paper or digital copies of any materials you have printed , copied or downloaded in any way, and you must not use any illustrations, photographs, video or audio sequences or any graphics separately from any accompanying text. </p>
                             <p className='text-primarygray text-base leading-[2em] mt-4'>Our status (and that of any identified contributors) as the authors of material on our website must always be acknowledged.
@@ -128,11 +127,6 @@ const USSDBanking: React.FC = () => {
                             <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can reset their transaction PIN on USSD service by dialling the string and choosing the PIN reset option and following the screen prompts to input necessary parameters.</p>
                             <strong className='text-main-4 text-base leading-[2em]'>Requirement:</strong>
                             <p className='text-primarygray text-base leading-[2em] mt-4'>Customers can only reset their USSD transaction PIN after they have registered successfully on the platform, PIN change can be done using Card (Card option is coming soon) or their DOB and other required parameters.</p>
-                        </div>
-                        <div id='opt_out' className='mt-10'>
-                            <h2 className="text-[30px] text-black font-bold">Opt Out</h2>
-                            <p className="text-primarygray text-base leading-[2em] mt-2 mb-4">Registered customers can opt out of USSD service by dialling the string and choosing the Opt out option and following the screen prompts to input necessary parameters.</p>
-                            <p className='text-primarygray text-base leading-[2em] mt-4'>Customers who opt out of the service cannot re-register on the platform unless the Bank is contacted.</p>
                         </div>
                     </div>
                 </div>
